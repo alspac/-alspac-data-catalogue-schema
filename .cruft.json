@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "6f53e5cd62bb88c21fbfdaa4a8b74fb0713f11a6",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "alspac-data-catalogue-schema",
+      "__project_slug": "alspac_data_catalogue_schema",
+      "github_org": "alspac",
+      "__source_path": "src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml",
+      "project_description": "This project is for the schema of alspac data catalogues and meta data on data sets",
+      "full_name": "Sam Neaves",
+      "email": "s.neaves@bristol.ac.uk",
+      "__author": "Sam Neaves <s.neaves@bristol.ac.uk>",
+      "license": "MIT",
+      "main_schema_class": "named_alspac_data_set",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

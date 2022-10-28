@@ -1,0 +1,71 @@
+@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Thing a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A generic grouping for any identifiable entity" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:name ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:description ] ;
+    sh:targetClass schema:Thing .
+
+alspac_data_catalogue_schema:NamedAlspacDataSetCollection a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A holder for named_alspac_data_set objects" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class alspac_data_catalogue_schema:NamedAlspacDataSet ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:entries ] ;
+    sh:targetClass alspac_data_catalogue_schema:NamedAlspacDataSetCollection .
+
+alspac_data_catalogue_schema:NamedAlspacDataSet a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a named_alspac_data_set" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "living or dead status" ;
+            sh:in ( PATO:0001421 PATO:0001422 "UNKNOWN" ) ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path alspac_data_catalogue_schema:vital_status ],
+        [ sh:description "The main email address of a person" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path schema:email ;
+            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
+        [ sh:description "Number of years since birth" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:age_in_years ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema:description ],
+        [ sh:description "Date on which a person is born" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:birthDate ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:identifier ] ;
+    sh:targetClass alspac_data_catalogue_schema:NamedAlspacDataSet .
+

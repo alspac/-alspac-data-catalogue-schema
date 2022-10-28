@@ -1,0 +1,6 @@
+name: alspac_data_catalogue_schema
+author: Sam Neaves <s.neaves@bristol.ac.uk>
+description: This project is for the schema of alspac data catalogues and meta data on data sets
+source_schema_path: src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums
