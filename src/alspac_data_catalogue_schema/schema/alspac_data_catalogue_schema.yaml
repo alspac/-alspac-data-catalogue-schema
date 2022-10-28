@@ -7,6 +7,8 @@ license: MIT
 see_also:
   - https://alspac.github.io/alspac-data-catalogue-schema
 
+# These have been augmented with the normitive recomendation here https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220510/
+
 prefixes:
   alspac_data_catalogue_schema: https://w3id.org/alspac/alspac-data-catalogue-schema/
   linkml: https://w3id.org/linkml/
@@ -14,6 +16,23 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
+  dc: http://purl.org/dc/elements/1.1/
+  dcat: http://www.w3.org/ns/dcat#	
+  dcterms: http://purl.org/dc/terms/
+  dctype: http://purl.org/dc/dcmitype/
+  foaf: http://xmlns.com/foaf/0.1/
+  locn: http://www.w3.org/ns/locn#
+  odrl: http://www.w3.org/ns/odrl/2/	
+  owl: http://www.w3.org/2002/07/owl#	
+  prov: http://www.w3.org/ns/prov#	
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  spdx: http://spdx.org/rdf/terms#
+  time: http://www.w3.org/2006/time#
+  vcard: http://www.w3.org/2006/vcard/ns#
+  http://www.w3.org/2001/XMLSchema#
+  
 default_prefix: alspac_data_catalogue_schema
 default_range: string
 
@@ -37,11 +56,14 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
       - code_name
-      - title
+      - name
       - description
       - primary_investigator
       - keywords
       - has_version
+      - primary_email
+      - authors
+      
     slot_usage:
       primary_email:
         pattern: "^\\S+@[\\S+\\.]+\\S+"
@@ -70,7 +92,7 @@ slots:
     description: A human-readable description for a thing
   primary_email:
     slot_uri: schema:email
-    description: The main email address of a person
+    description: The main email address to contact
 
 
     
