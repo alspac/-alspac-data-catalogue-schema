@@ -56,8 +56,6 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
       - code_name
-      - name
-      - description
       - primary_investigator
       - keywords
       - has_version
