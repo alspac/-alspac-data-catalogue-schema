@@ -119,7 +119,18 @@ classes:
     description: >-
       Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
     slots:
-      - na
+      - data_distribution
+
+   data_distribution:
+    is_a: NamedThing
+    decription: >-
+    slots:
+      abstract_dataset_part:
+      md5sum
+      filesize
+      number_of_samples
+      location_on_bc4
+      location_on_bp
 
 slots:
   id:
