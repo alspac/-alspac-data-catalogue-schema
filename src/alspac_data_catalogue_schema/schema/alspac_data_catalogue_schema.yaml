@@ -50,6 +50,19 @@ classes:
       - description
     class_uri: schema:Thing
 
+
+  alspac_data_catalogue:
+    is_a: NamedThing
+    description: >-
+      Represents an alspac data catalogue. That is a set of named alspac data sets.
+    slots:
+      - primary_investigator
+      - keywords
+      - primary_email
+      - authors
+      - named_alspac_data_setCollection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
+  
+
   named_alspac_data_set:
     is_a: NamedThing
     description: >-
