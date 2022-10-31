@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-28T11:40:49\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
+   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-31T11:43:16\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
    "@context": {
       "PATO": {
          "@id": "http://purl.obolibrary.org/obo/PATO_",
@@ -7,20 +7,34 @@
       },
       "alspac_data_catalogue_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
       "biolink": "https://w3id.org/biolink/",
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "dctype": "http://purl.org/dc/dcmitype/",
       "example": "https://example.org/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
       "linkml": "https://w3id.org/linkml/",
+      "locn": "http://www.w3.org/ns/locn#",
+      "odrl": "http://www.w3.org/ns/odrl/2/",
+      "orcid": "http://example.org/UNKNOWN/orcid/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "schema": "http://schema.org/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
+      "spdx": "http://spdx.org/rdf/terms#",
+      "time": "http://www.w3.org/2006/time#",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
       "@vocab": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
-      "age_in_years": {
-         "@type": "xsd:integer"
-      },
-      "birth_date": {
-         "@type": "xsd:date",
-         "@id": "schema:birthDate"
-      },
       "description": {
          "@id": "schema:description"
+      },
+      "filesize": {
+         "@id": "dcat:byteSize"
+      },
+      "filetype": {
+         "@id": "dcat:mediaType"
       },
       "id": "@id",
       "name": {
@@ -32,13 +46,27 @@
       "primary_email": {
          "@id": "schema:email"
       },
-      "vital_status": {
-         "@context": {
-            "@vocab": "@null",
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         }
+      "primary_investigator_orcid": {
+         "@type": "@id",
+         "@id": "orcid:id"
+      },
+      "AbstractDatasetPart": {
+         "@id": "dcat:Dataset"
+      },
+      "AlspacDataCatalogue": {
+         "@id": "dcat:Catalog"
+      },
+      "AlspacDataSetVersion": {
+         "@id": "dcat:Dataset"
+      },
+      "AlspacDataSetVersionFreeze": {
+         "@id": "dcat:Dataset"
+      },
+      "DataDistribution": {
+         "@id": "dcat:Distribution"
+      },
+      "NamedAlspacDataSet": {
+         "@id": "dcat:Dataset"
       },
       "NamedThing": {
          "@id": "schema:Thing"

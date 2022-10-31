@@ -1,10 +1,9 @@
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
-@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
 @prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix linkml: <https://w3id.org/linkml/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -17,11 +16,146 @@
     dcterms:license "MIT" ;
     dcterms:title "alspac-data-catalogue-schema" ;
     rdfs:seeAlso "https://alspac.github.io/alspac-data-catalogue-schema" ;
-    linkml:generation_date "2022-10-28T11:41:04" ;
+    linkml:generation_date "2022-10-31T11:43:22" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "alspac_data_catalogue_schema.yaml" ;
-    linkml:source_file_date "2022-10-28T11:28:17" ;
-    linkml:source_file_size 2423 .
+    linkml:source_file_date "2022-10-31T11:34:58" ;
+    linkml:source_file_size 5345 .
+
+alspac_data_catalogue_schema:AbstractDatasetPart a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "abstract_dataset_part" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:data_distribution ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file." ;
+    skos:exactMatch dcat:Dataset .
+
+alspac_data_catalogue_schema:AlspacDataCatalogue a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "alspac_data_catalogue" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:email ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/orcid/id> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:named_alspac_data_set_collection ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
+    skos:exactMatch dcat:Catalog .
+
+alspac_data_catalogue_schema:AlspacDataSetVersion a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "alspac_data_set_version" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:has_previous_version ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:email ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:keywords ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:authors ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:version_date ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:version_number ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:has_next_verion ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:is_current_version ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use." ;
+    skos:exactMatch dcat:Dataset .
+
+alspac_data_catalogue_schema:AlspacDataSetVersionFreeze a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "alspac_data_set_version_freeze" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:freeze_dataset ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:freeze_number ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:freeze_date ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:authors ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:freeze_of_version ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:email ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use." ;
+    skos:exactMatch dcat:Dataset .
+
+alspac_data_catalogue_schema:DataDistribution a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "data_distribution" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:abstract_dataset_part ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:location_on_bp ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:md5sum ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcat:byteSize ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcat:mediaType ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:number_of_samples ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:location_on_bc4 ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "A dataset distribution has a loaction, file type and file size." ;
+    skos:exactMatch dcat:Distribution .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -34,43 +168,108 @@ linkml:topValue a owl:DatatypeProperty ;
 
 alspac_data_catalogue_schema:NamedAlspacDataSetCollection a owl:Class,
         linkml:ClassDefinition ;
-    rdfs:label "named_alspac_data_setCollection" ;
+    rdfs:label "named_alspac_data_set_collection" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom alspac_data_catalogue_schema:NamedAlspacDataSet ;
             owl:onProperty alspac_data_catalogue_schema:entries ] ;
     skos:definition "A holder for named_alspac_data_set objects" .
 
-alspac_data_catalogue_schema:age_in_years a owl:ObjectProperty,
+alspac_data_catalogue_schema:abstract_dataset_part a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "age_in_years" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "Number of years since birth" .
+    rdfs:label "abstract_dataset_part" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:code_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "code_name" ;
+    rdfs:range linkml:String ;
+    skos:definition "The alspac codename for a named dataset. For example gi_1000g_g0m_g1" .
+
+alspac_data_catalogue_schema:data_distribution a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "data_distribution" ;
+    rdfs:range linkml:String .
 
 alspac_data_catalogue_schema:entries a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "entries" ;
     rdfs:range alspac_data_catalogue_schema:NamedAlspacDataSet .
 
-alspac_data_catalogue_schema:vital_status a owl:ObjectProperty,
+alspac_data_catalogue_schema:freeze_dataset a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "vital_status" ;
-    rdfs:range alspac_data_catalogue_schema:PersonStatus ;
-    skos:definition "living or dead status" .
+    rdfs:label "freeze_dataset" ;
+    rdfs:range linkml:String .
 
-PATO:0001421 a owl:Class,
-        alspac_data_catalogue_schema:PersonStatus ;
-    rdfs:label "ALIVE" .
-
-PATO:0001422 a owl:Class,
-        alspac_data_catalogue_schema:PersonStatus ;
-    rdfs:label "DEAD" .
-
-schema:birthDate a owl:ObjectProperty,
+alspac_data_catalogue_schema:freeze_date a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "birth_date" ;
-    rdfs:range linkml:Date ;
-    skos:definition "Date on which a person is born" ;
-    skos:exactMatch schema:birthDate .
+    rdfs:label "freeze_date" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:freeze_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "freeze_number" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:freeze_of_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "freeze_of_version" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:has_next_verion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_next_verion" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:has_previous_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_previous_version" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:has_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_version" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:is_current_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "is_current_version" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:location_on_bc4 a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "location_on_bc4" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:location_on_bp a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "location_on_bp" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:md5sum a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "md5sum" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:named_alspac_data_set_collection a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "named_alspac_data_set_collection" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:number_of_samples a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "number_of_samples" ;
+    rdfs:range linkml:String ;
+    skos:definition "The number of alspac participants in this dataset" .
+
+alspac_data_catalogue_schema:version_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "version_date" ;
+    rdfs:range linkml:String .
+
+alspac_data_catalogue_schema:version_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "version_number" ;
+    rdfs:range linkml:String .
 
 schema:description a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -78,13 +277,6 @@ schema:description a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:definition "A human-readable description for a thing" ;
     skos:exactMatch schema:description .
-
-schema:email a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_email" ;
-    rdfs:range linkml:String ;
-    skos:definition "The main email address of a person" ;
-    skos:exactMatch schema:email .
 
 schema:identifier a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -100,27 +292,72 @@ schema:name a owl:ObjectProperty,
     skos:definition "A human-readable name for a thing" ;
     skos:exactMatch schema:name .
 
+dcat:byteSize a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "filesize" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dcat:byteSize .
+
+dcat:mediaType a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "filetype" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dcat:mediaType .
+
 alspac_data_catalogue_schema:NamedAlspacDataSet a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "named_alspac_data_set" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass alspac_data_catalogue_schema:PersonStatus ;
-            owl:onProperty alspac_data_catalogue_schema:vital_status ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty alspac_data_catalogue_schema:age_in_years ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty schema:email ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Date ;
-            owl:onProperty schema:birthDate ],
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/orcid/id> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:code_name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:has_version ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:authors ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:keywords ],
         alspac_data_catalogue_schema:NamedThing ;
-    skos:definition "Represents a named_alspac_data_set" .
+    skos:definition "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
+    skos:exactMatch dcat:Dataset .
+
+alspac_data_catalogue_schema:keywords a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "keywords" ;
+    rdfs:range linkml:String .
+
+<http://example.org/UNKNOWN/orcid/id> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "primary_investigator_orcid" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "the orcid id of the pi" ;
+    skos:exactMatch <http://example.org/UNKNOWN/orcid/id> .
+
+alspac_data_catalogue_schema:authors a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "authors" ;
+    rdfs:range linkml:String .
+
+schema:email a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "primary_email" ;
+    rdfs:range linkml:String ;
+    skos:definition "The main email address to contact" ;
+    skos:exactMatch schema:email .
 
 alspac_data_catalogue_schema:NamedThing a owl:Class,
         linkml:ClassDefinition ;
@@ -132,28 +369,16 @@ alspac_data_catalogue_schema:NamedThing a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema:name ],
+            owl:onProperty schema:description ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema:description ] ;
+            owl:onProperty schema:name ] ;
     skos:definition "A generic grouping for any identifiable entity" ;
     skos:exactMatch schema:Thing .
 
-<https://w3id.org/alspac/alspac-data-catalogue-schema/PersonStatus#UNKNOWN> a owl:Class,
-        alspac_data_catalogue_schema:PersonStatus ;
-    rdfs:label "UNKNOWN" .
-
 linkml:ClassDefinition a owl:Class ;
     rdfs:label "class_definition" .
-
-alspac_data_catalogue_schema:PersonStatus a owl:Class,
-        linkml:EnumDefinition ;
-    rdfs:label "PersonStatus" ;
-    owl:unionOf ( PATO:0001421 PATO:0001422 <https://w3id.org/alspac/alspac-data-catalogue-schema/PersonStatus#UNKNOWN> ) ;
-    linkml:permissible_values PATO:0001421,
-        PATO:0001422,
-        <https://w3id.org/alspac/alspac-data-catalogue-schema/PersonStatus#UNKNOWN> .
 
 linkml:SlotDefinition a owl:Class ;
     rdfs:label "slot_definition" .

@@ -1,5 +1,5 @@
-@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
 @prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -23,49 +23,210 @@ schema:Thing a sh:NodeShape ;
             sh:path schema:description ] ;
     sh:targetClass schema:Thing .
 
+dcat:Catalog a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:named_alspac_data_set_collection ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:description ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:email ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:name ],
+        [ sh:description "the orcid id of the pi" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path <orcid:id> ] ;
+    sh:targetClass dcat:Catalog .
+
+dcat:Distribution a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A dataset distribution has a loaction, file type and file size." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspac_data_catalogue_schema:location_on_bc4 ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path schema:description ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path dcat:byteSize ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema:name ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path dcat:mediaType ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path schema:identifier ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:abstract_dataset_part ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspac_data_catalogue_schema:md5sum ],
+        [ sh:description "The number of alspac participants in this dataset" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path alspac_data_catalogue_schema:number_of_samples ],
+        [ sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path alspac_data_catalogue_schema:location_on_bp ] ;
+    sh:targetClass dcat:Distribution .
+
 alspac_data_catalogue_schema:NamedAlspacDataSetCollection a sh:NodeShape ;
     sh:closed true ;
     sh:description "A holder for named_alspac_data_set objects" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class alspac_data_catalogue_schema:NamedAlspacDataSet ;
+    sh:property [ sh:class dcat:Dataset ;
             sh:nodeKind sh:IRI ;
             sh:order 0 ;
             sh:path alspac_data_catalogue_schema:entries ] ;
     sh:targetClass alspac_data_catalogue_schema:NamedAlspacDataSetCollection .
 
-alspac_data_catalogue_schema:NamedAlspacDataSet a sh:NodeShape ;
+dcat:Dataset a sh:NodeShape ;
     sh:closed true ;
-    sh:description "Represents a named_alspac_data_set" ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "living or dead status" ;
-            sh:in ( PATO:0001421 PATO:0001422 "UNKNOWN" ) ;
+    sh:description "Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.",
+        "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
+        "Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.",
+        "Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file." ;
+    sh:ignoredProperties ( rdf:type ),
+        ( rdf:type ),
+        ( rdf:type ),
+        ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path alspac_data_catalogue_schema:vital_status ],
-        [ sh:description "The main email address of a person" ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path schema:email ;
-            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
-        [ sh:description "Number of years since birth" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path alspac_data_catalogue_schema:age_in_years ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path schema:description ],
-        [ sh:description "Date on which a person is born" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema:birthDate ],
-        [ sh:description "A human-readable name for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
+            sh:order 7 ;
             sh:path schema:name ],
-        [ sh:description "A unique identifier for a thing" ;
+        [ sh:description "The main email address to contact" ;
             sh:maxCount 1 ;
             sh:order 4 ;
-            sh:path schema:identifier ] ;
-    sh:targetClass alspac_data_catalogue_schema:NamedAlspacDataSet .
+            sh:path schema:email ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:version_number ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:freeze_of_version ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:keywords ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path alspac_data_catalogue_schema:freeze_dataset ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path schema:name ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:keywords ],
+        [ sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path alspac_data_catalogue_schema:authors ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path alspac_data_catalogue_schema:has_version ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:name ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema:email ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspac_data_catalogue_schema:freeze_date ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspac_data_catalogue_schema:authors ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path alspac_data_catalogue_schema:has_next_verion ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:freeze_number ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 10 ;
+            sh:path schema:description ],
+        [ sh:description "The alspac codename for a named dataset. For example gi_1000g_g0m_g1" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:code_name ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspac_data_catalogue_schema:authors ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspac_data_catalogue_schema:is_current_version ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspac_data_catalogue_schema:version_date ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema:identifier ],
+        [ sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path alspac_data_catalogue_schema:has_previous_version ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspac_data_catalogue_schema:data_distribution ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema:identifier ],
+        [ sh:description "the orcid id of the pi" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <orcid:id> ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:email ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema:identifier ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path schema:name ] ;
+    sh:targetClass dcat:Dataset .
 

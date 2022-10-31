@@ -1,16 +1,10 @@
 {
    "$defs": {
-      "NamedAlspacDataSet": {
+      "AbstractDatasetPart": {
          "additionalProperties": false,
-         "description": "Represents a named_alspac_data_set",
+         "description": "Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.",
          "properties": {
-            "age_in_years": {
-               "description": "Number of years since birth",
-               "type": "integer"
-            },
-            "birth_date": {
-               "description": "Date on which a person is born",
-               "format": "date",
+            "data_distribution": {
                "type": "string"
             },
             "description": {
@@ -24,15 +18,219 @@
             "name": {
                "description": "A human-readable name for a thing",
                "type": "string"
-            },
-            "primary_email": {
-               "description": "The main email address of a person",
-               "pattern": "^\\S+@[\\S+\\.]+\\S+",
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "AbstractDatasetPart",
+         "type": "object"
+      },
+      "AlspacDataCatalogue": {
+         "additionalProperties": false,
+         "description": "Represents an alspac data catalogue. That is a set of named alspac data sets.",
+         "properties": {
+            "description": {
+               "description": "A human-readable description for a thing",
                "type": "string"
             },
-            "vital_status": {
-               "$ref": "#/$defs/PersonStatus",
-               "description": "living or dead status"
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "named_alspac_data_set_collection": {
+               "type": "string"
+            },
+            "primary_email": {
+               "description": "The main email address to contact",
+               "type": "string"
+            },
+            "primary_investigator_orcid": {
+               "description": "the orcid id of the pi",
+               "type": "string"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "AlspacDataCatalogue",
+         "type": "object"
+      },
+      "AlspacDataSetVersion": {
+         "additionalProperties": false,
+         "description": "Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.",
+         "properties": {
+            "authors": {
+               "type": "string"
+            },
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "has_next_verion": {
+               "type": "string"
+            },
+            "has_previous_version": {
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "is_current_version": {
+               "type": "string"
+            },
+            "keywords": {
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "primary_email": {
+               "description": "The main email address to contact",
+               "type": "string"
+            },
+            "version_date": {
+               "type": "string"
+            },
+            "version_number": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "AlspacDataSetVersion",
+         "type": "object"
+      },
+      "AlspacDataSetVersionFreeze": {
+         "additionalProperties": false,
+         "description": "Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.",
+         "properties": {
+            "authors": {
+               "type": "string"
+            },
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "freeze_dataset": {
+               "type": "string"
+            },
+            "freeze_date": {
+               "type": "string"
+            },
+            "freeze_number": {
+               "type": "string"
+            },
+            "freeze_of_version": {
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "primary_email": {
+               "description": "The main email address to contact",
+               "type": "string"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "AlspacDataSetVersionFreeze",
+         "type": "object"
+      },
+      "DataDistribution": {
+         "additionalProperties": false,
+         "description": "A dataset distribution has a loaction, file type and file size.",
+         "properties": {
+            "abstract_dataset_part": {
+               "type": "string"
+            },
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "filesize": {
+               "type": "string"
+            },
+            "filetype": {
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "location_on_bc4": {
+               "type": "string"
+            },
+            "location_on_bp": {
+               "type": "string"
+            },
+            "md5sum": {
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "number_of_samples": {
+               "description": "The number of alspac participants in this dataset",
+               "type": "string"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "DataDistribution",
+         "type": "object"
+      },
+      "NamedAlspacDataSet": {
+         "additionalProperties": false,
+         "description": "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
+         "properties": {
+            "authors": {
+               "type": "string"
+            },
+            "code_name": {
+               "description": "The alspac codename for a named dataset. For example gi_1000g_g0m_g1",
+               "type": "string"
+            },
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "has_version": {
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "keywords": {
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "primary_email": {
+               "description": "The main email address to contact",
+               "type": "string"
+            },
+            "primary_investigator_orcid": {
+               "description": "the orcid id of the pi",
+               "type": "string"
             }
          },
          "required": [
@@ -57,23 +255,27 @@
       },
       "NamedAlspacDataSet__identifier_optional": {
          "additionalProperties": false,
-         "description": "Represents a named_alspac_data_set",
+         "description": "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
          "properties": {
-            "age_in_years": {
-               "description": "Number of years since birth",
-               "type": "integer"
+            "authors": {
+               "type": "string"
             },
-            "birth_date": {
-               "description": "Date on which a person is born",
-               "format": "date",
+            "code_name": {
+               "description": "The alspac codename for a named dataset. For example gi_1000g_g0m_g1",
                "type": "string"
             },
             "description": {
                "description": "A human-readable description for a thing",
                "type": "string"
             },
+            "has_version": {
+               "type": "string"
+            },
             "id": {
                "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "keywords": {
                "type": "string"
             },
             "name": {
@@ -81,13 +283,12 @@
                "type": "string"
             },
             "primary_email": {
-               "description": "The main email address of a person",
-               "pattern": "^\\S+@[\\S+\\.]+\\S+",
+               "description": "The main email address to contact",
                "type": "string"
             },
-            "vital_status": {
-               "$ref": "#/$defs/PersonStatus",
-               "description": "living or dead status"
+            "primary_investigator_orcid": {
+               "description": "the orcid id of the pi",
+               "type": "string"
             }
          },
          "required": [],
@@ -116,16 +317,6 @@
          ],
          "title": "NamedThing",
          "type": "object"
-      },
-      "PersonStatus": {
-         "description": "",
-         "enum": [
-            "ALIVE",
-            "DEAD",
-            "UNKNOWN"
-         ],
-         "title": "PersonStatus",
-         "type": "string"
       }
    },
    "$id": "https://w3id.org/alspac/alspac-data-catalogue-schema",

@@ -1,13 +1,75 @@
-// Represents a named_alspac_data_set
+// Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
+message AbstractDatasetPart
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string dataDistribution = 0
+ }
+// Represents an alspac data catalogue. That is a set of named alspac data sets.
+message AlspacDataCatalogue
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  uriorcurie primaryInvestigatorOrcid = 0
+  string primaryEmail = 0
+  string namedAlspacDataSetCollection = 0
+ }
+// Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
+message AlspacDataSetVersion
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string versionNumber = 0
+  string versionDate = 0
+  string keywords = 0
+  string hasPreviousVersion = 0
+  string hasNextVerion = 0
+  string isCurrentVersion = 0
+  string primaryEmail = 0
+  string authors = 0
+ }
+// Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
+message AlspacDataSetVersionFreeze
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string freezeNumber = 0
+  string freezeDate = 0
+  string freezeOfVersion = 0
+  string freezeDataset = 0
+  string primaryEmail = 0
+  string authors = 0
+ }
+// A dataset distribution has a loaction, file type and file size.
+message DataDistribution
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string abstractDatasetPart = 0
+  string md5sum = 0
+  string filesize = 0
+  string filetype = 0
+  string numberOfSamples = 0
+  string locationOnBc4 = 0
+  string locationOnBp = 0
+ }
+// Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
 message NamedAlspacDataSet
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
+  string codeName = 0
+  uriorcurie primaryInvestigatorOrcid = 0
+  string keywords = 0
+  string hasVersion = 0
   string primaryEmail = 0
-  date birthDate = 0
-  integer ageInYears = 0
-  personStatus vitalStatus = 0
+  string authors = 0
  }
 // A holder for named_alspac_data_set objects
 message NamedAlspacDataSetCollection
