@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -209,7 +209,6 @@
       AlspacDataCatalogue : description
       AlspacDataCatalogue : id
       AlspacDataCatalogue : name
-      AlspacDataCatalogue : named_alspac_data_set_collection
       AlspacDataCatalogue : primary_email
       AlspacDataCatalogue : primary_investigator_orcid
 
@@ -242,12 +241,6 @@
 <td><a href="../primary_email/">primary_email</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The main email address to contact</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -307,7 +300,6 @@ is_a: NamedThing
 slots:
 - primary_investigator_orcid
 - primary_email
-- named_alspac_data_set_collection
 class_uri: dcat:Catalog
 
 </code></pre>
@@ -346,15 +338,6 @@ attributes:
     - named_alspac_data_set
     - alspac_data_set_version
     - alspac_data_set_version_freeze
-    range: string
-  named_alspac_data_set_collection:
-    name: named_alspac_data_set_collection
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: named_alspac_data_set_collection
-    owner: alspac_data_catalogue
-    domain_of:
-    - alspac_data_catalogue
     range: string
   id:
     name: id
