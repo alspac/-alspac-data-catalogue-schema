@@ -10,6 +10,6 @@ example:alspac_data_catalogue_001 a dcat:Catalog ;
     schema:email "alspac-omics@bristol.ac.uk" ;
     schema:name "Omics Data Catalogue" ;
     ORCID:id "https://orcid.org/xxxx-xxxx-xxxx-xxxx"^^xsd:anyURI ;
-    alspac_data_catalogue_schema:named_alspac_data_set_collection "test test2" .
+    alspac_data_catalogue_schema:named_alspac_data_set_collection "['alspac-data-catalogue-schema:named_alspac_data_set-001', 'alspac-data-catalogue-schema:named_alspac_data_set-002', 'alspac-data-catalogue-schema:named_alspac_data_set-003']" .
 
 
