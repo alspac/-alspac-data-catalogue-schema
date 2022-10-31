@@ -181,6 +181,7 @@ slots:
   filetype:
     slot_uri: dcat:mediaType
   number_of_samples:
+    description: The number of alspac participants in this dataset
   location_on_bc4:
   location_on_bp:
 
