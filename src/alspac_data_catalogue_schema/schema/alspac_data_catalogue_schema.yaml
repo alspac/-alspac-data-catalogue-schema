@@ -35,6 +35,8 @@ prefixes:
   
 default_prefix: alspac_data_catalogue_schema
 default_range: string
+default_curi_maps:
+  - semweb_context
 
 imports:
   - linkml:types
@@ -52,6 +54,7 @@ classes:
 
 
   alspac_data_catalogue:
+    class_uri: dcat:Catalog
     is_a: NamedThing
     description: >-
       Represents an alspac data catalogue. That is a set of named alspac data sets.
@@ -64,11 +67,13 @@ classes:
   
 
   named_alspac_data_set:
+    class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
       - code_name
+        required: true
       - primary_investigator
       - keywords
       - has_version
@@ -90,6 +95,7 @@ classes:
         inlined: true
 
   alspac_data_set_version:
+    class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
@@ -103,6 +109,7 @@ classes:
       - authors
 
    alspac_data_set_version_freeze:
+    class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
       Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
@@ -115,6 +122,7 @@ classes:
 
    
    abstract_dataset_part:
+    class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
       Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
@@ -122,6 +130,7 @@ classes:
       - data_distribution
 
    data_distribution:
+    class_uri: dcat:Distribution
     is_a: NamedThing
     decription: >-
     slots:
