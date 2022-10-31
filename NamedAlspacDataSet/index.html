@@ -205,19 +205,21 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-namedalspacdataset">Class: NamedAlspacDataSet</h1>
-<p><em>Represents a named_alspac_data_set</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataSet">alspac_data_catalogue_schema:NamedAlspacDataSet</a></p>
+<p><em>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</em></p>
+<p>URI: <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></p>
 <div class="mermaid"> classDiagram
     class NamedAlspacDataSet
       NamedThing &lt;|-- NamedAlspacDataSet
 
-      NamedAlspacDataSet : age_in_years
-      NamedAlspacDataSet : birth_date
+      NamedAlspacDataSet : authors
+      NamedAlspacDataSet : code_name
       NamedAlspacDataSet : description
+      NamedAlspacDataSet : has_version
       NamedAlspacDataSet : id
+      NamedAlspacDataSet : keywords
       NamedAlspacDataSet : name
       NamedAlspacDataSet : primary_email
-      NamedAlspacDataSet : vital_status
+      NamedAlspacDataSet : primary_investigator_orcid
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -239,44 +241,56 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../code_name/">code_name</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The alspac codename for a named dataset. For example gi_1000g_g0m_g1</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../primary_investigator_orcid/">primary_investigator_orcid</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>the orcid id of the pi</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../keywords/">keywords</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_version/">has_version</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../primary_email/">primary_email</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td>The main email address of a person</td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The main email address to contact</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../birth_date/">birth_date</a></td>
-<td>0..1 <br/> <a href="xsd:date">xsd:date</a></td>
-<td>Date on which a person is born</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../age_in_years/">age_in_years</a></td>
-<td>0..1 <br/> <a href="xsd:integer">xsd:integer</a></td>
-<td>Number of years since birth</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../vital_status/">vital_status</a></td>
-<td>0..1 <br/> <a href="../PersonStatus/">PersonStatus</a></td>
-<td>living or dead status</td>
+<td><a href="../authors/">authors</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
 <td>inherited</td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
 <td>inherited</td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td>inherited</td>
 </tr>
@@ -317,7 +331,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['alspac_data_catalogue_schema:NamedAlspacDataSet']</td>
+<td>['dcat:Dataset']</td>
 </tr>
 <tr>
 <td>native</td>
@@ -330,84 +344,97 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: named_alspac_data_set
-description: Represents a named_alspac_data_set
+description: Represents a named_alspac_data_set. That is a set of data that has been
+  collected or produced to be named, reused and distributed.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
+- code_name
+- primary_investigator_orcid
+- keywords
+- has_version
 - primary_email
-- birth_date
-- age_in_years
-- vital_status
-slot_usage:
-  primary_email:
-    name: primary_email
-    domain_of:
-    - named_alspac_data_set
-    - named_alspac_data_set
-    pattern: ^\S+@[\S+\.]+\S+
+- authors
+class_uri: dcat:Dataset
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: named_alspac_data_set
-description: Represents a named_alspac_data_set
+description: Represents a named_alspac_data_set. That is a set of data that has been
+  collected or produced to be named, reused and distributed.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
-slot_usage:
-  primary_email:
-    name: primary_email
+attributes:
+  code_name:
+    name: code_name
+    description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: code_name
+    owner: named_alspac_data_set
     domain_of:
     - named_alspac_data_set
+    range: string
+  primary_investigator_orcid:
+    name: primary_investigator_orcid
+    description: the orcid id of the pi
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: orcid:id
+    alias: primary_investigator_orcid
+    owner: named_alspac_data_set
+    domain_of:
+    - alspac_data_catalogue
     - named_alspac_data_set
-    pattern: ^\S+@[\S+\.]+\S+
-attributes:
+    range: uriorcurie
+  keywords:
+    name: keywords
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: keywords
+    owner: named_alspac_data_set
+    domain_of:
+    - named_alspac_data_set
+    - alspac_data_set_version
+    range: string
+  has_version:
+    name: has_version
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: has_version
+    owner: named_alspac_data_set
+    domain_of:
+    - named_alspac_data_set
+    range: string
   primary_email:
     name: primary_email
-    description: The main email address of a person
+    description: The main email address to contact
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     slot_uri: schema:email
     alias: primary_email
     owner: named_alspac_data_set
     domain_of:
+    - alspac_data_catalogue
     - named_alspac_data_set
-    - named_alspac_data_set
+    - alspac_data_set_version
+    - alspac_data_set_version_freeze
     range: string
-    pattern: ^\S+@[\S+\.]+\S+
-  birth_date:
-    name: birth_date
-    description: Date on which a person is born
+  authors:
+    name: authors
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    slot_uri: schema:birthDate
-    alias: birth_date
+    alias: authors
     owner: named_alspac_data_set
     domain_of:
     - named_alspac_data_set
-    range: date
-  age_in_years:
-    name: age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: age_in_years
-    owner: named_alspac_data_set
-    domain_of:
-    - named_alspac_data_set
-    range: integer
-  vital_status:
-    name: vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: vital_status
-    owner: named_alspac_data_set
-    domain_of:
-    - named_alspac_data_set
-    range: PersonStatus
+    - alspac_data_set_version
+    - alspac_data_set_version_freeze
+    range: string
   id:
     name: id
     description: A unique identifier for a thing
@@ -442,6 +469,7 @@ attributes:
     domain_of:
     - NamedThing
     range: string
+class_uri: dcat:Dataset
 
 </code></pre>
 </details>

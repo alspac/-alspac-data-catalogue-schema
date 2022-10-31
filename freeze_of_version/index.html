@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/id/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/freeze_of_version/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: id - alspac-data-catalogue-schema</title>
+        <title>Slot: freeze_of_version - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-id" class="md-skip">
+        <a href="#slot-freeze_of_version" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: id
+              Slot: freeze_of_version
             
           </span>
         </div>
@@ -310,15 +310,14 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/freeze_of_version.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-id">Slot: id</h1>
-<p><em>A unique identifier for a thing</em></p>
-<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
+<h1 id="slot-freeze_of_version">Slot: freeze_of_version</h1>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/freeze_of_version">alspac_data_catalogue_schema:freeze_of_version</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,38 +330,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
-<td>Represents an alspac data catalogue. That is a set of named alspac data sets.</td>
-</tr>
-<tr>
-<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
-<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
-</tr>
-<tr>
 <td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
 <td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.</td>
-</tr>
-<tr>
-<td><a href="../AbstractDatasetPart/">AbstractDatasetPart</a></td>
-<td>Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</td>
-</tr>
-<tr>
-<td><a href="../DataDistribution/">DataDistribution</a></td>
-<td>A dataset distribution has a loaction, file type and file size.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -373,16 +348,13 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: id
-description: A unique identifier for a thing
+<pre><code class="language-yaml">name: freeze_of_version
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-slot_uri: schema:identifier
-identifier: true
-alias: id
+alias: freeze_of_version
 domain_of:
-- NamedThing
-range: uriorcurie
+- alspac_data_set_version_freeze
+range: string
 
 </code></pre>
 

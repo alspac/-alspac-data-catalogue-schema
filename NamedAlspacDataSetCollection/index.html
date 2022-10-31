@@ -150,15 +150,6 @@
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
-<nav aria-label="Identifier and Mapping Information" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#schema-source">
-    Schema Source
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mappings">
@@ -223,10 +214,6 @@
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/alspac/alspac-data-catalogue-schema</li>
-</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -250,9 +237,8 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: named_alspac_data_setCollection
+<pre><code class="language-yaml">name: named_alspac_data_set_collection
 description: A holder for named_alspac_data_set objects
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 attributes:
   entries:
@@ -268,9 +254,8 @@ tree_root: true
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: named_alspac_data_setCollection
+<pre><code class="language-yaml">name: named_alspac_data_set_collection
 description: A holder for named_alspac_data_set objects
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 attributes:
   entries:
@@ -279,9 +264,9 @@ attributes:
     rank: 1000
     multivalued: true
     alias: entries
-    owner: named_alspac_data_setCollection
+    owner: named_alspac_data_set_collection
     domain_of:
-    - named_alspac_data_setCollection
+    - named_alspac_data_set_collection
     range: named_alspac_data_set
     inlined: true
 tree_root: true

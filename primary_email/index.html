@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-primary_email">Slot: primary_email</h1>
-<p><em>The main email address of a person</em></p>
+<p><em>The main email address to contact</em></p>
 <p>URI: <a href="http://schema.org/email">schema:email</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -331,14 +331,26 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
+<td>Represents an alspac data catalogue. That is a set of named alspac data sets.</td>
+</tr>
+<tr>
 <td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
-<td>Represents a named_alspac_data_set</td>
+<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
+</tr>
+<tr>
+<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
+<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
+</tr>
+<tr>
+<td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
+<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:string">xsd:string</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -350,13 +362,16 @@
 <details>
 
 <pre><code class="language-yaml">name: primary_email
-description: The main email address of a person
+description: The main email address to contact
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 slot_uri: schema:email
 alias: primary_email
 domain_of:
+- alspac_data_catalogue
 - named_alspac_data_set
+- alspac_data_set_version
+- alspac_data_set_version_freeze
 range: string
 
 </code></pre>

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/birth_date/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/location_on_bc4/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: birth_date - alspac-data-catalogue-schema</title>
+        <title>Slot: location_on_bc4 - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-birth_date" class="md-skip">
+        <a href="#slot-location_on_bc4" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: birth_date
+              Slot: location_on_bc4
             
           </span>
         </div>
@@ -310,15 +310,14 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/birth_date.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/location_on_bc4.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-birth_date">Slot: birth_date</h1>
-<p><em>Date on which a person is born</em></p>
-<p>URI: <a href="http://schema.org/birthDate">schema:birthDate</a></p>
+<h1 id="slot-location_on_bc4">Slot: location_on_bc4</h1>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/location_on_bc4">alspac_data_catalogue_schema:location_on_bc4</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +330,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
-<td>Represents a named_alspac_data_set</td>
+<td><a href="../DataDistribution/">DataDistribution</a></td>
+<td>A dataset distribution has a loaction, file type and file size.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="xsd:date">xsd:date</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -349,15 +348,13 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: birth_date
-description: Date on which a person is born
+<pre><code class="language-yaml">name: location_on_bc4
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-slot_uri: schema:birthDate
-alias: birth_date
+alias: location_on_bc4
 domain_of:
-- named_alspac_data_set
-range: date
+- data_distribution
+range: string
 
 </code></pre>
 

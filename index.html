@@ -393,6 +393,26 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="AbstractDatasetPart/">AbstractDatasetPart</a></td>
+<td>Represents an abstract part of named alspac data set, in a version or freeze</td>
+</tr>
+<tr>
+<td><a href="AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
+<td>Represents an alspac data catalogue</td>
+</tr>
+<tr>
+<td><a href="AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
+<td>Represents a version of a named_alspac_data_set</td>
+</tr>
+<tr>
+<td><a href="AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
+<td>Represents a freeze of a version of named_alspac_data_set</td>
+</tr>
+<tr>
+<td><a href="DataDistribution/">DataDistribution</a></td>
+<td>A dataset distribution has a loaction, file type and file size</td>
+</tr>
+<tr>
 <td><a href="NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
 <td>Represents a named_alspac_data_set</td>
 </tr>
@@ -416,12 +436,20 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="age_in_years/">age_in_years</a></td>
-<td>Number of years since birth</td>
+<td><a href="abstract_dataset_part/">abstract_dataset_part</a></td>
+<td></td>
 </tr>
 <tr>
-<td><a href="birth_date/">birth_date</a></td>
-<td>Date on which a person is born</td>
+<td><a href="authors/">authors</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="code_name/">code_name</a></td>
+<td>The alspac codename for a named dataset</td>
+</tr>
+<tr>
+<td><a href="data_distribution/">data_distribution</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>
@@ -432,20 +460,92 @@ Name: alspac-data-catalogue-schema</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="filesize/">filesize</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="filetype/">filetype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="freeze_dataset/">freeze_dataset</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="freeze_date/">freeze_date</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="freeze_number/">freeze_number</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="freeze_of_version/">freeze_of_version</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_next_verion/">has_next_verion</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_previous_version/">has_previous_version</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="has_version/">has_version</a></td>
+<td></td>
+</tr>
+<tr>
 <td><a href="id/">id</a></td>
 <td>A unique identifier for a thing</td>
+</tr>
+<tr>
+<td><a href="is_current_version/">is_current_version</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="keywords/">keywords</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="location_on_bc4/">location_on_bc4</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="location_on_bp/">location_on_bp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="md5sum/">md5sum</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="name/">name</a></td>
 <td>A human-readable name for a thing</td>
 </tr>
 <tr>
-<td><a href="primary_email/">primary_email</a></td>
-<td>The main email address of a person</td>
+<td><a href="named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
+<td></td>
 </tr>
 <tr>
-<td><a href="vital_status/">vital_status</a></td>
-<td>living or dead status</td>
+<td><a href="number_of_samples/">number_of_samples</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="primary_email/">primary_email</a></td>
+<td>The main email address to contact</td>
+</tr>
+<tr>
+<td><a href="primary_investigator_orcid/">primary_investigator_orcid</a></td>
+<td>the orcid id of the pi</td>
+</tr>
+<tr>
+<td><a href="version_date/">version_date</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="version_number/">version_number</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +559,7 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="PersonStatus/">PersonStatus</a></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -474,11 +574,11 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="xsd:boolean">xsd:boolean</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a></td>
 <td>A binary (true or false) value</td>
 </tr>
 <tr>
-<td><a href="xsd:date">xsd:date</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
 <td>a date (year, month and day) in an idealized calendar</td>
 </tr>
 <tr>
@@ -486,27 +586,27 @@ Name: alspac-data-catalogue-schema</p>
 <td>Either a date or a datetime</td>
 </tr>
 <tr>
-<td><a href="xsd:dateTime">xsd:dateTime</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>The combination of a date and time</td>
 </tr>
 <tr>
-<td><a href="xsd:decimal">xsd:decimal</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></td>
 <td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
 </tr>
 <tr>
-<td><a href="xsd:double">xsd:double</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#double">xsd:double</a></td>
 <td>A real number that conforms to the xsd:double specification</td>
 </tr>
 <tr>
-<td><a href="xsd:float">xsd:float</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a></td>
 <td>A real number that conforms to the xsd:float specification</td>
 </tr>
 <tr>
-<td><a href="xsd:integer">xsd:integer</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
 <td>An integer</td>
 </tr>
 <tr>
-<td><a href="xsd:string">xsd:string</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Prefix part of CURIE</td>
 </tr>
 <tr>
@@ -518,19 +618,19 @@ Name: alspac-data-catalogue-schema</p>
 <td>A URI or CURIE that represents an object in the model</td>
 </tr>
 <tr>
-<td><a href="xsd:string">xsd:string</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A character string</td>
 </tr>
 <tr>
-<td><a href="xsd:dateTime">xsd:dateTime</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td>
 <td>A time object represents a (local) time of day, independent of any particular...</td>
 </tr>
 <tr>
-<td><a href="xsd:anyURI">xsd:anyURI</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>a complete URI</td>
 </tr>
 <tr>
-<td><a href="xsd:anyURI">xsd:anyURI</a></td>
+<td><a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>a URI or a CURIE</td>
 </tr>
 </tbody>
