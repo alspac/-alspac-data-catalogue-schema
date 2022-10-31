@@ -1,5 +1,5 @@
 # Auto generated from alspac_data_catalogue_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-10-31T11:43:24
+# Generation date: 2022-10-31T11:53:24
 # Schema: alspac-data-catalogue-schema
 #
 # id: https://w3id.org/alspac/alspac-data-catalogue-schema

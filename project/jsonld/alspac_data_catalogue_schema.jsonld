@@ -833,7 +833,7 @@
   "source_file": "alspac_data_catalogue_schema.yaml",
   "source_file_date": "2022-10-31T11:34:58",
   "source_file_size": 5345,
-  "generation_date": "2022-10-31T11:43:16",
+  "generation_date": "2022-10-31T11:53:16",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/alspac_data_catalogue_schema.context.jsonld",

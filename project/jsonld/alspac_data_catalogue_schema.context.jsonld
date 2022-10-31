@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-31T11:43:16\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
+   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-31T11:53:15\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
    "@context": {
       "PATO": {
          "@id": "http://purl.obolibrary.org/obo/PATO_",
