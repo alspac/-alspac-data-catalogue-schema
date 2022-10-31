@@ -4,7 +4,7 @@ This project is for the schema of alspac data catalogues and meta data on data s
 
 ## Website
 
-* [https://alspac.github.io/alspac-data-catalogue-schema](https://alspac.github.io/alspac-data-catalogue-schema)
+* [https://alspac.github.io/alspac-data-catalogue-schema](https://alspac.github.io/-alspac-data-catalogue-schema)
 
 ## Repository Structure
 
