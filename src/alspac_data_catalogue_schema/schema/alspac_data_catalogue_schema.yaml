@@ -59,7 +59,7 @@ classes:
     slots:
       - primary_investigator_orcid
       - primary_email
-      - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
+      #- named_alspac_data_set_collection_thing # I am not sure if this means all the data fields need to go in a datum or can just be ids.
       
 
   named_alspac_data_set:
@@ -155,7 +155,7 @@ slots:
     slot_uri: orcid:id
     range: uriorcurie
     description: the orcid id of the pi
-  named_alspac_data_set_collection:
+  named_alspac_data_set_collection_thing:
     #range:named_alspac_data_set_collections
     #multivalued: true
     #inlined: true
