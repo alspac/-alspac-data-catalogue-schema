@@ -83,7 +83,7 @@ classes:
       entries:
         range: named_alspac_data_set
         multivalued: true
-        inlined: true
+        inlined: false
 
   alspac_data_set_version:
     class_uri: dcat:Dataset
