@@ -31,8 +31,8 @@ prefixes:
   spdx: http://spdx.org/rdf/terms#
   time: http://www.w3.org/2006/time#
   vcard: http://www.w3.org/2006/vcard/ns#
-
-
+  ORCID: https://orcid.org/
+  
 default_prefix: alspac_data_catalogue_schema
 default_range: string
 default_curi_maps:
@@ -152,7 +152,7 @@ slots:
     slot_uri: schema:email
     description: The main email address to contact
   primary_investigator_orcid:
-    slot_uri: orcid:id
+    slot_uri: ORCID:id
     range: uriorcurie
     description: the orcid id of the pi
   named_alspac_data_set_collection:
