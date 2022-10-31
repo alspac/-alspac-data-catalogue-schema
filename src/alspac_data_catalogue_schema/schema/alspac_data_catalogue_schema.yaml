@@ -17,22 +17,22 @@ prefixes:
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
   dc: http://purl.org/dc/elements/1.1/
-  dcat: http://www.w3.org/ns/dcat#	
+  dcat: http://www.w3.org/ns/dcat#
   dcterms: http://purl.org/dc/terms/
   dctype: http://purl.org/dc/dcmitype/
   foaf: http://xmlns.com/foaf/0.1/
   locn: http://www.w3.org/ns/locn#
-  odrl: http://www.w3.org/ns/odrl/2/	
-  owl: http://www.w3.org/2002/07/owl#	
-  prov: http://www.w3.org/ns/prov#	
+  odrl: http://www.w3.org/ns/odrl/2/
+  owl: http://www.w3.org/2002/07/owl#
+  prov: http://www.w3.org/ns/prov#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   skos: http://www.w3.org/2004/02/skos/core#
   spdx: http://spdx.org/rdf/terms#
   time: http://www.w3.org/2006/time#
   vcard: http://www.w3.org/2006/vcard/ns#
-  http://www.w3.org/2001/XMLSchema#
-  
+
+
 default_prefix: alspac_data_catalogue_schema
 default_range: string
 default_curi_maps:
@@ -42,13 +42,13 @@ imports:
   - linkml:types
 
 classes:
-
   NamedThing:
     description: >-
       A generic grouping for any identifiable entity
     slots:
       - id
-      - name
+      - name:
+        slot_type: dcterms:title 
       - description
     class_uri: schema:Thing
 
@@ -73,7 +73,6 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
       - code_name
-        required: true
       - primary_investigator
       - keywords
       - has_version
@@ -133,10 +132,14 @@ classes:
     class_uri: dcat:Distribution
     is_a: NamedThing
     decription: >-
+      A dataset distribution has a loaction, file type and file size.
     slots:
       abstract_dataset_part:
       md5sum
-      filesize
+      filesize:
+        slot_uri: dcat:byteSize
+      filetype:
+        slot_uri: dcat:mediaType
       number_of_samples
       location_on_bc4
       location_on_bp
@@ -164,7 +167,7 @@ enums:
     permissible_values:
       ALIVE:
         description: the person is living
-        meaning: PATO:0001421 
+        meaning: PATO:0001421
       DEAD:
         description: the person is deceased
         meaning: PATO:0001422
