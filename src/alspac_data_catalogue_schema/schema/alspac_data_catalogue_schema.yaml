@@ -40,18 +40,16 @@ default_curi_maps:
 
 imports:
   - linkml:types
-
+  
 classes:
   NamedThing:
     description: >-
-      A generic grouping for any identifiable entity
+     A generic grouping for any identifiable entity
     slots:
-      - id
-      - name:
-        slot_type: dcterms:title 
-      - description
+     - id
+     - name 
+     - description
     class_uri: schema:Thing
-
 
   alspac_data_catalogue:
     class_uri: dcat:Catalog
@@ -59,12 +57,10 @@ classes:
     description: >-
       Represents an alspac data catalogue. That is a set of named alspac data sets.
     slots:
-      - primary_investigator
-      - keywords
+      - primary_investigator_orcid
       - primary_email
-      - authors
-      - named_alspac_data_setCollection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
-  
+      - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
+      
 
   named_alspac_data_set:
     class_uri: dcat:Dataset
@@ -73,17 +69,13 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
       - code_name
-      - primary_investigator
+      - primary_investigator_orcid
       - keywords
       - has_version
       - primary_email
       - authors
-      
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
-        
-  named_alspac_data_setCollection:
+
+  named_alspac_data_set_collection:
     tree_root: true
     description: >-
       A holder for named_alspac_data_set objects
@@ -102,12 +94,14 @@ classes:
       - version_number
       - version_date
       - keywords
-      - has_version
-      - is_version
+      - has_previous_version
+      - has_next_verion
+      - is_current_version
       - primary_email
       - authors
 
-   alspac_data_set_version_freeze:
+
+  alspac_data_set_version_freeze:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
@@ -115,12 +109,12 @@ classes:
     slots:
       - freeze_number
       - freeze_date
-      - is_version
+      - freeze_of_version
+      - freeze_dataset
       - primary_email
       - authors
 
-   
-   abstract_dataset_part:
+  abstract_dataset_part:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
@@ -128,21 +122,19 @@ classes:
     slots:
       - data_distribution
 
-   data_distribution:
+  data_distribution:
     class_uri: dcat:Distribution
     is_a: NamedThing
-    decription: >-
+    description: >-
       A dataset distribution has a loaction, file type and file size.
     slots:
-      abstract_dataset_part:
-      md5sum
-      filesize:
-        slot_uri: dcat:byteSize
-      filetype:
-        slot_uri: dcat:mediaType
-      number_of_samples
-      location_on_bc4
-      location_on_bp
+      - abstract_dataset_part
+      - md5sum
+      - filesize
+      - filetype
+      - number_of_samples
+      - location_on_bc4
+      - location_on_bp
 
 slots:
   id:
@@ -159,19 +151,36 @@ slots:
   primary_email:
     slot_uri: schema:email
     description: The main email address to contact
+  primary_investigator_orcid:
+    slot_uri: orcid:id
+    range: uriorcurie
+    description: the orcid id of the pi
+  named_alspac_data_set_collection:
+    #range:named_alspac_data_set_collections
+    #multivalued: true
+    #inlined: true
+  keywords:
+  code_name:
+    description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
+  authors:
+  has_version:
+  version_number:
+  version_date:
+  has_previous_version:
+  has_next_verion:
+  is_current_version:
+  freeze_number:
+  freeze_date:
+  freeze_of_version:
+  freeze_dataset:
+  data_distribution:
+  abstract_dataset_part:
+  md5sum:
+  filesize:
+    slot_uri: dcat:byteSize
+  filetype:
+    slot_uri: dcat:mediaType
+  number_of_samples:
+  location_on_bc4:
+  location_on_bp:
 
-
-    
-enums:
-  PersonStatus:
-    permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
