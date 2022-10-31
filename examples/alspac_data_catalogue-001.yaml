@@ -1,0 +1,7 @@
+# Example omics data catalogue object
+id: example:alspac_data_catalogue_001
+name: Omics Data Catalogue
+description: This catalogue is for all of the named alspac omics data sets
+primary_investigator_orcid: https://orcid.org/xxxx-xxxx-xxxx-xxxx
+primary_email: alspac-omics@bristol.ac.uk
+named_alspac_data_set_collection: test test2
