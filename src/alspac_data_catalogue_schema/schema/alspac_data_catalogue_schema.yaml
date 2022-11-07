@@ -32,6 +32,7 @@ prefixes:
   time: http://www.w3.org/2006/time#
   vcard: http://www.w3.org/2006/vcard/ns#
   ORCID: https://orcid.org/
+  doi: https://doi.org/
   
 default_prefix: alspac_data_catalogue_schema
 default_range: string
@@ -68,12 +69,13 @@ classes:
     description: >-
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
     slots:
-      - code_name
-      - primary_investigator_orcid
+      - primary_investigator_orcids
       - keywords
-      - has_version
+      - has_current_version
       - primary_email
-      - authors
+      - documentatio_authors_orcids
+      - main_publication
+      - publications
 
   named_alspac_data_set_collection:
     tree_root: true
@@ -91,14 +93,12 @@ classes:
     description: >-
       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
     slots:
-      - version_number
-      - version_date
-      - keywords
       - has_previous_version
       - has_next_verion
       - is_current_version
       - primary_email
       - authors
+      - has_parts
 
 
   alspac_data_set_version_freeze:
@@ -160,15 +160,20 @@ slots:
     #multivalued: true
     #inlined: true
   keywords:
+    description: A list of keywords.
+    multivalued: true
+    inlined: true
   code_name:
     description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
   authors:
-  has_version:
-  version_number:
-  version_date:
+  has_current_version:
+    slot_uri: dcat:hasCurrentVersion
+    range: uriorcurie
+    decription: The current version of this named alspac dataset
   has_previous_version:
   has_next_verion:
   is_current_version:
+  has_parts:
   freeze_number:
   freeze_date:
   freeze_of_version:
@@ -184,4 +189,7 @@ slots:
     description: The number of alspac participants in this dataset
   location_on_bc4:
   location_on_bp:
+  main_publication:
+    slot_uri: doi
+    description: A doi ref to the main publication describing this dataset.
 
