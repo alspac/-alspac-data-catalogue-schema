@@ -113,6 +113,7 @@ classes:
       - freeze_dataset
       - primary_email
       - authors
+      - git_tag
 
   abstract_dataset_part:
     class_uri: dcat:Dataset
