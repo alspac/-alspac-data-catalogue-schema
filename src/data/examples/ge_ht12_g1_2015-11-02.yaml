@@ -8,9 +8,71 @@ is_current_version: true
 has_previous_version: NA
 has_next_version: NA
 has_parts:
-  - alspacdcs:ge_ht12_g1_2015-11-02_bryosis
-  - alspacdcs:ge_ht12_g1_2015-11-02_molgenis
-  - alspacdcs:ge_ht12_g1_2015-11-02_raw
-  - alspacdcs:ge_ht12_g1_2015-11-02_id_map
+  - id:alspacdcs:ge_ht12_g1_2015-11-02_bryosis
+    name:
+    description:
+    data_distributions:
+    -id:
+    -name:data.RData
+    -description:
+    -md5sum:
+    -filesize:
+    -filetype: .RData
+    -number_of_participants: 931
+    -number_of_gene_expression_probe_values:48804
+  - id:alspacdcs:ge_ht12_g1_2015-11-02_molgenis
+      name:
+    description:
+    data_distributions:
+    -id:
+    -name:data.RData
+    -description:
+    -md5sum:
+    -filesize:
+    -filetype: .Rdata
+    -number_of_participants
+    -number_of_gene_expression_probe_values:
+  - id:alspacdcs:ge_ht12_g1_2015-11-02_raw
+      name:
+    description:
+    data_distributions:
+    -id:
+    -name:data.txt
+    -description:
+    -md5sum:39af1c2d21276a0a3c10222a9828c6f1
+    -filesize:1.1G
+    -filetype:.txt
+    -number_of_participants
+    -number_of_gene_expression_probe_values:
+
+    -id:
+    -name:data.txt.gz
+    -description:
+    -md5sum:9ef5acc742f7bece57e964bb341b5a9e
+    -filesize:450M
+    -filetype:.txt.gz
+    -number_of_participants
+    -number_of_gene_expression_probe_values:
+  - id:alspacdcs:ge_ht12_g1_2015-11-02_id_map
+    name:
+    description:
+    data_distributions:
+    -id:
+    -name:id_map.txt
+    -description:
+    -md5sum:2b91ff9a91f5bfe2b807ba638cc2916b
+    -filesize:31k
+    -filetype:.txt
+    -number_of_participants
+
+    -id:
+    -name:id_map2.txt
+    -description:
+    -md5sum:889022ba439c1baef05b9dd83b8db497
+    -filesize:62k
+    -filetype:.txt
+    -number_of_participants
+
+
 known_issues:
   issue_description: We do not have the original idat files that were used to call this data.
