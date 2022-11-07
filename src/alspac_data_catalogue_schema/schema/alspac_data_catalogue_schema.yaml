@@ -138,11 +138,11 @@ classes:
       - location_on_bc4
       - location_on_bp
 
-   known_issues:
-   slots:
-     -description:
-     -logged_by:
-     -date:
+#  known_issues:
+#   slots:
+#     -description:
+#     -logged_by:
+#     -date:
 
 slots:
   id:
