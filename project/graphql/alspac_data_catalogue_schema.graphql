@@ -3,7 +3,7 @@ type AbstractDatasetPart
     id: Uriorcurie!
     name: String
     description: String
-    dataDistribution: String
+    dataDistributions: String
   }
 
 type AlspacDataCatalogue
@@ -11,7 +11,7 @@ type AlspacDataCatalogue
     id: Uriorcurie!
     name: String
     description: String
-    primaryInvestigatorOrcid: Uriorcurie
+    primaryInvestigatorOrcids: Uriorcurie
     primaryEmail: String
     namedAlspacDataSetCollection: String
   }
@@ -21,14 +21,13 @@ type AlspacDataSetVersion
     id: Uriorcurie!
     name: String
     description: String
-    versionNumber: String
-    versionDate: String
-    keywords: String
-    hasPreviousVersion: String
-    hasNextVerion: String
+    hasPreviousVersion: Uriorcurie
+    hasNextVersion: Uriorcurie
     isCurrentVersion: String
     primaryEmail: String
     authors: String
+    hasParts: String
+    qcDescription: String
   }
 
 type AlspacDataSetVersionFreeze
@@ -42,6 +41,7 @@ type AlspacDataSetVersionFreeze
     freezeDataset: String
     primaryEmail: String
     authors: String
+    gitTag: String
   }
 
 type DataDistribution
@@ -53,7 +53,7 @@ type DataDistribution
     md5sum: String
     filesize: String
     filetype: String
-    numberOfSamples: String
+    numberOfParticipants: String
     locationOnBc4: String
     locationOnBp: String
   }
@@ -63,12 +63,13 @@ type NamedAlspacDataSet
     id: Uriorcurie!
     name: String
     description: String
-    codeName: String
-    primaryInvestigatorOrcid: Uriorcurie
-    keywords: String
-    hasVersion: String
+    primaryInvestigatorOrcids: Uriorcurie
+    keywords: [String]
+    hasCurrentVersion: Uriorcurie
     primaryEmail: String
-    authors: String
+    documentationAuthorsOrcids: Uriorcurie
+    mainPublication: String
+    publications: String
   }
 
 type NamedAlspacDataSetCollection

@@ -1,22 +1,23 @@
 {
-   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-10-31T11:53:15\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
+   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-11-07T20:34:02\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
    "@context": {
+      "ORCID": "https://orcid.org/",
       "PATO": {
          "@id": "http://purl.obolibrary.org/obo/PATO_",
          "@prefix": true
       },
-      "alspac_data_catalogue_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
+      "alspacdcs": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
       "biolink": "https://w3id.org/biolink/",
       "dc": "http://purl.org/dc/elements/1.1/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "dcterms": "http://purl.org/dc/terms/",
       "dctype": "http://purl.org/dc/dcmitype/",
+      "doi": "https://doi.org/",
       "example": "https://example.org/",
       "foaf": "http://xmlns.com/foaf/0.1/",
       "linkml": "https://w3id.org/linkml/",
       "locn": "http://www.w3.org/ns/locn#",
       "odrl": "http://www.w3.org/ns/odrl/2/",
-      "orcid": "http://example.org/UNKNOWN/orcid/",
       "owl": "http://www.w3.org/2002/07/owl#",
       "prov": "http://www.w3.org/ns/prov#",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -30,13 +31,30 @@
       "description": {
          "@id": "schema:description"
       },
+      "documentation_authors_orcids": {
+         "@type": "@id",
+         "@id": "ORCID:id"
+      },
       "filesize": {
          "@id": "dcat:byteSize"
       },
       "filetype": {
          "@id": "dcat:mediaType"
       },
+      "has_current_version": {
+         "@type": "@id",
+         "@id": "dcat:hasCurrentVersion"
+      },
+      "has_next_version": {
+         "@type": "@id"
+      },
+      "has_previous_version": {
+         "@type": "@id"
+      },
       "id": "@id",
+      "landing_page": {
+         "@id": "dcat:landingPage"
+      },
       "name": {
          "@id": "schema:name"
       },
@@ -46,9 +64,9 @@
       "primary_email": {
          "@id": "schema:email"
       },
-      "primary_investigator_orcid": {
+      "primary_investigator_orcids": {
          "@type": "@id",
-         "@id": "orcid:id"
+         "@id": "ORCID:id"
       },
       "AbstractDatasetPart": {
          "@id": "dcat:Dataset"
