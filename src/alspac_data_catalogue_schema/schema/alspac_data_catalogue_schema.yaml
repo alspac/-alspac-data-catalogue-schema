@@ -192,4 +192,7 @@ slots:
   main_publication:
     slot_uri: doi
     description: A doi ref to the main publication describing this dataset.
+  landing_page:
+    slot_uri: dcat:landingPage
+    decription: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
 
