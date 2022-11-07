@@ -2,8 +2,7 @@
 id: alspacdcs:gi_1000g_g0m_g1
 name: Genome-wide - 1000G imputed - G0 mothers + G1
 decription: Genome-wide array data imputed to the 1000 genomes reference panel for G0 mothers and G1 individuals
-code-name: gi_1000g_g0m_g1
-primary_investigator_orcid:
+primary_investigator_orcid: orcid: 0000-0002-7141-9189
 keywords:
 has_version:
 primary_email: alspac-omics@bristol.ac.uk
