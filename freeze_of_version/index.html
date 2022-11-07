@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -254,6 +254,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#applicable-classes" class="md-nav__link">
+    Applicable Classes
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
@@ -313,6 +320,21 @@
 <p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/freeze_of_version">alspacdcs:freeze_of_version</a></p>
 <!-- no inheritance hierarchy -->
 
+<h2 id="applicable-classes">Applicable Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
+<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
@@ -330,6 +352,8 @@
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 alias: freeze_of_version
+domain_of:
+- alspac_data_set_version_freeze
 range: string
 
 </code></pre>
