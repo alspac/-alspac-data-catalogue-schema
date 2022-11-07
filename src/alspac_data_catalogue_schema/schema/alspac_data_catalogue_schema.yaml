@@ -99,6 +99,7 @@ classes:
       - primary_email
       - authors
       - has_parts
+      - qc_description
 
 
   alspac_data_set_version_freeze:
@@ -176,10 +177,15 @@ slots:
   has_current_version:
     slot_uri: dcat:hasCurrentVersion
     range: uriorcurie
-    decription: The current version of this named alspac dataset
+    description: The current version of this named alspac dataset
   has_previous_version:
-  has_next_verion:
+    range: uriorcurie
+    description: The previous version of this named alspac dataset
+  has_next_version:
+    range: uriorcurie
+    description: The next version of this named alspac dataset
   is_current_version:
+    description: Is this the current version of a named alspac dataset
   has_parts:
   freeze_number:
   freeze_date:
@@ -195,7 +201,9 @@ slots:
   number_of_samples:
     description: The number of alspac participants in this dataset
   location_on_bc4:
+    description: The location of this file on bc4
   location_on_bp:
+    description: The location of this file on bc4
   main_publication:
     slot_uri: doi
     description: A doi ref to the main publication describing this dataset.
@@ -206,4 +214,5 @@ slots:
     description: The md5sum of the woc file used to make this freeze.
   git_tag:
     description: The git tag of the repo that made this freeze.
-
+  qc_description:
+    description: Some text to describe any quality control that has been performed.
