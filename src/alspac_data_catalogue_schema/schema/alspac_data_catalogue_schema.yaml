@@ -210,7 +210,7 @@ slots:
   location_on_bp:
     description: The location of this file on bc4
   main_publication:
-    slot_uri: doi
+    slot_uri: 
     description: A doi ref to the main publication describing this dataset.
   landing_page:
     slot_uri: dcat:landingPage
