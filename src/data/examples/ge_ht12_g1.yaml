@@ -1,0 +1,25 @@
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:ge_ht12_g1
+name: Gene expression - array - G1
+decription: Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals
+primary_investigator_orcids:
+  - orcid: 0000-0002-7141-9189 # Nic Timpson
+  - orcid: 0000-0003-0663-4621 # Dave Evans
+keywords:
+  - genomic
+  - expression
+  - genome-wide
+  - illumina
+  - transcription
+has_current_version: alspacdcs:ge_ht12_g1_2015-11-02
+versions:
+  -  alspacdcs:ge_ht12_g1_2015-11-02
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+   - orcid: 0000-0003-0663-4621 # Dave Evans
+   - orcid: 0000-0003-0920-1055 # Gibran Hemani
+main_publication: doi:10.1371/journal.pgen.1004461
+publications:
+  - doi:10.1371/journal.pgen.1004461
