@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -211,15 +211,16 @@
     class NamedAlspacDataSet
       NamedThing &lt;|-- NamedAlspacDataSet
 
-      NamedAlspacDataSet : authors
-      NamedAlspacDataSet : code_name
       NamedAlspacDataSet : description
-      NamedAlspacDataSet : has_version
+      NamedAlspacDataSet : documentation_authors_orcids
+      NamedAlspacDataSet : has_current_version
       NamedAlspacDataSet : id
       NamedAlspacDataSet : keywords
+      NamedAlspacDataSet : main_publication
       NamedAlspacDataSet : name
       NamedAlspacDataSet : primary_email
-      NamedAlspacDataSet : primary_investigator_orcid
+      NamedAlspacDataSet : primary_investigator_orcids
+      NamedAlspacDataSet : publications
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -241,27 +242,21 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../code_name/">code_name</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The alspac codename for a named dataset. For example gi_1000g_g0m_g1</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../primary_investigator_orcid/">primary_investigator_orcid</a></td>
+<td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>the orcid id of the pi</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../keywords/">keywords</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A list of keywords.</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../has_version/">has_version</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td><a href="../has_current_version/">has_current_version</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>The current version of this named alspac dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -271,9 +266,21 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../authors/">authors</a></td>
+<td><a href="../documentation_authors_orcids/">documentation_authors_orcids</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>the orcid id of the documentation authors</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../main_publication/">main_publication</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>A doi ref to the main publication describing this dataset.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../publications/">publications</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A list of publications dois.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -350,12 +357,13 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- code_name
-- primary_investigator_orcid
+- primary_investigator_orcids
 - keywords
-- has_version
+- has_current_version
 - primary_email
-- authors
+- documentation_authors_orcids
+- main_publication
+- publications
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -369,23 +377,13 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  code_name:
-    name: code_name
-    description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: code_name
-    owner: named_alspac_data_set
-    domain_of:
-    - named_alspac_data_set
-    range: string
-  primary_investigator_orcid:
-    name: primary_investigator_orcid
+  primary_investigator_orcids:
+    name: primary_investigator_orcids
     description: the orcid id of the pi
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    slot_uri: orcid:id
-    alias: primary_investigator_orcid
+    slot_uri: ORCID:id
+    alias: primary_investigator_orcids
     owner: named_alspac_data_set
     domain_of:
     - alspac_data_catalogue
@@ -393,23 +391,27 @@ attributes:
     range: uriorcurie
   keywords:
     name: keywords
+    description: A list of keywords.
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: keywords
     owner: named_alspac_data_set
     domain_of:
     - named_alspac_data_set
-    - alspac_data_set_version
     range: string
-  has_version:
-    name: has_version
+    inlined: true
+  has_current_version:
+    name: has_current_version
+    description: The current version of this named alspac dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: has_version
+    slot_uri: dcat:hasCurrentVersion
+    alias: has_current_version
     owner: named_alspac_data_set
     domain_of:
     - named_alspac_data_set
-    range: string
+    range: uriorcurie
   primary_email:
     name: primary_email
     description: The main email address to contact
@@ -424,16 +426,37 @@ attributes:
     - alspac_data_set_version
     - alspac_data_set_version_freeze
     range: string
-  authors:
-    name: authors
+  documentation_authors_orcids:
+    name: documentation_authors_orcids
+    description: the orcid id of the documentation authors
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: authors
+    slot_uri: ORCID:id
+    alias: documentation_authors_orcids
     owner: named_alspac_data_set
     domain_of:
     - named_alspac_data_set
-    - alspac_data_set_version
-    - alspac_data_set_version_freeze
+    range: uriorcurie
+  main_publication:
+    name: main_publication
+    description: A doi ref to the main publication describing this dataset.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: doi
+    alias: main_publication
+    owner: named_alspac_data_set
+    domain_of:
+    - named_alspac_data_set
+    range: string
+  publications:
+    name: publications
+    description: A list of publications dois.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: publications
+    owner: named_alspac_data_set
+    domain_of:
+    - named_alspac_data_set
     range: string
   id:
     name: id

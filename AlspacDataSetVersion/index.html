@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -208,15 +208,14 @@
 
       AlspacDataSetVersion : authors
       AlspacDataSetVersion : description
-      AlspacDataSetVersion : has_next_verion
+      AlspacDataSetVersion : has_next_version
+      AlspacDataSetVersion : has_parts
       AlspacDataSetVersion : has_previous_version
       AlspacDataSetVersion : id
       AlspacDataSetVersion : is_current_version
-      AlspacDataSetVersion : keywords
       AlspacDataSetVersion : name
       AlspacDataSetVersion : primary_email
-      AlspacDataSetVersion : version_date
-      AlspacDataSetVersion : version_number
+      AlspacDataSetVersion : qc_description
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -238,39 +237,21 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../version_number/">version_number</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../version_date/">version_date</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../keywords/">keywords</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../has_previous_version/">has_previous_version</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>The previous version of this named alspac dataset</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../has_next_verion/">has_next_verion</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td><a href="../has_next_version/">has_next_version</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>The next version of this named alspac dataset</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../is_current_version/">is_current_version</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>Is this the current version of a named alspac dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -283,6 +264,18 @@
 <td><a href="../authors/">authors</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>None</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_parts/">has_parts</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../qc_description/">qc_description</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>Some text to describe any quality control that has been performed.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -340,14 +333,13 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- version_number
-- version_date
-- keywords
 - has_previous_version
-- has_next_verion
+- has_next_version
 - is_current_version
 - primary_email
 - authors
+- has_parts
+- qc_description
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -361,54 +353,29 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  version_number:
-    name: version_number
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: version_number
-    owner: alspac_data_set_version
-    domain_of:
-    - alspac_data_set_version
-    range: string
-  version_date:
-    name: version_date
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: version_date
-    owner: alspac_data_set_version
-    domain_of:
-    - alspac_data_set_version
-    range: string
-  keywords:
-    name: keywords
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: keywords
-    owner: alspac_data_set_version
-    domain_of:
-    - named_alspac_data_set
-    - alspac_data_set_version
-    range: string
   has_previous_version:
     name: has_previous_version
+    description: The previous version of this named alspac dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: has_previous_version
     owner: alspac_data_set_version
     domain_of:
     - alspac_data_set_version
-    range: string
-  has_next_verion:
-    name: has_next_verion
+    range: uriorcurie
+  has_next_version:
+    name: has_next_version
+    description: The next version of this named alspac dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: has_next_verion
+    alias: has_next_version
     owner: alspac_data_set_version
     domain_of:
     - alspac_data_set_version
-    range: string
+    range: uriorcurie
   is_current_version:
     name: is_current_version
+    description: Is this the current version of a named alspac dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: is_current_version
@@ -437,9 +404,27 @@ attributes:
     alias: authors
     owner: alspac_data_set_version
     domain_of:
-    - named_alspac_data_set
     - alspac_data_set_version
     - alspac_data_set_version_freeze
+    range: string
+  has_parts:
+    name: has_parts
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: has_parts
+    owner: alspac_data_set_version
+    domain_of:
+    - alspac_data_set_version
+    range: string
+  qc_description:
+    name: qc_description
+    description: Some text to describe any quality control that has been performed.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: qc_description
+    owner: alspac_data_set_version
+    domain_of:
+    - alspac_data_set_version
     range: string
   id:
     name: id

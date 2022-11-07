@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -452,8 +452,16 @@ Name: alspac-data-catalogue-schema</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="data_distributions/">data_distributions</a></td>
+<td>A list of data distributions for this abstract dataset</td>
+</tr>
+<tr>
 <td><a href="description/">description</a></td>
 <td>A human-readable description for a thing</td>
+</tr>
+<tr>
+<td><a href="documentation_authors_orcids/">documentation_authors_orcids</a></td>
+<td>the orcid id of the documentation authors</td>
 </tr>
 <tr>
 <td><a href="entries/">entries</a></td>
@@ -484,16 +492,24 @@ Name: alspac-data-catalogue-schema</p>
 <td></td>
 </tr>
 <tr>
-<td><a href="has_next_verion/">has_next_verion</a></td>
+<td><a href="git_tag/">git_tag</a></td>
+<td>The git tag of the repo that made this freeze</td>
+</tr>
+<tr>
+<td><a href="has_current_version/">has_current_version</a></td>
+<td>The current version of this named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="has_next_version/">has_next_version</a></td>
+<td>The next version of this named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="has_parts/">has_parts</a></td>
 <td></td>
 </tr>
 <tr>
 <td><a href="has_previous_version/">has_previous_version</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="has_version/">has_version</a></td>
-<td></td>
+<td>The previous version of this named alspac dataset</td>
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
@@ -501,19 +517,27 @@ Name: alspac-data-catalogue-schema</p>
 </tr>
 <tr>
 <td><a href="is_current_version/">is_current_version</a></td>
-<td></td>
+<td>Is this the current version of a named alspac dataset</td>
 </tr>
 <tr>
 <td><a href="keywords/">keywords</a></td>
-<td></td>
+<td>A list of keywords</td>
+</tr>
+<tr>
+<td><a href="landing_page/">landing_page</a></td>
+<td>A Web page that can be navigated to in a Web browser to gain access to the ca...</td>
 </tr>
 <tr>
 <td><a href="location_on_bc4/">location_on_bc4</a></td>
-<td></td>
+<td>The location of this file on bc4</td>
 </tr>
 <tr>
 <td><a href="location_on_bp/">location_on_bp</a></td>
-<td></td>
+<td>The location of this file on bc4</td>
+</tr>
+<tr>
+<td><a href="main_publication/">main_publication</a></td>
+<td>A doi ref to the main publication describing this dataset</td>
 </tr>
 <tr>
 <td><a href="md5sum/">md5sum</a></td>
@@ -528,6 +552,10 @@ Name: alspac-data-catalogue-schema</p>
 <td></td>
 </tr>
 <tr>
+<td><a href="number_of_participants/">number_of_participants</a></td>
+<td>Number of participants in this file</td>
+</tr>
+<tr>
 <td><a href="number_of_samples/">number_of_samples</a></td>
 <td>The number of alspac participants in this dataset</td>
 </tr>
@@ -536,16 +564,20 @@ Name: alspac-data-catalogue-schema</p>
 <td>The main email address to contact</td>
 </tr>
 <tr>
-<td><a href="primary_investigator_orcid/">primary_investigator_orcid</a></td>
+<td><a href="primary_investigator_orcids/">primary_investigator_orcids</a></td>
 <td>the orcid id of the pi</td>
 </tr>
 <tr>
-<td><a href="version_date/">version_date</a></td>
-<td></td>
+<td><a href="publications/">publications</a></td>
+<td>A list of publications dois</td>
 </tr>
 <tr>
-<td><a href="version_number/">version_number</a></td>
-<td></td>
+<td><a href="qc_description/">qc_description</a></td>
+<td>Some text to describe any quality control that has been performed</td>
+</tr>
+<tr>
+<td><a href="woc_file_md5sum/">woc_file_md5sum</a></td>
+<td>The md5sum of the woc file used to make this freeze</td>
 </tr>
 </tbody>
 </table>
@@ -667,27 +699,6 @@ Name: alspac-data-catalogue-schema</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-      
-        
-        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              About
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

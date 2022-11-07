@@ -46,27 +46,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/Person/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/PersonStatus/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/about/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/abstract_dataset_part/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/age_in_years/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -81,11 +61,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/birth_date/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/code_name/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
@@ -96,7 +71,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/data_distributions/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/description/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/documentation_authors_orcids/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -136,17 +121,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_next_verion/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/git_tag/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_current_version/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_next_version/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_parts/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_previous_version/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_version/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -166,12 +161,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/landing_page/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/location_on_bc4/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/location_on_bp/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/main_publication/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -186,12 +191,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/namedAlspacDataSetCollection__entries/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/named_alspac_data_set_collection/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/named_alspac_data_set_collection/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/number_of_participants/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -201,37 +206,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/person__age/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/person__aliases/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/person__full_name/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/person__id/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/person__phone/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/primary_email/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/primary_investigator_orcid/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/primary_investigator_orcids/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/publications/</loc>
+         <lastmod>2022-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/qc_description/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -241,92 +231,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/version_date/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/version_number/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/vital_status/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Boolean/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Date/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/DateOrDatetime/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Datetime/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Decimal/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Double/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Float/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Integer/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Ncname/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Nodeidentifier/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Objectidentifier/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/String/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Time/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Uri/</loc>
-         <lastmod>2022-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/Uriorcurie/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/woc_file_md5sum/</loc>
          <lastmod>2022-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
