@@ -34,7 +34,7 @@ prefixes:
   ORCID: https://orcid.org/
   doi: https://doi.org/
   
-default_prefix: alspac_data_catalogue_schema
+default_prefix: alspacdcs
 default_range: string
 default_curi_maps:
   - semweb_context
