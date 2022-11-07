@@ -94,7 +94,7 @@ classes:
       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
     slots:
       - has_previous_version
-      - has_next_verion
+      - has_next_version
       - is_current_version
       - primary_email
       - authors
@@ -221,3 +221,9 @@ slots:
     description: The git tag of the repo that made this freeze.
   qc_description:
     description: Some text to describe any quality control that has been performed.
+  publications:
+    description: A list of publications dois.
+  data_distributions:
+    description: A list of data distributions for this abstract dataset
+  number_of_participants:
+    description: Number of participants in this file
