@@ -3,8 +3,6 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema: <http://schema.org/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX orcid: <http://example.org/UNKNOWN/orcid/>
 
 
 linkml:String xsd:string
@@ -37,100 +35,12 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<AbstractDatasetPart> CLOSED {
-    (  $<AbstractDatasetPart_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          <data_distribution> @linkml:String ?
+<NamedThing> CLOSED {
+    (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
+          schema:description @linkml:String ?
        ) ;
-       rdf:type [ dcat:Dataset ]
+       rdf:type [ schema:Thing ]
     )
 }
-
-<AlspacDataCatalogue> CLOSED {
-    (  $<AlspacDataCatalogue_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          orcid:id @linkml:Uriorcurie ? ;
-          schema:email @linkml:String ? ;
-          <named_alspac_data_set_collection> @linkml:String ?
-       ) ;
-       rdf:type [ dcat:Catalog ]
-    )
-}
-
-<AlspacDataSetVersion> CLOSED {
-    (  $<AlspacDataSetVersion_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          <version_number> @linkml:String ? ;
-          <version_date> @linkml:String ? ;
-          <keywords> @linkml:String ? ;
-          <has_previous_version> @linkml:String ? ;
-          <has_next_verion> @linkml:String ? ;
-          <is_current_version> @linkml:String ? ;
-          schema:email @linkml:String ? ;
-          <authors> @linkml:String ?
-       ) ;
-       rdf:type [ dcat:Dataset ]
-    )
-}
-
-<AlspacDataSetVersionFreeze> CLOSED {
-    (  $<AlspacDataSetVersionFreeze_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          <freeze_number> @linkml:String ? ;
-          <freeze_date> @linkml:String ? ;
-          <freeze_of_version> @linkml:String ? ;
-          <freeze_dataset> @linkml:String ? ;
-          schema:email @linkml:String ? ;
-          <authors> @linkml:String ?
-       ) ;
-       rdf:type [ dcat:Dataset ]
-    )
-}
-
-<DataDistribution> CLOSED {
-    (  $<DataDistribution_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          <abstract_dataset_part> @linkml:String ? ;
-          <md5sum> @linkml:String ? ;
-          dcat:byteSize @linkml:String ? ;
-          dcat:mediaType @linkml:String ? ;
-          <number_of_samples> @linkml:String ? ;
-          <location_on_bc4> @linkml:String ? ;
-          <location_on_bp> @linkml:String ?
-       ) ;
-       rdf:type [ dcat:Distribution ]
-    )
-}
-
-<NamedAlspacDataSet> CLOSED {
-    (  $<NamedAlspacDataSet_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema:Thing ] ? ;
-          <code_name> @linkml:String ? ;
-          orcid:id @linkml:Uriorcurie ? ;
-          <keywords> @linkml:String ? ;
-          <has_version> @linkml:String ? ;
-          schema:email @linkml:String ? ;
-          <authors> @linkml:String ?
-       ) ;
-       rdf:type [ dcat:Dataset ]
-    )
-}
-
-<NamedAlspacDataSetCollection> CLOSED {
-    (  $<NamedAlspacDataSetCollection_tes> <entries> @<NamedAlspacDataSet> * ;
-       rdf:type [ <NamedAlspacDataSetCollection> ] ?
-    )
-}
-
-<NamedThing>  (
-    CLOSED {
-       (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
-             schema:description @linkml:String ?
-          ) ;
-          rdf:type [ schema:Thing ]
-       )
-    } OR @<AbstractDatasetPart> OR @<AlspacDataCatalogue> OR @<AlspacDataSetVersion> OR @<AlspacDataSetVersionFreeze> OR
-    @<DataDistribution> OR @<NamedAlspacDataSet>
-)
 
 
