@@ -20,6 +20,7 @@ primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about 
 documentation_authors_orcids:
    - orcid: 0000-0003-0663-4621 # Dave Evans
    - orcid: 0000-0003-0920-1055 # Gibran Hemani
+   - orcid: 0000-0002-4064-3794 # Sam Neaves
 main_publication: doi:10.1371/journal.pgen.1004461
 publications:
   - doi:10.1371/journal.pgen.1004461
