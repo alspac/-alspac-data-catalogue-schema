@@ -239,25 +239,25 @@
 <tr>
 <td><a href="../freeze_number/">freeze_number</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>What number freeze is this?</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../freeze_date/">freeze_date</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>When was this freeze made?</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../freeze_of_version/">freeze_of_version</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>What version of a dataset is this freeze of?</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../freeze_dataset/">freeze_dataset</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>What dataset is this a freeze of?</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -355,6 +355,7 @@ is_a: NamedThing
 attributes:
   freeze_number:
     name: freeze_number
+    description: What number freeze is this?
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: freeze_number
@@ -364,6 +365,7 @@ attributes:
     range: string
   freeze_date:
     name: freeze_date
+    description: When was this freeze made?
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: freeze_date
@@ -373,6 +375,7 @@ attributes:
     range: string
   freeze_of_version:
     name: freeze_of_version
+    description: What version of a dataset is this freeze of?
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: freeze_of_version
@@ -382,6 +385,7 @@ attributes:
     range: string
   freeze_dataset:
     name: freeze_dataset
+    description: What dataset is this a freeze of?
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: freeze_dataset
