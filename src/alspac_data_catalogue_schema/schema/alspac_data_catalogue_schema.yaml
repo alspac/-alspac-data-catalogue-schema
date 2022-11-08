@@ -192,9 +192,13 @@ slots:
     description: Is this the current version of a named alspac dataset
   has_parts:
   freeze_number:
+    description: What number freeze is this?
   freeze_date:
+    description: When was this freeze made?
   freeze_of_version:
+    description: What version of a dataset is this freeze of?
   freeze_dataset:
+    description: What dataset is this a freeze of?
   data_distribution:
   abstract_dataset_part:
   md5sum:
