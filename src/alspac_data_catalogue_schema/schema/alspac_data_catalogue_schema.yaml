@@ -97,7 +97,7 @@ classes:
       - has_next_version
       - is_current_version
       - primary_email
-      - authors
+      - version_authors
       - has_parts
       - qc_description
 
@@ -234,5 +234,12 @@ slots:
     description: A list of publications dois
   data_distributions:
     description: A list of data distributions for this abstract dataset
+    multivalued: true
+    inlined: false
   number_of_participants:
     description: Number of participants in this file
+  version_authors:
+    description: A list of orcids for the authors of the version
+    multivalued: true
+    inlined: false
+  
