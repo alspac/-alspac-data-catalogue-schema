@@ -164,25 +164,25 @@ slots:
     range: uriorcurie
     description: a list of the orcid ids of the pi
     multivalued: true
-    inlined:false
+    inlined: false
   documentation_authors_orcids:
     slot_uri: ORCID:id
     range: uriorcurie
     description: a list of the orcid ids of the documentation authors
     multivalued: true
-    inlined:false
+    inlined: false
   named_alspac_data_set_collection:
-    range:uriorcurie
+    range: uriorcurie
     multivalued: true
     description: A list of named alspac data sets
     inlined: false
   keywords:
+    range:
     description: A list of keywords.
     multivalued: true
-    inlined: true
+    inlined: false
   code_name:
     description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
-  authors:
   has_current_version:
     slot_uri: dcat:hasCurrentVersion
     range: uriorcurie
