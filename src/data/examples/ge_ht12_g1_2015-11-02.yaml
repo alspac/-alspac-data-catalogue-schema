@@ -116,5 +116,5 @@ has_parts:
 
 known_issues:
   - issue_description: We do not have the original idat files that were used to call this data.
-  - logged_by:
-  - logged_date
+  - logged_by: Gibran Hermani
+  - logged_date: NA
