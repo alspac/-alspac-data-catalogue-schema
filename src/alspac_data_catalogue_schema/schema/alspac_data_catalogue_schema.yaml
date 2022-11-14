@@ -97,7 +97,7 @@ classes:
       - has_next_version
       - is_current_version
       - primary_email
-      - version_authors
+      - authors
       - has_parts
       - qc_description
 
@@ -196,6 +196,9 @@ slots:
   is_current_version:
     description: Is this the current version of a named alspac dataset
   has_parts:
+    #range: uriorcurie
+    multivalued: true
+    inlined: true
   freeze_number:
     description: What number freeze is this?
   freeze_date:
@@ -238,8 +241,8 @@ slots:
     inlined: false
   number_of_participants:
     description: Number of participants in this file
-  version_authors:
-    description: A list of orcids for the authors of the version
+  authors:
+    description: A list of orcids for the authors of the item
     multivalued: true
     inlined: false
   
