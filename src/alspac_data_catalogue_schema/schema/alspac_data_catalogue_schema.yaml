@@ -138,12 +138,12 @@ classes:
       - number_of_participants
       - location_on_bc4
       - location_on_bp
-#
-#  known_issues:
-#   slots:
-#     -description:
-#     -logged_by:
-#     -date:
+
+  known_issue:
+   slots:
+     -issue_ description:
+     -logged_by:
+     -logged_date:
 
 slots:
   id:
