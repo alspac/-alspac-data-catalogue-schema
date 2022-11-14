@@ -100,6 +100,7 @@ classes:
       - authors
       - has_parts
       - qc_description
+      - known_issue_container
 
 
   alspac_data_set_version_freeze:
