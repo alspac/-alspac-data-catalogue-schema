@@ -124,6 +124,7 @@ classes:
       Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
     slots:
       - data_distributions
+      - part_of
 
   data_distribution:
     class_uri: dcat:Distribution
@@ -211,6 +212,7 @@ slots:
     #range: uriorcurie
     multivalued: true
     inlined: true
+    inverse: part_of
   freeze_number:
     description: What number freeze is this?
   freeze_date:
@@ -221,6 +223,7 @@ slots:
     description: What dataset is this a freeze of?
   data_distribution:
   abstract_dataset_part:
+  part_of:
   md5sum:
     description: What is the md5sum of the file in this distribution?
   filesize:
@@ -257,4 +260,5 @@ slots:
     description: A list of orcids for the authors of the item
     multivalued: true
     inlined: false
+  
   
