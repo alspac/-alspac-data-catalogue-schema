@@ -139,9 +139,20 @@ classes:
       - location_on_bc4
       - location_on_bp
 
+
+  known_issues:
+    tree_root: true
+    description: >-
+      A holder for known issues
+    attributes:
+      entries:
+        range: alspacdcs:known_issue
+        multivalued: true
+        inlined: true
+
   known_issue:
    slots:
-     -issue_ description:
+     -issue_description:
      -logged_by:
      -logged_date:
 
