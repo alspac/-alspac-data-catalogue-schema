@@ -51,7 +51,7 @@ has_parts:
     name: Broyosis data
     description: The set of data which was produced by the bryosis method for the 2015-11-02 release of ge_ht12_g1.
     data_distributions:
-    -id:
+    -id: d171e08157db6b84a6a4939f5da2ba78_data.RData
     -name: data.RData
     -description: This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1.
     -md5sum: d171e08157db6b84a6a4939f5da2ba78
@@ -63,7 +63,7 @@ has_parts:
     name: Molgeis data
     description: The set of data which was produced by the molgenis method for the 2015-11-02 release of ge_ht12_g1.
     data_distributions:
-    -id:
+    -id:b515c9ed69ec01eed3a31e0d132c552c_data.RData
     -name: data.RData
     -description:
     -md5sum: b515c9ed69ec01eed3a31e0d132c552c
@@ -75,7 +75,7 @@ has_parts:
     name:
     description:
     data_distributions:
-    -id:
+    -id: 39af1c2d21276a0a3c10222a9828c6f1_data.txt
     -name: data.txt
     -description:
     -md5sum: 39af1c2d21276a0a3c10222a9828c6f1
@@ -84,7 +84,7 @@ has_parts:
     -number_of_participants:
     -number_of_gene_expression_probe_values:
 
-    -id:
+    -id: 9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz
     -name: data.txt.gz
     -description:
     -md5sum: 9ef5acc742f7bece57e964bb341b5a9e
@@ -97,7 +97,7 @@ has_parts:
     name:
     description:
     data_distributions:
-    -id:
+    -id: 2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt
     -name: id_map.txt
     -description:
     -md5sum: 2b91ff9a91f5bfe2b807ba638cc2916b
@@ -105,7 +105,7 @@ has_parts:
     -filetype: .txt
     -number_of_participants
 
-    -id:
+    -id: 889022ba439c1baef05b9dd83b8db497_id_map2.txt
     -name: id_map2.txt
     -description:
     -md5sum: 889022ba439c1baef05b9dd83b8db497
@@ -115,4 +115,6 @@ has_parts:
 
 
 known_issues:
-  issue_description: We do not have the original idat files that were used to call this data.
+  - issue_description: We do not have the original idat files that were used to call this data.
+  - logged_by:
+  - logged_date
