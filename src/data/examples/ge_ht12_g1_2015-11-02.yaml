@@ -47,68 +47,68 @@ is_current_version: true
 has_previous_version: NA
 has_next_version: NA
 has_parts:
-  - id:alspacdcs:ge_ht12_g1_2015-11-02_bryosis
-    name:Broyosis data
+  - id:alspacdcs: ge_ht12_g1_2015-11-02_bryosis
+    name: Broyosis data
     description: The set of data which was produced by the bryosis method for the 2015-11-02 release of ge_ht12_g1.
     data_distributions:
     -id:
-    -name:data.RData
+    -name: data.RData
     -description: This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1.
-    -md5sum:d171e08157db6b84a6a4939f5da2ba78
+    -md5sum: d171e08157db6b84a6a4939f5da2ba78
     -filesize: 322M
     -filetype: .RData
     -number_of_participants: 931
     -number_of_gene_expression_probe_values:48804
-  - id:alspacdcs:ge_ht12_g1_2015-11-02_molgenis
+  - id:alspacdcs: ge_ht12_g1_2015-11-02_molgenis
     name: Molgeis data
     description: The set of data which was produced by the molgenis method for the 2015-11-02 release of ge_ht12_g1.
     data_distributions:
     -id:
-    -name:data.RData
+    -name: data.RData
     -description:
-    -md5sum:b515c9ed69ec01eed3a31e0d132c552c
+    -md5sum: b515c9ed69ec01eed3a31e0d132c552c
     -filesize: 314M
     -filetype: .Rdata
-    -number_of_participants
+    -number_of_participants:
     -number_of_gene_expression_probe_values:
-  - id:alspacdcs:ge_ht12_g1_2015-11-02_raw
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_raw
     name:
     description:
     data_distributions:
     -id:
-    -name:data.txt
+    -name: data.txt
     -description:
-    -md5sum:39af1c2d21276a0a3c10222a9828c6f1
-    -filesize:1.1G
-    -filetype:.txt
-    -number_of_participants
+    -md5sum: 39af1c2d21276a0a3c10222a9828c6f1
+    -filesize: 1.1G
+    -filetype: .txt
+    -number_of_participants:
     -number_of_gene_expression_probe_values:
 
     -id:
-    -name:data.txt.gz
+    -name: data.txt.gz
     -description:
-    -md5sum:9ef5acc742f7bece57e964bb341b5a9e
-    -filesize:450M
-    -filetype:.txt.gz
-    -number_of_participants
+    -md5sum: 9ef5acc742f7bece57e964bb341b5a9e
+    -filesize: 450M
+    -filetype: .txt.gz
+    -number_of_participants:
     -number_of_gene_expression_probe_values:
     
-  - id:alspacdcs:ge_ht12_g1_2015-11-02_id_map
+  - id:alspacdcs: ge_ht12_g1_2015-11-02_id_map
     name:
     description:
     data_distributions:
     -id:
-    -name:id_map.txt
+    -name: id_map.txt
     -description:
-    -md5sum:2b91ff9a91f5bfe2b807ba638cc2916b
-    -filesize:31k
-    -filetype:.txt
+    -md5sum: 2b91ff9a91f5bfe2b807ba638cc2916b
+    -filesize: 31k
+    -filetype: .txt
     -number_of_participants
 
     -id:
-    -name:id_map2.txt
+    -name: id_map2.txt
     -description:
-    -md5sum:889022ba439c1baef05b9dd83b8db497
+    -md5sum: 889022ba439c1baef05b9dd83b8db497
     -filesize:62k
     -filetype:.txt
     -number_of_participants
