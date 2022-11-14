@@ -83,7 +83,7 @@ classes:
       A holder for named_alspac_data_set objects
     attributes:
       entries:
-        #range: named_alspac_data_set
+        range: alspacdcs:named_alspac_data_set
         multivalued: true
         inlined: false
 
