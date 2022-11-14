@@ -5,8 +5,9 @@ id: alspacdcs:ge_ht12_g1_2015-11-02
 name: Gene expression - array - G1 release version 2015-11-02
 description: >
   This is the first version of the Gene expression - array - G1 dataset released by ALSPAC.
+  
 qc_description:>
-  There are two different version of QC available in this release, one performed by David Evans for the
+  There are two different types of QC'd data available in this version, one performed by David Evans for the
   Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping
   meta analysis.
 
