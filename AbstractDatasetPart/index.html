@@ -223,7 +223,7 @@
 <tbody>
 <tr>
 <td><a href="../data_distributions/">data_distributions</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A list of data distributions for this abstract dataset</td>
 <td>direct</td>
 </tr>
@@ -299,11 +299,13 @@ attributes:
     description: A list of data distributions for this abstract dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: data_distributions
     owner: abstract_dataset_part
     domain_of:
     - abstract_dataset_part
     range: string
+    inlined: false
   id:
     name: id
     description: A unique identifier for a thing

@@ -262,13 +262,13 @@
 </tr>
 <tr>
 <td><a href="../authors/">authors</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A list of orcids for the authors of the item</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>None</td>
 <td>direct</td>
 </tr>
@@ -399,23 +399,28 @@ attributes:
     range: string
   authors:
     name: authors
+    description: A list of orcids for the authors of the item
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: authors
     owner: alspac_data_set_version
     domain_of:
     - alspac_data_set_version
     - alspac_data_set_version_freeze
     range: string
+    inlined: false
   has_parts:
     name: has_parts
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: has_parts
     owner: alspac_data_set_version
     domain_of:
     - alspac_data_set_version
     range: string
+    inlined: true
   qc_description:
     name: qc_description
     description: Some text to describe any quality control that has been performed.
