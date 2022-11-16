@@ -58,7 +58,7 @@ classes:
     description: >-
       Represents an alspac data catalogue. That is a set of named alspac data sets.
     slots:
-      - primary_investigator_orcids
+      - primary_investigator_orcid
       - primary_email
  #     - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
       
