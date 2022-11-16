@@ -183,7 +183,7 @@ slots:
     multivalued: true
     inlined: false
   named_alspac_data_set_collection:
-    range: uriorcurie
+    #range: uriorcurie
     multivalued: true
     description: A list of named alspac data sets curies
     inlined: false
