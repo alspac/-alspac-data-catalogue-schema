@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:schema="http://schema.org/"
+         xmlns:ns0="https://orcid.org/"
+         xmlns:ns1="https://w3id.org/alspac/alspac-data-catalogue-schema/">
+
+  <dcat:Catalog rdf:about="https://example.org/alspac_data_catalogue_001">
+    <schema:description>This catalogue is for all of the named alspac omics data sets</schema:description>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <schema:name>Omics Data Catalogue</schema:name>
+    <ns0:id rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/xxxx-xxxx-xxxx-xxxx</ns0:id>
+    <ns1:named_alspac_data_set_collection>['alspac-data-catalogue-schema:named_alspac_data_set-001', 'alspac-data-catalogue-schema:named_alspac_data_set-002', 'alspac-data-catalogue-schema:named_alspac_data_set-003']</ns1:named_alspac_data_set_collection>
+  </dcat:Catalog>
+
+</rdf:RDF>
