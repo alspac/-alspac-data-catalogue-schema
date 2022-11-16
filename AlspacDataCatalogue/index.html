@@ -211,7 +211,7 @@
       AlspacDataCatalogue : name
       AlspacDataCatalogue : named_alspac_data_set_collection
       AlspacDataCatalogue : primary_email
-      AlspacDataCatalogue : primary_investigator_orcid
+      AlspacDataCatalogue : primary_investigator_orcids
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -233,9 +233,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../primary_investigator_orcid/">primary_investigator_orcid</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>The orcid id of the pi</td>
+<td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>The orcid ids of the pis</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -305,7 +305,7 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- primary_investigator_orcid
+- primary_investigator_orcids
 - primary_email
 - named_alspac_data_set_collection
 class_uri: dcat:Catalog
@@ -321,17 +321,19 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  primary_investigator_orcid:
-    name: primary_investigator_orcid
-    description: The orcid id of the pi
+  primary_investigator_orcids:
+    name: primary_investigator_orcids
+    description: The orcid ids of the pis
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     slot_uri: ORCID:id
-    alias: primary_investigator_orcid
+    multivalued: true
+    alias: primary_investigator_orcids
     owner: AlspacDataCatalogue
     domain_of:
     - AlspacDataCatalogue
     range: uriorcurie
+    inlined: false
   primary_email:
     name: primary_email
     description: The main email address to contact
