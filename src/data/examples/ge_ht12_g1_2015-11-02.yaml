@@ -6,7 +6,7 @@ name: Gene expression - array - G1 release version 2015-11-02
 description: >
   This is the first version of the Gene expression - array - G1 dataset released by ALSPAC.
   
-qc_description:>
+qc_description: >-
   There are two different types of QC'd data available in this version, one performed by David Evans for the
   Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping
   meta analysis.
@@ -19,7 +19,7 @@ qc_description:>
   
   Number of probes: 48804
 
-  Bryois:LCL's from unrelated individuals were grown under identical conditions and cells
+  Bryois: LCL's from unrelated individuals were grown under identical conditions and cells
   frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was
   amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion).
   Expression profiling of the samples, each with two technical replicates, were performed
@@ -35,7 +35,7 @@ qc_description:>
   See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461
   for full details.
   
-  Molgenis:Genetic outliers were removed, any individuals that were clear outliers in the
+  Molgenis: Genetic outliers were removed, any individuals that were clear outliers in the
   first 2 genetic principal components. Each probe was simply quantile normalised and then
   log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal
   components (excluding those that had genetic associations), and scaled to have mean 0 and
@@ -103,18 +103,18 @@ has_parts:
     -md5sum: 2b91ff9a91f5bfe2b807ba638cc2916b
     -filesize: 31k
     -filetype: .txt
-    -number_of_participants
+    -number_of_participants:
 
     -id: 889022ba439c1baef05b9dd83b8db497_id_map2.txt
     -name: id_map2.txt
     -description:
     -md5sum: 889022ba439c1baef05b9dd83b8db497
-    -filesize:62k
-    -filetype:.txt
-    -number_of_participants
+    -filesize: 62k
+    -filetype: .txt
+    -number_of_participants:
 
 
 known_issues:
   - issue_description: We do not have the original idat files that were used to call this data.
-  - logged_by: Gibran Hermani
-  - logged_date: NA
+    logged_by: Gibran Hermani
+    logged_date: NA
