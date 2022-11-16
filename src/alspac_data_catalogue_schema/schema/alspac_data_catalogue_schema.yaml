@@ -60,16 +60,17 @@ classes:
     slots:
       - primary_investigator_orcids
       - primary_email
-      - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
+      - named_alspac_data_set_collection 
       
 
-  # named_alspac_data_set:
-  #   class_uri: dcat:Dataset
-  #   is_a: NamedThing
-  #   description: >-
-  #     Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
-  #   slots:
-  #     - primary_investigator_orcids
+  NamedAlspacDataSet:
+    class_uri: dcat:Dataset
+    is_a: NamedThing
+    description: >-
+      Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
+
+    slots:
+      - primary_investigator_orcids
   #     - keywords
   #     - has_current_version
   #     - primary_email
