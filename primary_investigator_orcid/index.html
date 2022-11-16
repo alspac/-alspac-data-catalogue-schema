@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/logged_by/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/primary_investigator_orcid/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: logged_by - alspac-data-catalogue-schema</title>
+        <title>Slot: primary_investigator_orcid - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-logged_by" class="md-skip">
+        <a href="#slot-primary_investigator_orcid" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: logged_by
+              Slot: primary_investigator_orcid
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/logged_by.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/primary_investigator_orcid.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-logged_by">Slot: logged_by</h1>
-<p><em>The person who logged this issue.</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/logged_by">alspacdcs:logged_by</a></p>
+<h1 id="slot-primary_investigator_orcid">Slot: primary_investigator_orcid</h1>
+<p><em>the orcid id of the pi</em></p>
+<p>URI: <a href="orcid:id">orcid:id</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../KnownIssue/">KnownIssue</a></td>
-<td>Known issues for a dataset should have a description, when they are logged and by who</td>
+<td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
+<td>Represents an alspac data catalogue. That is a set of named alspac data sets.</td>
+</tr>
+<tr>
+<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
+<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -349,14 +353,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: logged_by
-description: The person who logged this issue.
+<pre><code class="language-yaml">name: primary_investigator_orcid
+description: the orcid id of the pi
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-alias: logged_by
+slot_uri: orcid:id
+alias: primary_investigator_orcid
 domain_of:
-- known_issue
-range: string
+- alspac_data_catalogue
+- named_alspac_data_set
+range: uriorcurie
 
 </code></pre>
 

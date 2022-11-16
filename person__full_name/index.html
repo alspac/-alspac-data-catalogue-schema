@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/issue_description/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/person__full_name/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: issue_description - alspac-data-catalogue-schema</title>
+        <title>Slot: full_name - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-issue_description" class="md-skip">
+        <a href="#slot-full_name" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: issue_description
+              Slot: full_name
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -256,42 +256,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#domain-and-range" class="md-nav__link">
+    Domain and Range
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#parents" class="md-nav__link">
+    Parents
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#identifier-and-mapping-information" class="md-nav__link">
-    Identifier and Mapping Information
+  <a href="#children" class="md-nav__link">
+    Children
   </a>
-  
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
+  <a href="#used-by" class="md-nav__link">
+    Used by
   </a>
   
 </li>
@@ -310,57 +297,22 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/issue_description.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/person__full_name.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-issue_description">Slot: issue_description</h1>
-<p><em>What the issue is.</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/issue_description">alspacdcs:issue_description</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../KnownIssue/">KnownIssue</a></td>
-<td>Known issues for a dataset should have a description, when they are logged and by who</td>
-</tr>
-</tbody>
-</table>
-<h2 id="properties">Properties</h2>
+<h1 id="slot-full_name">Slot: full_name</h1>
+<p>URI: <a href="https://w3id.org/linkml/examples/personinfo/person__full_name">https://w3id.org/linkml/examples/personinfo/person__full_name</a></p>
+<h2 id="domain-and-range">Domain and Range</h2>
+<p>None &#8594;  <sub>0..1</sub> <a href="../types/String/">String</a></p>
+<h2 id="parents">Parents</h2>
+<h2 id="children">Children</h2>
+<h2 id="used-by">Used by</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
-<li>Multivalued: None</li>
+<li><a href="../Person/">Person</a></li>
 </ul>
-<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: https://w3id.org/alspac/alspac-data-catalogue-schema</li>
-</ul>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
-
-<pre><code class="language-yaml">name: issue_description
-description: What the issue is.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-rank: 1000
-alias: issue_description
-domain_of:
-- known_issue
-range: string
-
-</code></pre>
-
-</details>
 
 
 
