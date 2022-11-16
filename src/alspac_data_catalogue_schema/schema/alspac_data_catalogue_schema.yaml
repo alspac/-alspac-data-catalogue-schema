@@ -58,7 +58,7 @@ classes:
     description: >-
       Represents an alspac data catalogue. That is a set of named alspac data sets.
     slots:
-      - primary_investigator_orcid
+      - primary_investigator_orcids
       - primary_email
       - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
       
@@ -167,10 +167,12 @@ slots:
   primary_email:
     slot_uri: schema:email
     description: The main email address to contact
-  primary_investigator_orcid:
+  primary_investigator_orcids:
     slot_uri: ORCID:id
     range: uriorcurie
-    description: The orcid id of the pi  
+    description: The orcid ids of the pis
+    multivalued: true
+    inlined: false
 #   documentation_authors_orcids:
 #     slot_uri: ORCID:id
 #     range: uriorcurie
