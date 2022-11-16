@@ -70,8 +70,9 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
 
     slots:
+      - landing_page
       - primary_investigator_orcids
-  #     - keywords
+      - keywords
   #     - has_current_version
   #     - primary_email
   #     - documentation_authors_orcids
@@ -229,7 +230,7 @@ slots:
 #     description: The location of this file on bc4
 #   location_on_bp:
 #     description: The location of this file on bc4
-   main_publication:
+  main_publication:
     #slot_uri: 
     description: A doi ref to the main publication describing this dataset.
   landing_page:
