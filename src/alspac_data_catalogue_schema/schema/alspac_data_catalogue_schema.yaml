@@ -175,12 +175,12 @@ slots:
     description: The orcid ids of the pis
     multivalued: true
     inlined: false
-#   documentation_authors_orcids:
-#     slot_uri: ORCID:id
-#     range: uriorcurie
-#     description: a list of the orcid ids of the documentation authors
-#     multivalued: true
-#     inlined: false
+  documentation_authors_orcids:
+    slot_uri: ORCID:id
+    range: uriorcurie
+    description: a list of the orcid ids of the documentation authors
+    multivalued: true
+    inlined: false
   named_alspac_data_set_collection:
     range: uriorcurie
     multivalued: true
