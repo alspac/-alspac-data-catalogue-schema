@@ -185,16 +185,14 @@ slots:
     multivalued: true
     description: A list of named alspac data sets curies
     inlined: false
-#   keywords:
-#     description: A list of keywords.
-#     multivalued: true
-#     inlined: false
-#   code_name:
-#     description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
-#   has_current_version:
-#     slot_uri: dcat:hasCurrentVersion
-#     range: uriorcurie
-#     description: The current version of this named alspac dataset
+  keywords:
+    description: A list of keywords.
+    multivalued: true
+    inlined: false
+  has_current_version:
+    slot_uri: dcat:hasCurrentVersion
+    range: uriorcurie
+    description: The current version of this named alspac dataset
 #   has_previous_version:
 #     range: uriorcurie
 #     description: The previous version of this named alspac dataset
