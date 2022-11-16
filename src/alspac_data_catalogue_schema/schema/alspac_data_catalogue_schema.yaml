@@ -167,12 +167,10 @@ slots:
   primary_email:
     slot_uri: schema:email
     description: The main email address to contact
-  primary_investigator_orcids:
+  primary_investigator_orcid:
     slot_uri: ORCID:id
     range: uriorcurie
-    description: a list of the orcid ids of the pi
-    multivalued: true
-    inlined: false
+    description: The orcid id of the pi  
 #   documentation_authors_orcids:
 #     slot_uri: ORCID:id
 #     range: uriorcurie
