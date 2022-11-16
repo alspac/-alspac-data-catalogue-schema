@@ -4,7 +4,7 @@ name: Omics Data Catalogue
 description: This catalogue is for all of the named alspac omics data sets
 primary_investigator_orcid: ORCID:0000-0002-7141-9189
 primary_email: alspac-omics@bristol.ac.uk
-#named_alspac_data_set_collection:
-#  - alspacdcs:ge_ht12_g1
-#  - alspacdcs:named_alspac_data_set-002
-#  - alspacdcs:named_alspac_data_set-003
+named_alspac_data_set_collection:
+  - alspacdcs:ge_ht12_g1
+  - alspacdcs:named_alspac_data_set-002 ## test example datasets
+  - alspacdcs:named_alspac_data_set-003
