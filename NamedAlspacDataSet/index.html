@@ -208,6 +208,8 @@
 
       NamedAlspacDataSet : description
       NamedAlspacDataSet : id
+      NamedAlspacDataSet : keywords
+      NamedAlspacDataSet : landing_page
       NamedAlspacDataSet : name
       NamedAlspacDataSet : primary_investigator_orcids
 
@@ -231,9 +233,21 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../landing_page/">landing_page</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>The orcid ids of the pis</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../keywords/">keywords</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A list of keywords.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -291,7 +305,9 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
+- landing_page
 - primary_investigator_orcids
+- keywords
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -305,6 +321,18 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
+  landing_page:
+    name: landing_page
+    description: A Web page that can be navigated to in a Web browser to gain access
+      to the catalog, a dataset, its distributions and/or additional information.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: dcat:landingPage
+    alias: landing_page
+    owner: NamedAlspacDataSet
+    domain_of:
+    - NamedAlspacDataSet
+    range: string
   primary_investigator_orcids:
     name: primary_investigator_orcids
     description: The orcid ids of the pis
@@ -318,6 +346,18 @@ attributes:
     - AlspacDataCatalogue
     - NamedAlspacDataSet
     range: uriorcurie
+    inlined: false
+  keywords:
+    name: keywords
+    description: A list of keywords.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    multivalued: true
+    alias: keywords
+    owner: NamedAlspacDataSet
+    domain_of:
+    - NamedAlspacDataSet
+    range: string
     inlined: false
   id:
     name: id
