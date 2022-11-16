@@ -143,22 +143,14 @@ classes:
       - location_on_bc4
       - location_on_bp
 
-
-  known_issues:
-    tree_root: true
-    description: >-
-      A holder for known issues
-    attributes:
-      entries:
-        range: alspacdcs:known_issue
-        multivalued: true
-        inlined: true
-
   known_issue:
-   slots:
-     -issue_description:
-     -logged_by:
-     -logged_date:
+    description: >-
+     Known issues for a dataset should have a description, when they
+     are logged and by who 
+    slots:
+     - issue_description
+     - logged_by
+     - logged_date
 
 slots:
   id:
