@@ -217,6 +217,7 @@
       NamedAlspacDataSet : primary_email
       NamedAlspacDataSet : primary_investigator_orcids
       NamedAlspacDataSet : publications
+      NamedAlspacDataSet : versions
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -259,6 +260,12 @@
 <td><a href="../has_current_version/">has_current_version</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>The current version of this named alspac dataset</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../versions/">versions</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>A list of versions of a named dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -344,6 +351,7 @@ slots:
 - primary_investigator_orcids
 - keywords
 - has_current_version
+- versions
 - primary_email
 - documentation_authors_orcids
 - main_publication
@@ -378,7 +386,6 @@ attributes:
     description: The orcid ids of the pis
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    slot_uri: ORCID:id
     multivalued: true
     alias: primary_investigator_orcids
     owner: NamedAlspacDataSet
@@ -410,6 +417,17 @@ attributes:
     domain_of:
     - NamedAlspacDataSet
     range: uriorcurie
+  versions:
+    name: versions
+    description: A list of versions of a named dataset
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: versions
+    owner: NamedAlspacDataSet
+    domain_of:
+    - NamedAlspacDataSet
+    range: uriorcurie
+    inlined: false
   primary_email:
     name: primary_email
     description: The main email address to contact
@@ -427,7 +445,6 @@ attributes:
     description: a list of the orcid ids of the documentation authors
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    slot_uri: ORCID:id
     multivalued: true
     alias: documentation_authors_orcids
     owner: NamedAlspacDataSet
