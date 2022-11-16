@@ -73,11 +73,11 @@ classes:
       - landing_page
       - primary_investigator_orcids
       - keywords
-  #     - has_current_version
-  #     - primary_email
-  #     - documentation_authors_orcids
-  #     - main_publication
-  #     - publications
+      - has_current_version
+      - primary_email
+      - documentation_authors_orcids
+      - main_publication
+      - publications
 
 # #  named_alspac_data_set_collection:
 # #    tree_root: true
