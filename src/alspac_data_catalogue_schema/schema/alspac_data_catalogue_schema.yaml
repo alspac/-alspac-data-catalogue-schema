@@ -177,11 +177,11 @@ slots:
 #     description: a list of the orcid ids of the documentation authors
 #     multivalued: true
 #     inlined: false
-#   named_alspac_data_set_collection:
-#     range: uriorcurie
-#     multivalued: true
-#     description: A list of named alspac data sets curies
-#     inlined: false
+  named_alspac_data_set_collection:
+    range: uriorcurie
+    multivalued: true
+    description: A list of named alspac data sets curies
+    inlined: false
 #   keywords:
 #     description: A list of keywords.
 #     multivalued: true
