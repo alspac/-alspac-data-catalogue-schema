@@ -74,6 +74,7 @@ classes:
       - primary_investigator_orcids
       - keywords
       - has_current_version
+      - versions
       - primary_email
       - documentation_authors_orcids
       - main_publication
@@ -185,6 +186,10 @@ slots:
     range: uriorcurie
     multivalued: true
     description: A list of named alspac data sets curies
+    inlined: false
+  versions:
+    range: uriorcurie
+    description: A list of versions of a named dataset
     inlined: false
   keywords:
     description: A list of keywords.
