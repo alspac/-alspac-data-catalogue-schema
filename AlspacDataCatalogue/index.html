@@ -209,8 +209,9 @@
       AlspacDataCatalogue : description
       AlspacDataCatalogue : id
       AlspacDataCatalogue : name
+      AlspacDataCatalogue : named_alspac_data_set_collection
       AlspacDataCatalogue : primary_email
-      AlspacDataCatalogue : primary_investigator_orcids
+      AlspacDataCatalogue : primary_investigator_orcid
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -232,15 +233,21 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>a list of the orcid ids of the pi</td>
+<td><a href="../primary_investigator_orcid/">primary_investigator_orcid</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>The orcid id of the pi</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../primary_email/">primary_email</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The main email address to contact</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>A list of named alspac data sets curies</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -291,42 +298,40 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: alspac_data_catalogue
+<pre><code class="language-yaml">name: AlspacDataCatalogue
 description: Represents an alspac data catalogue. That is a set of named alspac data
   sets.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- primary_investigator_orcids
+- primary_investigator_orcid
 - primary_email
+- named_alspac_data_set_collection
 class_uri: dcat:Catalog
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: alspac_data_catalogue
+<pre><code class="language-yaml">name: AlspacDataCatalogue
 description: Represents an alspac data catalogue. That is a set of named alspac data
   sets.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  primary_investigator_orcids:
-    name: primary_investigator_orcids
-    description: a list of the orcid ids of the pi
+  primary_investigator_orcid:
+    name: primary_investigator_orcid
+    description: The orcid id of the pi
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     slot_uri: ORCID:id
-    multivalued: true
-    alias: primary_investigator_orcids
-    owner: alspac_data_catalogue
+    alias: primary_investigator_orcid
+    owner: AlspacDataCatalogue
     domain_of:
-    - alspac_data_catalogue
-    - named_alspac_data_set
+    - AlspacDataCatalogue
     range: uriorcurie
-    inlined: false
   primary_email:
     name: primary_email
     description: The main email address to contact
@@ -334,13 +339,22 @@ attributes:
     rank: 1000
     slot_uri: schema:email
     alias: primary_email
-    owner: alspac_data_catalogue
+    owner: AlspacDataCatalogue
     domain_of:
-    - alspac_data_catalogue
-    - named_alspac_data_set
-    - alspac_data_set_version
-    - alspac_data_set_version_freeze
+    - AlspacDataCatalogue
     range: string
+  named_alspac_data_set_collection:
+    name: named_alspac_data_set_collection
+    description: A list of named alspac data sets curies
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    multivalued: true
+    alias: named_alspac_data_set_collection
+    owner: AlspacDataCatalogue
+    domain_of:
+    - AlspacDataCatalogue
+    range: uriorcurie
+    inlined: false
   id:
     name: id
     description: A unique identifier for a thing
@@ -349,7 +363,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: alspac_data_catalogue
+    owner: AlspacDataCatalogue
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -360,7 +374,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: alspac_data_catalogue
+    owner: AlspacDataCatalogue
     domain_of:
     - NamedThing
     range: string
@@ -371,7 +385,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: alspac_data_catalogue
+    owner: AlspacDataCatalogue
     domain_of:
     - NamedThing
     range: string

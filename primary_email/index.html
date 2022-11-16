@@ -334,18 +334,6 @@
 <td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
 <td>Represents an alspac data catalogue. That is a set of named alspac data sets.</td>
 </tr>
-<tr>
-<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
-<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
-<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.</td>
-</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
@@ -368,10 +356,7 @@ rank: 1000
 slot_uri: schema:email
 alias: primary_email
 domain_of:
-- alspac_data_catalogue
-- named_alspac_data_set
-- alspac_data_set_version
-- alspac_data_set_version_freeze
+- AlspacDataCatalogue
 range: string
 
 </code></pre>
