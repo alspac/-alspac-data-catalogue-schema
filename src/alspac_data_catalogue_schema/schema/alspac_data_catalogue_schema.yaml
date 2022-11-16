@@ -251,6 +251,7 @@ slots:
     inlined: false
   number_of_participants:
     description: Number of participants in this file
+    range: integer 
   authors:
     description: A list of orcids for the authors of the item
     multivalued: true
