@@ -229,20 +229,22 @@ slots:
 #     description: The location of this file on bc4
 #   location_on_bp:
 #     description: The location of this file on bc4
-#   main_publication:
-#     slot_uri: 
-#     description: A doi ref to the main publication describing this dataset.
-#   landing_page:
-#     slot_uri: dcat:landingPage
-#     description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
+   main_publication:
+    #slot_uri: 
+    description: A doi ref to the main publication describing this dataset.
+  landing_page:
+     slot_uri: dcat:landingPage
+     description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
 #   woc_file_md5sum:
 #     description: The md5sum of the woc file used to make this freeze.
 #   git_tag:
 #     description: The git tag of the repo that made this freeze.
 #   qc_description:
-#     description: Some text to describe any quality control that has been performed.
-#   publications:
-#     description: A list of publications dois
+#     description: Some text to describe any quality control that has
+#     been performed.
+  publications:
+     description: A list of publications dois that use or refer to
+  this data set
 #   data_distributions:
 #     description: A list of data distributions for this abstract dataset
 #     multivalued: true
