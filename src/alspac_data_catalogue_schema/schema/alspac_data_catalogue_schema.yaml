@@ -121,7 +121,10 @@ classes:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
-      Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
+      Represents an abstract part of named alspac data set, in a
+      version or freeze. For example in an omics context the data
+      collected for a single chr which would be made availble as a dcat
+      distribution of this type of dataset which would be of a specific file.
     slots:
       - data_distributions
       - part_of
