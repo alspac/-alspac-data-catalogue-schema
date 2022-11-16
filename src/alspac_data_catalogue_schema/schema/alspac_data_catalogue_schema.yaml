@@ -188,7 +188,7 @@ slots:
     description: A list of named alspac data sets curies
     inlined: false
   versions:
-    range: uriorcurie
+    #range: uriorcurie
     description: A list of versions of a named dataset
     inlined: false
   keywords:
