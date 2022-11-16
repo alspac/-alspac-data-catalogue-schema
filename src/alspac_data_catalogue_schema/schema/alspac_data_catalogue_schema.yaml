@@ -83,7 +83,7 @@ classes:
       A holder for named_alspac_data_set objects
     attributes:
       entries:
-        range: alspacdcs:named_alspac_data_set
+        range: named_alspac_data_set ## Should this be a uriorcurie
         multivalued: true
         inlined: false
 
