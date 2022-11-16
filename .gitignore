@@ -182,3 +182,5 @@ flycheck_*.el
 
 # network security
 /network-security.data
+/.DS_Store
+/project/.DS_Store
