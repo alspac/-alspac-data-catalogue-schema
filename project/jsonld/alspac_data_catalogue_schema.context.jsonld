@@ -1,5 +1,5 @@
 {
-   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-11-16T12:09:05\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
+   "_comments": "Auto generated from alspac_data_catalogue_schema.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-11-16T15:24:04\n    Schema: alspac-data-catalogue-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/alspac/alspac-data-catalogue-schema\n    description: This project is for the schema of alspac data catalogues and meta data on data sets\n    license: MIT\n    ",
    "@context": {
       "ORCID": "https://orcid.org/",
       "PATO": {
@@ -31,9 +31,19 @@
       "description": {
          "@id": "schema:description"
       },
+      "has_current_version": {
+         "@type": "@id",
+         "@id": "dcat:hasCurrentVersion"
+      },
       "id": "@id",
+      "landing_page": {
+         "@id": "dcat:landingPage"
+      },
       "name": {
          "@id": "schema:name"
+      },
+      "named_alspac_data_set_collection": {
+         "@type": "@id"
       },
       "primary_email": {
          "@id": "schema:email"
@@ -44,6 +54,9 @@
       },
       "AlspacDataCatalogue": {
          "@id": "dcat:Catalog"
+      },
+      "NamedAlspacDataSet": {
+         "@id": "dcat:Dataset"
       },
       "NamedThing": {
          "@id": "schema:Thing"

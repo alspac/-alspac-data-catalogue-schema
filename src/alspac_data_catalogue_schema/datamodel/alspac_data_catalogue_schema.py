@@ -1,5 +1,5 @@
 # Auto generated from alspac_data_catalogue_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-11-16T12:09:11
+# Generation date: 2022-11-16T15:24:12
 # Schema: alspac-data-catalogue-schema
 #
 # id: https://w3id.org/alspac/alspac-data-catalogue-schema
@@ -69,6 +69,10 @@ class AlspacDataCatalogueId(NamedThingId):
     pass
 
 
+class NamedAlspacDataSetId(NamedThingId):
+    pass
+
+
 @dataclass
 class NamedThing(YAMLRoot):
     """
@@ -109,12 +113,13 @@ class AlspacDataCatalogue(NamedThing):
 
     class_class_uri: ClassVar[URIRef] = DCAT.Catalog
     class_class_curie: ClassVar[str] = "dcat:Catalog"
-    class_name: ClassVar[str] = "alspac_data_catalogue"
+    class_name: ClassVar[str] = "AlspacDataCatalogue"
     class_model_uri: ClassVar[URIRef] = ALSPAC_DATA_CATALOGUE_SCHEMA.AlspacDataCatalogue
 
     id: Union[str, AlspacDataCatalogueId] = None
     primary_investigator_orcids: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
     primary_email: Optional[str] = None
+    named_alspac_data_set_collection: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -128,6 +133,48 @@ class AlspacDataCatalogue(NamedThing):
 
         if self.primary_email is not None and not isinstance(self.primary_email, str):
             self.primary_email = str(self.primary_email)
+
+        if not isinstance(self.named_alspac_data_set_collection, list):
+            self.named_alspac_data_set_collection = [self.named_alspac_data_set_collection] if self.named_alspac_data_set_collection is not None else []
+        self.named_alspac_data_set_collection = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.named_alspac_data_set_collection]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class NamedAlspacDataSet(NamedThing):
+    """
+    Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused
+    and distributed.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DCAT.Dataset
+    class_class_curie: ClassVar[str] = "dcat:Dataset"
+    class_name: ClassVar[str] = "NamedAlspacDataSet"
+    class_model_uri: ClassVar[URIRef] = ALSPAC_DATA_CATALOGUE_SCHEMA.NamedAlspacDataSet
+
+    id: Union[str, NamedAlspacDataSetId] = None
+    landing_page: Optional[str] = None
+    primary_investigator_orcids: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
+    keywords: Optional[Union[str, List[str]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, NamedAlspacDataSetId):
+            self.id = NamedAlspacDataSetId(self.id)
+
+        if self.landing_page is not None and not isinstance(self.landing_page, str):
+            self.landing_page = str(self.landing_page)
+
+        if not isinstance(self.primary_investigator_orcids, list):
+            self.primary_investigator_orcids = [self.primary_investigator_orcids] if self.primary_investigator_orcids is not None else []
+        self.primary_investigator_orcids = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.primary_investigator_orcids]
+
+        if not isinstance(self.keywords, list):
+            self.keywords = [self.keywords] if self.keywords is not None else []
+        self.keywords = [v if isinstance(v, str) else str(v) for v in self.keywords]
 
         super().__post_init__(**kwargs)
 
@@ -153,3 +200,21 @@ slots.primary_email = Slot(uri=SCHEMA.email, name="primary_email", curie=SCHEMA.
 
 slots.primary_investigator_orcids = Slot(uri=ORCID.id, name="primary_investigator_orcids", curie=ORCID.curie('id'),
                    model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.primary_investigator_orcids, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.named_alspac_data_set_collection = Slot(uri=ALSPAC_DATA_CATALOGUE_SCHEMA.named_alspac_data_set_collection, name="named_alspac_data_set_collection", curie=ALSPAC_DATA_CATALOGUE_SCHEMA.curie('named_alspac_data_set_collection'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.named_alspac_data_set_collection, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.keywords = Slot(uri=ALSPAC_DATA_CATALOGUE_SCHEMA.keywords, name="keywords", curie=ALSPAC_DATA_CATALOGUE_SCHEMA.curie('keywords'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.keywords, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.has_current_version = Slot(uri=DCAT.hasCurrentVersion, name="has_current_version", curie=DCAT.curie('hasCurrentVersion'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.has_current_version, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.main_publication = Slot(uri=ALSPAC_DATA_CATALOGUE_SCHEMA.main_publication, name="main_publication", curie=ALSPAC_DATA_CATALOGUE_SCHEMA.curie('main_publication'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.main_publication, domain=None, range=Optional[str])
+
+slots.landing_page = Slot(uri=DCAT.landingPage, name="landing_page", curie=DCAT.curie('landingPage'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.landing_page, domain=None, range=Optional[str])
+
+slots.publications = Slot(uri=ALSPAC_DATA_CATALOGUE_SCHEMA.publications, name="publications", curie=ALSPAC_DATA_CATALOGUE_SCHEMA.curie('publications'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.publications, domain=None, range=Optional[str])

@@ -41,9 +41,21 @@ linkml:Nodeidentifier NONLITERAL
     (  $<AlspacDataCatalogue_tes> (  &<NamedThing_tes> ;
           rdf:type [ schema:Thing ] ? ;
           ORCID:id @linkml:Uriorcurie * ;
-          schema:email @linkml:String ?
+          schema:email @linkml:String ? ;
+          <named_alspac_data_set_collection> @linkml:Uriorcurie *
        ) ;
        rdf:type [ dcat:Catalog ]
+    )
+}
+
+<NamedAlspacDataSet> CLOSED {
+    (  $<NamedAlspacDataSet_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          dcat:landingPage @linkml:String ? ;
+          ORCID:id @linkml:Uriorcurie * ;
+          <keywords> @linkml:String *
+       ) ;
+       rdf:type [ dcat:Dataset ]
     )
 }
 
@@ -54,7 +66,7 @@ linkml:Nodeidentifier NONLITERAL
           ) ;
           rdf:type [ schema:Thing ]
        )
-    } OR @<AlspacDataCatalogue>
+    } OR @<AlspacDataCatalogue> OR @<NamedAlspacDataSet>
 )
 
 

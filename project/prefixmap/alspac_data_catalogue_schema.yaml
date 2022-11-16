@@ -25,6 +25,9 @@
    "AlspacDataCatalogue": {
       "@id": "dcat:Catalog"
    },
+   "NamedAlspacDataSet": {
+      "@id": "dcat:Dataset"
+   },
    "NamedThing": {
       "@id": "schema:Thing"
    }

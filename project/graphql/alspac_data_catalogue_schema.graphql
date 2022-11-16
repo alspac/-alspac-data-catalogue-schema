@@ -5,6 +5,17 @@ type AlspacDataCatalogue
     description: String
     primaryInvestigatorOrcids: [Uriorcurie]
     primaryEmail: String
+    namedAlspacDataSetCollection: [Uriorcurie]
+  }
+
+type NamedAlspacDataSet
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    landingPage: String
+    primaryInvestigatorOrcids: [Uriorcurie]
+    keywords: [String]
   }
 
 type NamedThing

@@ -350,18 +350,93 @@
     {
       "name": "primary_investigator_orcids",
       "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids",
-      "description": "a list of the orcid ids of the pi",
+      "description": "The orcid ids of the pis",
       "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
       "mappings": [
         "https://orcid.org/id"
       ],
       "slot_uri": "https://orcid.org/id",
       "multivalued": true,
+      "owner": "NamedAlspacDataSet",
+      "domain_of": [
+        "AlspacDataCatalogue",
+        "NamedAlspacDataSet"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "named_alspac_data_set_collection",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/named_alspac_data_set_collection",
+      "description": "A list of named alspac data sets curies",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "slot_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/named_alspac_data_set_collection",
+      "multivalued": true,
       "owner": "AlspacDataCatalogue",
       "domain_of": [
         "AlspacDataCatalogue"
       ],
       "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "keywords",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/keywords",
+      "description": "A list of keywords.",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "slot_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/keywords",
+      "multivalued": true,
+      "owner": "NamedAlspacDataSet",
+      "domain_of": [
+        "NamedAlspacDataSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "has_current_version",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/has_current_version",
+      "description": "The current version of this named alspac dataset",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "mappings": [
+        "http://www.w3.org/ns/dcat#hasCurrentVersion"
+      ],
+      "slot_uri": "http://www.w3.org/ns/dcat#hasCurrentVersion",
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "main_publication",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/main_publication",
+      "description": "A doi ref to the main publication describing this dataset.",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "slot_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/main_publication",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "landing_page",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/landing_page",
+      "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "mappings": [
+        "http://www.w3.org/ns/dcat#landingPage"
+      ],
+      "slot_uri": "http://www.w3.org/ns/dcat#landingPage",
+      "owner": "NamedAlspacDataSet",
+      "domain_of": [
+        "NamedAlspacDataSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "publications",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/publications",
+      "description": "A list of publications dois that use or refer to this data set",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "slot_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/publications",
+      "range": "string",
       "@type": "SlotDefinition"
     }
   ],
@@ -397,18 +472,40 @@
         "name",
         "description",
         "primary_investigator_orcids",
-        "primary_email"
+        "primary_email",
+        "named_alspac_data_set_collection"
       ],
       "slot_usage": {},
       "class_uri": "http://www.w3.org/ns/dcat#Catalog",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NamedAlspacDataSet",
+      "definition_uri": "https://w3id.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataSet",
+      "description": "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
+      "from_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema",
+      "mappings": [
+        "dcat:Dataset"
+      ],
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "landing_page",
+        "primary_investigator_orcids",
+        "keywords"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/ns/dcat#Dataset",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "alspac_data_catalogue_schema.yaml",
-  "source_file_date": "2022-11-16T12:07:35",
-  "source_file_size": 8628,
-  "generation_date": "2022-11-16T12:09:06",
+  "source_file_date": "2022-11-16T15:12:54",
+  "source_file_size": 8445,
+  "generation_date": "2022-11-16T15:24:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/alspac_data_catalogue_schema.context.jsonld",

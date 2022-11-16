@@ -6,6 +6,17 @@ message AlspacDataCatalogue
   string description = 0
  repeated  uriorcurie primaryInvestigatorOrcids = 0
   string primaryEmail = 0
+ repeated  uriorcurie namedAlspacDataSetCollection = 0
+ }
+// Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
+message NamedAlspacDataSet
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string landingPage = 0
+ repeated  uriorcurie primaryInvestigatorOrcids = 0
+ repeated  string keywords = 0
  }
 // A generic grouping for any identifiable entity
 message NamedThing

@@ -16,12 +16,19 @@
                "description": "A human-readable name for a thing",
                "type": "string"
             },
+            "named_alspac_data_set_collection": {
+               "description": "A list of named alspac data sets curies",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
             "primary_email": {
                "description": "The main email address to contact",
                "type": "string"
             },
             "primary_investigator_orcids": {
-               "description": "a list of the orcid ids of the pi",
+               "description": "The orcid ids of the pis",
                "items": {
                   "type": "string"
                },
@@ -32,6 +39,47 @@
             "id"
          ],
          "title": "AlspacDataCatalogue",
+         "type": "object"
+      },
+      "NamedAlspacDataSet": {
+         "additionalProperties": false,
+         "description": "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
+         "properties": {
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "keywords": {
+               "description": "A list of keywords.",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "landing_page": {
+               "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "primary_investigator_orcids": {
+               "description": "The orcid ids of the pis",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "NamedAlspacDataSet",
          "type": "object"
       },
       "NamedThing": {

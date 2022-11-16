@@ -16,18 +16,21 @@
     dcterms:license "MIT" ;
     dcterms:title "alspac-data-catalogue-schema" ;
     rdfs:seeAlso "https://alspac.github.io/alspac-data-catalogue-schema" ;
-    linkml:generation_date "2022-11-16T12:09:09" ;
+    linkml:generation_date "2022-11-16T15:24:09" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "alspac_data_catalogue_schema.yaml" ;
-    linkml:source_file_date "2022-11-16T12:07:35" ;
-    linkml:source_file_size 8628 .
+    linkml:source_file_date "2022-11-16T15:12:54" ;
+    linkml:source_file_size 8445 .
 
 alspac_data_catalogue_schema:AlspacDataCatalogue a owl:Class,
         linkml:ClassDefinition ;
-    rdfs:label "alspac_data_catalogue" ;
+    rdfs:label "AlspacDataCatalogue" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty ORCID:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty alspac_data_catalogue_schema:named_alspac_data_set_collection ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
@@ -35,6 +38,35 @@ alspac_data_catalogue_schema:AlspacDataCatalogue a owl:Class,
         alspac_data_catalogue_schema:NamedThing ;
     skos:definition "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
     skos:exactMatch dcat:Catalog .
+
+alspac_data_catalogue_schema:NamedAlspacDataSet a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NamedAlspacDataSet" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty dcat:landingPage ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty ORCID:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:keywords ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
+    skos:exactMatch dcat:Dataset .
+
+alspac_data_catalogue_schema:main_publication a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "main_publication" ;
+    rdfs:range linkml:String ;
+    skos:definition "A doi ref to the main publication describing this dataset." .
+
+alspac_data_catalogue_schema:publications a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "publications" ;
+    rdfs:range linkml:String ;
+    skos:definition "A list of publications dois that use or refer to this data set" .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -44,6 +76,25 @@ linkml:TypeDefinition a owl:Class ;
 
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
+
+dcat:hasCurrentVersion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_current_version" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "The current version of this named alspac dataset" ;
+    skos:exactMatch dcat:hasCurrentVersion .
+
+alspac_data_catalogue_schema:keywords a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "keywords" ;
+    rdfs:range linkml:String ;
+    skos:definition "A list of keywords." .
+
+alspac_data_catalogue_schema:named_alspac_data_set_collection a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "named_alspac_data_set_collection" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "A list of named alspac data sets curies" .
 
 schema:description a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -73,11 +124,18 @@ schema:name a owl:ObjectProperty,
     skos:definition "A human-readable name for a thing" ;
     skos:exactMatch schema:name .
 
+dcat:landingPage a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "landing_page" ;
+    rdfs:range linkml:String ;
+    skos:definition "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
+    skos:exactMatch dcat:landingPage .
+
 ORCID:id a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "primary_investigator_orcids" ;
     rdfs:range linkml:Uriorcurie ;
-    skos:definition "a list of the orcid ids of the pi" ;
+    skos:definition "The orcid ids of the pis" ;
     skos:exactMatch ORCID:id .
 
 alspac_data_catalogue_schema:NamedThing a owl:Class,

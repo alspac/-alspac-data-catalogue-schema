@@ -1,4 +1,5 @@
 @prefix ORCID: <https://orcid.org/> .
+@prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
@@ -9,42 +10,73 @@ schema:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A unique identifier for a thing" ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:name ],
+        [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema:identifier ],
         [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
             sh:order 2 ;
-            sh:path schema:description ],
-        [ sh:description "A human-readable name for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema:name ] ;
+            sh:path schema:description ] ;
     sh:targetClass schema:Thing .
 
 dcat:Catalog a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A unique identifier for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema:identifier ],
-        [ sh:description "a list of the orcid ids of the pi" ;
-            sh:order 0 ;
-            sh:path ORCID:id ],
-        [ sh:description "A human-readable description for a thing" ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 4 ;
+            sh:path schema:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:identifier ],
+        [ sh:description "The orcid ids of the pis" ;
+            sh:order 0 ;
+            sh:path ORCID:id ],
+        [ sh:description "A list of named alspac data sets curies" ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:named_alspac_data_set_collection ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
             sh:path schema:description ],
         [ sh:description "The main email address to contact" ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path schema:email ],
+            sh:path schema:email ] ;
+    sh:targetClass dcat:Catalog .
+
+dcat:Dataset a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A list of keywords." ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:keywords ],
+        [ sh:description "The orcid ids of the pis" ;
+            sh:order 1 ;
+            sh:path ORCID:id ],
+        [ sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path dcat:landingPage ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:name ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:description ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
             sh:order 3 ;
-            sh:path schema:name ] ;
-    sh:targetClass dcat:Catalog .
+            sh:path schema:identifier ] ;
+    sh:targetClass dcat:Dataset .
 
