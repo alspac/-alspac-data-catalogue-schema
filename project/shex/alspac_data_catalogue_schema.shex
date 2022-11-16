@@ -53,7 +53,12 @@ linkml:Nodeidentifier NONLITERAL
           rdf:type [ schema:Thing ] ? ;
           dcat:landingPage @linkml:String ? ;
           ORCID:id @linkml:Uriorcurie * ;
-          <keywords> @linkml:String *
+          <keywords> @linkml:String * ;
+          dcat:hasCurrentVersion @linkml:Uriorcurie ? ;
+          schema:email @linkml:String ? ;
+          ORCID:id @linkml:Uriorcurie * ;
+          <main_publication> @linkml:String ? ;
+          <publications> @linkml:String ?
        ) ;
        rdf:type [ dcat:Dataset ]
     )

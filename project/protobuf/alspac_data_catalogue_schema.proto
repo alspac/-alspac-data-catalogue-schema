@@ -17,6 +17,11 @@ message NamedAlspacDataSet
   string landingPage = 0
  repeated  uriorcurie primaryInvestigatorOrcids = 0
  repeated  string keywords = 0
+  uriorcurie hasCurrentVersion = 0
+  string primaryEmail = 0
+ repeated  uriorcurie documentationAuthorsOrcids = 0
+  string mainPublication = 0
+  string publications = 0
  }
 // A generic grouping for any identifiable entity
 message NamedThing

@@ -1,5 +1,5 @@
 # Auto generated from alspac_data_catalogue_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-11-16T15:24:12
+# Generation date: 2022-11-16T15:30:32
 # Schema: alspac-data-catalogue-schema
 #
 # id: https://w3id.org/alspac/alspac-data-catalogue-schema
@@ -158,6 +158,11 @@ class NamedAlspacDataSet(NamedThing):
     landing_page: Optional[str] = None
     primary_investigator_orcids: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
     keywords: Optional[Union[str, List[str]]] = empty_list()
+    has_current_version: Optional[Union[str, URIorCURIE]] = None
+    primary_email: Optional[str] = None
+    documentation_authors_orcids: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
+    main_publication: Optional[str] = None
+    publications: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -175,6 +180,22 @@ class NamedAlspacDataSet(NamedThing):
         if not isinstance(self.keywords, list):
             self.keywords = [self.keywords] if self.keywords is not None else []
         self.keywords = [v if isinstance(v, str) else str(v) for v in self.keywords]
+
+        if self.has_current_version is not None and not isinstance(self.has_current_version, URIorCURIE):
+            self.has_current_version = URIorCURIE(self.has_current_version)
+
+        if self.primary_email is not None and not isinstance(self.primary_email, str):
+            self.primary_email = str(self.primary_email)
+
+        if not isinstance(self.documentation_authors_orcids, list):
+            self.documentation_authors_orcids = [self.documentation_authors_orcids] if self.documentation_authors_orcids is not None else []
+        self.documentation_authors_orcids = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.documentation_authors_orcids]
+
+        if self.main_publication is not None and not isinstance(self.main_publication, str):
+            self.main_publication = str(self.main_publication)
+
+        if self.publications is not None and not isinstance(self.publications, str):
+            self.publications = str(self.publications)
 
         super().__post_init__(**kwargs)
 
@@ -200,6 +221,9 @@ slots.primary_email = Slot(uri=SCHEMA.email, name="primary_email", curie=SCHEMA.
 
 slots.primary_investigator_orcids = Slot(uri=ORCID.id, name="primary_investigator_orcids", curie=ORCID.curie('id'),
                    model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.primary_investigator_orcids, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.documentation_authors_orcids = Slot(uri=ORCID.id, name="documentation_authors_orcids", curie=ORCID.curie('id'),
+                   model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.documentation_authors_orcids, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
 
 slots.named_alspac_data_set_collection = Slot(uri=ALSPAC_DATA_CATALOGUE_SCHEMA.named_alspac_data_set_collection, name="named_alspac_data_set_collection", curie=ALSPAC_DATA_CATALOGUE_SCHEMA.curie('named_alspac_data_set_collection'),
                    model_uri=ALSPAC_DATA_CATALOGUE_SCHEMA.named_alspac_data_set_collection, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])

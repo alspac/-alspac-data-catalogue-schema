@@ -16,11 +16,11 @@
     dcterms:license "MIT" ;
     dcterms:title "alspac-data-catalogue-schema" ;
     rdfs:seeAlso "https://alspac.github.io/alspac-data-catalogue-schema" ;
-    linkml:generation_date "2022-11-16T15:24:09" ;
+    linkml:generation_date "2022-11-16T15:30:29" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "alspac_data_catalogue_schema.yaml" ;
-    linkml:source_file_date "2022-11-16T15:12:54" ;
-    linkml:source_file_size 8445 .
+    linkml:source_file_date "2022-11-16T15:28:14" ;
+    linkml:source_file_size 8423 .
 
 alspac_data_catalogue_schema:AlspacDataCatalogue a owl:Class,
         linkml:ClassDefinition ;
@@ -44,6 +44,25 @@ alspac_data_catalogue_schema:NamedAlspacDataSet a owl:Class,
     rdfs:label "NamedAlspacDataSet" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty dcat:hasCurrentVersion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty ORCID:id ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:email ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:main_publication ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty alspac_data_catalogue_schema:publications ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty dcat:landingPage ],
         [ a owl:Restriction ;
@@ -56,18 +75,6 @@ alspac_data_catalogue_schema:NamedAlspacDataSet a owl:Class,
     skos:definition "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
     skos:exactMatch dcat:Dataset .
 
-alspac_data_catalogue_schema:main_publication a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "main_publication" ;
-    rdfs:range linkml:String ;
-    skos:definition "A doi ref to the main publication describing this dataset." .
-
-alspac_data_catalogue_schema:publications a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "publications" ;
-    rdfs:range linkml:String ;
-    skos:definition "A list of publications dois that use or refer to this data set" .
-
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
 
@@ -77,18 +84,17 @@ linkml:TypeDefinition a owl:Class ;
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
 
-dcat:hasCurrentVersion a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "has_current_version" ;
-    rdfs:range linkml:Uriorcurie ;
-    skos:definition "The current version of this named alspac dataset" ;
-    skos:exactMatch dcat:hasCurrentVersion .
-
 alspac_data_catalogue_schema:keywords a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "keywords" ;
     rdfs:range linkml:String ;
     skos:definition "A list of keywords." .
+
+alspac_data_catalogue_schema:main_publication a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "main_publication" ;
+    rdfs:range linkml:String ;
+    skos:definition "A doi ref to the main publication describing this dataset." .
 
 alspac_data_catalogue_schema:named_alspac_data_set_collection a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -96,19 +102,18 @@ alspac_data_catalogue_schema:named_alspac_data_set_collection a owl:ObjectProper
     rdfs:range linkml:Uriorcurie ;
     skos:definition "A list of named alspac data sets curies" .
 
+alspac_data_catalogue_schema:publications a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "publications" ;
+    rdfs:range linkml:String ;
+    skos:definition "A list of publications dois that use or refer to this data set" .
+
 schema:description a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "description" ;
     rdfs:range linkml:String ;
     skos:definition "A human-readable description for a thing" ;
     skos:exactMatch schema:description .
-
-schema:email a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_email" ;
-    rdfs:range linkml:String ;
-    skos:definition "The main email address to contact" ;
-    skos:exactMatch schema:email .
 
 schema:identifier a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -124,6 +129,13 @@ schema:name a owl:ObjectProperty,
     skos:definition "A human-readable name for a thing" ;
     skos:exactMatch schema:name .
 
+dcat:hasCurrentVersion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "has_current_version" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "The current version of this named alspac dataset" ;
+    skos:exactMatch dcat:hasCurrentVersion .
+
 dcat:landingPage a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "landing_page" ;
@@ -131,12 +143,15 @@ dcat:landingPage a owl:ObjectProperty,
     skos:definition "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
     skos:exactMatch dcat:landingPage .
 
-ORCID:id a owl:ObjectProperty,
+schema:email a owl:ObjectProperty,
         linkml:SlotDefinition ;
-    rdfs:label "primary_investigator_orcids" ;
-    rdfs:range linkml:Uriorcurie ;
-    skos:definition "The orcid ids of the pis" ;
-    skos:exactMatch ORCID:id .
+    rdfs:label "primary_email" ;
+    rdfs:range linkml:String ;
+    skos:definition "The main email address to contact" ;
+    skos:exactMatch schema:email .
+
+ORCID:id a owl:ObjectProperty,
+        linkml:SlotDefinition .
 
 alspac_data_catalogue_schema:NamedThing a owl:Class,
         linkml:ClassDefinition ;
@@ -144,11 +159,11 @@ alspac_data_catalogue_schema:NamedThing a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema:name ],
+            owl:onProperty schema:description ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema:description ],
+            owl:onProperty schema:name ],
         [ a owl:Restriction ;
             owl:onClass linkml:Uriorcurie ;
             owl:onProperty schema:identifier ;

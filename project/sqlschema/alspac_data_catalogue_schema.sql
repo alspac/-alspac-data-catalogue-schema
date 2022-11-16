@@ -13,6 +13,10 @@ CREATE TABLE "NamedAlspacDataSet" (
 	name TEXT, 
 	description TEXT, 
 	landing_page TEXT, 
+	has_current_version TEXT, 
+	primary_email TEXT, 
+	main_publication TEXT, 
+	publications TEXT, 
 	PRIMARY KEY (id)
 );
 
@@ -48,5 +52,12 @@ CREATE TABLE "NamedAlspacDataSet_keywords" (
 	backref_id TEXT, 
 	keywords TEXT, 
 	PRIMARY KEY (backref_id, keywords), 
+	FOREIGN KEY(backref_id) REFERENCES "NamedAlspacDataSet" (id)
+);
+
+CREATE TABLE "NamedAlspacDataSet_documentation_authors_orcids" (
+	backref_id TEXT, 
+	documentation_authors_orcids TEXT, 
+	PRIMARY KEY (backref_id, documentation_authors_orcids), 
 	FOREIGN KEY(backref_id) REFERENCES "NamedAlspacDataSet" (id)
 );

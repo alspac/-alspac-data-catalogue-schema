@@ -10,73 +10,92 @@ schema:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 1 ;
             sh:path schema:name ],
         [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
-            sh:path schema:identifier ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema:description ] ;
+            sh:path schema:identifier ] ;
     sh:targetClass schema:Thing .
 
 dcat:Catalog a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:name ],
-        [ sh:description "A unique identifier for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path schema:identifier ],
-        [ sh:description "The orcid ids of the pis" ;
-            sh:order 0 ;
-            sh:path ORCID:id ],
-        [ sh:description "A list of named alspac data sets curies" ;
-            sh:order 2 ;
-            sh:path alspac_data_catalogue_schema:named_alspac_data_set_collection ],
-        [ sh:description "A human-readable description for a thing" ;
+    sh:property [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path schema:description ],
         [ sh:description "The main email address to contact" ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path schema:email ] ;
+            sh:path schema:email ],
+        [ sh:description "A list of named alspac data sets curies" ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:named_alspac_data_set_collection ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:name ],
+        [ sh:description "The orcid ids of the pis" ;
+            sh:order 0 ;
+            sh:path ORCID:id ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:identifier ] ;
     sh:targetClass dcat:Catalog .
 
 dcat:Dataset a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A list of keywords." ;
-            sh:order 2 ;
-            sh:path alspac_data_catalogue_schema:keywords ],
-        [ sh:description "The orcid ids of the pis" ;
-            sh:order 1 ;
-            sh:path ORCID:id ],
+    sh:property [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:email ],
+        [ sh:description "The current version of this named alspac dataset" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path dcat:hasCurrentVersion ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path schema:name ],
         [ sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path dcat:landingPage ],
-        [ sh:description "A human-readable name for a thing" ;
+        [ sh:description "A list of publications dois that use or refer to this data set" ;
             sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:name ],
+            sh:order 7 ;
+            sh:path alspac_data_catalogue_schema:publications ],
+        [ sh:description "a list of the orcid ids of the documentation authors" ;
+            sh:order 5 ;
+            sh:path ORCID:id ],
         [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
-            sh:order 5 ;
+            sh:order 10 ;
             sh:path schema:description ],
-        [ sh:description "A unique identifier for a thing" ;
+        [ sh:description "A doi ref to the main publication describing this dataset." ;
             sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path schema:identifier ] ;
+            sh:order 6 ;
+            sh:path alspac_data_catalogue_schema:main_publication ],
+        [ sh:description "The orcid ids of the pis" ;
+            sh:order 1 ;
+            sh:path ORCID:id ],
+        [ sh:description "A list of keywords." ;
+            sh:order 2 ;
+            sh:path alspac_data_catalogue_schema:keywords ] ;
     sh:targetClass dcat:Dataset .
 

@@ -16,6 +16,11 @@ type NamedAlspacDataSet
     landingPage: String
     primaryInvestigatorOrcids: [Uriorcurie]
     keywords: [String]
+    hasCurrentVersion: Uriorcurie
+    primaryEmail: String
+    documentationAuthorsOrcids: [Uriorcurie]
+    mainPublication: String
+    publications: String
   }
 
 type NamedThing
