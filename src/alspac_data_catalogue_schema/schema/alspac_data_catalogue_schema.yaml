@@ -77,15 +77,15 @@ classes:
       - main_publication
       - publications
 
-  named_alspac_data_set_collection:
-    tree_root: true
-    description: >-
-      A holder for named_alspac_data_set objects
-    attributes:
-      entries:
-        range: named_alspac_data_set ## Should this be a uriorcurie
-        multivalued: true
-        inlined: false
+#  named_alspac_data_set_collection:
+#    tree_root: true
+#    description: >-
+#      A holder for named_alspac_data_set objects
+#    attributes:
+#      entries:
+#        range: named_alspac_data_set ## Should this be a uriorcurie
+#        multivalued: true
+#        inlined: false
 
   alspac_data_set_version:
     class_uri: dcat:Dataset
