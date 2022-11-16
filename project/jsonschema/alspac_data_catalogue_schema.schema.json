@@ -1,5 +1,39 @@
 {
    "$defs": {
+      "AlspacDataCatalogue": {
+         "additionalProperties": false,
+         "description": "Represents an alspac data catalogue. That is a set of named alspac data sets.",
+         "properties": {
+            "description": {
+               "description": "A human-readable description for a thing",
+               "type": "string"
+            },
+            "id": {
+               "description": "A unique identifier for a thing",
+               "type": "string"
+            },
+            "name": {
+               "description": "A human-readable name for a thing",
+               "type": "string"
+            },
+            "primary_email": {
+               "description": "The main email address to contact",
+               "type": "string"
+            },
+            "primary_investigator_orcids": {
+               "description": "a list of the orcid ids of the pi",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            }
+         },
+         "required": [
+            "id"
+         ],
+         "title": "AlspacDataCatalogue",
+         "type": "object"
+      },
       "NamedThing": {
          "additionalProperties": false,
          "description": "A generic grouping for any identifiable entity",

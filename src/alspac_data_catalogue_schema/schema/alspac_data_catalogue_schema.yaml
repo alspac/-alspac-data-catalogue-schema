@@ -63,94 +63,94 @@ classes:
  #     - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
       
 
-  named_alspac_data_set:
-    class_uri: dcat:Dataset
-    is_a: NamedThing
-    description: >-
-      Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
-    slots:
-      - primary_investigator_orcids
-      - keywords
-      - has_current_version
-      - primary_email
-      - documentation_authors_orcids
-      - main_publication
-      - publications
+  # named_alspac_data_set:
+  #   class_uri: dcat:Dataset
+  #   is_a: NamedThing
+  #   description: >-
+  #     Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
+  #   slots:
+  #     - primary_investigator_orcids
+  #     - keywords
+  #     - has_current_version
+  #     - primary_email
+  #     - documentation_authors_orcids
+  #     - main_publication
+  #     - publications
 
-#  named_alspac_data_set_collection:
-#    tree_root: true
-#    description: >-
-#      A holder for named_alspac_data_set objects
-#    attributes:
-#      entries:
-#        range: named_alspac_data_set ## Should this be a uriorcurie
-#        multivalued: true
-#        inlined: false
+# #  named_alspac_data_set_collection:
+# #    tree_root: true
+# #    description: >-
+# #      A holder for named_alspac_data_set objects
+# #    attributes:
+# #      entries:
+# #        range: named_alspac_data_set ## Should this be a uriorcurie
+# #        multivalued: true
+# #        inlined: false
 
-  alspac_data_set_version:
-    class_uri: dcat:Dataset
-    is_a: NamedThing
-    description: >-
-      Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
-    slots:
-      - has_previous_version
-      - has_next_version
-      - is_current_version
-      - primary_email
-      - authors
-      - has_parts
-      - qc_description
-      - known_issues
+#   alspac_data_set_version:
+#     class_uri: dcat:Dataset
+#     is_a: NamedThing
+#     description: >-
+#       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
+#     slots:
+#       - has_previous_version
+#       - has_next_version
+#       - is_current_version
+#       - primary_email
+#       - authors
+#       - has_parts
+#       - qc_description
+#       - known_issues
 
 
-  alspac_data_set_version_freeze:
-    class_uri: dcat:Dataset
-    is_a: NamedThing
-    description: >-
-      Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
-    slots:
-      - freeze_number
-      - freeze_date
-      - freeze_of_version
-      - freeze_dataset
-      - primary_email
-      - authors
-      - git_tag
+#   alspac_data_set_version_freeze:
+#     class_uri: dcat:Dataset
+#     is_a: NamedThing
+#     description: >-
+#       Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
+#     slots:
+#       - freeze_number
+#       - freeze_date
+#       - freeze_of_version
+#       - freeze_dataset
+#       - primary_email
+#       - authors
+#       - git_tag
 
-  abstract_dataset_part:
-    class_uri: dcat:Dataset
-    is_a: NamedThing
-    description: >-
-      Represents an abstract part of named alspac data set, in a
-      version or freeze. For example in an omics context the data
-      collected for a single chr which would be made availble as a dcat
-      distribution of this type of dataset which would be of a specific file.
-    slots:
-      - data_distributions
-      - part_of
+#   abstract_dataset_part:
+#     class_uri: dcat:Dataset
+#     is_a: NamedThing
+#     description: >-
+#       Represents an abstract part of named alspac data set, in a
+#       version or freeze. For example in an omics context the data
+#       collected for a single chr which would be made availble as a dcat
+#       distribution of this type of dataset which would be of a specific file.
+#     slots:
+#       - data_distributions
+#       - part_of
 
-  data_distribution:
-    class_uri: dcat:Distribution
-    is_a: NamedThing
-    description: >-
-      A dataset distribution has a loaction, file type and file size.
-    slots:
-      - abstract_dataset_part
-      - md5sum
-      - filesize
-      - filetype
-      - number_of_participants
-      - location_on_bc4
-      - location_on_bp
+#   data_distribution:
+#     class_uri: dcat:Distribution
+#     is_a: NamedThing
+#     description: >-
+#       A dataset distribution has a loaction, file type and file size.
+#     slots:
+#       - abstract_dataset_part
+#       - md5sum
+#       - filesize
+#       - filetype
+#       - number_of_participants
+#       - location_on_bc4
+#       - location_on_bp
 
-  known_issue:
-    description: >-
-     Known issues for a dataset should have a description, when they
-     are logged and by who 
-    slots:
-     - issue_description
-     - logged_by
-     - logged_date
+#   known_issue:
+#     description: >-
+#      Known issues for a dataset should have a description, when they
+#      are logged and by who 
+#     slots:
+#      - issue_description
+#      - logged_by
+#      - logged_date
 
 slots:
   id:
@@ -173,101 +173,101 @@ slots:
     description: a list of the orcid ids of the pi
     multivalued: true
     inlined: false
-  documentation_authors_orcids:
-    slot_uri: ORCID:id
-    range: uriorcurie
-    description: a list of the orcid ids of the documentation authors
-    multivalued: true
-    inlined: false
-  named_alspac_data_set_collection:
-    range: uriorcurie
-    multivalued: true
-    description: A list of named alspac data sets curies
-    inlined: false
-  keywords:
-    description: A list of keywords.
-    multivalued: true
-    inlined: false
-  code_name:
-    description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
-  has_current_version:
-    slot_uri: dcat:hasCurrentVersion
-    range: uriorcurie
-    description: The current version of this named alspac dataset
-  has_previous_version:
-    range: uriorcurie
-    description: The previous version of this named alspac dataset
-  has_next_version:
-    range: uriorcurie
-    description: The next version of this named alspac dataset
-  is_current_version:
-    description: Is this the current version of a named alspac dataset
-  has_parts:
-    #range: uriorcurie
-    multivalued: true
-    inlined: true
-    inverse: part_of
-  freeze_number:
-    description: What number freeze is this?
-  freeze_date:
-    description: When was this freeze made?
-  freeze_of_version:
-    description: What version of a dataset is this freeze of?
-  freeze_dataset:
-    description: What dataset is this a freeze of?
-  data_distribution:
-  abstract_dataset_part:
-  part_of:
-  md5sum:
-    description: What is the md5sum of the file in this distribution?
-  filesize:
-    slot_uri: dcat:byteSize
-  filetype:
-    slot_uri: dcat:mediaType
-  number_of_samples:
-    description: The number of alspac participants in this dataset
-  location_on_bc4:
-    description: The location of this file on bc4
-  location_on_bp:
-    description: The location of this file on bc4
-  main_publication:
-    slot_uri: 
-    description: A doi ref to the main publication describing this dataset.
-  landing_page:
-    slot_uri: dcat:landingPage
-    description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
-  woc_file_md5sum:
-    description: The md5sum of the woc file used to make this freeze.
-  git_tag:
-    description: The git tag of the repo that made this freeze.
-  qc_description:
-    description: Some text to describe any quality control that has been performed.
-  publications:
-    description: A list of publications dois
-  data_distributions:
-    description: A list of data distributions for this abstract dataset
-    multivalued: true
-    inlined: false
-  number_of_participants:
-    description: Number of participants in this file
-    range: integer 
-  authors:
-    description: A list of orcids for the authors of the item
-    multivalued: true
-    inlined: false
-  known_issues:
-    description: >-
-      A holder for known issues
-    range: known_issue
-    multivalued: true
-    inlined: true
-  logged_by:
-    description: >-
-      The person who logged this issue.
-  logged_date:
-    description: >-
-      The date that this issue was logged.
-  issue_description:
-    description: >-
-      What the issue is.
+#   documentation_authors_orcids:
+#     slot_uri: ORCID:id
+#     range: uriorcurie
+#     description: a list of the orcid ids of the documentation authors
+#     multivalued: true
+#     inlined: false
+#   named_alspac_data_set_collection:
+#     range: uriorcurie
+#     multivalued: true
+#     description: A list of named alspac data sets curies
+#     inlined: false
+#   keywords:
+#     description: A list of keywords.
+#     multivalued: true
+#     inlined: false
+#   code_name:
+#     description: The alspac codename for a named dataset. For example gi_1000g_g0m_g1
+#   has_current_version:
+#     slot_uri: dcat:hasCurrentVersion
+#     range: uriorcurie
+#     description: The current version of this named alspac dataset
+#   has_previous_version:
+#     range: uriorcurie
+#     description: The previous version of this named alspac dataset
+#   has_next_version:
+#     range: uriorcurie
+#     description: The next version of this named alspac dataset
+#   is_current_version:
+#     description: Is this the current version of a named alspac dataset
+#   has_parts:
+#     #range: uriorcurie
+#     multivalued: true
+#     inlined: true
+#     inverse: part_of
+#   freeze_number:
+#     description: What number freeze is this?
+#   freeze_date:
+#     description: When was this freeze made?
+#   freeze_of_version:
+#     description: What version of a dataset is this freeze of?
+#   freeze_dataset:
+#     description: What dataset is this a freeze of?
+#   data_distribution:
+#   abstract_dataset_part:
+#   part_of:
+#   md5sum:
+#     description: What is the md5sum of the file in this distribution?
+#   filesize:
+#     slot_uri: dcat:byteSize
+#   filetype:
+#     slot_uri: dcat:mediaType
+#   number_of_samples:
+#     description: The number of alspac participants in this dataset
+#   location_on_bc4:
+#     description: The location of this file on bc4
+#   location_on_bp:
+#     description: The location of this file on bc4
+#   main_publication:
+#     slot_uri: 
+#     description: A doi ref to the main publication describing this dataset.
+#   landing_page:
+#     slot_uri: dcat:landingPage
+#     description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
+#   woc_file_md5sum:
+#     description: The md5sum of the woc file used to make this freeze.
+#   git_tag:
+#     description: The git tag of the repo that made this freeze.
+#   qc_description:
+#     description: Some text to describe any quality control that has been performed.
+#   publications:
+#     description: A list of publications dois
+#   data_distributions:
+#     description: A list of data distributions for this abstract dataset
+#     multivalued: true
+#     inlined: false
+#   number_of_participants:
+#     description: Number of participants in this file
+#     range: integer 
+#   authors:
+#     description: A list of orcids for the authors of the item
+#     multivalued: true
+#     inlined: false
+#   known_issues:
+#     description: >-
+#       A holder for known issues
+#     range: known_issue
+#     multivalued: true
+#     inlined: true
+#   logged_by:
+#     description: >-
+#       The person who logged this issue.
+#   logged_date:
+#     description: >-
+#       The date that this issue was logged.
+#   issue_description:
+#     description: >-
+#       What the issue is.
   

@@ -1,4 +1,4 @@
-name: Auto-deployment of Documentation
+name: Auto-deployment of alspac_data_catalogue_schema Documentation
 on:
   push:
     branches: [ main ]

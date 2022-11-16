@@ -3,6 +3,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema: <http://schema.org/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX ORCID: <https://orcid.org/>
 
 
 linkml:String xsd:string
@@ -35,12 +37,24 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<NamedThing> CLOSED {
-    (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
-          schema:description @linkml:String ?
+<AlspacDataCatalogue> CLOSED {
+    (  $<AlspacDataCatalogue_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          ORCID:id @linkml:Uriorcurie * ;
+          schema:email @linkml:String ?
        ) ;
-       rdf:type [ schema:Thing ]
+       rdf:type [ dcat:Catalog ]
     )
 }
+
+<NamedThing>  (
+    CLOSED {
+       (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
+             schema:description @linkml:String ?
+          ) ;
+          rdf:type [ schema:Thing ]
+       )
+    } OR @<AlspacDataCatalogue>
+)
 
 

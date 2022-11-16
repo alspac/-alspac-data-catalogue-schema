@@ -1,3 +1,5 @@
+@prefix ORCID: <https://orcid.org/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -7,17 +9,42 @@ schema:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema:name ],
+            sh:order 0 ;
+            sh:path schema:identifier ],
         [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path schema:description ],
-        [ sh:description "A unique identifier for a thing" ;
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path schema:identifier ] ;
+            sh:order 1 ;
+            sh:path schema:name ] ;
     sh:targetClass schema:Thing .
+
+dcat:Catalog a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:identifier ],
+        [ sh:description "a list of the orcid ids of the pi" ;
+            sh:order 0 ;
+            sh:path ORCID:id ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:description ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:email ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:name ] ;
+    sh:targetClass dcat:Catalog .
 

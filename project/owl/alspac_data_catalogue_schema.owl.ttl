@@ -1,6 +1,6 @@
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix ORCID: <https://orcid.org/> .
-@prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix linkml: <https://w3id.org/linkml/> .
@@ -10,160 +10,31 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ORCID:id a owl:ObjectProperty,
-        linkml:SlotDefinition .
-
 <https://w3id.org/alspac/alspac-data-catalogue-schema> a owl:Ontology ;
     rdfs:label "alspac-data-catalogue-schema" ;
-    IAO:0000700 alspacdcs:NamedThing ;
+    IAO:0000700 alspac_data_catalogue_schema:NamedThing ;
     dcterms:license "MIT" ;
     dcterms:title "alspac-data-catalogue-schema" ;
     rdfs:seeAlso "https://alspac.github.io/alspac-data-catalogue-schema" ;
-    linkml:generation_date "2022-11-07T21:05:23" ;
+    linkml:generation_date "2022-11-16T12:09:09" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "alspac_data_catalogue_schema.yaml" ;
-    linkml:source_file_date "2022-11-07T21:05:12" ;
-    linkml:source_file_size 7083 .
+    linkml:source_file_date "2022-11-16T12:07:35" ;
+    linkml:source_file_size 8628 .
 
-alspacdcs:abstract_dataset_part a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "abstract_dataset_part" ;
-    rdfs:range linkml:String .
-
-alspacdcs:authors a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "authors" ;
-    rdfs:range linkml:String .
-
-alspacdcs:code_name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "code_name" ;
-    rdfs:range linkml:String ;
-    skos:definition "The alspac codename for a named dataset. For example gi_1000g_g0m_g1" .
-
-alspacdcs:data_distribution a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "data_distribution" ;
-    rdfs:range linkml:String .
-
-alspacdcs:data_distributions a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "data_distributions" ;
-    rdfs:range linkml:String ;
-    skos:definition "A list of data distributions for this abstract dataset" .
-
-alspacdcs:freeze_dataset a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "freeze_dataset" ;
-    rdfs:range linkml:String .
-
-alspacdcs:freeze_date a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "freeze_date" ;
-    rdfs:range linkml:String .
-
-alspacdcs:freeze_number a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "freeze_number" ;
-    rdfs:range linkml:String .
-
-alspacdcs:freeze_of_version a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "freeze_of_version" ;
-    rdfs:range linkml:String .
-
-alspacdcs:git_tag a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "git_tag" ;
-    rdfs:range linkml:String ;
-    skos:definition "The git tag of the repo that made this freeze." .
-
-alspacdcs:has_next_version a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "has_next_version" ;
-    rdfs:range linkml:String ;
-    skos:definition "The next version of this named alspac dataset" .
-
-alspacdcs:has_parts a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "has_parts" ;
-    rdfs:range linkml:String .
-
-alspacdcs:has_previous_version a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "has_previous_version" ;
-    rdfs:range linkml:String ;
-    skos:definition "The previous version of this named alspac dataset" .
-
-alspacdcs:is_current_version a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "is_current_version" ;
-    rdfs:range linkml:String ;
-    skos:definition "Is this the current version of a named alspac dataset" .
-
-alspacdcs:keywords a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "keywords" ;
-    rdfs:range linkml:String ;
-    skos:definition "A list of keywords." .
-
-alspacdcs:location_on_bc4 a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "location_on_bc4" ;
-    rdfs:range linkml:String ;
-    skos:definition "The location of this file on bc4" .
-
-alspacdcs:location_on_bp a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "location_on_bp" ;
-    rdfs:range linkml:String ;
-    skos:definition "The location of this file on bc4" .
-
-alspacdcs:main_publication a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "main_publication" ;
-    rdfs:range linkml:String ;
-    skos:definition "A doi ref to the main publication describing this dataset." .
-
-alspacdcs:md5sum a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "md5sum" ;
-    rdfs:range linkml:String .
-
-alspacdcs:named_alspac_data_set_collection a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "named_alspac_data_set_collection" ;
-    rdfs:range linkml:String .
-
-alspacdcs:number_of_participants a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "number_of_participants" ;
-    rdfs:range linkml:String ;
-    skos:definition "Number of participants in this file" .
-
-alspacdcs:number_of_samples a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "number_of_samples" ;
-    rdfs:range linkml:String ;
-    skos:definition "The number of alspac participants in this dataset" .
-
-alspacdcs:publications a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "publications" ;
-    rdfs:range linkml:String ;
-    skos:definition "A list of publications dois" .
-
-alspacdcs:qc_description a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "qc_description" ;
-    rdfs:range linkml:String ;
-    skos:definition "Some text to describe any quality control that has been performed." .
-
-alspacdcs:woc_file_md5sum a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "woc_file_md5sum" ;
-    rdfs:range linkml:String ;
-    skos:definition "The md5sum of the woc file used to make this freeze." .
+alspac_data_catalogue_schema:AlspacDataCatalogue a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "alspac_data_catalogue" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty ORCID:id ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:email ],
+        alspac_data_catalogue_schema:NamedThing ;
+    skos:definition "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
+    skos:exactMatch dcat:Catalog .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -174,60 +45,6 @@ linkml:TypeDefinition a owl:Class ;
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
 
-schema:email a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_email" ;
-    rdfs:range linkml:String ;
-    skos:definition "The main email address to contact" ;
-    skos:exactMatch schema:email .
-
-dcat:byteSize a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "filesize" ;
-    rdfs:range linkml:String ;
-    skos:exactMatch dcat:byteSize .
-
-dcat:hasCurrentVersion a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "has_current_version" ;
-    rdfs:range linkml:String ;
-    skos:definition "The current version of this named alspac dataset" ;
-    skos:exactMatch dcat:hasCurrentVersion .
-
-dcat:landingPage a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "landing_page" ;
-    rdfs:range linkml:String ;
-    skos:definition "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
-    skos:exactMatch dcat:landingPage .
-
-dcat:mediaType a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "filetype" ;
-    rdfs:range linkml:String ;
-    skos:exactMatch dcat:mediaType .
-
-alspacdcs:NamedThing a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "NamedThing" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema:description ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema:name ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema:identifier ;
-            owl:qualifiedCardinality 1 ] ;
-    skos:definition "A generic grouping for any identifiable entity" ;
-    skos:exactMatch schema:Thing .
-
-linkml:ClassDefinition a owl:Class ;
-    rdfs:label "class_definition" .
-
 schema:description a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "description" ;
@@ -235,10 +52,17 @@ schema:description a owl:ObjectProperty,
     skos:definition "A human-readable description for a thing" ;
     skos:exactMatch schema:description .
 
+schema:email a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "primary_email" ;
+    rdfs:range linkml:String ;
+    skos:definition "The main email address to contact" ;
+    skos:exactMatch schema:email .
+
 schema:identifier a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "id" ;
-    rdfs:range linkml:String ;
+    rdfs:range linkml:Uriorcurie ;
     skos:definition "A unique identifier for a thing" ;
     skos:exactMatch schema:identifier .
 
@@ -248,6 +72,34 @@ schema:name a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:definition "A human-readable name for a thing" ;
     skos:exactMatch schema:name .
+
+ORCID:id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "primary_investigator_orcids" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "a list of the orcid ids of the pi" ;
+    skos:exactMatch ORCID:id .
+
+alspac_data_catalogue_schema:NamedThing a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "NamedThing" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:name ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema:description ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty schema:identifier ;
+            owl:qualifiedCardinality 1 ] ;
+    skos:definition "A generic grouping for any identifiable entity" ;
+    skos:exactMatch schema:Thing .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" .
 
 linkml:SlotDefinition a owl:Class ;
     rdfs:label "slot_definition" .

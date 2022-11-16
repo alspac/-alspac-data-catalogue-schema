@@ -1,6 +1,15 @@
+type AlspacDataCatalogue
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    primaryInvestigatorOrcids: [Uriorcurie]
+    primaryEmail: String
+  }
+
 type NamedThing
   {
-    id: String!
+    id: Uriorcurie!
     name: String
     description: String
   }

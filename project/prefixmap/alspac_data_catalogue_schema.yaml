@@ -1,7 +1,7 @@
 {
    "ORCID": "https://orcid.org/",
    "PATO": "http://purl.obolibrary.org/obo/PATO_",
-   "alspacdcs": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
+   "alspac_data_catalogue_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
    "biolink": "https://w3id.org/biolink/",
    "dc": "http://purl.org/dc/elements/1.1/",
    "dcat": "http://www.w3.org/ns/dcat#",
@@ -22,6 +22,9 @@
    "spdx": "http://spdx.org/rdf/terms#",
    "time": "http://www.w3.org/2006/time#",
    "vcard": "http://www.w3.org/2006/vcard/ns#",
+   "AlspacDataCatalogue": {
+      "@id": "dcat:Catalog"
+   },
    "NamedThing": {
       "@id": "schema:Thing"
    }
