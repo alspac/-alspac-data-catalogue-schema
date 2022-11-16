@@ -213,6 +213,7 @@
       AlspacDataSetVersion : has_previous_version
       AlspacDataSetVersion : id
       AlspacDataSetVersion : is_current_version
+      AlspacDataSetVersion : known_issues
       AlspacDataSetVersion : name
       AlspacDataSetVersion : primary_email
       AlspacDataSetVersion : qc_description
@@ -279,6 +280,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../known_issues/">known_issues</a></td>
+<td>0..* <br/> <a href="../KnownIssue/">KnownIssue</a></td>
+<td>A holder for known issues</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
@@ -340,6 +347,7 @@ slots:
 - authors
 - has_parts
 - qc_description
+- known_issues
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -419,6 +427,7 @@ attributes:
     owner: alspac_data_set_version
     domain_of:
     - alspac_data_set_version
+    inverse: part_of
     range: string
     inlined: true
   qc_description:
@@ -431,6 +440,18 @@ attributes:
     domain_of:
     - alspac_data_set_version
     range: string
+  known_issues:
+    name: known_issues
+    description: A holder for known issues
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    multivalued: true
+    alias: known_issues
+    owner: alspac_data_set_version
+    domain_of:
+    - alspac_data_set_version
+    range: known_issue
+    inlined: true
   id:
     name: id
     description: A unique identifier for a thing

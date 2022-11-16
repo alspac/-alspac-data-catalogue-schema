@@ -201,6 +201,7 @@
       AbstractDatasetPart : description
       AbstractDatasetPart : id
       AbstractDatasetPart : name
+      AbstractDatasetPart : part_of
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -225,6 +226,12 @@
 <td><a href="../data_distributions/">data_distributions</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A list of data distributions for this abstract dataset</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../part_of/">part_of</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>None</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -280,6 +287,7 @@ rank: 1000
 is_a: NamedThing
 slots:
 - data_distributions
+- part_of
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -306,6 +314,15 @@ attributes:
     - abstract_dataset_part
     range: string
     inlined: false
+  part_of:
+    name: part_of
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: part_of
+    owner: abstract_dataset_part
+    domain_of:
+    - abstract_dataset_part
+    range: string
   id:
     name: id
     description: A unique identifier for a thing
