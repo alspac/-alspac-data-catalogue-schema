@@ -52,7 +52,7 @@ classes:
      - description
     class_uri: schema:Thing
 
-  alspac_data_catalogue:
+  AlspacDataCatalogue:
     class_uri: dcat:Catalog
     is_a: NamedThing
     description: >-
