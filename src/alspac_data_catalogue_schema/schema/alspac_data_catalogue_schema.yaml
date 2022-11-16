@@ -10,7 +10,7 @@ see_also:
 # These have been augmented with the normative recomendation here https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220510/
 
 prefixes:
-  alspacdcs: https://w3id.org/alspac/alspac-data-catalogue-schema/
+  alspac_data_catalogue_schema: https://w3id.org/alspac/alspac-data-catalogue-schema/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
@@ -34,7 +34,7 @@ prefixes:
   ORCID: https://orcid.org/
   doi: https://doi.org/
   
-default_prefix: alspacdcs
+default_prefix: alspac_data_catalogue_schema
 default_range: string
 default_curi_maps:
   - semweb_context
@@ -60,7 +60,7 @@ classes:
     slots:
       - primary_investigator_orcids
       - primary_email
-      - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
+ #     - named_alspac_data_set_collection # I am not sure if this means all the data fields need to go in a datum or can just be ids.
       
 
   named_alspac_data_set:
