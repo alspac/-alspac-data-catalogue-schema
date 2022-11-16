@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -317,6 +317,7 @@
 
 
 <h1 id="slot-named_alspac_data_set_collection">Slot: named_alspac_data_set_collection</h1>
+<p><em>A list of named alspac data sets</em></p>
 <p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/named_alspac_data_set_collection">alspacdcs:named_alspac_data_set_collection</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -337,8 +338,8 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
-<li>Multivalued: None</li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -349,12 +350,15 @@
 <details>
 
 <pre><code class="language-yaml">name: named_alspac_data_set_collection
+description: A list of named alspac data sets
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
+multivalued: true
 alias: named_alspac_data_set_collection
 domain_of:
 - alspac_data_catalogue
-range: string
+range: uriorcurie
+inlined: false
 
 </code></pre>
 
