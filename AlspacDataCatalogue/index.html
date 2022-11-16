@@ -209,7 +209,6 @@
       AlspacDataCatalogue : description
       AlspacDataCatalogue : id
       AlspacDataCatalogue : name
-      AlspacDataCatalogue : named_alspac_data_set_collection
       AlspacDataCatalogue : primary_email
       AlspacDataCatalogue : primary_investigator_orcids
 
@@ -242,12 +241,6 @@
 <td><a href="../primary_email/">primary_email</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The main email address to contact</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>A list of named alspac data sets curies</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -290,7 +283,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:AlspacDataCatalogue']</td>
+<td>['alspac_data_catalogue_schema:AlspacDataCatalogue']</td>
 </tr>
 </tbody>
 </table>
@@ -307,7 +300,6 @@ is_a: NamedThing
 slots:
 - primary_investigator_orcids
 - primary_email
-- named_alspac_data_set_collection
 class_uri: dcat:Catalog
 
 </code></pre>
@@ -349,18 +341,6 @@ attributes:
     - alspac_data_set_version
     - alspac_data_set_version_freeze
     range: string
-  named_alspac_data_set_collection:
-    name: named_alspac_data_set_collection
-    description: A list of named alspac data sets curies
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: named_alspac_data_set_collection
-    owner: alspac_data_catalogue
-    domain_of:
-    - alspac_data_catalogue
-    range: uriorcurie
-    inlined: false
   id:
     name: id
     description: A unique identifier for a thing
