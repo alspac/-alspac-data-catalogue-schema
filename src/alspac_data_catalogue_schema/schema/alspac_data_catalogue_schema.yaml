@@ -255,5 +255,19 @@ slots:
     description: A list of orcids for the authors of the item
     multivalued: true
     inlined: false
-  
+  known_issues:
+    description: >-
+      A holder for known issues
+    range: known_issue
+    multivalued: true
+    inlined: true
+  logged_by:
+    description: >-
+      The person who logged this issue.
+  logged_date:
+    description: >-
+      The date that this issue was logged.
+  issue_description:
+    description: >-
+      What the issue is.
   
