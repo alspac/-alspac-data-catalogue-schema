@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/NamedAlspacDataSet/</loc>
+         <lastmod>2022-11-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/NamedThing/</loc>
          <lastmod>2022-11-16</lastmod>
          <changefreq>daily</changefreq>
