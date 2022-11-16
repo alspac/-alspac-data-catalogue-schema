@@ -4,7 +4,7 @@ import glob
 import unittest
 
 from linkml_runtime.loaders import yaml_loader
-from alspac_data_catalogue_schema.datamodel import named_alspac_data_set
+from alspac_data_catalogue_schema.datamodel import NamedAlspacDataSet
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 DATA_DIR = os.path.join(ROOT, "src", "data", "examples")
@@ -17,5 +17,5 @@ class TestData(unittest.TestCase):
     def test_data(self):
         """Date test."""
         for path in EXAMPLE_FILES:
-            obj = yaml_loader.load(path, target_class=named_alspac_data_set)
+            obj = yaml_loader.load(path, target_class=NamedAlspacDataSet)
             assert obj
