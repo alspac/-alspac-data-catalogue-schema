@@ -244,8 +244,9 @@ slots:
 #     description: Some text to describe any quality control that has
 #     been performed.
   publications:
-     description: A list of publications dois that use or refer to
-  this data set
+     description: >-
+       A list of publications dois that use or refer to
+       this data set
 #   data_distributions:
 #     description: A list of data distributions for this abstract dataset
 #     multivalued: true
