@@ -168,6 +168,8 @@ slots:
   primary_email:
     slot_uri: schema:email
     description: The main email address to contact
+    exact_mappings:
+          - foaf:email
   primary_investigator_orcids:
     #slot_uri: ORCID:id
     range: uriorcurie
