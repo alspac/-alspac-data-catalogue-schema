@@ -90,21 +90,19 @@ classes:
 # #        multivalued: true
 # #        inlined: false
 
-#   alspac_data_set_version:
-#     class_uri: dcat:Dataset
-#     is_a: NamedThing
-#     description: >-
-#       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
-#     slots:
-#       - has_previous_version
-#       - has_next_version
-#       - is_current_version
-#       - primary_email
-#       - authors
-#       - has_parts
-#       - qc_description
-#       - known_issues
-
+  alspac_data_set_version:
+    class_uri: dcat:Dataset
+    is_a: NamedThing
+    description: >-
+      Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
+    slots:
+      - qc_description
+      - is_current_version
+      - has_previous_version
+      - has_next_version
+      - authors
+      - has_parts
+      - known_issues
 
 #   alspac_data_set_version_freeze:
 #     class_uri: dcat:Dataset
