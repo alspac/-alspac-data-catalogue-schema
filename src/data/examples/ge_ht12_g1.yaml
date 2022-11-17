@@ -5,7 +5,7 @@ id: alspacdcs:ge_ht12_g1
 name: Gene expression - array - G1
 description: Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals. 
 
-landing_page: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 # Nic Timpson
   - ORCID:0000-0003-0663-4621 # Dave Evans
@@ -23,7 +23,7 @@ documentation_authors_orcids:
   - ORCID:0000-0003-0663-4621 # Dave Evans
   - ORCID:0000-0003-0920-1055 # Gibran Hemani
   - ORCID:0000-0002-4064-3794 # Sam Neaves
-  - example:frog
-main_publication: doi:10.1371/journal.pgen.1004461 # Cis and Trans Effects of Human Genomic Variants on Gene Expression
-publications:
+main_publication_doi: doi:10.1371/journal.pgen.1004461 # Cis and Trans Effects of Human Genomic Variants on Gene Expression
+publications_dois:
   - doi:10.1371/journal.pgen.1004461
+

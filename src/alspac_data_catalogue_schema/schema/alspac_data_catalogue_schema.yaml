@@ -70,15 +70,15 @@ classes:
       Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
 
     slots:
-      - landing_page
+      - landing_page_url
       - primary_investigator_orcids
       - keywords
       - has_current_version
       - versions
       - primary_email
       - documentation_authors_orcids
-      - main_publication
-      - publications
+      - main_publication_doi
+      - publications_dois
 
 # #  named_alspac_data_set_collection:
 # #    tree_root: true
@@ -238,10 +238,10 @@ slots:
 #     description: The location of this file on bc4
 #   location_on_bp:
 #     description: The location of this file on bc4
-  main_publication:
+  main_publication_doi:
     #slot_uri: 
     description: A doi ref to the main publication describing this dataset.
-  landing_page:
+  landing_page_url:
      slot_uri: dcat:landingPage
      description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
 #   woc_file_md5sum:
@@ -251,7 +251,7 @@ slots:
 #   qc_description:
 #     description: Some text to describe any quality control that has
 #     been performed.
-  publications:
+  publications_dois:
      description: >-
        A list of publications dois that use or refer to
        this data set
