@@ -90,7 +90,7 @@ classes:
 # #        multivalued: true
 # #        inlined: false
 
-  alspac_data_set_version:
+  AlspacDataSetVersion:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
