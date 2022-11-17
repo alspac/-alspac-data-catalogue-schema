@@ -227,6 +227,7 @@ slots:
 #   abstract_dataset_part:
 #   part_of:
 #   md5sum:
+#     slot_uri: spdx:checksum
 #     description: What is the md5sum of the file in this distribution?
 #   filesize:
 #     slot_uri: dcat:byteSize
