@@ -211,12 +211,12 @@
       NamedAlspacDataSet : has_current_version
       NamedAlspacDataSet : id
       NamedAlspacDataSet : keywords
-      NamedAlspacDataSet : landing_page
-      NamedAlspacDataSet : main_publication
+      NamedAlspacDataSet : landing_page_url
+      NamedAlspacDataSet : main_publication_doi
       NamedAlspacDataSet : name
       NamedAlspacDataSet : primary_email
       NamedAlspacDataSet : primary_investigator_orcids
-      NamedAlspacDataSet : publications
+      NamedAlspacDataSet : publications_dois
       NamedAlspacDataSet : versions
 
 </div>
@@ -239,7 +239,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../landing_page/">landing_page</a></td>
+<td><a href="../landing_page_url/">landing_page_url</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
 <td>direct</td>
@@ -281,13 +281,13 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../main_publication/">main_publication</a></td>
+<td><a href="../main_publication_doi/">main_publication_doi</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A doi ref to the main publication describing this dataset.</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../publications/">publications</a></td>
+<td><a href="../publications_dois/">publications_dois</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A list of publications dois that use or refer to this data set</td>
 <td>direct</td>
@@ -347,15 +347,15 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
-- landing_page
+- landing_page_url
 - primary_investigator_orcids
 - keywords
 - has_current_version
 - versions
 - primary_email
 - documentation_authors_orcids
-- main_publication
-- publications
+- main_publication_doi
+- publications_dois
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -369,14 +369,14 @@ from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  landing_page:
-    name: landing_page
+  landing_page_url:
+    name: landing_page_url
     description: A Web page that can be navigated to in a Web browser to gain access
       to the catalog, a dataset, its distributions and/or additional information.
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     slot_uri: dcat:landingPage
-    alias: landing_page
+    alias: landing_page_url
     owner: NamedAlspacDataSet
     domain_of:
     - NamedAlspacDataSet
@@ -454,22 +454,22 @@ attributes:
     - NamedAlspacDataSet
     range: uriorcurie
     inlined: false
-  main_publication:
-    name: main_publication
+  main_publication_doi:
+    name: main_publication_doi
     description: A doi ref to the main publication describing this dataset.
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: main_publication
+    alias: main_publication_doi
     owner: NamedAlspacDataSet
     domain_of:
     - NamedAlspacDataSet
     range: string
-  publications:
-    name: publications
+  publications_dois:
+    name: publications_dois
     description: A list of publications dois that use or refer to this data set
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: publications
+    alias: publications_dois
     owner: NamedAlspacDataSet
     domain_of:
     - NamedAlspacDataSet

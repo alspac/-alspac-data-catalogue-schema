@@ -51,12 +51,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/landing_page/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/landing_page_url/</loc>
          <lastmod>2022-11-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/main_publication/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/main_publication_doi/</loc>
          <lastmod>2022-11-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -81,7 +81,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://alspac.github.io/alspac-data-catalogue-schema/publications/</loc>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/publications_dois/</loc>
          <lastmod>2022-11-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
