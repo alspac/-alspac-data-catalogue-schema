@@ -23,6 +23,7 @@ documentation_authors_orcids:
   - ORCID:0000-0003-0663-4621 # Dave Evans
   - ORCID:0000-0003-0920-1055 # Gibran Hemani
   - ORCID:0000-0002-4064-3794 # Sam Neaves
+  - example:frog
 main_publication: doi:10.1371/journal.pgen.1004461 # Cis and Trans Effects of Human Genomic Variants on Gene Expression
 publications:
   - doi:10.1371/journal.pgen.1004461
