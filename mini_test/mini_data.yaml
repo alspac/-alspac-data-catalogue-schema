@@ -1,0 +1,15 @@
+id: http://example.com/project_awesome
+#name: project awesome
+#description: making things awesome
+people_orcids:
+  - ORCID:0000-0000-0000-0001
+  - ORCID:0000-0000-0000-0002
+  - ORCID:0000-0000-0000-0003
+paper_dois:
+  - doi:00.0001/blah
+  - doi:00.0002/blah
+  - doi:00.0003/blah
+related_projects:
+  - myschema:124
+  - myschema:125
+  - myschema:126
