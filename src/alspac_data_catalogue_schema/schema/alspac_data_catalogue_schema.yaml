@@ -62,7 +62,7 @@ classes:
     slots:
       - primary_investigator_orcids
       - primary_email
-      - named_alspac_data_sets 
+      - named_alspac_datasets 
       
 
   NamedAlspacDataSet:
@@ -249,9 +249,9 @@ slots:
 #     description: The md5sum of the woc file used to make this freeze.
 #   git_tag:
 #     description: The git tag of the repo that made this freeze.
-#   qc_description:
-#     description: Some text to describe any quality control that has
-#     been performed.
+  qc_description:
+     description: Some text to describe any quality control that has
+     been performed.
   publications_dois:
      description: >-
        A list of publications dois that use or refer to
