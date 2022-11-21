@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/documentation_authors_orcids/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/issue_description/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: documentation_authors_orcids - alspac-data-catalogue-schema</title>
+        <title>Slot: issue_description - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-documentation_authors_orcids" class="md-skip">
+        <a href="#slot-issue_description" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: documentation_authors_orcids
+              Slot: issue_description
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/documentation_authors_orcids.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/issue_description.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-documentation_authors_orcids">Slot: documentation_authors_orcids</h1>
-<p><em>a list of the orcid ids of the documentation authors</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids">alspacdcs:documentation_authors_orcids</a></p>
+<h1 id="slot-issue_description">Slot: issue_description</h1>
+<p><em>What the issue is.</em></p>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/issue_description">alspacdcs:issue_description</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,15 +331,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
-<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
+<td><a href="../KnownIssue/">KnownIssue</a></td>
+<td>Known issues for a dataset should have a description, when they are logged and by who</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></li>
-<li>Multivalued: True</li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+<li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -349,16 +349,14 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: documentation_authors_orcids
-description: a list of the orcid ids of the documentation authors
+<pre><code class="language-yaml">name: issue_description
+description: What the issue is.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-multivalued: true
-alias: documentation_authors_orcids
+alias: issue_description
 domain_of:
-- NamedAlspacDataSet
-range: uriorcurie
-inlined: false
+- KnownIssue
+range: string
 
 </code></pre>
 

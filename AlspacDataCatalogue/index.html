@@ -209,7 +209,7 @@
       AlspacDataCatalogue : description
       AlspacDataCatalogue : id
       AlspacDataCatalogue : name
-      AlspacDataCatalogue : named_alspac_data_set_collection
+      AlspacDataCatalogue : named_alspac_datasets
       AlspacDataCatalogue : primary_email
       AlspacDataCatalogue : primary_investigator_orcids
 
@@ -245,9 +245,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A list of named alspac data sets curies</td>
+<td><a href="../named_alspac_datasets/">named_alspac_datasets</a></td>
+<td>0..* <br/> <a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
+<td>A list of named alspac data sets curies ids</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -307,7 +307,7 @@ is_a: NamedThing
 slots:
 - primary_investigator_orcids
 - primary_email
-- named_alspac_data_set_collection
+- named_alspac_datasets
 class_uri: dcat:Catalog
 
 </code></pre>
@@ -338,6 +338,8 @@ attributes:
     name: primary_email
     description: The main email address to contact
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    exact_mappings:
+    - foaf:email
     rank: 1000
     slot_uri: schema:email
     alias: primary_email
@@ -346,18 +348,19 @@ attributes:
     - AlspacDataCatalogue
     - NamedAlspacDataSet
     range: string
-  named_alspac_data_set_collection:
-    name: named_alspac_data_set_collection
-    description: A list of named alspac data sets curies
+  named_alspac_datasets:
+    name: named_alspac_datasets
+    description: A list of named alspac data sets curies ids
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     multivalued: true
-    alias: named_alspac_data_set_collection
+    alias: named_alspac_datasets
     owner: AlspacDataCatalogue
     domain_of:
     - AlspacDataCatalogue
-    range: string
-    inlined: false
+    range: NamedAlspacDataSet
+    inlined: true
+    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
