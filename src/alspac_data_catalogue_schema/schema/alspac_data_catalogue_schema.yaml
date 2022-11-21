@@ -33,6 +33,7 @@ prefixes:
   vcard: http://www.w3.org/2006/vcard/ns#
   ORCID: http://identifiers.org/orcid/
   doi: https://doi.org/
+  identifier: https://registry.identifiers.org/registry/
   
 default_prefix: alspacdcs 
 default_range: string
