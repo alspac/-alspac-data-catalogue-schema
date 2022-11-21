@@ -9,4 +9,4 @@ test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/sch
 
 './src/data/examples/alspac_data_catalogue-001.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/alspac_data_catalogue-001.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml -o ./src/data/examples/alspac_data_catalogue-001.ttl --target-class AlspacDataCatalogue'.
 
-convert <--[],'./src/data/examples/alspac_data_catalogue-001.ttl'.
+convert <--['./src/data/examples/alspac_data_catalogue-001.ttl'],true.
