@@ -2,6 +2,8 @@
 
 go <--[],'echo "hello world"'.
 
+test_schema <--[],'gen-json-schema ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml'.
+
 test_cat <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml --target-class AlspacDataCatalogue'.
 
 test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1.yaml --target-class NamedAlspacDataset'.
