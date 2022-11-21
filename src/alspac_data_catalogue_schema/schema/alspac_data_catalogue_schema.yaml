@@ -82,15 +82,13 @@ classes:
       - main_publication_doi
       - publications_dois
 
-# #  named_alspac_data_set_collection:
-# #    tree_root: true
-# #    description: >-
-# #      A holder for named_alspac_data_set objects
-# #    attributes:
-# #      entries:
-# #        range: named_alspac_data_set ## Should this be a uriorcurie
-# #        multivalued: true
-# #        inlined: false
+  NamedAlspacDataSetCollection:
+    #tree_root: true
+    description: >-
+      A holder for named_alspac_data_set objects
+    slots:
+      - NamedAlspacDatasets
+
 
   AlspacDataSetVersion:
     class_uri: dcat:Dataset
@@ -187,10 +185,10 @@ slots:
     #values_from:
       #- ORCID ## I wanted this to only let orcid ids here but not sure
             ## it works
-  named_alspac_data_set_collection:
+  named_alspac_datasets:
     range: NamedAlspacDataSet
     multivalued: true
-    description: A list of named alspac data sets curies
+    description: A list of named alspac data sets curies ids
     inlined_as_list: true
   versions:
     #range: uriorcurie
