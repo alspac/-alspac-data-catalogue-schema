@@ -165,13 +165,13 @@ slots:
     exact_mappings:
           - foaf:email
   primary_investigator_orcids:
-    slot_uri: identifier:orcid
+    #slot_uri: identifier:orcid
     range: uriorcurie
     description: The orcid ids of the pis
     multivalued: true
     inlined_as_list: true
   documentation_authors_orcids:
-    slot_uri: identifier:orcid
+    #slot_uri: identifier:orcid
     range: uriorcurie
     description: a list of the orcid ids of the documentation authors
     multivalued: true
@@ -249,7 +249,8 @@ slots:
        Some free text to describe any quality control that has
        been performed.
   publications_dois:
-     slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462
+     #slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462 ### This is
+                              ### not very nice as not human readable
      description: >-
        A list of publications dois that use or refer to
        this data set
