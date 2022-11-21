@@ -1,0 +1,27 @@
+@prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:ge_ht12_g1 a dcat:Dataset ;
+    schema:description "Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals." ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "Gene expression - array - G1" ;
+    dcat:hasCurrentVersion alspacdcs:ge_ht12_g1_2015-11-02 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" ;
+    alspacdcs:documentation_authors_orcids "ORCID:0000-0002-4064-3794"^^xsd:anyURI,
+        "ORCID:0000-0003-0663-4621"^^xsd:anyURI,
+        "ORCID:0000-0003-0920-1055"^^xsd:anyURI ;
+    alspacdcs:keywords "expression",
+        "genome-wide",
+        "genomic",
+        "illumina",
+        "transcription" ;
+    alspacdcs:main_publication_doi "doi:10.1371/journal.pgen.1004461" ;
+    alspacdcs:primary_investigator_orcids "ORCID:0000-0002-7141-9189"^^xsd:anyURI,
+        "ORCID:0000-0003-0663-4621"^^xsd:anyURI ;
+    alspacdcs:publications_dois "['doi:10.1371/journal.pgen.1004461']" ;
+    alspacdcs:versions alspacdcs:ge_ht12_g1_2015-11-02 .
+
+alspacdcs:ge_ht12_g1_2015-11-02 a dcat:Dataset .
+
