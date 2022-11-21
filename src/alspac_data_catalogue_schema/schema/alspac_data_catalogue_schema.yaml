@@ -208,8 +208,8 @@ slots:
 #   has_next_version:
 #     range: uriorcurie
 #     description: The next version of this named alspac dataset
-#   is_current_version:
-#     description: Is this the current version of a named alspac dataset
+  is_current_version:
+     description: Is this the current version of a named alspac dataset
 #   has_parts:
 #     #range: uriorcurie
 #     multivalued: true
