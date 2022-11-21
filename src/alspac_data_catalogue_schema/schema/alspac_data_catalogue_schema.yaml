@@ -250,7 +250,7 @@ slots:
 #   git_tag:
 #     description: The git tag of the repo that made this freeze.
   qc_description:
-     description: Some text to describe any quality control that has
+     description: >- Some free text to describe any quality control that has
      been performed.
   publications_dois:
      description: >-
