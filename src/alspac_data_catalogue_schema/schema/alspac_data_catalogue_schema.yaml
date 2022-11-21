@@ -194,7 +194,7 @@ slots:
     inlined: false
   has_current_version:
     slot_uri: dcat:hasCurrentVersion
-    range: alspacdcs:AlspacDataSetVersion
+    range: AlspacDataSetVersion
     description: The current version of this named alspac dataset
   has_previous_version:
     range: uriorcurie
