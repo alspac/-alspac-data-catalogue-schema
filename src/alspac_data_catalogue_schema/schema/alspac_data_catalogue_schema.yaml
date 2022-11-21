@@ -65,7 +65,7 @@ classes:
       - named_alspac_datasets 
       
 
-  NamedAlspacDataSet:
+  NamedAlspacDataset:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
@@ -179,7 +179,7 @@ slots:
       #- ORCID ## I wanted this to only let orcid ids here but not sure
             ## it works
   named_alspac_datasets:
-    range: NamedAlspacDataSet
+    range: NamedAlspacDataset
     multivalued: true
     description: A list of named alspac data sets curies ids
     inlined_as_list: true
