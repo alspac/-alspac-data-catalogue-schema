@@ -7,7 +7,7 @@ license: MIT
 see_also:
   - https://alspac.github.io/alspac-data-catalogue-schema
 
-# These have been augmented with the normative recomendation here https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220510/
+# These have been augmented with the normative recommendation here https://www.w3.org/TR/2022/WD-vocab-dcat-3-20220510/
 
 prefixes:
   alspacdcs: https://w3id.org/alspac/alspac-data-catalogue-schema/
