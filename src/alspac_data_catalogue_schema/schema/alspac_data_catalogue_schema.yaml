@@ -168,13 +168,13 @@ slots:
     range: uriorcurie
     description: The orcid ids of the pis
     multivalued: true
-    inlined: false
+    inlined_as_list: true
   documentation_authors_orcids:
     #slot_uri: ORCID:id
     range: uriorcurie
     description: a list of the orcid ids of the documentation authors
     multivalued: true
-    inlined: false
+    inlined_as_list: true
     #values_from:
       #- ORCID ## I wanted this to only let orcid ids here but not sure
             ## it works
