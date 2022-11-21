@@ -246,7 +246,8 @@ slots:
 #   location_on_bp:
 #     description: The location of this file on bc4
   main_publication_doi:
-    #slot_uri: 
+    #slot_uri:
+    range: Paper
     description: A doi ref to the main publication describing this dataset.
   landing_page_url:
      slot_uri: dcat:landingPage
