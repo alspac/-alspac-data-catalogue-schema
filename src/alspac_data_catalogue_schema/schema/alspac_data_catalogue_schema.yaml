@@ -104,7 +104,7 @@ classes:
       - has_parts
       - known_issues
 
-#   alspac_data_set_version_freeze:
+#   AlspacDataSetVersionFreeze:
 #     class_uri: dcat:Dataset
 #     is_a: NamedThing
 #     description: >-
@@ -118,7 +118,7 @@ classes:
 #       - authors
 #       - git_tag
 
-#   abstract_dataset_part:
+#   AbstractDatasetPart:
 #     class_uri: dcat:Dataset
 #     is_a: NamedThing
 #     description: >-
@@ -130,7 +130,7 @@ classes:
 #       - data_distributions
 #       - part_of
 
-#   data_distribution:
+#   DataDistribution:
 #     class_uri: dcat:Distribution
 #     is_a: NamedThing
 #     description: >-
@@ -144,7 +144,7 @@ classes:
 #       - location_on_bc4
 #       - location_on_bp
 
-#   known_issue:
+#   KnownIssue:
 #     description: >-
 #      Known issues for a dataset should have a description, when they
 #      are logged and by who 
