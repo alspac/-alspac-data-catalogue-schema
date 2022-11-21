@@ -293,7 +293,7 @@
 </tr>
 <tr>
 <td><a href="../publications_dois/">publications_dois</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A list of publications dois that use or refer to this data set</td>
 <td>direct</td>
 </tr>
@@ -410,6 +410,7 @@ attributes:
     description: The orcid ids of the pis
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    slot_uri: identifier:orcid
     multivalued: true
     alias: primary_investigator_orcids
     owner: NamedAlspacDataset
@@ -474,6 +475,7 @@ attributes:
     description: a list of the orcid ids of the documentation authors
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    slot_uri: identifier:orcid
     multivalued: true
     alias: documentation_authors_orcids
     owner: NamedAlspacDataset
@@ -497,11 +499,15 @@ attributes:
     description: A list of publications dois that use or refer to this data set
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462
+    multivalued: true
     alias: publications_dois
     owner: NamedAlspacDataset
     domain_of:
     - NamedAlspacDataset
     range: string
+    inlined: true
+    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
