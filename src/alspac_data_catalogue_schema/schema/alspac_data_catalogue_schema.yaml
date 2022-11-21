@@ -263,9 +263,12 @@ slots:
   publications_dois:
      #slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462 ### This is
                               ### not very nice as not human readable
+
      description: >-
        A list of publications dois that use or refer to
        this data set
+
+     range: Paper
      multivalued: true
      inlined_as_list: true
 #   data_distributions:
