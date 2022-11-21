@@ -55,6 +55,17 @@ classes:
      - description
     class_uri: schema:Thing
 
+  Person:
+    class_uri: foaf:person
+    is_a: NamedThing
+    description: A person
+
+  Paper:
+#    class_uri:
+    is_a: NamedThing
+    description: a scientific paper
+    
+
   AlspacDataCatalogue:
     class_uri: dcat:Catalog
     is_a: NamedThing
