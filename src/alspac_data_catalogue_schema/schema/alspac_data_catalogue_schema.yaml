@@ -46,6 +46,8 @@ classes:
   NamedThing:
     description: >-
      A generic grouping for any identifiable entity
+
+    abstract: true 
     slots:
      - id
      - name 
