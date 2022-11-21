@@ -101,8 +101,9 @@ has_parts:
     
   - id: alspacdcs:ge_ht12_g1_2015-11-02_id_map
     name: Gene expression id mapping data
-    description: This data set has two distributions, one with a
-    header and one without.
+    description: >-
+      This data set has two distributions, one with a
+      header and one without.
     data_distributions:
     -id: 2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt
     -name: id_map.txt
