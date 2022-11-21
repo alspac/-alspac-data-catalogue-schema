@@ -1,28 +1,38 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
 @prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix identifier: <https://registry.identifiers.org/registry/> .
-@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 alspacdcs:ge_ht12_g1 a dcat:Dataset ;
-    ns1:NCIT_C71462 "doi:10.1371/journal.pgen.1004461" ;
     schema:description "Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals." ;
     schema:email "alspac-omics@bristol.ac.uk" ;
     schema:name "Gene expression - array - G1" ;
     dcat:hasCurrentVersion alspacdcs:ge_ht12_g1_2015-11-02 ;
     dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" ;
-    identifier:orcid "ORCID:0000-0002-4064-3794"^^xsd:anyURI,
-        "ORCID:0000-0002-7141-9189"^^xsd:anyURI,
-        "ORCID:0000-0003-0663-4621"^^xsd:anyURI,
-        "ORCID:0000-0003-0920-1055"^^xsd:anyURI ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-4064-3794,
+        ORCID:0000-0003-0663-4621,
+        ORCID:0000-0003-0920-1055 ;
     alspacdcs:keywords "expression",
         "genome-wide",
         "genomic",
         "illumina",
         "transcription" ;
-    alspacdcs:main_publication_doi "doi:10.1371/journal.pgen.1004461" ;
+    alspacdcs:main_publication_doi <https://doi.org/10.1371/journal.pgen.1004461> ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-7141-9189,
+        ORCID:0000-0003-0663-4621 ;
+    alspacdcs:publications_dois <https://doi.org/10.1371/journal.pgen.1004461> ;
     alspacdcs:versions alspacdcs:ge_ht12_g1_2015-11-02 .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+ORCID:0000-0002-7141-9189 a foaf:Person .
+
+ORCID:0000-0003-0920-1055 a foaf:Person .
+
+ORCID:0000-0003-0663-4621 a foaf:Person .
+
+<https://doi.org/10.1371/journal.pgen.1004461> a alspacdcs:Paper .
 
 alspacdcs:ge_ht12_g1_2015-11-02 a dcat:Dataset .
 
