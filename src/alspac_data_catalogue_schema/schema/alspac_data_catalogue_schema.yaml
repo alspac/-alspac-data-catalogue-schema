@@ -139,7 +139,7 @@ classes:
 #     class_uri: dcat:Distribution
 #     is_a: NamedThing
 #     description: >-
-#       A dataset distribution has a loaction, file type and file size.
+#       A dataset distribution has a location, file type and file size.
 #     slots:
 #       - abstract_dataset_part
 #       - md5sum
