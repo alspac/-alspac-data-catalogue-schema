@@ -271,7 +271,7 @@ slots:
   known_issues:
     description: >-
       A list of known issues inline
-    range: known_issue
+    range: KnownIssue
 #     multivalued: true
 #     inlined: true
   logged_by:
