@@ -31,6 +31,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/Paper/</loc>
+         <lastmod>2022-11-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/Person/</loc>
+         <lastmod>2022-11-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/alspac-data-catalogue-schema/</loc>
          <lastmod>2022-11-21</lastmod>
          <changefreq>daily</changefreq>

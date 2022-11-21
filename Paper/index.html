@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://alspac.github.io/alspac-data-catalogue-schema/NamedAlspacDataset/" rel="canonical"/>
+<link href="https://alspac.github.io/alspac-data-catalogue-schema/Paper/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.1, mkdocs-material-8.5.7" name="generator"/>
-<title>Class: NamedAlspacDataset - alspac-data-catalogue-schema</title>
+<title>Class: Paper - alspac-data-catalogue-schema</title>
 <link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-namedalspacdataset">
+<a class="md-skip" href="#class-paper">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: NamedAlspacDataset
+              Class: Paper
             
           </span>
 </div>
@@ -152,11 +152,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#usages">
-    Usages
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#identifier-and-mapping-information">
     Identifier and Mapping Information
   </a>
@@ -201,34 +196,25 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/NamedAlspacDataset.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/Paper.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-namedalspacdataset">Class: NamedAlspacDataset</h1>
-<p><em>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</em></p>
-<p>URI: <a href="http://www.w3.org/ns/dcat#Dataset">dcat:Dataset</a></p>
+<h1 id="class-paper">Class: Paper</h1>
+<p><em>a scientific paper</em></p>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/Paper">alspacdcs:Paper</a></p>
 <div class="mermaid"> classDiagram
-    class NamedAlspacDataset
-      NamedThing &lt;|-- NamedAlspacDataset
+    class Paper
+      NamedThing &lt;|-- Paper
 
-      NamedAlspacDataset : description
-      NamedAlspacDataset : documentation_authors_orcids
-      NamedAlspacDataset : has_current_version
-      NamedAlspacDataset : id
-      NamedAlspacDataset : keywords
-      NamedAlspacDataset : landing_page_url
-      NamedAlspacDataset : main_publication_doi
-      NamedAlspacDataset : name
-      NamedAlspacDataset : primary_email
-      NamedAlspacDataset : primary_investigator_orcids
-      NamedAlspacDataset : publications_dois
-      NamedAlspacDataset : versions
+      Paper : description
+      Paper : id
+      Paper : name
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedThing/">NamedThing</a><ul>
-<li><strong>NamedAlspacDataset</strong></li>
+<li><strong>Paper</strong></li>
 </ul>
 </li>
 </ul>
@@ -243,60 +229,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../landing_page_url/">landing_page_url</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>The orcid ids of the pis</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../keywords/">keywords</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A list of keywords.</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../has_current_version/">has_current_version</a></td>
-<td>0..1 <br/> <a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>The current version of this named alspac dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../versions/">versions</a></td>
-<td>0..* <br/> <a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>A list of versions of a named dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../primary_email/">primary_email</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The main email address to contact</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../documentation_authors_orcids/">documentation_authors_orcids</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
-<td>a list of the orcid ids of the documentation authors</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../main_publication_doi/">main_publication_doi</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A doi ref to the main publication describing this dataset.</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../publications_dois/">publications_dois</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A list of publications dois that use or refer to this data set</td>
-<td>direct</td>
-</tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
@@ -317,25 +249,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usages">Usages</h2>
-<table>
-<thead>
-<tr>
-<th>used by</th>
-<th>used in</th>
-<th>type</th>
-<th>used</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
-<td><a href="../named_alspac_datasets/">named_alspac_datasets</a></td>
-<td>range</td>
-<td>NamedAlspacDataset</td>
-</tr>
-</tbody>
-</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -352,11 +265,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Dataset']</td>
+<td>['alspacdcs:Paper']</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:NamedAlspacDataset']</td>
+<td>['alspacdcs:Paper']</td>
 </tr>
 </tbody>
 </table>
@@ -364,147 +277,22 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: NamedAlspacDataset
-description: Represents a named_alspac_data_set. That is a set of data that has been
-  collected or produced to be named, reused and distributed.
+<pre><code class="language-yaml">name: Paper
+description: a scientific paper
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
-slots:
-- landing_page_url
-- primary_investigator_orcids
-- keywords
-- has_current_version
-- versions
-- primary_email
-- documentation_authors_orcids
-- main_publication_doi
-- publications_dois
-class_uri: dcat:Dataset
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: NamedAlspacDataset
-description: Represents a named_alspac_data_set. That is a set of data that has been
-  collected or produced to be named, reused and distributed.
+<pre><code class="language-yaml">name: Paper
+description: a scientific paper
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
-  landing_page_url:
-    name: landing_page_url
-    description: A Web page that can be navigated to in a Web browser to gain access
-      to the catalog, a dataset, its distributions and/or additional information.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    slot_uri: dcat:landingPage
-    alias: landing_page_url
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: string
-  primary_investigator_orcids:
-    name: primary_investigator_orcids
-    description: The orcid ids of the pis
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: primary_investigator_orcids
-    owner: NamedAlspacDataset
-    domain_of:
-    - AlspacDataCatalogue
-    - NamedAlspacDataset
-    range: uriorcurie
-    inlined: true
-    inlined_as_list: true
-  keywords:
-    name: keywords
-    description: A list of keywords.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: keywords
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: string
-    inlined: false
-  has_current_version:
-    name: has_current_version
-    description: The current version of this named alspac dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    slot_uri: dcat:hasCurrentVersion
-    alias: has_current_version
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: AlspacDataSetVersion
-  versions:
-    name: versions
-    description: A list of versions of a named dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: versions
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: AlspacDataSetVersion
-    inlined: true
-    inlined_as_list: true
-  primary_email:
-    name: primary_email
-    description: The main email address to contact
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    exact_mappings:
-    - foaf:email
-    rank: 1000
-    slot_uri: schema:email
-    alias: primary_email
-    owner: NamedAlspacDataset
-    domain_of:
-    - AlspacDataCatalogue
-    - NamedAlspacDataset
-    range: string
-  documentation_authors_orcids:
-    name: documentation_authors_orcids
-    description: a list of the orcid ids of the documentation authors
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: documentation_authors_orcids
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: uriorcurie
-    inlined: true
-    inlined_as_list: true
-  main_publication_doi:
-    name: main_publication_doi
-    description: A doi ref to the main publication describing this dataset.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: main_publication_doi
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: string
-  publications_dois:
-    name: publications_dois
-    description: A list of publications dois that use or refer to this data set
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    multivalued: true
-    alias: publications_dois
-    owner: NamedAlspacDataset
-    domain_of:
-    - NamedAlspacDataset
-    range: string
-    inlined: true
-    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
@@ -513,7 +301,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: NamedAlspacDataset
+    owner: Paper
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -524,7 +312,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: NamedAlspacDataset
+    owner: Paper
     domain_of:
     - NamedThing
     range: string
@@ -535,11 +323,10 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: NamedAlspacDataset
+    owner: Paper
     domain_of:
     - NamedThing
     range: string
-class_uri: dcat:Dataset
 
 </code></pre>
 </details>
