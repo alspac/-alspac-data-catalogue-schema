@@ -1,6 +1,6 @@
 # Example omics data catalogue object
-id: alspac_data_catalogue_001
-name: Omics Data Catalogue
+id: alspacdcs:alspac_data_catalogue_001
+name: ALSPAC Omics Data Catalogue
 description: This catalogue is for all of the named alspac omics data sets
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 #Nic Timpson
