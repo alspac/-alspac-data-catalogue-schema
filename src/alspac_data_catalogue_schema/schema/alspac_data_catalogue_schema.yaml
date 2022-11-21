@@ -253,7 +253,7 @@ slots:
      description: >-
        A list of publications dois that use or refer to
        this data set
-     mulitvalued: true
+     multivalued: true
      inlined_as_list: true
 #   data_distributions:
 #     description: A list of data distributions for this abstract dataset
