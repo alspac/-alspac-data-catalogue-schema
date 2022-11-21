@@ -268,10 +268,10 @@ slots:
     description: A list of orcids for the authors of the item
     multivalued: true
     inlined_as_list: true
-#   known_issues:
-#     description: >-
-#       A holder for known issues
-#     range: known_issue
+  known_issues:
+    description: >-
+      A list of known issues inline
+    range: known_issue
 #     multivalued: true
 #     inlined: true
 #   logged_by:
