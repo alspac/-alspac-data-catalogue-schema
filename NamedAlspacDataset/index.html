@@ -251,7 +251,7 @@
 </tr>
 <tr>
 <td><a href="../primary_investigator_orcids/">primary_investigator_orcids</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>0..* <br/> <a href="../Person/">Person</a></td>
 <td>The orcid ids of the pis</td>
 <td>direct</td>
 </tr>
@@ -281,19 +281,19 @@
 </tr>
 <tr>
 <td><a href="../documentation_authors_orcids/">documentation_authors_orcids</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>0..* <br/> <a href="../Person/">Person</a></td>
 <td>a list of the orcid ids of the documentation authors</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../main_publication_doi/">main_publication_doi</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..1 <br/> <a href="../Paper/">Paper</a></td>
 <td>A doi ref to the main publication describing this dataset.</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../publications_dois/">publications_dois</a></td>
-<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>0..* <br/> <a href="../Paper/">Paper</a></td>
 <td>A list of publications dois that use or refer to this data set</td>
 <td>direct</td>
 </tr>
@@ -416,7 +416,7 @@ attributes:
     domain_of:
     - AlspacDataCatalogue
     - NamedAlspacDataset
-    range: uriorcurie
+    range: Person
     inlined: true
     inlined_as_list: true
   keywords:
@@ -479,7 +479,7 @@ attributes:
     owner: NamedAlspacDataset
     domain_of:
     - NamedAlspacDataset
-    range: uriorcurie
+    range: Person
     inlined: true
     inlined_as_list: true
   main_publication_doi:
@@ -491,7 +491,7 @@ attributes:
     owner: NamedAlspacDataset
     domain_of:
     - NamedAlspacDataset
-    range: string
+    range: Paper
   publications_dois:
     name: publications_dois
     description: A list of publications dois that use or refer to this data set
@@ -502,7 +502,7 @@ attributes:
     owner: NamedAlspacDataset
     domain_of:
     - NamedAlspacDataset
-    range: string
+    range: Paper
     inlined: true
     inlined_as_list: true
   id:
