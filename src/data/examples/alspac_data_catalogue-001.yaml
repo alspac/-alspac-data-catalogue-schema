@@ -7,5 +7,6 @@ primary_investigator_orcids:
 primary_email: alspac-omics@bristol.ac.uk
 named_alspac_data_set_collection:
   - alspacdcs:ge_ht12_g1
-  - alspacdcs:named_alspac_data_set-002 ## test example datasets
-  - alspacdcs:named_alspac_data_set-003
+  - alspacdcs:gi_hrc_g0m_g1  ## test example datasets
+  - alspacdcs:gi_1000g_g0m_g1
+  - alspacdcs:gi_1000g_g0p
