@@ -273,7 +273,7 @@
 </tr>
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>0..* <br/> <a href="../AbstractDatasetPart/">AbstractDatasetPart</a></td>
 <td>None</td>
 <td>direct</td>
 </tr>
@@ -440,11 +440,14 @@ attributes:
     name: has_parts
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: has_parts
     owner: AlspacDataSetVersion
     domain_of:
     - AlspacDataSetVersion
-    range: uriorcurie
+    range: AbstractDatasetPart
+    inlined: true
+    inlined_as_list: true
   known_issues:
     name: known_issues
     description: A list of known issues inline
