@@ -56,7 +56,7 @@ classes:
     class_uri: schema:Thing
 
   Person:
-    class_uri: foaf:person
+    class_uri: foaf:Person
     is_a: NamedThing
     description: A person
 
