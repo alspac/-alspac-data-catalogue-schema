@@ -69,7 +69,7 @@ has_parts:
       The set of data which was produced by the molgenis method for
       the 2015-11-02 release of ge_ht12_g1.
     data_distributions:
-    -id:b515c9ed69ec01eed3a31e0d132c552c_data.RData
+    -id: b515c9ed69ec01eed3a31e0d132c552c_data.RData
     -name: data.RData
     -description:
     -md5sum: b515c9ed69ec01eed3a31e0d132c552c
