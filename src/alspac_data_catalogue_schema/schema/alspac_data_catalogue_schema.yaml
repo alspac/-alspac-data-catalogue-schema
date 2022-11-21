@@ -184,16 +184,17 @@ slots:
     description: A list of named alspac data sets curies ids
     inlined_as_list: true
   versions:
-    #range: uriorcurie
+    range: AlspacDataSetVersion
+    multivalued: true
     description: A list of versions of a named dataset
-    inlined: false
+    inlined_as_list: true
   keywords:
     description: A list of keywords.
     multivalued: true
     inlined: false
   has_current_version:
     slot_uri: dcat:hasCurrentVersion
-    range: uriorcurie
+    range: alspacdcs:AlspacDataSetVersion
     description: The current version of this named alspac dataset
   has_previous_version:
     range: uriorcurie
