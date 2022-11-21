@@ -182,8 +182,8 @@ slots:
     description: a list of the orcid ids of the documentation authors
     multivalued: true
     inlined: false
-    values_from:
-      - ORCID ## I wanted this to only let orcid ids here but not sure
+    #values_from:
+      #- ORCID ## I wanted this to only let orcid ids here but not sure
             ## it works
   named_alspac_data_set_collection:
     #range: uriorcurie
