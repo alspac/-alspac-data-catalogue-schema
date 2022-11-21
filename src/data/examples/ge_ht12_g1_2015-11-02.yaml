@@ -115,8 +115,9 @@ has_parts:
 
     -id: 889022ba439c1baef05b9dd83b8db497_id_map2.txt
     -name: id_map2.txt
-    -description: A text file with two collumns and a header line
-    -mapping ids.
+    -description: >-
+      A text file with two collumns and a header line
+      mapping ids.
     -md5sum: 889022ba439c1baef05b9dd83b8db497
     -filesize: 62k
     -filetype: .txt
