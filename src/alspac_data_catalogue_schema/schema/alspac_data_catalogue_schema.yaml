@@ -186,10 +186,10 @@ slots:
       #- ORCID ## I wanted this to only let orcid ids here but not sure
             ## it works
   named_alspac_data_set_collection:
-    #range: uriorcurie
+    range: NamedAlspacDataSet
     multivalued: true
     description: A list of named alspac data sets curies
-    inlined: false
+    inlined_as_list: true
   versions:
     #range: uriorcurie
     description: A list of versions of a named dataset
