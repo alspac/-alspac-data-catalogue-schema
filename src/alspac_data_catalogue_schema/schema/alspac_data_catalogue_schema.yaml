@@ -177,13 +177,13 @@ slots:
           - foaf:email
   primary_investigator_orcids:
     #slot_uri: identifier:orcid
-    range: uriorcurie
+    range: Person
     description: The orcid ids of the pis
     multivalued: true
     inlined_as_list: true
   documentation_authors_orcids:
     #slot_uri: identifier:orcid
-    range: uriorcurie
+    range: Person
     description: a list of the orcid ids of the documentation authors
     multivalued: true
     inlined_as_list: true
