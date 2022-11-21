@@ -249,9 +249,12 @@ slots:
        Some free text to describe any quality control that has
        been performed.
   publications_dois:
+     slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462
      description: >-
        A list of publications dois that use or refer to
        this data set
+     mulitvalued: true
+     inlined_as_list: true
 #   data_distributions:
 #     description: A list of data distributions for this abstract dataset
 #     multivalued: true
