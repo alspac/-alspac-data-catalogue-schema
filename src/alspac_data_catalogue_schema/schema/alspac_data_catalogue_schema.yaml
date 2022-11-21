@@ -62,7 +62,7 @@ classes:
     slots:
       - primary_investigator_orcids
       - primary_email
-      - named_alspac_data_set_collection 
+      - named_alspac_data_sets 
       
 
   NamedAlspacDataSet:
@@ -82,13 +82,13 @@ classes:
       - main_publication_doi
       - publications_dois
 
-  NamedAlspacDataSetCollection:
-    #tree_root: true
-    description: >-
-      A holder for named_alspac_data_set objects
-    slots:
-      - NamedAlspacDatasets
-
+# NamedAlspacDataSetCollection:
+#    #tree_root: true
+#    description: >-
+#      A holder for named_alspac_data_set objects
+#    slots:
+#      - named_alspac_datasets
+#
 
   AlspacDataSetVersion:
     class_uri: dcat:Dataset

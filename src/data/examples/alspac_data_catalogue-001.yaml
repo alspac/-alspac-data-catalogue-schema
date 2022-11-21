@@ -5,7 +5,7 @@ description: This catalogue is for all of the named alspac omics data sets
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 #Nic Timpson
 primary_email: alspac-omics@bristol.ac.uk
-named_alspac_data_set_collection:
+named_alspac_data_sets:
   - alspacdcs:ge_ht12_g1
   - alspacdcs:gi_hrc_g0m_g1  ## test example datasets
   - alspacdcs:gi_1000g_g0m_g1
