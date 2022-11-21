@@ -4,6 +4,8 @@ go <--[],'echo "hello world"'.
 
 test_cat <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml --target-class AlspacDataCatalogue'.
 
+test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1.yaml --target-class NamedAlspacDataset'.
+
 
 './src/data/examples/alspac_data_catalogue-001.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/alspac_data_catalogue-001.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml -o ./src/data/examples/alspac_data_catalogue-001.ttl --target-class AlspacDataCatalogue'.
 
