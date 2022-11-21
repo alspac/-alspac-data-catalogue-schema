@@ -144,14 +144,14 @@ classes:
 #       - location_on_bc4
 #       - location_on_bp
 
-#   KnownIssue:
-#     description: >-
-#      Known issues for a dataset should have a description, when they
-#      are logged and by who 
-#     slots:
-#      - issue_description
-#      - logged_by
-#      - logged_date
+  KnownIssue:
+    description: >-
+     Known issues for a dataset should have a description, when they
+     are logged and by who 
+    slots:
+       - issue_description
+       - logged_by
+       - logged_date
 
 slots:
   id:
@@ -274,13 +274,13 @@ slots:
     range: known_issue
 #     multivalued: true
 #     inlined: true
-#   logged_by:
-#     description: >-
-#       The person who logged this issue.
-#   logged_date:
-#     description: >-
-#       The date that this issue was logged.
-#   issue_description:
-#     description: >-
-#       What the issue is.
+  logged_by:
+    description: >-
+      The person who logged this issue.
+  logged_date:
+    description: >-
+      The date that this issue was logged.
+  issue_description:
+    description: >-
+      What the issue is.
   
