@@ -271,10 +271,12 @@ slots:
      range: Paper
      multivalued: true
      inlined_as_list: true
-#   data_distributions:
-#     description: A list of data distributions for this abstract dataset
-#     multivalued: true
-#     inlined: false
+
+  data_distributions:
+   description: A list of data distributions for this abstract dataset
+   range: DataDistribution
+   multivalued: true
+   inlined_as_list: true
 #   number_of_participants:
 #     description: Number of participants in this file
 #     range: integer 
