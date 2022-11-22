@@ -234,6 +234,15 @@ slots:
     description: What number freeze is this?
   freeze_date:
     description: When was this freeze made?
+  is_current_freeze:
+    description: Is this current freeze?
+    range: boolean
+  previous_freeze:
+    description: What was the previous freeze?
+    range: AlspacDataSetVersionFreeze
+  next_freeze:
+    description: What is the next freeze ?
+    range: AlspacDataSetVersionFreeze
 #   freeze_of_version:
 #     description: What version of a dataset is this freeze of?
 #   freeze_dataset:
