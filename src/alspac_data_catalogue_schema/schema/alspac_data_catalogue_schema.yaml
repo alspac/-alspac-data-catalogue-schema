@@ -271,9 +271,11 @@ slots:
      slot_uri: dcat:landingPage
      description: A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
 #   woc_file_md5sum:
-#     description: The md5sum of the woc file used to make this freeze.
-#   git_tag:
-#     description: The git tag of the repo that made this freeze.
+#     description: The md5sum of the woc file used to make this
+#     freeze.
+  git_tag:
+    description: The git tag of the repo that made this freeze.
+    
   qc_description:
      description: >-
        Some free text to describe any quality control that has
