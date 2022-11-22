@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -317,6 +317,7 @@
 
 
 <h1 id="slot-filetype">Slot: filetype</h1>
+<p><em>what is the file type?</em></p>
 <p>URI: <a href="http://www.w3.org/ns/dcat#mediaType">dcat:mediaType</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -331,7 +332,7 @@
 <tbody>
 <tr>
 <td><a href="../DataDistribution/">DataDistribution</a></td>
-<td>A dataset distribution has a loaction, file type and file size.</td>
+<td>A dataset distribution has a location, file type and file size.</td>
 </tr>
 </tbody>
 </table>
@@ -349,12 +350,13 @@
 <details>
 
 <pre><code class="language-yaml">name: filetype
+description: what is the file type?
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 slot_uri: dcat:mediaType
 alias: filetype
 domain_of:
-- data_distribution
+- DataDistribution
 range: string
 
 </code></pre>

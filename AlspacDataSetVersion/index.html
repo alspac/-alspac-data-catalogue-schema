@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -149,6 +149,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#slots">
     Slots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+    Usages
   </a>
 </li>
 <li class="md-nav__item">
@@ -213,8 +218,8 @@
       AlspacDataSetVersion : has_previous_version
       AlspacDataSetVersion : id
       AlspacDataSetVersion : is_current_version
+      AlspacDataSetVersion : known_issues
       AlspacDataSetVersion : name
-      AlspacDataSetVersion : primary_email
       AlspacDataSetVersion : qc_description
 
 </div>
@@ -237,6 +242,18 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../qc_description/">qc_description</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>Some free text to describe any quality control that has been performed.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../is_current_version/">is_current_version</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>Is this the current version of a named alspac dataset</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../has_previous_version/">has_previous_version</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>The previous version of this named alspac dataset</td>
@@ -249,33 +266,21 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../is_current_version/">is_current_version</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>Is this the current version of a named alspac dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../primary_email/">primary_email</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The main email address to contact</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../authors/">authors</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A list of orcids for the authors of the item</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>None</td>
+<td>0..* <br/> <a href="../DatasetPart/">DatasetPart</a></td>
+<td>A list of parts of a named alspac dataset version or freeze</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../qc_description/">qc_description</a></td>
-<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>Some text to describe any quality control that has been performed.</td>
+<td><a href="../known_issues/">known_issues</a></td>
+<td>0..* <br/> <a href="../KnownIssue/">KnownIssue</a></td>
+<td>A list of known issues inline</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -295,6 +300,31 @@
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
 <td>inherited</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
+<td><a href="../has_current_version/">has_current_version</a></td>
+<td>range</td>
+<td>AlspacDataSetVersion</td>
+</tr>
+<tr>
+<td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
+<td><a href="../versions/">versions</a></td>
+<td>range</td>
+<td>AlspacDataSetVersion</td>
 </tr>
 </tbody>
 </table>
@@ -326,42 +356,62 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: alspac_data_set_version
+<pre><code class="language-yaml">name: AlspacDataSetVersion
 description: Represents a version of a named_alspac_data_set. That is a specific set
   of data which internal people to alspac can use.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 slots:
+- qc_description
+- is_current_version
 - has_previous_version
 - has_next_version
-- is_current_version
-- primary_email
 - authors
 - has_parts
-- qc_description
+- known_issues
 class_uri: dcat:Dataset
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: alspac_data_set_version
+<pre><code class="language-yaml">name: AlspacDataSetVersion
 description: Represents a version of a named_alspac_data_set. That is a specific set
   of data which internal people to alspac can use.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 is_a: NamedThing
 attributes:
+  qc_description:
+    name: qc_description
+    description: Some free text to describe any quality control that has been performed.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: qc_description
+    owner: AlspacDataSetVersion
+    domain_of:
+    - AlspacDataSetVersion
+    range: string
+  is_current_version:
+    name: is_current_version
+    description: Is this the current version of a named alspac dataset
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: is_current_version
+    owner: AlspacDataSetVersion
+    domain_of:
+    - AlspacDataSetVersion
+    range: string
   has_previous_version:
     name: has_previous_version
     description: The previous version of this named alspac dataset
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: has_previous_version
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
-    - alspac_data_set_version
+    - AlspacDataSetVersion
     range: uriorcurie
   has_next_version:
     name: has_next_version
@@ -369,63 +419,49 @@ attributes:
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: has_next_version
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
-    - alspac_data_set_version
+    - AlspacDataSetVersion
     range: uriorcurie
-  is_current_version:
-    name: is_current_version
-    description: Is this the current version of a named alspac dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    alias: is_current_version
-    owner: alspac_data_set_version
-    domain_of:
-    - alspac_data_set_version
-    range: string
-  primary_email:
-    name: primary_email
-    description: The main email address to contact
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
-    rank: 1000
-    slot_uri: schema:email
-    alias: primary_email
-    owner: alspac_data_set_version
-    domain_of:
-    - alspac_data_catalogue
-    - named_alspac_data_set
-    - alspac_data_set_version
-    - alspac_data_set_version_freeze
-    range: string
   authors:
     name: authors
+    description: A list of orcids for the authors of the item
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: authors
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
-    - alspac_data_set_version
-    - alspac_data_set_version_freeze
+    - AlspacDataSetVersion
     range: string
+    inlined: true
+    inlined_as_list: true
   has_parts:
     name: has_parts
+    description: A list of parts of a named alspac dataset version or freeze
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
+    multivalued: true
     alias: has_parts
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
-    - alspac_data_set_version
-    range: string
-  qc_description:
-    name: qc_description
-    description: Some text to describe any quality control that has been performed.
+    - AlspacDataSetVersion
+    range: DatasetPart
+    inlined: true
+    inlined_as_list: true
+  known_issues:
+    name: known_issues
+    description: A list of known issues inline
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
-    alias: qc_description
-    owner: alspac_data_set_version
+    multivalued: true
+    alias: known_issues
+    owner: AlspacDataSetVersion
     domain_of:
-    - alspac_data_set_version
-    range: string
+    - AlspacDataSetVersion
+    range: KnownIssue
+    inlined: true
+    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
@@ -434,7 +470,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -445,7 +481,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
     - NamedThing
     range: string
@@ -456,7 +492,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: alspac_data_set_version
+    owner: AlspacDataSetVersion
     domain_of:
     - NamedThing
     range: string
