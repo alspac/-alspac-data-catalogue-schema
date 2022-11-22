@@ -129,3 +129,89 @@ known_issues:
       We do not have the original idat files that were used to call this data.
     logged_by: Gibran Hermani
     logged_date: NA
+
+has_scripts:
+  - id: alspacdcs:7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh
+    name: checking_proxies.sh
+    md5sum: 7ff9755c06115ec3d27d0a328a2a6895
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 859B
+    filetype: .sh
+  - id: alspacdcs:2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh
+    name: cisQTL.sh
+    md5sum: 2709e8d54e2687de65ecea73bcd63b1d
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.1K
+    filetype: .sh
+  - id: alspacdcs:572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh
+    name: combine_genotypes.sh
+    md5sum: 572b73e8312f0691e4b95ad9e459f63b
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 2.2K
+    filetype: .sh
+  - id: alspacdcs:6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh
+    name: convert_genotypes.sh
+    md5sum: 6a3b79a2d080d8e5f45a9dcde3c0405b
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.2K
+    filetype: .sh
+  - id: alspacdcs:9792a553813502395cc791805db3fd5d_expression_normalisation.R
+    name: expression_normalisation.R
+    md5sum: 9792a553813502395cc791805db3fd5d
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 820B
+    filetype: .R
+  - id: alspacdcs:bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh
+    name: expression_normalisation.sh
+    md5sum: bd3cd8d3b95c5facb76fd1f80476fa8a
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.6K
+    filetype: .sh
+  - id: alspacdcs:5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh
+    name: gather_data.sh
+    md5sum: 5dd7f9bd308c50f2ec401bb9ab4181d8
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.6K
+    filetype: .sh
+  - id: alspacdcs:8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh
+    name: generate_pcs.sh
+    md5sum: 8dd67b9513e18a3c0d8dcf12bfbd57cb
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 739B
+    filetype: .sh
+  - id: alspacdcs:bb449a9991739fdad51136df422e98e9_ids.R
+    name: ids.R
+    md5sum: bb449a9991739fdad51136df422e98e9
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 214B
+    filetype: .R
+  - id: alspacdcs:a7af80819b4dbd4a0dae795553a1de03_initial_setup.R
+    name: initial_setup.R
+    md5sum: a7af80819b4dbd4a0dae795553a1de03
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 3.1K
+    filetype: .R
+  - id: alspacdcs:d9404781f96ff338c4755c4510f616c4_initial_setup.sh
+    name: initial_setup.sh
+    md5sum: d9404781f96ff338c4755c4510f616c4
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 205B
+    filetype: .sh
+  - id: alspacdcs:24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh
+    name: mixupmapper.sh
+    md5sum: 24e1fd034a96b37657743603d9cb0e6c
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.7K
+    filetype: .sh
+  - id: alspacdcs:8013f1dce551d40ed2e0f56773cda52a_removemixups.R
+    name: removemixups.R
+    md5sum: 8013f1dce551d40ed2e0f56773cda52a
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 586B
+    filetype: .R
+  - id: alspacdcs:e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh
+    name: remove_pcs.sh
+    md5sum: e3d6eafb8e8576ee28fff22109e851c1
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.2K
+    filetype: .sh
