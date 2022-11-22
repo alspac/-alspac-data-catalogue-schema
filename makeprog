@@ -21,4 +21,4 @@ test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/sch
 
 './src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl --target-class AlspacDataSetVersionFreeze'.
 
-convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/examples/ge_ht12_g1.ttl','./src/data/examples/ge_ht12_g1_2015-11-02.ttl'],true.
+convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/examples/ge_ht12_g1.ttl','./src/data/examples/ge_ht12_g1_2015-11-02.ttl','./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl'],true.
