@@ -13,7 +13,7 @@ all_individuals_to_exclude_md5sum: 33b08d90fa3e43504308f20283088a6b
 git_tag: https://github.com/alspac/dataset_ge_ht12_g1/releases/tag/freeze2
 is_current_freeze: true
 freeze_number: 2
-freeze_date:
+freeze_date: 19-12-2022
 previous_freeze: alspacdcs:ge_ht12_g1_2015-11-02_f1
 next_freeze:
 freeze_of_alspac_dataset_version: alspacdcs:ge_ht12_g1_2015-11-02
