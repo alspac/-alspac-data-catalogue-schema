@@ -218,6 +218,7 @@ slots:
   is_current_version:
      description: Is this the current version of a named alspac dataset
   has_parts:
+     description: A list of parts of a named alspac dataset version or freeze
      range: DatasetPart
      multivalued: true
      inlined_as_list: true
@@ -239,8 +240,10 @@ slots:
     description: What is the md5sum of the file in this distribution?
   filesize:
     slot_uri: dcat:byteSize
+    description: The size of the file in k, m,g or t.
   filetype:
     slot_uri: dcat:mediaType
+    description: what is the file type?
   number_of_participants:
     description: The number of alspac participants in this dataset
     range: integer
