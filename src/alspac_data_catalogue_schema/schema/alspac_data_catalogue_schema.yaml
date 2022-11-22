@@ -238,6 +238,7 @@ slots:
     description: What number freeze is this?
   freeze_date:
     description: When was this freeze made?
+    range: date
   is_current_freeze:
     description: Is this current freeze?
     range: boolean
