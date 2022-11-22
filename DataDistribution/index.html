@@ -217,6 +217,7 @@
       DataDistribution : id
       DataDistribution : md5sum
       DataDistribution : name
+      DataDistribution : number_of_gene_expression_probe_values
       DataDistribution : number_of_participants
 
 </div>
@@ -260,6 +261,12 @@
 <td><a href="../number_of_participants/">number_of_participants</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
 <td>The number of alspac participants in this dataset</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../number_of_gene_expression_probe_values/">number_of_gene_expression_probe_values</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td>This slot is used for gene expression data distributions</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -339,6 +346,7 @@ slots:
 - filesize
 - filetype
 - number_of_participants
+- number_of_gene_expression_probe_values
 class_uri: dcat:Distribution
 
 </code></pre>
@@ -388,6 +396,16 @@ attributes:
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: number_of_participants
+    owner: DataDistribution
+    domain_of:
+    - DataDistribution
+    range: integer
+  number_of_gene_expression_probe_values:
+    name: number_of_gene_expression_probe_values
+    description: This slot is used for gene expression data distributions
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: number_of_gene_expression_probe_values
     owner: DataDistribution
     domain_of:
     - DataDistribution
