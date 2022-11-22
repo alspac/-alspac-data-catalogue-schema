@@ -233,15 +233,22 @@ slots:
 #   data_distribution:
 #   abstract_dataset_part:
 #   part_of:
-#   md5sum:
-#     slot_uri: spdx:checksum
-#     description: What is the md5sum of the file in this distribution?
-#   filesize:
-#     slot_uri: dcat:byteSize
-#   filetype:
-#     slot_uri: dcat:mediaType
-#   number_of_samples:
-#     description: The number of alspac participants in this dataset
+  md5sum:
+    slot_uri: spdx:checksum
+    description: What is the md5sum of the file in this distribution?
+  filesize:
+    slot_uri: dcat:byteSize
+  filetype:
+    slot_uri: dcat:mediaType
+  number_of_participants:
+    description: The number of alspac participants in this dataset
+    range: integer
+  number_of_gene_expression_probe_values:
+    description: >-
+      This slot is used for gene expression data
+      distributions
+    range: integer
+    
 #   location_on_bc4:
 #     description: The location of this file on bc4
 #   location_on_bp:
