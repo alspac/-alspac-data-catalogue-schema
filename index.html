@@ -393,16 +393,20 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="AbstractDatasetPart/">AbstractDatasetPart</a></td>
-<td>Represents an abstract part of named alspac data set, in a version or freeze</td>
-</tr>
-<tr>
 <td><a href="AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
 <td>Represents an alspac data catalogue</td>
 </tr>
 <tr>
 <td><a href="AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
 <td>Represents a version of a named_alspac_data_set</td>
+</tr>
+<tr>
+<td><a href="DataDistribution/">DataDistribution</a></td>
+<td>A dataset distribution has a location, file type and file size</td>
+</tr>
+<tr>
+<td><a href="DatasetPart/">DatasetPart</a></td>
+<td>Represents a  part of named alspac data set, in a version or freeze</td>
 </tr>
 <tr>
 <td><a href="KnownIssue/">KnownIssue</a></td>
@@ -440,12 +444,24 @@ Name: alspac-data-catalogue-schema</p>
 <td>A list of orcids for the authors of the item</td>
 </tr>
 <tr>
+<td><a href="data_distributions/">data_distributions</a></td>
+<td>A list of data distributions for this abstract dataset</td>
+</tr>
+<tr>
 <td><a href="description/">description</a></td>
 <td>A human-readable description for a thing</td>
 </tr>
 <tr>
 <td><a href="documentation_authors_orcids/">documentation_authors_orcids</a></td>
 <td>a list of the orcid ids of the documentation authors</td>
+</tr>
+<tr>
+<td><a href="filesize/">filesize</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="filetype/">filetype</a></td>
+<td></td>
 </tr>
 <tr>
 <td><a href="has_current_version/">has_current_version</a></td>
@@ -500,12 +516,24 @@ Name: alspac-data-catalogue-schema</p>
 <td>A doi ref to the main publication describing this dataset</td>
 </tr>
 <tr>
+<td><a href="md5sum/">md5sum</a></td>
+<td>What is the md5sum of the file in this distribution?</td>
+</tr>
+<tr>
 <td><a href="name/">name</a></td>
 <td>A human-readable name for a thing</td>
 </tr>
 <tr>
 <td><a href="named_alspac_datasets/">named_alspac_datasets</a></td>
 <td>A list of named alspac data sets curies ids</td>
+</tr>
+<tr>
+<td><a href="number_of_gene_expression_probe_values/">number_of_gene_expression_probe_values</a></td>
+<td>This slot is used for gene expression data distributions</td>
+</tr>
+<tr>
+<td><a href="number_of_participants/">number_of_participants</a></td>
+<td>The number of alspac participants in this dataset</td>
 </tr>
 <tr>
 <td><a href="primary_email/">primary_email</a></td>

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/known_issues/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/number_of_gene_expression_probe_values/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: known_issues - alspac-data-catalogue-schema</title>
+        <title>Slot: number_of_gene_expression_probe_values - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-known_issues" class="md-skip">
+        <a href="#slot-number_of_gene_expression_probe_values" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: known_issues
+              Slot: number_of_gene_expression_probe_values
             
           </span>
         </div>
@@ -256,13 +256,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
   </a>
@@ -310,36 +303,21 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/known_issues.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/number_of_gene_expression_probe_values.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-known_issues">Slot: known_issues</h1>
-<p><em>A list of known issues inline</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/known_issues">alspacdcs:known_issues</a></p>
+<h1 id="slot-number_of_gene_expression_probe_values">Slot: number_of_gene_expression_probe_values</h1>
+<p><em>This slot is used for gene expression data distributions</em></p>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values">alspacdcs:number_of_gene_expression_probe_values</a></p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../KnownIssue/">KnownIssue</a></li>
-<li>Multivalued: True</li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></li>
+<li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -349,17 +327,12 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: known_issues
-description: A list of known issues inline
+<pre><code class="language-yaml">name: number_of_gene_expression_probe_values
+description: This slot is used for gene expression data distributions
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-multivalued: true
-alias: known_issues
-domain_of:
-- AlspacDataSetVersion
-range: KnownIssue
-inlined: true
-inlined_as_list: true
+alias: number_of_gene_expression_probe_values
+range: integer
 
 </code></pre>
 

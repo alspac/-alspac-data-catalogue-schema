@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/known_issues/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/data_distributions/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: known_issues - alspac-data-catalogue-schema</title>
+        <title>Slot: data_distributions - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-known_issues" class="md-skip">
+        <a href="#slot-data_distributions" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: known_issues
+              Slot: data_distributions
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/known_issues.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/data_distributions.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-known_issues">Slot: known_issues</h1>
-<p><em>A list of known issues inline</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/known_issues">alspacdcs:known_issues</a></p>
+<h1 id="slot-data_distributions">Slot: data_distributions</h1>
+<p><em>A list of data distributions for this abstract dataset</em></p>
+<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/data_distributions">alspacdcs:data_distributions</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
+<td><a href="../DatasetPart/">DatasetPart</a></td>
+<td>Represents a  part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../KnownIssue/">KnownIssue</a></li>
+<li>Range: <a href="../DataDistribution/">DataDistribution</a></li>
 <li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -349,15 +349,15 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: known_issues
-description: A list of known issues inline
+<pre><code class="language-yaml">name: data_distributions
+description: A list of data distributions for this abstract dataset
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 multivalued: true
-alias: known_issues
+alias: data_distributions
 domain_of:
-- AlspacDataSetVersion
-range: KnownIssue
+- DatasetPart
+range: DataDistribution
 inlined: true
 inlined_as_list: true
 
