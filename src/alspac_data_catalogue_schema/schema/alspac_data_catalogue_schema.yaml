@@ -238,8 +238,12 @@ slots:
 #     description: What version of a dataset is this freeze of?
 #   freeze_dataset:
 #     description: What dataset is this a freeze of?
-#   data_distribution:
-#   abstract_dataset_part:
+
+  linker_file_md5sum:
+    slot_uri: spdx:checksum
+    description: >-
+      What is the md5sum of the dataset linker file used to
+      make this freeze
 #   part_of:
   md5sum:
     slot_uri: spdx:checksum
