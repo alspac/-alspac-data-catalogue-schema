@@ -109,19 +109,25 @@ classes:
       - has_parts
       - known_issues
 
-#   AlspacDataSetVersionFreeze:
-#     class_uri: dcat:Dataset
-#     is_a: NamedThing
-#     description: >-
-#       Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
-#     slots:
-#       - freeze_number
-#       - freeze_date
-#       - freeze_of_version
-#       - freeze_dataset
-#       - primary_email
-#       - authors
-#       - git_tag
+  AlspacDataSetVersionFreeze:
+    class_uri: dcat:Dataset
+    is_a: NamedThing
+    description: >-
+      Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
+    slots:
+      - linker_file_md5sum
+      - woc_file_md5sum
+      - all_individuals_to_exclude_md5sum
+      - is_current_freeze
+      - freeze_number
+      - freeze_date
+      - freeze_of_version
+      - freeze_dataset
+      - previous_freeze
+      - next_freeze
+      - primary_email
+      - git_tag
+      - has_parts
 
   DatasetPart:
     class_uri: dcat:Dataset
