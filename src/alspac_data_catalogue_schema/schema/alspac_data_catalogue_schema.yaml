@@ -108,6 +108,19 @@ classes:
       - authors
       - has_parts
       - known_issues
+      - has_scripts
+
+  Script:
+    is_a: NamedThing
+    description: >-
+      A description and attributes of a script included in a version
+      or freeze
+    slots:
+      - authors
+      - md5sum
+      - filesize
+      - filetype
+      
 
   AlspacDataSetVersionFreeze:
     class_uri: dcat:Dataset
@@ -232,6 +245,12 @@ slots:
      range: DatasetPart
      multivalued: true
      inlined_as_list: true
+
+  has_scripts:
+    description: A list of scripts that are included in a dataset version or freeze
+    range: Script
+    multivalued: true
+    inlined_as_list: true
 
 #     inverse: part_of
   freeze_number:
