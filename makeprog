@@ -10,6 +10,8 @@ test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/sch
 
 'test_ge_ht12_g1_2015-11-02' <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02.yaml --target-class AlspacDataSetVersion'.
 
+'test_ge_ht12_g1_2015-11-02_f2' <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml --target-class AlspacDataSetVersionFreeze'.
+
 
 './src/data/examples/alspac_data_catalogue-001.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/alspac_data_catalogue-001.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml -o ./src/data/examples/alspac_data_catalogue-001.ttl --target-class AlspacDataCatalogue'.
 
