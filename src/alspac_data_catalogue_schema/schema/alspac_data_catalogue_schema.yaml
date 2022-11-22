@@ -230,10 +230,10 @@ slots:
      inlined_as_list: true
 
 #     inverse: part_of
-#   freeze_number:
-#     description: What number freeze is this?
-#   freeze_date:
-#     description: When was this freeze made?
+  freeze_number:
+    description: What number freeze is this?
+  freeze_date:
+    description: When was this freeze made?
 #   freeze_of_version:
 #     description: What version of a dataset is this freeze of?
 #   freeze_dataset:
