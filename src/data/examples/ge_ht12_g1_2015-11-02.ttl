@@ -14,6 +14,20 @@ alspacdcs:ge_ht12_g1_2015-11-02 a dcat:Dataset ;
         alspacdcs:ge_ht12_g1_2015-11-02_molgenis,
         alspacdcs:ge_ht12_g1_2015-11-02_raw ;
     alspacdcs:has_previous_version "NA"^^xsd:anyURI ;
+    alspacdcs:has_scripts alspacdcs:24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh,
+        alspacdcs:2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh,
+        alspacdcs:572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh,
+        alspacdcs:5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh,
+        alspacdcs:6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh,
+        alspacdcs:7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh,
+        alspacdcs:8013f1dce551d40ed2e0f56773cda52a_removemixups.R,
+        alspacdcs:8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh,
+        alspacdcs:9792a553813502395cc791805db3fd5d_expression_normalisation.R,
+        alspacdcs:a7af80819b4dbd4a0dae795553a1de03_initial_setup.R,
+        alspacdcs:bb449a9991739fdad51136df422e98e9_ids.R,
+        alspacdcs:bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh,
+        alspacdcs:d9404781f96ff338c4755c4510f616c4_initial_setup.sh,
+        alspacdcs:e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh ;
     alspacdcs:is_current_version "True" ;
     alspacdcs:known_issues [ a alspacdcs:KnownIssue ;
             alspacdcs:issue_description "We do not have the original idat files that were used to call this data." ;
@@ -26,6 +40,20 @@ Number of individuals: 931
 Number of probes: 48804
 Bryois: LCL's from unrelated individuals were grown under identical conditions and cells frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion). Expression profiling of the samples, each with two technical replicates, were performed using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where 200 ng of total RNA was processed according to the protocol supplied by Illumina. Raw data was imported to the Illumina Beadstudio software and probes with less than three beads present were excluded. Log2 - transformed expression signals were then normalized with quantile normalization of the replicates of each individual followed by quantile normalization across all individuals. We restricted our analysis to 23'935 probes tagging genes annotated in Ensembl. Principal component analysis was performed on 931 individuals. 62 individuals with principal component 1 or 2 greater than one standard deviation of the population were excluded from further analysis. See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461 for full details.
 Molgenis: Genetic outliers were removed, any individuals that were clear outliers in the first 2 genetic principal components. Each probe was simply quantile normalised and then log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal components (excluding those that had genetic associations), and scaled to have mean 0 and variance 1. See https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full details.""" .
+
+alspacdcs:24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "mixupmapper.sh" ;
+    spdx:checksum "24e1fd034a96b37657743603d9cb0e6c" ;
+    dcat:byteSize "1.7K" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "cisQTL.sh" ;
+    spdx:checksum "2709e8d54e2687de65ecea73bcd63b1d" ;
+    dcat:byteSize "1.1K" ;
+    dcat:mediaType ".sh" .
 
 alspacdcs:2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt a dcat:Distribution ;
     schema:description "A text file with two collums and no header mapping ids." ;
@@ -40,6 +68,41 @@ alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt a dcat:Distribution ;
     dcat:byteSize "1.1G" ;
     dcat:mediaType ".txt" .
 
+alspacdcs:572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "combine_genotypes.sh" ;
+    spdx:checksum "572b73e8312f0691e4b95ad9e459f63b" ;
+    dcat:byteSize "2.2K" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "gather_data.sh" ;
+    spdx:checksum "5dd7f9bd308c50f2ec401bb9ab4181d8" ;
+    dcat:byteSize "1.6K" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "convert_genotypes.sh" ;
+    spdx:checksum "6a3b79a2d080d8e5f45a9dcde3c0405b" ;
+    dcat:byteSize "1.2K" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "checking_proxies.sh" ;
+    spdx:checksum "7ff9755c06115ec3d27d0a328a2a6895" ;
+    dcat:byteSize "859B" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:8013f1dce551d40ed2e0f56773cda52a_removemixups.R a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "removemixups.R" ;
+    spdx:checksum "8013f1dce551d40ed2e0f56773cda52a" ;
+    dcat:byteSize "586B" ;
+    dcat:mediaType ".R" .
+
 alspacdcs:889022ba439c1baef05b9dd83b8db497_id_map2.txt a dcat:Distribution ;
     schema:description "A text file with two collumns and a header line mapping ids." ;
     schema:name "id_map2.txt" ;
@@ -47,17 +110,52 @@ alspacdcs:889022ba439c1baef05b9dd83b8db497_id_map2.txt a dcat:Distribution ;
     dcat:byteSize "62k" ;
     dcat:mediaType ".txt" .
 
+alspacdcs:8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "generate_pcs.sh" ;
+    spdx:checksum "8dd67b9513e18a3c0d8dcf12bfbd57cb" ;
+    dcat:byteSize "739B" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:9792a553813502395cc791805db3fd5d_expression_normalisation.R a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "expression_normalisation.R" ;
+    spdx:checksum "9792a553813502395cc791805db3fd5d" ;
+    dcat:byteSize "820B" ;
+    dcat:mediaType ".R" .
+
 alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz a dcat:Distribution ;
     schema:name "data.txt.gz" ;
     spdx:checksum "9ef5acc742f7bece57e964bb341b5a9e" ;
     dcat:byteSize "450M" ;
     dcat:mediaType ".txt.gz" .
 
+alspacdcs:a7af80819b4dbd4a0dae795553a1de03_initial_setup.R a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "initial_setup.R" ;
+    spdx:checksum "a7af80819b4dbd4a0dae795553a1de03" ;
+    dcat:byteSize "3.1K" ;
+    dcat:mediaType ".R" .
+
 alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData a dcat:Distribution ;
     schema:name "data.RData" ;
     spdx:checksum "b515c9ed69ec01eed3a31e0d132c552c" ;
     dcat:byteSize "314M" ;
     dcat:mediaType ".Rdata" .
+
+alspacdcs:bb449a9991739fdad51136df422e98e9_ids.R a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "ids.R" ;
+    spdx:checksum "bb449a9991739fdad51136df422e98e9" ;
+    dcat:byteSize "214B" ;
+    dcat:mediaType ".R" .
+
+alspacdcs:bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "expression_normalisation.sh" ;
+    spdx:checksum "bd3cd8d3b95c5facb76fd1f80476fa8a" ;
+    dcat:byteSize "1.6K" ;
+    dcat:mediaType ".sh" .
 
 alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData a dcat:Distribution ;
     schema:description "This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1." ;
@@ -67,6 +165,20 @@ alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData a dcat:Distribution ;
     dcat:mediaType ".RData" ;
     alspacdcs:number_of_gene_expression_probe_values 48804 ;
     alspacdcs:number_of_participants 931 .
+
+alspacdcs:d9404781f96ff338c4755c4510f616c4_initial_setup.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "initial_setup.sh" ;
+    spdx:checksum "d9404781f96ff338c4755c4510f616c4" ;
+    dcat:byteSize "205B" ;
+    dcat:mediaType ".sh" .
+
+alspacdcs:e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh a alspacdcs:Script ;
+    schema:description "Part of the molgenis_eqtl_pipeline." ;
+    schema:name "remove_pcs.sh" ;
+    spdx:checksum "e3d6eafb8e8576ee28fff22109e851c1" ;
+    dcat:byteSize "1.2K" ;
+    dcat:mediaType ".sh" .
 
 alspacdcs:ge_ht12_g1_2015-11-02_bryosis a dcat:Dataset ;
     schema:description "The set of data which was produced by the bryosis method for the 2015-11-02 release of ge_ht12_g1." ;
