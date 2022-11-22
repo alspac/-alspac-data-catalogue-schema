@@ -286,8 +286,8 @@ slots:
     description: >-
       A list of known issues inline
     range: KnownIssue
-#     multivalued: true
-#     inlined: true
+    multivalued: true
+    inlined_as_list: true
   logged_by:
     description: >-
       The person who logged this issue.
