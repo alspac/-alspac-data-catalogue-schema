@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -318,7 +318,7 @@
 
 <h1 id="slot-documentation_authors_orcids">Slot: documentation_authors_orcids</h1>
 <p><em>a list of the orcid ids of the documentation authors</em></p>
-<p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids">alspacdcs:documentation_authors_orcids</a></p>
+<p>URI: <a href="https://orcid.org/id">ORCID:id</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,14 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
+<td><a href="../NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
 <td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Person/">Person</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></li>
 <li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -353,13 +353,13 @@
 description: a list of the orcid ids of the documentation authors
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
+slot_uri: ORCID:id
 multivalued: true
 alias: documentation_authors_orcids
 domain_of:
-- NamedAlspacDataset
-range: Person
-inlined: true
-inlined_as_list: true
+- NamedAlspacDataSet
+range: uriorcurie
+inlined: false
 
 </code></pre>
 

@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -331,15 +331,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../DatasetPart/">DatasetPart</a></td>
-<td>Represents a  part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</td>
+<td><a href="../AbstractDatasetPart/">AbstractDatasetPart</a></td>
+<td>Represents an abstract part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../DataDistribution/">DataDistribution</a></li>
-<li>Multivalued: True</li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+<li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -353,13 +353,10 @@
 description: A list of data distributions for this abstract dataset
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
-multivalued: true
 alias: data_distributions
 domain_of:
-- DatasetPart
-range: DataDistribution
-inlined: true
-inlined_as_list: true
+- abstract_dataset_part
+range: string
 
 </code></pre>
 
