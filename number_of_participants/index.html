@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-number_of_participants">Slot: number_of_participants</h1>
-<p><em>The number of alspac participants in this dataset</em></p>
+<p><em>Number of participants in this file</em></p>
 <p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/number_of_participants">alspacdcs:number_of_participants</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,13 +332,13 @@
 <tbody>
 <tr>
 <td><a href="../DataDistribution/">DataDistribution</a></td>
-<td>A dataset distribution has a location, file type and file size.</td>
+<td>A dataset distribution has a loaction, file type and file size.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -350,13 +350,13 @@
 <details>
 
 <pre><code class="language-yaml">name: number_of_participants
-description: The number of alspac participants in this dataset
+description: Number of participants in this file
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 alias: number_of_participants
 domain_of:
-- DataDistribution
-range: integer
+- data_distribution
+range: string
 
 </code></pre>
 
