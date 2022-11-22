@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -397,12 +397,44 @@ Name: alspac-data-catalogue-schema</p>
 <td>Represents an alspac data catalogue</td>
 </tr>
 <tr>
-<td><a href="NamedAlspacDataSet/">NamedAlspacDataSet</a></td>
+<td><a href="AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
+<td>Represents a version of a named_alspac_data_set</td>
+</tr>
+<tr>
+<td><a href="AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
+<td>Represents a freeze of a version of named_alspac_data_set</td>
+</tr>
+<tr>
+<td><a href="DataDistribution/">DataDistribution</a></td>
+<td>A dataset distribution has a location, file type and file size</td>
+</tr>
+<tr>
+<td><a href="DatasetPart/">DatasetPart</a></td>
+<td>Represents a  part of named alspac data set, in a version or freeze</td>
+</tr>
+<tr>
+<td><a href="KnownIssue/">KnownIssue</a></td>
+<td>Known issues for a dataset should have a description, when they are logged an...</td>
+</tr>
+<tr>
+<td><a href="NamedAlspacDataset/">NamedAlspacDataset</a></td>
 <td>Represents a named_alspac_data_set</td>
 </tr>
 <tr>
 <td><a href="NamedThing/">NamedThing</a></td>
 <td>A generic grouping for any identifiable entity</td>
+</tr>
+<tr>
+<td><a href="Paper/">Paper</a></td>
+<td>a scientific paper</td>
+</tr>
+<tr>
+<td><a href="Person/">Person</a></td>
+<td>A person</td>
+</tr>
+<tr>
+<td><a href="Script/">Script</a></td>
+<td>A description and attributes of a script included in a version or freeze</td>
 </tr>
 </tbody>
 </table>
@@ -416,6 +448,18 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="all_individuals_to_exclude_md5sum/">all_individuals_to_exclude_md5sum</a></td>
+<td>The md5sum of the all_individuals_to_exclude to make this freeze</td>
+</tr>
+<tr>
+<td><a href="authors/">authors</a></td>
+<td>A list of orcids for the authors of the item</td>
+</tr>
+<tr>
+<td><a href="data_distributions/">data_distributions</a></td>
+<td>A list of data distributions for this abstract dataset</td>
+</tr>
+<tr>
 <td><a href="description/">description</a></td>
 <td>A human-readable description for a thing</td>
 </tr>
@@ -424,32 +468,124 @@ Name: alspac-data-catalogue-schema</p>
 <td>a list of the orcid ids of the documentation authors</td>
 </tr>
 <tr>
+<td><a href="filesize/">filesize</a></td>
+<td>The size of the file in k, m,g or t</td>
+</tr>
+<tr>
+<td><a href="filetype/">filetype</a></td>
+<td>what is the file type?</td>
+</tr>
+<tr>
+<td><a href="freeze_date/">freeze_date</a></td>
+<td>When was this freeze made?</td>
+</tr>
+<tr>
+<td><a href="freeze_number/">freeze_number</a></td>
+<td>What number freeze is this?</td>
+</tr>
+<tr>
+<td><a href="freeze_of_alspac_dataset_version/">freeze_of_alspac_dataset_version</a></td>
+<td>What version was this freeze built from?</td>
+</tr>
+<tr>
+<td><a href="freeze_of_named_alspac_dataset/">freeze_of_named_alspac_dataset</a></td>
+<td>What named alspac dataset is this freeze built from?</td>
+</tr>
+<tr>
+<td><a href="git_tag/">git_tag</a></td>
+<td>The git tag of the repo that made this freeze</td>
+</tr>
+<tr>
 <td><a href="has_current_version/">has_current_version</a></td>
 <td>The current version of this named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="has_next_version/">has_next_version</a></td>
+<td>The next version of this named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="has_parts/">has_parts</a></td>
+<td>A list of parts of a named alspac dataset version or freeze</td>
+</tr>
+<tr>
+<td><a href="has_previous_version/">has_previous_version</a></td>
+<td>The previous version of this named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="has_scripts/">has_scripts</a></td>
+<td>A list of scripts that are included in a dataset version or freeze</td>
 </tr>
 <tr>
 <td><a href="id/">id</a></td>
 <td>A unique identifier for a thing</td>
 </tr>
 <tr>
+<td><a href="is_current_freeze/">is_current_freeze</a></td>
+<td>Is this current freeze?</td>
+</tr>
+<tr>
+<td><a href="is_current_version/">is_current_version</a></td>
+<td>Is this the current version of a named alspac dataset</td>
+</tr>
+<tr>
+<td><a href="issue_description/">issue_description</a></td>
+<td>What the issue is</td>
+</tr>
+<tr>
 <td><a href="keywords/">keywords</a></td>
 <td>A list of keywords</td>
 </tr>
 <tr>
-<td><a href="landing_page/">landing_page</a></td>
+<td><a href="known_issues/">known_issues</a></td>
+<td>A list of known issues inline</td>
+</tr>
+<tr>
+<td><a href="landing_page_url/">landing_page_url</a></td>
 <td>A Web page that can be navigated to in a Web browser to gain access to the ca...</td>
 </tr>
 <tr>
-<td><a href="main_publication/">main_publication</a></td>
+<td><a href="linker_file_md5sum/">linker_file_md5sum</a></td>
+<td>What is the md5sum of the dataset linker file used to make this freeze</td>
+</tr>
+<tr>
+<td><a href="logged_by/">logged_by</a></td>
+<td>The person who logged this issue</td>
+</tr>
+<tr>
+<td><a href="logged_date/">logged_date</a></td>
+<td>The date that this issue was logged</td>
+</tr>
+<tr>
+<td><a href="main_publication_doi/">main_publication_doi</a></td>
 <td>A doi ref to the main publication describing this dataset</td>
+</tr>
+<tr>
+<td><a href="md5sum/">md5sum</a></td>
+<td>What is the md5sum of the file in this distribution?</td>
 </tr>
 <tr>
 <td><a href="name/">name</a></td>
 <td>A human-readable name for a thing</td>
 </tr>
 <tr>
-<td><a href="named_alspac_data_set_collection/">named_alspac_data_set_collection</a></td>
-<td>A list of named alspac data sets curies</td>
+<td><a href="named_alspac_datasets/">named_alspac_datasets</a></td>
+<td>A list of named alspac data sets curies ids</td>
+</tr>
+<tr>
+<td><a href="next_freeze/">next_freeze</a></td>
+<td>What is the next freeze ?</td>
+</tr>
+<tr>
+<td><a href="number_of_gene_expression_probe_values/">number_of_gene_expression_probe_values</a></td>
+<td>This slot is used for gene expression data distributions</td>
+</tr>
+<tr>
+<td><a href="number_of_participants/">number_of_participants</a></td>
+<td>The number of alspac participants in this dataset</td>
+</tr>
+<tr>
+<td><a href="previous_freeze/">previous_freeze</a></td>
+<td>What was the previous freeze?</td>
 </tr>
 <tr>
 <td><a href="primary_email/">primary_email</a></td>
@@ -460,8 +596,20 @@ Name: alspac-data-catalogue-schema</p>
 <td>The orcid ids of the pis</td>
 </tr>
 <tr>
-<td><a href="publications/">publications</a></td>
+<td><a href="publications_dois/">publications_dois</a></td>
 <td>A list of publications dois that use or refer to this data set</td>
+</tr>
+<tr>
+<td><a href="qc_description/">qc_description</a></td>
+<td>Some free text to describe any quality control that has been performed</td>
+</tr>
+<tr>
+<td><a href="versions/">versions</a></td>
+<td>A list of versions of a named dataset</td>
+</tr>
+<tr>
+<td><a href="woc_file_md5sum/">woc_file_md5sum</a></td>
+<td>The md5sum of the woc file used to make this freeze</td>
 </tr>
 </tbody>
 </table>
@@ -583,27 +731,6 @@ Name: alspac-data-catalogue-schema</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-      
-        
-        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              About
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
