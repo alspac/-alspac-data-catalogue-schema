@@ -16,6 +16,8 @@ freeze_number: 2
 freeze_date:
 previous_freeze: alspacdcs:ge_ht12_g1_2015-11-02_f1
 next_freeze:
+freeze_of_alspac_dataset_version: alspacdcs:ge_ht12_g1_2015-11-02
+freeze_of_named_alspac_dataset: alspacdcs:ge_ht12_g1
 has_parts:
   - id: alspacdcs:ge_ht12_g1_2015-11-02_bryosis_f2
     name: Bryosis data
