@@ -1,0 +1,49 @@
+# This yaml file is a description of a freeze of a released version of a named alspac dataset
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:ge_ht12_g1_2015-11-02_f2
+name: Gene expression - array - G1 release version 2015-11-02 freeze 2
+Description: This freeze of the 2015-11-02 version of ge_ht12_g1 dataset has .csv distributions of the data rather than .Rdata files in order to be easier to use across data science software and languages.
+woc_file_md5sum: da4785a577a4d837883710f7ab45af51
+all_individuals_to_exclude_md5sum: 33b08d90fa3e43504308f20283088a6b
+git_tag: https://github.com/alspac/dataset_ge_ht12_g1/releases/tag/freeze2
+is_current_freeze: true
+has_previous_freeze: alspacdcs:ge_ht12_g1_2015-11-02_f1
+has_next_freeze:
+has_parts:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_bryosis_f2
+    name: Bryosis
+    description: Dataset part for the Bryosis data in ge_ht12_g1 version 2015-11-02 freeze2
+    data_distributions:
+      -id:
+       name: bryosis.csv
+       description: The 
+       md5sum:
+       filesize: 742M
+       filetype: .csv
+       number_of_participants:
+       number_of_gene_expression_values:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_molgenis_f2
+    name: Molgenis
+    description:
+    data_distributions:
+      -id:
+       name: molgenis.csv
+       description: The 
+       md5sum: f31e95e978226b30eefea59aee26f200
+       filesize: 752M
+       filetype: .csv
+       number_of_participants:
+       number_of_gene_expression_values:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_raw_f2
+    name: Raw
+    description:
+    data_distribution:
+      -id:
+       name: raw.csv
+       description: 
+       md5sum:
+       filesize: 1.1G
+       filetype: .csv
+       number_of_participants:
+       number_of_gene_expression_values:
