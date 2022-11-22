@@ -125,10 +125,10 @@ classes:
       - is_current_freeze
       - freeze_number
       - freeze_date
-      - freeze_of_version
-      - freeze_dataset
       - previous_freeze
       - next_freeze
+      - freeze_of_alspac_dataset_version
+      - freeze_of_named_alspac_dataset
       - primary_email
       - git_tag
       - has_parts
