@@ -216,6 +216,7 @@
       AlspacDataSetVersion : has_next_version
       AlspacDataSetVersion : has_parts
       AlspacDataSetVersion : has_previous_version
+      AlspacDataSetVersion : has_scripts
       AlspacDataSetVersion : id
       AlspacDataSetVersion : is_current_version
       AlspacDataSetVersion : known_issues
@@ -281,6 +282,12 @@
 <td><a href="../known_issues/">known_issues</a></td>
 <td>0..* <br/> <a href="../KnownIssue/">KnownIssue</a></td>
 <td>A list of known issues inline</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_scripts/">has_scripts</a></td>
+<td>0..* <br/> <a href="../Script/">Script</a></td>
+<td>A list of scripts that are included in a dataset version or freeze</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -376,6 +383,7 @@ slots:
 - authors
 - has_parts
 - known_issues
+- has_scripts
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -439,6 +447,7 @@ attributes:
     owner: AlspacDataSetVersion
     domain_of:
     - AlspacDataSetVersion
+    - Script
     range: string
     inlined: true
     inlined_as_list: true
@@ -467,6 +476,19 @@ attributes:
     domain_of:
     - AlspacDataSetVersion
     range: KnownIssue
+    inlined: true
+    inlined_as_list: true
+  has_scripts:
+    name: has_scripts
+    description: A list of scripts that are included in a dataset version or freeze
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    multivalued: true
+    alias: has_scripts
+    owner: AlspacDataSetVersion
+    domain_of:
+    - AlspacDataSetVersion
+    range: Script
     inlined: true
     inlined_as_list: true
   id:
