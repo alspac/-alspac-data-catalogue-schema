@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_freezes/</loc>
+         <lastmod>2022-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/has_next_version/</loc>
          <lastmod>2022-11-22</lastmod>
          <changefreq>daily</changefreq>
