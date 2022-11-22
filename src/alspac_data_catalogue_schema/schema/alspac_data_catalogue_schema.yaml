@@ -113,7 +113,11 @@ classes:
     class_uri: dcat:Dataset
     is_a: NamedThing
     description: >-
-      Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.
+      Represents a freeze of a version of named_alspac_data_set.
+      That is a specific set of data which can be applied to use by
+      external colabs. It is normally a subset of files in a version
+      of named alspac dataset, but sometimes file types will also
+      change. For example .Rdata changed to .csv.
     slots:
       - linker_file_md5sum
       - woc_file_md5sum
