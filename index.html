@@ -401,6 +401,10 @@ Name: alspac-data-catalogue-schema</p>
 <td>Represents a version of a named_alspac_data_set</td>
 </tr>
 <tr>
+<td><a href="AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
+<td>Represents a freeze of a version of named_alspac_data_set</td>
+</tr>
+<tr>
 <td><a href="DataDistribution/">DataDistribution</a></td>
 <td>A dataset distribution has a location, file type and file size</td>
 </tr>
@@ -440,6 +444,10 @@ Name: alspac-data-catalogue-schema</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="all_individuals_to_exclude_md5sum/">all_individuals_to_exclude_md5sum</a></td>
+<td>The md5sum of the all_individuals_to_exclude to make this freeze</td>
+</tr>
+<tr>
 <td><a href="authors/">authors</a></td>
 <td>A list of orcids for the authors of the item</td>
 </tr>
@@ -464,6 +472,26 @@ Name: alspac-data-catalogue-schema</p>
 <td>what is the file type?</td>
 </tr>
 <tr>
+<td><a href="freeze_date/">freeze_date</a></td>
+<td>When was this freeze made?</td>
+</tr>
+<tr>
+<td><a href="freeze_number/">freeze_number</a></td>
+<td>What number freeze is this?</td>
+</tr>
+<tr>
+<td><a href="freeze_of_alspac_dataset_version/">freeze_of_alspac_dataset_version</a></td>
+<td>What version was this freeze built from?</td>
+</tr>
+<tr>
+<td><a href="freeze_of_named_alspac_dataset/">freeze_of_named_alspac_dataset</a></td>
+<td>What named alspac dataset is this freeze built from?</td>
+</tr>
+<tr>
+<td><a href="git_tag/">git_tag</a></td>
+<td>The git tag of the repo that made this freeze</td>
+</tr>
+<tr>
 <td><a href="has_current_version/">has_current_version</a></td>
 <td>The current version of this named alspac dataset</td>
 </tr>
@@ -484,6 +512,10 @@ Name: alspac-data-catalogue-schema</p>
 <td>A unique identifier for a thing</td>
 </tr>
 <tr>
+<td><a href="is_current_freeze/">is_current_freeze</a></td>
+<td>Is this current freeze?</td>
+</tr>
+<tr>
 <td><a href="is_current_version/">is_current_version</a></td>
 <td>Is this the current version of a named alspac dataset</td>
 </tr>
@@ -502,6 +534,10 @@ Name: alspac-data-catalogue-schema</p>
 <tr>
 <td><a href="landing_page_url/">landing_page_url</a></td>
 <td>A Web page that can be navigated to in a Web browser to gain access to the ca...</td>
+</tr>
+<tr>
+<td><a href="linker_file_md5sum/">linker_file_md5sum</a></td>
+<td>What is the md5sum of the dataset linker file used to make this freeze</td>
 </tr>
 <tr>
 <td><a href="logged_by/">logged_by</a></td>
@@ -528,12 +564,20 @@ Name: alspac-data-catalogue-schema</p>
 <td>A list of named alspac data sets curies ids</td>
 </tr>
 <tr>
+<td><a href="next_freeze/">next_freeze</a></td>
+<td>What is the next freeze ?</td>
+</tr>
+<tr>
 <td><a href="number_of_gene_expression_probe_values/">number_of_gene_expression_probe_values</a></td>
 <td>This slot is used for gene expression data distributions</td>
 </tr>
 <tr>
 <td><a href="number_of_participants/">number_of_participants</a></td>
 <td>The number of alspac participants in this dataset</td>
+</tr>
+<tr>
+<td><a href="previous_freeze/">previous_freeze</a></td>
+<td>What was the previous freeze?</td>
 </tr>
 <tr>
 <td><a href="primary_email/">primary_email</a></td>
@@ -554,6 +598,10 @@ Name: alspac-data-catalogue-schema</p>
 <tr>
 <td><a href="versions/">versions</a></td>
 <td>A list of versions of a named dataset</td>
+</tr>
+<tr>
+<td><a href="woc_file_md5sum/">woc_file_md5sum</a></td>
+<td>The md5sum of the woc file used to make this freeze</td>
 </tr>
 </tbody>
 </table>
