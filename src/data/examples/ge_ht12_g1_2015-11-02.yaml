@@ -46,6 +46,8 @@ qc_description: >-
 is_current_version: true
 has_previous_version: NA
 has_next_version: NA
+has_freezes:
+  - alspacdcs:ge_ht12_g1_2015-11-02_f2
 has_parts:
   - id: alspacdcs:ge_ht12_g1_2015-11-02_bryosis
     name: Broyosis data
