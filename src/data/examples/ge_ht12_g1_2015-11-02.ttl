@@ -1,0 +1,91 @@
+@prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix schema: <http://schema.org/> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:ge_ht12_g1_2015-11-02 a dcat:Dataset ;
+    schema:description """This is the first version of the Gene expression - array - G1 dataset released by ALSPAC.
+""" ;
+    schema:name "Gene expression - array - G1 release version 2015-11-02" ;
+    alspacdcs:has_next_version "NA"^^xsd:anyURI ;
+    alspacdcs:has_parts alspacdcs:ge_ht12_g1_2015-11-02_bryosis,
+        alspacdcs:ge_ht12_g1_2015-11-02_id_map,
+        alspacdcs:ge_ht12_g1_2015-11-02_molgenis,
+        alspacdcs:ge_ht12_g1_2015-11-02_raw ;
+    alspacdcs:has_previous_version "NA"^^xsd:anyURI ;
+    alspacdcs:is_current_version "True" ;
+    alspacdcs:known_issues [ a alspacdcs:KnownIssue ;
+            alspacdcs:issue_description "We do not have the original idat files that were used to call this data." ;
+            alspacdcs:logged_by "Gibran Hermani" ;
+            alspacdcs:logged_date "NA" ] ;
+    alspacdcs:qc_description """There are two different types of QC'd data available in this version, one performed by David Evans for the Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping meta analysis.
+Summary:
+Platform: Illumina Human HT-12 V3 BeadChips
+Number of individuals: 931
+Number of probes: 48804
+Bryois: LCL's from unrelated individuals were grown under identical conditions and cells frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion). Expression profiling of the samples, each with two technical replicates, were performed using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where 200 ng of total RNA was processed according to the protocol supplied by Illumina. Raw data was imported to the Illumina Beadstudio software and probes with less than three beads present were excluded. Log2 - transformed expression signals were then normalized with quantile normalization of the replicates of each individual followed by quantile normalization across all individuals. We restricted our analysis to 23'935 probes tagging genes annotated in Ensembl. Principal component analysis was performed on 931 individuals. 62 individuals with principal component 1 or 2 greater than one standard deviation of the population were excluded from further analysis. See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461 for full details.
+Molgenis: Genetic outliers were removed, any individuals that were clear outliers in the first 2 genetic principal components. Each probe was simply quantile normalised and then log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal components (excluding those that had genetic associations), and scaled to have mean 0 and variance 1. See https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full details.""" .
+
+alspacdcs:2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt a dcat:Distribution ;
+    schema:description "A text file with two collums and no header mapping ids." ;
+    schema:name "id_map.txt" ;
+    spdx:checksum "2b91ff9a91f5bfe2b807ba638cc2916b" ;
+    dcat:byteSize "31k" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt a dcat:Distribution ;
+    schema:name "data.txt" ;
+    spdx:checksum "39af1c2d21276a0a3c10222a9828c6f1" ;
+    dcat:byteSize "1.1G" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:889022ba439c1baef05b9dd83b8db497_id_map2.txt a dcat:Distribution ;
+    schema:description "A text file with two collumns and a header line mapping ids." ;
+    schema:name "id_map2.txt" ;
+    spdx:checksum "889022ba439c1baef05b9dd83b8db497" ;
+    dcat:byteSize "62k" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz a dcat:Distribution ;
+    schema:name "data.txt.gz" ;
+    spdx:checksum "9ef5acc742f7bece57e964bb341b5a9e" ;
+    dcat:byteSize "450M" ;
+    dcat:mediaType ".txt.gz" .
+
+alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData a dcat:Distribution ;
+    schema:name "data.RData" ;
+    spdx:checksum "b515c9ed69ec01eed3a31e0d132c552c" ;
+    dcat:byteSize "314M" ;
+    dcat:mediaType ".Rdata" .
+
+alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData a dcat:Distribution ;
+    schema:description "This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1." ;
+    schema:name "data.RData" ;
+    spdx:checksum "d171e08157db6b84a6a4939f5da2ba78" ;
+    dcat:byteSize "322M" ;
+    dcat:mediaType ".RData" ;
+    alspacdcs:number_of_gene_expression_probe_values 48804 ;
+    alspacdcs:number_of_participants 931 .
+
+alspacdcs:ge_ht12_g1_2015-11-02_bryosis a dcat:Dataset ;
+    schema:description "The set of data which was produced by the bryosis method for the 2015-11-02 release of ge_ht12_g1." ;
+    schema:name "Broyosis data" ;
+    alspacdcs:data_distributions alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData .
+
+alspacdcs:ge_ht12_g1_2015-11-02_id_map a dcat:Dataset ;
+    schema:description "This data set has two distributions, one with a header and one without." ;
+    schema:name "Gene expression id mapping data" ;
+    alspacdcs:data_distributions alspacdcs:2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt,
+        alspacdcs:889022ba439c1baef05b9dd83b8db497_id_map2.txt .
+
+alspacdcs:ge_ht12_g1_2015-11-02_molgenis a dcat:Dataset ;
+    schema:description "The set of data which was produced by the molgenis method for the 2015-11-02 release of ge_ht12_g1." ;
+    schema:name "Molgeis data" ;
+    alspacdcs:data_distributions alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData .
+
+alspacdcs:ge_ht12_g1_2015-11-02_raw a dcat:Dataset ;
+    schema:name "Raw Gene Expression data" ;
+    alspacdcs:data_distributions alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt,
+        alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz .
+
