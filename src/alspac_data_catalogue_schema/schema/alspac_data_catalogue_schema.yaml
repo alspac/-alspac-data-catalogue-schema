@@ -135,19 +135,18 @@ classes:
       - data_distributions
 
 
-#   DataDistribution:
-#     class_uri: dcat:Distribution
-#     is_a: NamedThing
-#     description: >-
-#       A dataset distribution has a location, file type and file size.
-#     slots:
-#       - dataset_part
-#       - md5sum
-#       - filesize
-#       - filetype
-#       - number_of_participants
-#       - location_on_bc4
-#       - location_on_bp
+  DataDistribution:
+    class_uri: dcat:Distribution
+    is_a: NamedThing
+    description: >-
+      A dataset distribution has a location, file type and file size.
+    slots:
+     - md5sum
+     - filesize
+     - filetype
+     - number_of_participants
+     #- location_on_bc4 # Maybe add these slots when du stuff changes
+     #- location_on_bp
 
   KnownIssue:
     description: >-
