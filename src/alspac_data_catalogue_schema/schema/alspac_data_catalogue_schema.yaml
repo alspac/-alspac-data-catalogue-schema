@@ -145,6 +145,8 @@ classes:
      - filesize
      - filetype
      - number_of_participants
+     - number_of_gene_expression_probe_values # Only for gene
+     # expression data distributions
      #- location_on_bc4 # Maybe add these slots when du stuff changes
      #- location_on_bp
 
