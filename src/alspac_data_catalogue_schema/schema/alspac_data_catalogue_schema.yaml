@@ -102,6 +102,7 @@ classes:
       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
     slots:
       - qc_description
+      - version_of
       - is_current_version
       - has_previous_version
       - has_next_version
@@ -229,6 +230,10 @@ slots:
     description: A list of keywords.
     multivalued: true
     inlined: false
+
+  version_of:
+    range: NamedAlspacDataset
+    description: What named Alspac dataset is this a version of
   has_current_version:
     slot_uri: dcat:hasCurrentVersion
     range: AlspacDataSetVersion
