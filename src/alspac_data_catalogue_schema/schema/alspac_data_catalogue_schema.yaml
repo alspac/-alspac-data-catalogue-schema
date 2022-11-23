@@ -136,6 +136,7 @@ classes:
       change. For example .Rdata changed to .csv.
     slots:
       - linker_file_md5sum
+      - freeze_size
       - woc_file_md5sum
       - all_individuals_to_exclude_md5sum
       - is_current_freeze
@@ -379,4 +380,5 @@ slots:
   issue_description:
     description: >-
       What the issue is.
-  
+  freeze_size:
+    description: The approximate size of all the data in the freeze.
