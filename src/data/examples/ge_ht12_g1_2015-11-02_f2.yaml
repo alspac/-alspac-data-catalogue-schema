@@ -29,8 +29,8 @@ has_parts:
         md5sum: 3586421b911d7b245930525903eca78b
         filesize: 742M
         filetype: .csv
-        number_of_participants:
-        number_of_gene_expression_probe_values:
+        number_of_participants: 948
+        number_of_gene_expression_probe_values: 48630
   - id: alspacdcs:ge_ht12_g1_2015-11-02_molgenis_f2
     name: Molgenis
     description: Dataset part for the Molgenis data in ge_ht12_g1 version 2015-11-02 freeze2
@@ -41,17 +41,17 @@ has_parts:
         md5sum: f31e95e978226b30eefea59aee26f200
         filesize: 752M
         filetype: .csv
-        number_of_participants:
-        number_of_gene_expression_probe_values:
+        number_of_participants: 880
+        number_of_gene_expression_probe_values: 48630
   - id: alspacdcs:ge_ht12_g1_2015-11-02_raw_f2
     name: Raw
     description: Dataset part for the raw data in ge_ht12_g1 version 2015-11-02 freeze2
     data_distributions: 
       - id: alspacdcs:b47b66478d63d706e1998542ada112d9_raw.csv
         name: raw.csv
-        description: 
+        description: The freeze 2 csv version of the raw ge data
         md5sum: b47b66478d63d706e1998542ada112d9
         filesize: 1.1G
         filetype: .csv
-        number_of_participants:
-        number_of_gene_expression_probe_values:
+        number_of_participants: ##This is not how wide this dataframe is
+        number_of_gene_expression_probe_values: 48630
