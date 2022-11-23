@@ -6,7 +6,10 @@ name: Gene expression - array - G1 release version 2015-11-02 freeze 2
 description: >-
   This is the second freeze of the 2015-11-02 version of
   ge_ht12_g1 dataset has .csv distributions of the data rather than
-  .Rdata files in order to be easier to use across differnt data science software and languages.
+  .Rdata files in order to be easier to use across differnt data
+  science software and languages.
+
+freeze_size:
 linker_file_md5sum: 
 woc_file_md5sum: da4785a577a4d837883710f7ab45af51
 all_individuals_to_exclude_md5sum: 33b08d90fa3e43504308f20283088a6b
