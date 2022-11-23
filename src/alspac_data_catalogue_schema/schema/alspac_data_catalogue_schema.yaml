@@ -93,6 +93,7 @@ classes:
       - documentation_authors_orcids
       - main_publication_doi
       - publications_dois
+      - in_catalog
 
 
   AlspacDataSetVersion:
