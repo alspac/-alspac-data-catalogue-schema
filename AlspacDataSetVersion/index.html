@@ -223,6 +223,7 @@
       AlspacDataSetVersion : known_issues
       AlspacDataSetVersion : name
       AlspacDataSetVersion : qc_description
+      AlspacDataSetVersion : version_of
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -247,6 +248,12 @@
 <td><a href="../qc_description/">qc_description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>Some free text to describe any quality control that has been performed.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../version_of/">version_of</a></td>
+<td>0..1 <br/> <a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
+<td>What named Alspac dataset is this a version of</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -384,6 +391,7 @@ rank: 1000
 is_a: NamedThing
 slots:
 - qc_description
+- version_of
 - is_current_version
 - has_previous_version
 - has_next_version
@@ -415,6 +423,16 @@ attributes:
     domain_of:
     - AlspacDataSetVersion
     range: string
+  version_of:
+    name: version_of
+    description: What named Alspac dataset is this a version of
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: version_of
+    owner: AlspacDataSetVersion
+    domain_of:
+    - AlspacDataSetVersion
+    range: NamedAlspacDataset
   is_current_version:
     name: is_current_version
     description: Is this the current version of a named alspac dataset
