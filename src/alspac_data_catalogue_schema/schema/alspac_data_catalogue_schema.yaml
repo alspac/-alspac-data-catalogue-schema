@@ -231,7 +231,9 @@ slots:
     description: A list of keywords.
     multivalued: true
     inlined: false
-
+  in_catalog:
+    range: AlspacDataCatalogue
+    description: What catalog is this dataset a part of
   version_of:
     range: NamedAlspacDataset
     description: What named Alspac dataset is this a version of
