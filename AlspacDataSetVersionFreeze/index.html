@@ -217,6 +217,7 @@
       AlspacDataSetVersionFreeze : freeze_number
       AlspacDataSetVersionFreeze : freeze_of_alspac_dataset_version
       AlspacDataSetVersionFreeze : freeze_of_named_alspac_dataset
+      AlspacDataSetVersionFreeze : freeze_size
       AlspacDataSetVersionFreeze : git_tag
       AlspacDataSetVersionFreeze : has_parts
       AlspacDataSetVersionFreeze : id
@@ -251,6 +252,12 @@
 <td><a href="../linker_file_md5sum/">linker_file_md5sum</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>What is the md5sum of the dataset linker file used to make this freeze</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../freeze_size/">freeze_size</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The approximate size of all the data in the freeze.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -414,6 +421,7 @@ rank: 1000
 is_a: NamedThing
 slots:
 - linker_file_md5sum
+- freeze_size
 - woc_file_md5sum
 - all_individuals_to_exclude_md5sum
 - is_current_freeze
@@ -447,6 +455,16 @@ attributes:
     from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
     rank: 1000
     alias: linker_file_md5sum
+    owner: AlspacDataSetVersionFreeze
+    domain_of:
+    - AlspacDataSetVersionFreeze
+    range: string
+  freeze_size:
+    name: freeze_size
+    description: The approximate size of all the data in the freeze.
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: freeze_size
     owner: AlspacDataSetVersionFreeze
     domain_of:
     - AlspacDataSetVersionFreeze

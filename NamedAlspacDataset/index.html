@@ -215,6 +215,7 @@
       NamedAlspacDataset : documentation_authors_orcids
       NamedAlspacDataset : has_current_version
       NamedAlspacDataset : id
+      NamedAlspacDataset : in_catalog
       NamedAlspacDataset : keywords
       NamedAlspacDataset : landing_page_url
       NamedAlspacDataset : main_publication_doi
@@ -295,6 +296,12 @@
 <td><a href="../publications_dois/">publications_dois</a></td>
 <td>0..* <br/> <a href="../Paper/">Paper</a></td>
 <td>A list of publications dois that use or refer to this data set</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../in_catalog/">in_catalog</a></td>
+<td>0..1 <br/> <a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
+<td>What catalog is this dataset a part of</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -392,6 +399,7 @@ slots:
 - documentation_authors_orcids
 - main_publication_doi
 - publications_dois
+- in_catalog
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -518,6 +526,16 @@ attributes:
     range: Paper
     inlined: true
     inlined_as_list: true
+  in_catalog:
+    name: in_catalog
+    description: What catalog is this dataset a part of
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    alias: in_catalog
+    owner: NamedAlspacDataset
+    domain_of:
+    - NamedAlspacDataset
+    range: AlspacDataCatalogue
   id:
     name: id
     description: A unique identifier for a thing

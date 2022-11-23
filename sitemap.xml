@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/freeze_size/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/git_tag/</loc>
          <lastmod>2022-11-23</lastmod>
          <changefreq>daily</changefreq>
@@ -157,6 +162,11 @@
     </url>
     <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/id/</loc>
+         <lastmod>2022-11-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/in_catalog/</loc>
          <lastmod>2022-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
