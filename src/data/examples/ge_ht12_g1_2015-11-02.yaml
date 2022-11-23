@@ -42,7 +42,7 @@ qc_description: >-
   variance 1. See
   https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full
   details.
-
+version_of: alspacdcs:ge_ht12_g1
 is_current_version: true
 has_previous_version: NA
 has_next_version: NA
@@ -53,7 +53,8 @@ has_parts:
     name: Broyosis data
     description: >-
       The set of data which was produced by the bryosis method for the
-      2015-11-02 release of ge_ht12_g1.
+      2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes
+      in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
     data_distributions:
     - id: alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData
       name: data.RData
@@ -69,7 +70,8 @@ has_parts:
     name: Molgeis data
     description: >-
       The set of data which was produced by the molgenis method for
-      the 2015-11-02 release of ge_ht12_g1.
+      the 2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes
+      in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
     data_distributions:
     - id: alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData
       name: data.RData
@@ -94,7 +96,7 @@ has_parts:
 
     - id: alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz
       name: data.txt.gz
-      description:
+      description: Zipped version of alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
       md5sum: 9ef5acc742f7bece57e964bb341b5a9e
       filesize: 450M
       filetype: .txt.gz
