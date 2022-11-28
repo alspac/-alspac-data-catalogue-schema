@@ -9,7 +9,7 @@ description: >-
   .Rdata files in order to be easier to use across differnt data
   science software and languages.
 
-freeze_size:
+freeze_size: 2.6G
 linker_file_md5sum: 
 woc_file_md5sum: da4785a577a4d837883710f7ab45af51
 all_individuals_to_exclude_md5sum: 33b08d90fa3e43504308f20283088a6b
