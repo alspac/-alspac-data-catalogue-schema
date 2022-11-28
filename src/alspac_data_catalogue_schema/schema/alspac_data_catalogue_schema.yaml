@@ -196,14 +196,14 @@ classes:
 
   QCKeyValue:
     is_a: NamedThing
-    Description: A qc part with a key and a value.
+    description: A qc part with a key and a value.
     slots:
       - qc_key
       - qc_value
 
   UGKeyValue:
     is_a: NamedThing
-    Description: A user guide entry.
+    description: A user guide entry.
     slots:
       - ug_key
       - ug_value
