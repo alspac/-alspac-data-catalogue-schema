@@ -309,16 +309,17 @@ slots:
 
 
   linker_file_md5sum:
-    #slot_uri: spdx:checksum ## 
     description: >-
       What is the md5sum of the dataset linker file used to
       make this freeze
-    #close_mapping: spdx:checksum 
-#   part_of:
+    close_mappings:
+      - spdx:checksum 
+
   md5sum:
-    #slot_uri: spdx:checksum
     description: What is the md5sum of the file in this distribution?
-    #close_mapping: spdx:checksum 
+    close_mappings:
+      - spdx:checksum
+    
   filesize:
     slot_uri: dcat:byteSize
     description: The size of the file in k, m,g or t.
