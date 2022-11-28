@@ -354,14 +354,12 @@ slots:
       this freeze
   git_tag:
     description: The git tag of the repo that made this freeze.
-    
+
+
   qc_description:
-     description: >-
+    description: >-
        Some free text to describe any quality control that has
        been performed.
-  publications_dois:
-     #slot_uri: http://purl.obolibrary.org/obo/NCIT_C71462 ### This is
-                              ### not very nice as not human readable
 
      description: >-
        A list of publications dois that use or refer to
