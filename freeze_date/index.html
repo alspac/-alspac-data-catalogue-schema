@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -317,7 +317,6 @@
 
 
 <h1 id="slot-freeze_date">Slot: freeze_date</h1>
-<p><em>When was this freeze made?</em></p>
 <p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/freeze_date">alspacdcs:freeze_date</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -332,13 +331,13 @@
 <tbody>
 <tr>
 <td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
-<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use by external colabs. It is normally a subset of files in a version of named alspac dataset, but sometimes file types will also change. For example .Rdata changed to .csv.</td>
+<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a></li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
 <li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -350,13 +349,12 @@
 <details>
 
 <pre><code class="language-yaml">name: freeze_date
-description: When was this freeze made?
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 alias: freeze_date
 domain_of:
-- AlspacDataSetVersionFreeze
-range: date
+- alspac_data_set_version_freeze
+range: string
 
 </code></pre>
 

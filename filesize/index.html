@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -317,7 +317,6 @@
 
 
 <h1 id="slot-filesize">Slot: filesize</h1>
-<p><em>The size of the file in k, m,g or t.</em></p>
 <p>URI: <a href="http://www.w3.org/ns/dcat#byteSize">dcat:byteSize</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -331,12 +330,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Script/">Script</a></td>
-<td>A description and attributes of a script included in a version or freeze</td>
-</tr>
-<tr>
 <td><a href="../DataDistribution/">DataDistribution</a></td>
-<td>A dataset distribution has a location, file type and file size.</td>
+<td>A dataset distribution has a loaction, file type and file size.</td>
 </tr>
 </tbody>
 </table>
@@ -354,14 +349,12 @@
 <details>
 
 <pre><code class="language-yaml">name: filesize
-description: The size of the file in k, m,g or t.
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
 slot_uri: dcat:byteSize
 alias: filesize
 domain_of:
-- Script
-- DataDistribution
+- data_distribution
 range: string
 
 </code></pre>
