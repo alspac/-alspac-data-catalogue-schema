@@ -59,12 +59,16 @@ classes:
     class_uri: foaf:Person
     is_a: NamedThing
     description: A person
+    id_prefixes:
+      - ORCID
 
   Paper:
-#    class_uri: http://purl.obolibrary.org/obo/IAO_0000013
     is_a: NamedThing
     description: a scientific paper
-    
+    mappings:
+      - IAO:0000013
+    id_prefixes:
+      - doi    
 
   AlspacDataCatalogue:
     class_uri: dcat:Catalog
