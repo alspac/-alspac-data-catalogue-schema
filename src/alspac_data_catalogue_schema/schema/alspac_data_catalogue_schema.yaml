@@ -15,6 +15,7 @@ prefixes:
   biolink: https://w3id.org/biolink/vocab/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  IAO: http://purl.obolibrary.org/obo/IAO_
   example: http://example.org/rdf#
   dce: http://purl.org/dc/elements/1.1/
   dcat: http://www.w3.org/ns/dcat#
