@@ -56,7 +56,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/QCKeyValue/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/Script/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/UGKeyValue/</loc>
          <lastmod>2022-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -276,7 +286,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/qc_key/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/qc_parts/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/qc_value/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://alspac.github.io/alspac-data-catalogue-schema/types/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/ug_key/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/ug_parts/</loc>
+         <lastmod>2022-11-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://alspac.github.io/alspac-data-catalogue-schema/ug_value/</loc>
          <lastmod>2022-11-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
