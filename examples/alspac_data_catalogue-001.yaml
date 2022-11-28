@@ -1,11 +1,26 @@
 # Example omics data catalogue object
-id: alspac_data_catalogue_001
-name: Omics Data Catalogue
+id: alspacdcs:alspac_data_catalogue_001
+name: ALSPAC Omics Data Catalogue
 description: This catalogue is for all of the named alspac omics data sets
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 #Nic Timpson
 primary_email: alspac-omics@bristol.ac.uk
-named_alspac_data_set_collection:
+named_alspac_datasets:
   - alspacdcs:ge_ht12_g1
-  - alspacdcs:named_alspac_data_set-002 ## test example datasets
-  - alspacdcs:named_alspac_data_set-003
+  - alspacdcs:gi_hrc_g0m_g1  
+  - alspacdcs:gi_1000g_g0m_g1
+  - alspacdcs:gi_1000g_g0p
+  - alspacdcs:gwa_660_g0m
+  - alspacdcs:gwa_exome_g0p
+  - alspacdcs:gwa_550_g1
+  - alspacdcs:gi_hapmap2_g0m
+  - alspacdcs:gi_hapmap2_g1
+  - alspacdcs:cnv_550_g1
+  - alspacdcs:wgs_hiseq_g1
+  - alspacdcs:wes_novaseq_g1
+  - alspacdcs:dnam_450_g0m_g1
+  - alspacdcs:dnam_bs_g0m
+
+
+
+      
