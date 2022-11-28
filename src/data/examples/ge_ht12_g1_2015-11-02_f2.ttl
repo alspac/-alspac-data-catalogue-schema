@@ -1,7 +1,6 @@
 @prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix schema: <http://schema.org/> .
-@prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 alspacdcs:ge_ht12_g1_2015-11-02_f2 a dcat:Dataset ;
@@ -12,6 +11,7 @@ alspacdcs:ge_ht12_g1_2015-11-02_f2 a dcat:Dataset ;
     alspacdcs:freeze_number "2" ;
     alspacdcs:freeze_of_alspac_dataset_version alspacdcs:ge_ht12_g1_2015-11-02 ;
     alspacdcs:freeze_of_named_alspac_dataset alspacdcs:ge_ht12_g1 ;
+    alspacdcs:freeze_size "2.6G" ;
     alspacdcs:git_tag "https://github.com/alspac/dataset_ge_ht12_g1/releases/tag/freeze2" ;
     alspacdcs:has_parts alspacdcs:ge_ht12_g1_2015-11-02_bryosis_f2,
         alspacdcs:ge_ht12_g1_2015-11-02_molgenis_f2,
@@ -23,22 +23,28 @@ alspacdcs:ge_ht12_g1_2015-11-02_f2 a dcat:Dataset ;
 alspacdcs:3586421b911d7b245930525903eca78b_bryosis.csv a dcat:Distribution ;
     schema:description "The freeze 2 csv version of the bryosis data" ;
     schema:name "bryosis.csv" ;
-    spdx:checksum "3586421b911d7b245930525903eca78b" ;
     dcat:byteSize "742M" ;
-    dcat:mediaType ".csv" .
+    dcat:mediaType ".csv" ;
+    alspacdcs:md5sum "3586421b911d7b245930525903eca78b" ;
+    alspacdcs:number_of_gene_expression_probe_values 48630 ;
+    alspacdcs:number_of_participants 948 .
 
 alspacdcs:b47b66478d63d706e1998542ada112d9_raw.csv a dcat:Distribution ;
+    schema:description "The freeze 2 csv version of the raw ge data" ;
     schema:name "raw.csv" ;
-    spdx:checksum "b47b66478d63d706e1998542ada112d9" ;
     dcat:byteSize "1.1G" ;
-    dcat:mediaType ".csv" .
+    dcat:mediaType ".csv" ;
+    alspacdcs:md5sum "b47b66478d63d706e1998542ada112d9" ;
+    alspacdcs:number_of_gene_expression_probe_values 48630 .
 
 alspacdcs:f31e95e978226b30eefea59aee26f200_molgenis.csv a dcat:Distribution ;
     schema:description "The freeze 2 csv version of the molgenis data" ;
     schema:name "molgenis.csv" ;
-    spdx:checksum "f31e95e978226b30eefea59aee26f200" ;
     dcat:byteSize "752M" ;
-    dcat:mediaType ".csv" .
+    dcat:mediaType ".csv" ;
+    alspacdcs:md5sum "f31e95e978226b30eefea59aee26f200" ;
+    alspacdcs:number_of_gene_expression_probe_values 48630 ;
+    alspacdcs:number_of_participants 880 .
 
 alspacdcs:ge_ht12_g1_2015-11-02_bryosis_f2 a dcat:Dataset ;
     schema:description "Dataset part for the Bryosis data in ge_ht12_g1 version 2015-11-02 freeze2" ;
