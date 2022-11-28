@@ -372,6 +372,23 @@ slots:
     multivalued: true
     inlined_as_list: true
 
+  qc_key:
+    description: >-
+      A key might be something that
+      has been done or a description of a paramater. i.e
+      'snp_hwe_filter'
+  qc_value:
+    description: >-
+      A value for a key
+
+  ug_key:
+    description: >-
+      A key is something you might
+      want to do for example run a gwas
+  qc_value:
+    description: >-
+      A description or link to how to do something
+
   ug_parts:
     ## As not named we will have blank nodes
     description: >-
