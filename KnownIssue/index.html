@@ -142,6 +142,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#slots">
     Slots
   </a>
@@ -204,12 +209,23 @@
 <p>URI: <a href="https://w3id.org/alspac/alspac-data-catalogue-schema/KnownIssue">alspacdcs:KnownIssue</a></p>
 <div class="mermaid"> classDiagram
     class KnownIssue
+      NamedThing &lt;|-- KnownIssue
+
+      KnownIssue : description
+      KnownIssue : id
       KnownIssue : issue_description
       KnownIssue : logged_by
       KnownIssue : logged_date
+      KnownIssue : name
 
 </div>
-<!-- no inheritance hierarchy -->
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../NamedThing/">NamedThing</a><ul>
+<li><strong>KnownIssue</strong></li>
+</ul>
+</li>
+</ul>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -238,6 +254,24 @@
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>The date that this issue was logged.</td>
 <td>direct</td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+<td>A unique identifier for a thing</td>
+<td>inherited</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A human-readable name for a thing</td>
+<td>inherited</td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>A human-readable description for a thing</td>
+<td>inherited</td>
 </tr>
 </tbody>
 </table>
@@ -293,6 +327,7 @@ description: 'Known issues for a dataset should have a description, when they ar
   logged and by who '
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
+is_a: NamedThing
 slots:
 - issue_description
 - logged_by
@@ -307,6 +342,7 @@ description: 'Known issues for a dataset should have a description, when they ar
   logged and by who '
 from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
 rank: 1000
+is_a: NamedThing
 attributes:
   issue_description:
     name: issue_description
@@ -337,6 +373,40 @@ attributes:
     owner: KnownIssue
     domain_of:
     - KnownIssue
+    range: string
+  id:
+    name: id
+    description: A unique identifier for a thing
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: schema:identifier
+    identifier: true
+    alias: id
+    owner: KnownIssue
+    domain_of:
+    - NamedThing
+    range: uriorcurie
+  name:
+    name: name
+    description: A human-readable name for a thing
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: schema:name
+    alias: name
+    owner: KnownIssue
+    domain_of:
+    - NamedThing
+    range: string
+  description:
+    name: description
+    description: A human-readable description for a thing
+    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    rank: 1000
+    slot_uri: schema:description
+    alias: description
+    owner: KnownIssue
+    domain_of:
+    - NamedThing
     range: string
 
 </code></pre>
