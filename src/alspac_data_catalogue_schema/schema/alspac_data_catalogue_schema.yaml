@@ -361,6 +361,26 @@ slots:
        Some free text to describe any quality control that has
        been performed.
 
+  qc_parts:
+    description: >-
+      A list of key value pairs for for information about
+      quality control of this dataset. A key might be something that
+      has been done or a description of a paramater. i.e
+      'snp_hwe_filter' and the value might be '5e-07'.
+    range: QCKeyValue
+    mulitvalued: true
+    inlined_as_list: true
+
+  ug_parts:
+    description: >-
+      A list of key value pairs, where a key is something you might
+      want to do and value is a description and/or link to how you might
+      want to do it.
+    range: UGKeyValue
+    mulitvalued: true
+    inlined_as_list: true
+    
+  publications_dois:
      description: >-
        A list of publications dois that use or refer to
        this data set
