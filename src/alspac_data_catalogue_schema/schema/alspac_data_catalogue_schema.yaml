@@ -193,6 +193,16 @@ classes:
        - logged_by
        - logged_date
 
+  QcKeyValue:
+    slots:
+      - qc_key
+      - qc_value
+
+  UGKeyValue:
+    slots:
+      - ug_key
+      - ug_value
+
 slots:
   id:
     identifier: true
