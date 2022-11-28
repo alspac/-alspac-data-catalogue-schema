@@ -385,7 +385,7 @@ slots:
     description: >-
       A key is something you might
       want to do for example run a gwas
-  qc_value:
+  ug_value:
     description: >-
       A description or link to how to do something
 
