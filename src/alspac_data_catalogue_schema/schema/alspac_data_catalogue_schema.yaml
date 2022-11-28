@@ -193,7 +193,7 @@ classes:
        - logged_by
        - logged_date
 
-  QcKeyValue:
+  QCKeyValue:
     slots:
       - qc_key
       - qc_value
