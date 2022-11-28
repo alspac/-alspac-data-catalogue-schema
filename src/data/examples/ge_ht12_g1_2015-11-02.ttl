@@ -33,13 +33,22 @@ alspacdcs:ge_ht12_g1_2015-11-02 a dcat:Dataset ;
             alspacdcs:issue_description "We do not have the original idat files that were used to call this data." ;
             alspacdcs:logged_by "Gibran Hermani" ;
             alspacdcs:logged_date "NA" ] ;
-    alspacdcs:qc_description """There are two different types of QC'd data available in this version, one performed by David Evans for the Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping meta analysis.
-Summary:
-Platform: Illumina Human HT-12 V3 BeadChips
-Number of individuals: 931
-Number of probes: 48804
-Bryois: LCL's from unrelated individuals were grown under identical conditions and cells frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion). Expression profiling of the samples, each with two technical replicates, were performed using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where 200 ng of total RNA was processed according to the protocol supplied by Illumina. Raw data was imported to the Illumina Beadstudio software and probes with less than three beads present were excluded. Log2 - transformed expression signals were then normalized with quantile normalization of the replicates of each individual followed by quantile normalization across all individuals. We restricted our analysis to 23'935 probes tagging genes annotated in Ensembl. Principal component analysis was performed on 931 individuals. 62 individuals with principal component 1 or 2 greater than one standard deviation of the population were excluded from further analysis. See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461 for full details.
-Molgenis: Genetic outliers were removed, any individuals that were clear outliers in the first 2 genetic principal components. Each probe was simply quantile normalised and then log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal components (excluding those that had genetic associations), and scaled to have mean 0 and variance 1. See https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full details.""" ;
+    alspacdcs:qc_description "There are two different types of QC'd data available in this version, one performed by David Evans for the Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping meta analysis." ;
+    alspacdcs:qc_parts [ a alspacdcs:QCKeyValue ;
+            alspacdcs:qc_key "Number of individuals" ;
+            alspacdcs:qc_value "931" ],
+        [ a alspacdcs:QCKeyValue ;
+            alspacdcs:qc_key "Molgenis" ;
+            alspacdcs:qc_value "Genetic outliers were removed, any individuals that were clear outliers in the first 2 genetic principal components. Each probe was simply quantile normalised and then log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal components (excluding those that had genetic associations), and scaled to have mean 0 and variance 1. See https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full details." ],
+        [ a alspacdcs:QCKeyValue ;
+            alspacdcs:qc_key "Platform" ;
+            alspacdcs:qc_value "Illumina Human HT-12 V3 BeadChips" ],
+        [ a alspacdcs:QCKeyValue ;
+            alspacdcs:qc_key "Number of probes" ;
+            alspacdcs:qc_value "48804" ],
+        [ a alspacdcs:QCKeyValue ;
+            alspacdcs:qc_key "Bryois" ;
+            alspacdcs:qc_value "LCL's from unrelated individuals were grown under identical conditions and cells frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion). Expression profiling of the samples, each with two technical replicates, were performed using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where 200 ng of total RNA was processed according to the protocol supplied by Illumina. Raw data was imported to the Illumina Beadstudio software and probes with less than three beads present were excluded. Log2 - transformed expression signals were then normalized with quantile normalization of the replicates of each individual followed by quantile normalization across all individuals. We restricted our analysis to 23'935 probes tagging genes annotated in Ensembl. Principal component analysis was performed on 931 individuals. 62 individuals with principal component 1 or 2 greater than one standard deviation of the population were excluded from further analysis. See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461 for full details." ] ;
     alspacdcs:version_of alspacdcs:ge_ht12_g1 .
 
 alspacdcs:24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh a alspacdcs:Script ;
@@ -64,6 +73,7 @@ alspacdcs:2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt a dcat:Distribution ;
     alspacdcs:md5sum "2b91ff9a91f5bfe2b807ba638cc2916b" .
 
 alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt a dcat:Distribution ;
+    schema:description "File with IDs in columns and probes in rows. Two columns per individual, with one column for average signal and one column for average number of beads. Presumably this is a file generated by the Illumina Genome Studio software. The IDs used in the files are mapped to ALNs in `alspacdcs:ge_ht12_g1_2015-11-02_id_map`." ;
     schema:name "data.txt" ;
     dcat:byteSize "1.1G" ;
     dcat:mediaType ".txt" ;
@@ -140,6 +150,7 @@ alspacdcs:a7af80819b4dbd4a0dae795553a1de03_initial_setup.R a alspacdcs:Script ;
     alspacdcs:md5sum "a7af80819b4dbd4a0dae795553a1de03" .
 
 alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData a dcat:Distribution ;
+    schema:description "RData file with IDs in columns and Illumina probe IDs in rows. Normalised data following the molgenis pipeline, found at https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook. The object name in the RData file is `dat`." ;
     schema:name "data.RData" ;
     dcat:byteSize "314M" ;
     dcat:mediaType ".Rdata" ;
@@ -160,7 +171,7 @@ alspacdcs:bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh a alspacd
     alspacdcs:md5sum "bd3cd8d3b95c5facb76fd1f80476fa8a" .
 
 alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData a dcat:Distribution ;
-    schema:description "This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1." ;
+    schema:description "This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1. RData file with IDs in columns and Illumina probe IDs in rows. This is the normalised data used in Bryois et al 2014. The object name in the RData file is `dat`. Probe IDs are mapped to Genes in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt" ;
     schema:name "data.RData" ;
     dcat:byteSize "322M" ;
     dcat:mediaType ".RData" ;
@@ -201,6 +212,7 @@ alspacdcs:ge_ht12_g1_2015-11-02_molgenis a dcat:Dataset ;
     alspacdcs:data_distributions alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData .
 
 alspacdcs:ge_ht12_g1_2015-11-02_raw a dcat:Dataset ;
+    schema:description "Dataset part for the raw gene expression data" ;
     schema:name "Raw Gene Expression data" ;
     alspacdcs:data_distributions alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt,
         alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz .
