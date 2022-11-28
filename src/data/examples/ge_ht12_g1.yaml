@@ -4,7 +4,7 @@
 id: alspacdcs:ge_ht12_g1
 name: Gene expression - array - G1
 description: Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals. 
-in_catalog: alspacdcs:alspac_data_catalogue-001
+in_catalog: alspacdcs:alspac_data_catalogue_001
 landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 # Nic Timpson

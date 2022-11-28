@@ -13,7 +13,7 @@ alspacdcs:ge_ht12_g1 a dcat:Dataset ;
     alspacdcs:documentation_authors_orcids ORCID:0000-0002-4064-3794,
         ORCID:0000-0003-0663-4621,
         ORCID:0000-0003-0920-1055 ;
-    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue-001 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
     alspacdcs:keywords "expression",
         "genome-wide",
         "genomic",
