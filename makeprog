@@ -21,16 +21,8 @@ test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/sch
 
 './src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl --target-class AlspacDataSetVersionFreeze'.
 
-'./src/data/examples/alspac_data_catalogue-001.rdf' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/alspac_data_catalogue-001.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml -o ./src/data/examples/alspac_data_catalogue-001.rdf -t rdf --target-class AlspacDataCatalogue'.
-
-'./src/data/examples/ge_ht12_g1.rdf' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1.yaml -o ./src/data/examples/ge_ht12_g1.rdf  -t rdf --target-class NamedAlspacDataset'.
-
-'./src/data/examples/ge_ht12_g1_2015-11-02.rdf' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02.rdf  -t rdf  --target-class AlspacDataSetVersion'.
-
-'./src/data/examples/ge_ht12_g1_2015-11-02_f2.rdf' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02_f2.rdf  -t rdf --target-class AlspacDataSetVersionFreeze'.
 
 
 convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/examples/ge_ht12_g1.ttl','./src/data/examples/ge_ht12_g1_2015-11-02.ttl','./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl'],true.
 
 
-convert_rdf <--['./src/data/examples/alspac_data_catalogue-001.rdf','./src/data/examples/ge_ht12_g1.rdf','./src/data/examples/ge_ht12_g1_2015-11-02.rdf','./src/data/examples/ge_ht12_g1_2015-11-02_f2.rdf'],true.
