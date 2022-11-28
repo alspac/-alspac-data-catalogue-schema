@@ -108,6 +108,8 @@ classes:
       Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
     slots:
       - qc_description
+      - qc_parts
+      - ug_parts
       - version_of
       - is_current_version
       - has_previous_version
