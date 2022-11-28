@@ -12,13 +12,17 @@ qc_description: >-
   meta analysis.
 
 qc_parts:
-  - qc_key: Platform
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_platform
+    qc_key: Platform
     qc_value: Illumina Human HT-12 V3 BeadChips
-  - qc_key: Number of individuals
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_number_of_individuals
+    qc_key: Number of individuals
     qc_value: 931
-  - qc_key: Number of probes
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_number_of_probes
+    qc_key: Number of probes
     qc_value: 48804
-  - qc_key: Bryois
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_bryois
+    qc_key: Bryois
     qc_value: >-
       LCL's from unrelated individuals were grown under identical conditions and cells
       frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was
@@ -35,7 +39,8 @@ qc_parts:
       deviation of the population were excluded from further analysis.
       See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461
       for full details.
-  - qc_key: Molgenis
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_molgenis
+    qc_key: Molgenis
     qc_value: >-
       Genetic outliers were removed, any individuals that were clear outliers in the
       first 2 genetic principal components. Each probe was simply quantile normalised and then
@@ -153,10 +158,11 @@ has_parts:
 
 
 known_issues:
-  - issue_description: >-
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_issue_1
+    issue_description: >-
       We do not have the original idat files that were used to call this data.
     logged_by: Gibran Hermani
-    logged_date: NA
+    logged_date: unknown
 
 has_scripts:
   - id: alspacdcs:7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh
