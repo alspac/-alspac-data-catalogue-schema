@@ -369,7 +369,7 @@ slots:
       has been done or a description of a paramater. i.e
       'snp_hwe_filter' and the value might be '5e-07'.
     range: QCKeyValue
-    mulitvalued: true
+    multivalued: true
     inlined_as_list: true
 
   ug_parts:
@@ -379,7 +379,7 @@ slots:
       want to do and value is a description and/or link to how you might
       want to do it.
     range: UGKeyValue
-    mulitvalued: true
+    multivalued: true
     inlined_as_list: true
     
   publications_dois:
