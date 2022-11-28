@@ -185,6 +185,7 @@ classes:
      #- location_on_bp
 
   KnownIssue:
+    is_a: NamedThing
     description: >-
      Known issues for a dataset should have a description, when they
      are logged and by who 
@@ -194,11 +195,15 @@ classes:
        - logged_date
 
   QCKeyValue:
+    is_a: NamedThing
+    Description: A qc part with a key and a value.
     slots:
       - qc_key
       - qc_value
 
   UGKeyValue:
+    is_a: NamedThing
+    Description: A user guide entry.
     slots:
       - ug_key
       - ug_value
