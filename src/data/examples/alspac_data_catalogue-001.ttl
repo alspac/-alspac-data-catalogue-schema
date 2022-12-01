@@ -1,13 +1,10 @@
 @prefix ORCID: <http://identifiers.org/orcid/> .
-@prefix alspacdcs: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
 
 alspacdcs:alspac_data_catalogue_001 a dcat:Catalog ;
-    schema:description "This catalogue is for all of the named alspac omics data sets" ;
-    schema:email "alspac-omics@bristol.ac.uk" ;
-    schema:name "ALSPAC Omics Data Catalogue" ;
     alspacdcs:named_alspac_datasets alspacdcs:cnv_550_g1,
         alspacdcs:dnam_450_g0m_g1,
         alspacdcs:dnam_bs_g0m,
@@ -22,7 +19,10 @@ alspacdcs:alspac_data_catalogue_001 a dcat:Catalog ;
         alspacdcs:gwa_exome_g0p,
         alspacdcs:wes_novaseq_g1,
         alspacdcs:wgs_hiseq_g1 ;
-    alspacdcs:primary_investigator_orcids ORCID:0000-0002-7141-9189 .
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-7141-9189 ;
+    schema:description "This catalogue is for all of the named alspac omics data sets" ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "ALSPAC Omics Data Catalogue" .
 
 ORCID:0000-0002-7141-9189 a foaf:Person .
 
