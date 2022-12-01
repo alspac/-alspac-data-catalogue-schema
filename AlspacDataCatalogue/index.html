@@ -297,7 +297,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/alspac/alspac-data-catalogue-schema</li>
+<li>from schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -325,7 +325,7 @@
 <pre><code class="language-yaml">name: AlspacDataCatalogue
 description: Represents an alspac data catalogue. That is a set of named alspac data
   sets.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 slots:
@@ -341,14 +341,14 @@ class_uri: dcat:Catalog
 <pre><code class="language-yaml">name: AlspacDataCatalogue
 description: Represents an alspac data catalogue. That is a set of named alspac data
   sets.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 attributes:
   primary_investigator_orcids:
     name: primary_investigator_orcids
     description: The orcid ids of the pis
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: primary_investigator_orcids
@@ -362,7 +362,7 @@ attributes:
   primary_email:
     name: primary_email
     description: The main email address to contact
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     exact_mappings:
     - foaf:email
     rank: 1000
@@ -377,7 +377,7 @@ attributes:
   named_alspac_datasets:
     name: named_alspac_datasets
     description: A list of named alspac data sets curies ids
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: named_alspac_datasets
@@ -390,7 +390,7 @@ attributes:
   id:
     name: id
     description: A unique identifier for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -402,7 +402,7 @@ attributes:
   name:
     name: name
     description: A human-readable name for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -413,7 +413,7 @@ attributes:
   description:
     name: description
     description: A human-readable description for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:description
     alias: description

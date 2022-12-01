@@ -311,7 +311,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/alspac/alspac-data-catalogue-schema</li>
+<li>from schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -338,7 +338,7 @@
 <details>
 <pre><code class="language-yaml">name: DataDistribution
 description: A dataset distribution has a location, file type and file size.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 slots:
@@ -355,14 +355,14 @@ class_uri: dcat:Distribution
 <details>
 <pre><code class="language-yaml">name: DataDistribution
 description: A dataset distribution has a location, file type and file size.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 attributes:
   md5sum:
     name: md5sum
     description: What is the md5sum of the file in this distribution?
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     close_mappings:
     - spdx:checksum
     rank: 1000
@@ -375,7 +375,7 @@ attributes:
   filesize:
     name: filesize
     description: The size of the file in k, m,g or t.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: dcat:byteSize
     alias: filesize
@@ -387,7 +387,7 @@ attributes:
   filetype:
     name: filetype
     description: what is the file type?
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: dcat:mediaType
     alias: filetype
@@ -399,7 +399,7 @@ attributes:
   number_of_participants:
     name: number_of_participants
     description: The number of alspac participants in this dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: number_of_participants
     owner: DataDistribution
@@ -409,7 +409,7 @@ attributes:
   number_of_gene_expression_probe_values:
     name: number_of_gene_expression_probe_values
     description: This slot is used for gene expression data distributions
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: number_of_gene_expression_probe_values
     owner: DataDistribution
@@ -419,7 +419,7 @@ attributes:
   id:
     name: id
     description: A unique identifier for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -431,7 +431,7 @@ attributes:
   name:
     name: name
     description: A human-readable name for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -442,7 +442,7 @@ attributes:
   description:
     name: description
     description: A human-readable description for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:description
     alias: description

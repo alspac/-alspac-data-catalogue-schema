@@ -372,7 +372,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/alspac/alspac-data-catalogue-schema</li>
+<li>from schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -400,7 +400,7 @@
 <pre><code class="language-yaml">name: AlspacDataSetVersion
 description: Represents a version of a named_alspac_data_set. That is a specific set
   of data which internal people to alspac can use.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 slots:
@@ -425,14 +425,14 @@ class_uri: dcat:Dataset
 <pre><code class="language-yaml">name: AlspacDataSetVersion
 description: Represents a version of a named_alspac_data_set. That is a specific set
   of data which internal people to alspac can use.
-from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
 is_a: NamedThing
 attributes:
   qc_description:
     name: qc_description
     description: Some free text to describe any quality control that has been performed.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: qc_description
     owner: AlspacDataSetVersion
@@ -444,7 +444,7 @@ attributes:
     description: A list of key value pairs for for information about quality control
       of this dataset. A key might be something that has been done or a description
       of a paramater. i.e 'snp_hwe_filter' and the value might be '5e-07'.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: qc_parts
@@ -458,7 +458,7 @@ attributes:
     name: ug_parts
     description: A list of key value pairs, where a key is something you might want
       to do and value is a description and/or link to how you might want to do it.
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: ug_parts
@@ -471,7 +471,7 @@ attributes:
   version_of:
     name: version_of
     description: What named Alspac dataset is this a version of
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: version_of
     owner: AlspacDataSetVersion
@@ -481,7 +481,7 @@ attributes:
   is_current_version:
     name: is_current_version
     description: Is this the current version of a named alspac dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: is_current_version
     owner: AlspacDataSetVersion
@@ -491,7 +491,7 @@ attributes:
   has_previous_version:
     name: has_previous_version
     description: The previous version of this named alspac dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: has_previous_version
     owner: AlspacDataSetVersion
@@ -501,7 +501,7 @@ attributes:
   has_next_version:
     name: has_next_version
     description: The next version of this named alspac dataset
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     alias: has_next_version
     owner: AlspacDataSetVersion
@@ -511,7 +511,7 @@ attributes:
   authors:
     name: authors
     description: A list of orcids for the authors of the item
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: authors
@@ -525,7 +525,7 @@ attributes:
   has_parts:
     name: has_parts
     description: A list of parts of a named alspac dataset version or freeze
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: has_parts
@@ -539,7 +539,7 @@ attributes:
   known_issues:
     name: known_issues
     description: A list of known issues inline
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: known_issues
@@ -552,7 +552,7 @@ attributes:
   has_scripts:
     name: has_scripts
     description: A list of scripts that are included in a dataset version or freeze
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: has_scripts
@@ -565,7 +565,7 @@ attributes:
   has_freezes:
     name: has_freezes
     description: A list of freezes for this version of the data
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
     alias: has_freezes
@@ -578,7 +578,7 @@ attributes:
   id:
     name: id
     description: A unique identifier for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -590,7 +590,7 @@ attributes:
   name:
     name: name
     description: A human-readable name for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -601,7 +601,7 @@ attributes:
   description:
     name: description
     description: A human-readable description for a thing
-    from_schema: https://w3id.org/alspac/alspac-data-catalogue-schema
+    from_schema: http://https://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     slot_uri: schema:description
     alias: description
