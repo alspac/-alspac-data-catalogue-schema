@@ -1,0 +1,14 @@
+@prefix myschema: <http://myschema.blah/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/project_awesome> a myschema:Project ;
+    myschema:paper_dois "doi:00.0001/blah"^^xsd:anyURI,
+        "doi:00.0002/blah"^^xsd:anyURI,
+        "doi:00.0003/blah"^^xsd:anyURI ;
+    myschema:people_orcids "ORCID:0000-0000-0000-0001"^^xsd:anyURI,
+        "ORCID:0000-0000-0000-0002"^^xsd:anyURI,
+        "ORCID:0000-0000-0000-0003"^^xsd:anyURI ;
+    myschema:related_projects "myschema:124"^^xsd:anyURI,
+        "myschema:125"^^xsd:anyURI,
+        "myschema:126"^^xsd:anyURI .
+

@@ -1,0 +1,70 @@
+name: mytest
+description: test schema
+id: http://myschema.blah/
+imports:
+- linkml:types
+prefixes:
+  ORCID:
+    prefix_prefix: ORCID
+    prefix_reference: http://identifiers.org/orcid/
+  doi:
+    prefix_prefix: doi
+    prefix_reference: https://doi.org/
+  myschema:
+    prefix_prefix: myschema
+    prefix_reference: http://myschema.blah/
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+  schema:
+    prefix_prefix: schema
+    prefix_reference: http://schema.org/
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
+default_prefix: myschema
+slots:
+  id:
+    name: id
+    description: A unique identifier for a thing
+    slot_uri: schema:identifier
+    identifier: true
+    range: uriorcurie
+  name:
+    name: name
+    description: A human-readable name for a thing
+    slot_uri: schema:name
+  description:
+    name: description
+    description: A human-readable description for a thing
+    slot_uri: schema:description
+  people_orcids:
+    name: people_orcids
+    description: The orcid ids of the people involved
+    multivalued: true
+    range: uriorcurie
+    inlined: false
+  paper_dois:
+    name: paper_dois
+    description: The dois of papers for this project
+    multivalued: true
+    range: uriorcurie
+    inlined: false
+  related_projects:
+    name: related_projects
+    description: The curies of projects related to this project
+    multivalued: true
+    range: uriorcurie
+    inlined: false
+classes:
+  Project:
+    name: Project
+    description: A class to describe information around a project
+    slots:
+    - id
+    - name
+    - description
+    - people_orcids
+    - paper_dois
+    - related_projects
+source_file: mini_test/mini_schema.yaml
