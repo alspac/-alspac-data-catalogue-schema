@@ -1,0 +1,62 @@
+id: http://myschema.blah/
+name: mytest
+description: >-
+  test schema
+
+prefixes:
+  ORCID: http://identifiers.org/orcid/
+  doi: https://doi.org/
+  myschema: http://myschema.blah/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/ # check this
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+imports:
+  - linkml:types
+
+default_prefix: myschema
+
+classes:
+  Project:
+    description: A class to describe information around a project
+    slots:
+      - id
+      - name
+      - description
+      - people_orcids
+      - paper_dois
+      - related_projects
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+    range: uriorcurie
+    description: A unique identifier for a thing
+  name:
+    slot_uri: schema:name
+    description: A human-readable name for a thing
+  description:
+    slot_uri: schema:description
+    description: A human-readable description for a thing
+  people_orcids:
+    #slot_uri: ORCID:id ? What should these be to say it is a list of orcids?
+    #values_from: ORCIDs ??
+    range: uriorcurie
+    description: The orcid ids of the people involved
+    multivalued: true
+    inlined: false
+  paper_dois:
+    #slot_uri: doi:id ? What should these be to say it is a list of dois?
+    #values_from: dois ??
+    range: uriorcurie
+    description: The dois of papers for this project
+    multivalued: true
+    inlined: false
+  related_projects:
+    #slot_uri: myschema:id ? What should these be to say it is a list of projects?
+    #values_from: myschema ??
+    range: uriorcurie
+    description: The curies of projects related to this project
+    multivalued: true
+    inlined: false
