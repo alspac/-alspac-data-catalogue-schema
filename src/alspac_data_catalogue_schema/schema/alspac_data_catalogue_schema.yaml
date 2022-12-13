@@ -101,6 +101,7 @@ classes:
       - main_publication_doi
       - publications_dois
       - in_catalog
+      - derived_from
 
 
   AlspacDataSetVersion:
