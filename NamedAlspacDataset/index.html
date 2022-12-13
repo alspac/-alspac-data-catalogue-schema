@@ -211,6 +211,7 @@
     class NamedAlspacDataset
       NamedThing &lt;|-- NamedAlspacDataset
 
+      NamedAlspacDataset : derived_from
       NamedAlspacDataset : description
       NamedAlspacDataset : documentation_authors_orcids
       NamedAlspacDataset : has_current_version
@@ -305,6 +306,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../derived_from/">derived_from</a></td>
+<td>0..* <br/> <a href="./">NamedAlspacDataset</a></td>
+<td>List of NamedAlspacDatasets that were used at least in part to derive this Named or custom dataset.</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
@@ -338,6 +345,12 @@
 <tr>
 <td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
 <td><a href="../named_alspac_datasets/">named_alspac_datasets</a></td>
+<td>range</td>
+<td>NamedAlspacDataset</td>
+</tr>
+<tr>
+<td><a href="./">NamedAlspacDataset</a></td>
+<td><a href="../derived_from/">derived_from</a></td>
 <td>range</td>
 <td>NamedAlspacDataset</td>
 </tr>
@@ -400,6 +413,7 @@ slots:
 - main_publication_doi
 - publications_dois
 - in_catalog
+- derived_from
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -536,6 +550,20 @@ attributes:
     domain_of:
     - NamedAlspacDataset
     range: AlspacDataCatalogue
+  derived_from:
+    name: derived_from
+    description: List of NamedAlspacDatasets that were used at least in part to derive
+      this Named or custom dataset.
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    multivalued: true
+    alias: derived_from
+    owner: NamedAlspacDataset
+    domain_of:
+    - NamedAlspacDataset
+    range: NamedAlspacDataset
+    inlined: true
+    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
