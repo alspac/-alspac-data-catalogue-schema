@@ -248,6 +248,14 @@ slots:
     multivalued: true
     description: A list of named alspac data sets curies ids
     inlined_as_list: true
+  derived_from:
+    range: NamedAlspacDataset
+    multivalued: true
+    description: >-
+      List of NamedAlspacDatasets that were used at least
+      in part to derive this Named or custom dataset.
+    inlined_as_list: true
+    
   versions:
     range: AlspacDataSetVersion
     multivalued: true
