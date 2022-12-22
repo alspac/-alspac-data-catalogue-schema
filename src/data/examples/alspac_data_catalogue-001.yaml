@@ -1,7 +1,7 @@
 # Example omics data catalogue object
 id: alspacdcs:alspac_data_catalogue_001
 name: ALSPAC Omics Data Catalogue
-description: This catalogue is for all of the named alspac omics data sets
+description: This catalogue is for all of the named alspac omics data sets.
 primary_investigator_orcids:
   - ORCID:0000-0002-7141-9189 #Nic Timpson
 primary_email: alspac-omics@bristol.ac.uk
@@ -20,7 +20,8 @@ named_alspac_datasets:
   - alspacdcs:wes_novaseq_g1
   - alspacdcs:dnam_450_g0m_g1
   - alspacdcs:dnam_bs_g0m
-
+see_also:
+  - https://dbpedia.org/page/Avon_Longitudinal_Study_of_Parents_and_Children
 
 
       
