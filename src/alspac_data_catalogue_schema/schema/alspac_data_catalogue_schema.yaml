@@ -37,6 +37,7 @@ prefixes:
   ORCID: http://identifiers.org/orcid/
   doi: https://doi.org/
   identifier: https://registry.identifiers.org/registry/
+  nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/
   
 default_prefix: alspacdcs 
 default_range: string
@@ -192,6 +193,7 @@ classes:
      - number_of_variants # only for genetic data
      - number_of_cpgs # only for methylation data.
      - required_files #
+     - belongsToContainer
 
   KnownIssue:
     is_a: NamedThing
@@ -347,12 +349,14 @@ slots:
       What is the md5sum of the dataset linker file used to
       make this freeze
     close_mappings:
-      - spdx:checksum 
+      - spdx:checksum
+      - nfo:FileHash
 
   md5sum:
     description: What is the md5sum of the file in this distribution?
     close_mappings:
       - spdx:checksum
+      - nfo:FileHash
     
   filesize:
     slot_uri: dcat:byteSize
