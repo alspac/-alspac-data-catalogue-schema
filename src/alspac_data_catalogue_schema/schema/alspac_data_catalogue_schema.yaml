@@ -81,7 +81,8 @@ classes:
     slots:
       - primary_investigator_orcids
       - primary_email
-      - named_alspac_datasets 
+      - named_alspac_datasets
+      - see_also
       
 
   NamedAlspacDataset:
@@ -171,7 +172,9 @@ classes:
     slots:
       - data_distributions
 
-
+### Might want to have specilised classes which inherit from this to
+### bring out attributes/slots that are specific to differnt types of
+### data distribution
   DataDistribution:
     class_uri: dcat:Distribution
     is_a: NamedThing
@@ -186,6 +189,9 @@ classes:
      # expression data distributions
      #- location_on_bc4 # Maybe add these slots when du stuff changes
      #- location_on_bp
+     - number_of_variants # only for genetic data
+     - number_of_cpgs # only for methylation data.
+     - required_files #
 
   KnownIssue:
     is_a: NamedThing
@@ -220,6 +226,11 @@ slots:
   name:
     slot_uri: schema:name
     description: A human-readable name for a thing
+  see_also:
+    range: uriorcurie
+    description: Links to useful info
+    multivalued: true
+    inlined_as_list: true
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing
@@ -255,6 +266,13 @@ slots:
       List of NamedAlspacDatasets that were used at least
       in part to derive this Named or custom dataset.
     inlined_as_list: true
+  required_files:
+    range: DataDistribution
+    multivalued: true
+    inlined_as_list: true
+    description: >-
+      If a file should be used with another file list them.
+      For example the three plink files (bim, bed, fam) work together.
     
   versions:
     range: AlspacDataSetVersion
