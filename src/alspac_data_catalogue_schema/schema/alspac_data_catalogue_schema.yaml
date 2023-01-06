@@ -367,6 +367,20 @@ slots:
   number_of_participants:
     description: The number of alspac participants in this dataset
     range: integer
+  number_of_variants:
+    description: >-
+      The number of genetic variants (i.e snps, indels
+      etc)
+    range: integer
+  number_of_cpgs:
+    description: >-
+      The number of CPG sites.
+    range: integer
+  belongsToContainer:
+    description: >-
+      What containter does this belong to.
+    
+      
   number_of_gene_expression_probe_values:
     description: >-
       This slot is used for gene expression data
