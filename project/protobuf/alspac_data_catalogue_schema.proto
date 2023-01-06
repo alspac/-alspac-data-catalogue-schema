@@ -4,29 +4,143 @@ message AlspacDataCatalogue
   uriorcurie id = 0
   string name = 0
   string description = 0
- repeated  uriorcurie primaryInvestigatorOrcids = 0
+ repeated  person primaryInvestigatorOrcids = 0
   string primaryEmail = 0
- repeated  uriorcurie namedAlspacDataSetCollection = 0
+ repeated  namedAlspacDataset namedAlspacDatasets = 0
+ repeated  uriorcurie seeAlso = 0
+ }
+// Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.
+message AlspacDataSetVersion
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string qcDescription = 0
+ repeated  qCKeyValue qcParts = 0
+ repeated  uGKeyValue ugParts = 0
+  namedAlspacDataset versionOf = 0
+  string isCurrentVersion = 0
+  uriorcurie hasPreviousVersion = 0
+  uriorcurie hasNextVersion = 0
+ repeated  string authors = 0
+ repeated  datasetPart hasParts = 0
+ repeated  knownIssue knownIssues = 0
+ repeated  script hasScripts = 0
+ repeated  alspacDataSetVersionFreeze hasFreezes = 0
+ }
+// Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use by external colabs. It is normally a subset of files in a version of named alspac dataset, but sometimes file types will also change. For example .Rdata changed to .csv.
+message AlspacDataSetVersionFreeze
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string linkerFileMd5sum = 0
+  string freezeSize = 0
+  string wocFileMd5sum = 0
+  string allIndividualsToExcludeMd5sum = 0
+  boolean isCurrentFreeze = 0
+  string freezeNumber = 0
+  date freezeDate = 0
+  alspacDataSetVersionFreeze previousFreeze = 0
+  alspacDataSetVersionFreeze nextFreeze = 0
+  alspacDataSetVersion freezeOfAlspacDatasetVersion = 0
+  namedAlspacDataset freezeOfNamedAlspacDataset = 0
+  string primaryEmail = 0
+  string gitTag = 0
+ repeated  datasetPart hasParts = 0
+ }
+// A dataset distribution has a location, file type and file size.
+message DataDistribution
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string md5sum = 0
+  string filesize = 0
+  string filetype = 0
+  integer numberOfParticipants = 0
+  integer numberOfGeneExpressionProbeValues = 0
+  integer numberOfVariants = 0
+  integer numberOfCpgs = 0
+ repeated  dataDistribution requiredFiles = 0
+  string belongsToContainer = 0
+ }
+// Represents a  part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.
+message DatasetPart
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  dataDistribution dataDistributions = 0
+ }
+// Known issues for a dataset should have a description, when they are logged and by who 
+message KnownIssue
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string issueDescription = 0
+  string loggedBy = 0
+  string loggedDate = 0
  }
 // Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.
-message NamedAlspacDataSet
+message NamedAlspacDataset
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
-  string landingPage = 0
- repeated  uriorcurie primaryInvestigatorOrcids = 0
+  string landingPageUrl = 0
+ repeated  person primaryInvestigatorOrcids = 0
  repeated  string keywords = 0
-  uriorcurie hasCurrentVersion = 0
+  alspacDataSetVersion hasCurrentVersion = 0
+ repeated  alspacDataSetVersion versions = 0
   string primaryEmail = 0
- repeated  uriorcurie documentationAuthorsOrcids = 0
-  string mainPublication = 0
-  string publications = 0
+ repeated  person documentationAuthorsOrcids = 0
+  paper mainPublicationDoi = 0
+ repeated  paper publicationsDois = 0
+  alspacDataCatalogue inCatalog = 0
+ repeated  namedAlspacDataset derivedFrom = 0
  }
-// A generic grouping for any identifiable entity
-message NamedThing
+// a scientific paper
+message Paper
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
+ }
+// A person
+message Person
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ }
+// A qc part with a key and a value.
+message QCKeyValue
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string qcKey = 0
+  string qcValue = 0
+ }
+// A description and attributes of a script included in a version or freeze
+message Script
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string authors = 0
+  string md5sum = 0
+  string filesize = 0
+  string filetype = 0
+ }
+// A user guide entry.
+message UGKeyValue
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+  string ugKey = 0
+  string ugValue = 0
  }

@@ -1,17 +1,20 @@
 {
-   "ORCID": "https://orcid.org/",
+   "IAO": "http://purl.obolibrary.org/obo/IAO_",
+   "ORCID": "http://identifiers.org/orcid/",
    "PATO": "http://purl.obolibrary.org/obo/PATO_",
-   "alspac_data_catalogue_schema": "https://w3id.org/alspac/alspac-data-catalogue-schema/",
-   "biolink": "https://w3id.org/biolink/",
-   "dc": "http://purl.org/dc/elements/1.1/",
+   "alspacdcs": "http://purl.org/alspac/alspac-data-catalogue-schema/",
+   "biolink": "https://w3id.org/biolink/vocab/",
    "dcat": "http://www.w3.org/ns/dcat#",
+   "dce": "http://purl.org/dc/elements/1.1/",
    "dcterms": "http://purl.org/dc/terms/",
-   "dctype": "http://purl.org/dc/dcmitype/",
+   "dctypes": "http://purl.org/dc/dcmitype/",
    "doi": "https://doi.org/",
-   "example": "https://example.org/",
+   "example": "http://example.org/rdf#",
    "foaf": "http://xmlns.com/foaf/0.1/",
+   "identifier": "https://registry.identifiers.org/registry/",
    "linkml": "https://w3id.org/linkml/",
    "locn": "http://www.w3.org/ns/locn#",
+   "nfo": "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/",
    "odrl": "http://www.w3.org/ns/odrl/2/",
    "owl": "http://www.w3.org/2002/07/owl#",
    "prov": "http://www.w3.org/ns/prov#",
@@ -25,10 +28,25 @@
    "AlspacDataCatalogue": {
       "@id": "dcat:Catalog"
    },
-   "NamedAlspacDataSet": {
+   "AlspacDataSetVersion": {
+      "@id": "dcat:Dataset"
+   },
+   "AlspacDataSetVersionFreeze": {
+      "@id": "dcat:Dataset"
+   },
+   "DataDistribution": {
+      "@id": "dcat:Distribution"
+   },
+   "DatasetPart": {
+      "@id": "dcat:Dataset"
+   },
+   "NamedAlspacDataset": {
       "@id": "dcat:Dataset"
    },
    "NamedThing": {
       "@id": "schema:Thing"
+   },
+   "Person": {
+      "@id": "foaf:Person"
    }
 }

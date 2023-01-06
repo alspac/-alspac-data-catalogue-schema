@@ -1,10 +1,10 @@
-BASE <https://w3id.org/alspac/alspac-data-catalogue-schema/>
+BASE <http://purl.org/alspac/alspac-data-catalogue-schema/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema: <http://schema.org/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX ORCID: <https://orcid.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 
 linkml:String xsd:string
@@ -40,38 +40,172 @@ linkml:Nodeidentifier NONLITERAL
 <AlspacDataCatalogue> CLOSED {
     (  $<AlspacDataCatalogue_tes> (  &<NamedThing_tes> ;
           rdf:type [ schema:Thing ] ? ;
-          ORCID:id @linkml:Uriorcurie * ;
+          <primary_investigator_orcids> @<Person> * ;
           schema:email @linkml:String ? ;
-          <named_alspac_data_set_collection> @linkml:Uriorcurie *
+          <named_alspac_datasets> @<NamedAlspacDataset> * ;
+          <see_also> @linkml:Uriorcurie *
        ) ;
        rdf:type [ dcat:Catalog ]
     )
 }
 
-<NamedAlspacDataSet> CLOSED {
-    (  $<NamedAlspacDataSet_tes> (  &<NamedThing_tes> ;
+<AlspacDataSetVersion> CLOSED {
+    (  $<AlspacDataSetVersion_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <qc_description> @linkml:String ? ;
+          <qc_parts> @<QCKeyValue> * ;
+          <ug_parts> @<UGKeyValue> * ;
+          <version_of> @<NamedAlspacDataset> ? ;
+          <is_current_version> @linkml:String ? ;
+          <has_previous_version> @linkml:Uriorcurie ? ;
+          <has_next_version> @linkml:Uriorcurie ? ;
+          <authors> @linkml:String * ;
+          <has_parts> @<DatasetPart> * ;
+          <known_issues> @<KnownIssue> * ;
+          <has_scripts> @<Script> * ;
+          <has_freezes> @<AlspacDataSetVersionFreeze> *
+       ) ;
+       rdf:type [ dcat:Dataset ]
+    )
+}
+
+<AlspacDataSetVersionFreeze> CLOSED {
+    (  $<AlspacDataSetVersionFreeze_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <linker_file_md5sum> @linkml:String ? ;
+          <freeze_size> @linkml:String ? ;
+          <woc_file_md5sum> @linkml:String ? ;
+          <all_individuals_to_exclude_md5sum> @linkml:String ? ;
+          <is_current_freeze> @linkml:Boolean ? ;
+          <freeze_number> @linkml:String ? ;
+          <freeze_date> @linkml:Date ? ;
+          <previous_freeze> @<AlspacDataSetVersionFreeze> ? ;
+          <next_freeze> @<AlspacDataSetVersionFreeze> ? ;
+          <freeze_of_alspac_dataset_version> @<AlspacDataSetVersion> ? ;
+          <freeze_of_named_alspac_dataset> @<NamedAlspacDataset> ? ;
+          schema:email @linkml:String ? ;
+          <git_tag> @linkml:String ? ;
+          <has_parts> @<DatasetPart> *
+       ) ;
+       rdf:type [ dcat:Dataset ]
+    )
+}
+
+<DataDistribution> CLOSED {
+    (  $<DataDistribution_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <md5sum> @linkml:String ? ;
+          dcat:byteSize @linkml:String ? ;
+          dcat:mediaType @linkml:String ? ;
+          <number_of_participants> @linkml:Integer ? ;
+          <number_of_gene_expression_probe_values> @linkml:Integer ? ;
+          <number_of_variants> @linkml:Integer ? ;
+          <number_of_cpgs> @linkml:Integer ? ;
+          <required_files> @<DataDistribution> * ;
+          <belongsToContainer> @linkml:String ?
+       ) ;
+       rdf:type [ dcat:Distribution ]
+    )
+}
+
+<DatasetPart> CLOSED {
+    (  $<DatasetPart_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <data_distributions> @<DataDistribution> *
+       ) ;
+       rdf:type [ dcat:Dataset ]
+    )
+}
+
+<KnownIssue> CLOSED {
+    (  $<KnownIssue_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <issue_description> @linkml:String ? ;
+          <logged_by> @linkml:String ? ;
+          <logged_date> @linkml:String ?
+       ) ;
+       rdf:type [ <KnownIssue> ]
+    )
+}
+
+<NamedAlspacDataset> CLOSED {
+    (  $<NamedAlspacDataset_tes> (  &<NamedThing_tes> ;
           rdf:type [ schema:Thing ] ? ;
           dcat:landingPage @linkml:String ? ;
-          ORCID:id @linkml:Uriorcurie * ;
+          <primary_investigator_orcids> @<Person> * ;
           <keywords> @linkml:String * ;
-          dcat:hasCurrentVersion @linkml:Uriorcurie ? ;
+          dcat:hasCurrentVersion @<AlspacDataSetVersion> ? ;
+          <versions> @<AlspacDataSetVersion> * ;
           schema:email @linkml:String ? ;
-          ORCID:id @linkml:Uriorcurie * ;
-          <main_publication> @linkml:String ? ;
-          <publications> @linkml:String ?
+          <documentation_authors_orcids> @<Person> * ;
+          <main_publication_doi> @<Paper> ? ;
+          <publications_dois> @<Paper> * ;
+          <in_catalog> @<AlspacDataCatalogue> ? ;
+          <derived_from> @<NamedAlspacDataset> *
        ) ;
        rdf:type [ dcat:Dataset ]
     )
 }
 
 <NamedThing>  (
-    CLOSED {
-       (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
-             schema:description @linkml:String ?
-          ) ;
-          rdf:type [ schema:Thing ]
-       )
-    } OR @<AlspacDataCatalogue> OR @<NamedAlspacDataSet>
+    @<AlspacDataCatalogue> OR @<AlspacDataSetVersion> OR @<AlspacDataSetVersionFreeze> OR @<DataDistribution> OR @<DatasetPart> OR
+    @<KnownIssue> OR @<NamedAlspacDataset> OR @<Paper> OR @<Person> OR @<QCKeyValue> OR @<Script> OR @<UGKeyValue>
 )
+
+<NamedThing_struct> {
+    (  $<NamedThing_tes> (  schema:name @linkml:String ? ;
+          schema:description @linkml:String ?
+       ) ;
+       rdf:type [ schema:Thing ]
+    )
+}
+
+<Paper> CLOSED {
+    (  $<Paper_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ?
+       ) ;
+       rdf:type [ <Paper> ]
+    )
+}
+
+<Person> CLOSED {
+    (  $<Person_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ?
+       ) ;
+       rdf:type [ foaf:Person ]
+    )
+}
+
+<QCKeyValue> CLOSED {
+    (  $<QCKeyValue_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <qc_key> @linkml:String ? ;
+          <qc_value> @linkml:String ?
+       ) ;
+       rdf:type [ <QCKeyValue> ]
+    )
+}
+
+<Script> CLOSED {
+    (  $<Script_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <authors> @linkml:String * ;
+          <md5sum> @linkml:String ? ;
+          dcat:byteSize @linkml:String ? ;
+          dcat:mediaType @linkml:String ?
+       ) ;
+       rdf:type [ <Script> ]
+    )
+}
+
+<UGKeyValue> CLOSED {
+    (  $<UGKeyValue_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <ug_key> @linkml:String ? ;
+          <ug_value> @linkml:String ?
+       ) ;
+       rdf:type [ <UGKeyValue> ]
+    )
+}
 
 

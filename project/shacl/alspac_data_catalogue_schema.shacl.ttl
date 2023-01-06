@@ -1,6 +1,6 @@
-@prefix ORCID: <https://orcid.org/> .
-@prefix alspac_data_catalogue_schema: <https://w3id.org/alspac/alspac-data-catalogue-schema/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -10,92 +10,497 @@ schema:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema:description ],
-        [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 1 ;
             sh:path schema:name ],
         [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
-            sh:path schema:identifier ] ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:description ] ;
     sh:targetClass schema:Thing .
+
+alspacdcs:KnownIssue a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Known issues for a dataset should have a description, when they are logged and by who " ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:name ],
+        [ sh:description "What the issue is." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:issue_description ],
+        [ sh:description "The date that this issue was logged." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspacdcs:logged_date ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:description ],
+        [ sh:description "The person who logged this issue." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspacdcs:logged_by ] ;
+    sh:targetClass alspacdcs:KnownIssue .
+
+alspacdcs:QCKeyValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A qc part with a key and a value." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter'" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:qc_key ],
+        [ sh:description "A value for a key" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspacdcs:qc_value ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:identifier ] ;
+    sh:targetClass alspacdcs:QCKeyValue .
+
+alspacdcs:Script a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A description and attributes of a script included in a version or freeze" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "what is the file type?" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path dcat:mediaType ],
+        [ sh:description "The size of the file in k, m,g or t." ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path dcat:byteSize ],
+        [ sh:description "A list of orcids for the authors of the item" ;
+            sh:order 0 ;
+            sh:path alspacdcs:authors ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path schema:description ],
+        [ sh:description "What is the md5sum of the file in this distribution?" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspacdcs:md5sum ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:name ] ;
+    sh:targetClass alspacdcs:Script .
+
+alspacdcs:UGKeyValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A user guide entry." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A key is something you might want to do for example run a gwas" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:ug_key ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema:description ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:identifier ],
+        [ sh:description "A description or link to how to do something" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspacdcs:ug_value ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:name ] ;
+    sh:targetClass alspacdcs:UGKeyValue .
 
 dcat:Catalog a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents an alspac data catalogue. That is a set of named alspac data sets." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable description for a thing" ;
+    sh:property [ sh:class foaf:Person ;
+            sh:description "The orcid ids of the pis" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path alspacdcs:primary_investigator_orcids ],
+        [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
-            sh:order 5 ;
+            sh:order 4 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
             sh:path schema:description ],
         [ sh:description "The main email address to contact" ;
             sh:maxCount 1 ;
             sh:order 1 ;
             sh:path schema:email ],
-        [ sh:description "A list of named alspac data sets curies" ;
+        [ sh:class dcat:Dataset ;
+            sh:description "A list of named alspac data sets curies ids" ;
+            sh:nodeKind sh:IRI ;
             sh:order 2 ;
-            sh:path alspac_data_catalogue_schema:named_alspac_data_set_collection ],
+            sh:path alspacdcs:named_alspac_datasets ],
+        [ sh:description "Links to useful info" ;
+            sh:order 3 ;
+            sh:path alspacdcs:see_also ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:name ],
-        [ sh:description "The orcid ids of the pis" ;
+            sh:order 5 ;
+            sh:path schema:name ] ;
+    sh:targetClass dcat:Catalog .
+
+alspacdcs:Paper a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "a scientific paper" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
             sh:order 0 ;
-            sh:path ORCID:id ],
-        [ sh:description "A unique identifier for a thing" ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:name ] ;
+    sh:targetClass alspacdcs:Paper .
+
+dcat:Distribution a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A dataset distribution has a location, file type and file size." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "what is the file type?" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path dcat:mediaType ],
+        [ sh:description "What is the md5sum of the file in this distribution?" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:md5sum ],
+        [ sh:description "The number of genetic variants (i.e snps, indels etc)" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspacdcs:number_of_variants ],
+        [ sh:description "The size of the file in k, m,g or t." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path dcat:byteSize ],
+        [ sh:class dcat:Distribution ;
+            sh:description "If a file should be used with another file list them. For example the three plink files (bim, bed, fam) work together." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path alspacdcs:required_files ],
+        [ sh:description "This slot is used for gene expression data distributions" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path alspacdcs:number_of_gene_expression_probe_values ],
+        [ sh:description "The number of alspac participants in this dataset" ;
             sh:maxCount 1 ;
             sh:order 3 ;
+            sh:path alspacdcs:number_of_participants ],
+        [ sh:description "What containter does this belong to." ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path alspacdcs:belongsToContainer ],
+        [ sh:description "The number of CPG sites." ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path alspacdcs:number_of_cpgs ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path schema:identifier ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 10 ;
+            sh:path schema:name ] ;
+    sh:targetClass dcat:Distribution .
+
+foaf:Person a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A person" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:name ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
             sh:path schema:identifier ] ;
-    sh:targetClass dcat:Catalog .
+    sh:targetClass foaf:Person .
 
 dcat:Dataset a sh:NodeShape ;
     sh:closed true ;
-    sh:description "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed." ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "The main email address to contact" ;
+    sh:description "Represents a  part of named alspac data set, in a version or freeze. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.",
+        "Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use by external colabs. It is normally a subset of files in a version of named alspac dataset, but sometimes file types will also change. For example .Rdata changed to .csv.",
+        "Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.",
+        "Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use." ;
+    sh:ignoredProperties ( rdf:type ),
+        ( rdf:type ),
+        ( rdf:type ),
+        ( rdf:type ) ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:email ],
-        [ sh:description "The current version of this named alspac dataset" ;
-            sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path dcat:hasCurrentVersion ],
-        [ sh:description "A unique identifier for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 8 ;
+            sh:order 12 ;
             sh:path schema:identifier ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 9 ;
+            sh:order 13 ;
             sh:path schema:name ],
+        [ sh:class dcat:Catalog ;
+            sh:description "What catalog is this dataset a part of" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path alspacdcs:in_catalog ],
+        [ sh:class alspacdcs:Script ;
+            sh:description "A list of scripts that are included in a dataset version or freeze" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path alspacdcs:has_scripts ],
+        [ sh:class alspacdcs:KnownIssue ;
+            sh:description "A list of known issues inline" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path alspacdcs:known_issues ],
+        [ sh:class dcat:Dataset ;
+            sh:description "What named alspac dataset is this freeze built from?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path alspacdcs:freeze_of_named_alspac_dataset ],
+        [ sh:class foaf:Person ;
+            sh:description "The orcid ids of the pis" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path alspacdcs:primary_investigator_orcids ],
+        [ sh:description "Some free text to describe any quality control that has been performed." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:qc_description ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path schema:name ],
+        [ sh:class foaf:Person ;
+            sh:description "a list of the orcid ids of the documentation authors" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 6 ;
+            sh:path alspacdcs:documentation_authors_orcids ],
+        [ sh:class dcat:Dataset ;
+            sh:description "What version was this freeze built from?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path alspacdcs:freeze_of_alspac_dataset_version ],
+        [ sh:description "What number freeze is this?" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspacdcs:freeze_number ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 14 ;
+            sh:path schema:identifier ],
+        [ sh:description "The md5sum of the all_individuals_to_exclude to make this freeze" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path alspacdcs:all_individuals_to_exclude_md5sum ],
+        [ sh:class alspacdcs:Paper ;
+            sh:description "A doi ref to the main publication describing this dataset." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path alspacdcs:main_publication_doi ],
+        [ sh:description "When was this freeze made?" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path alspacdcs:freeze_date ],
+        [ sh:description "What is the md5sum of the dataset linker file used to make this freeze" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path alspacdcs:linker_file_md5sum ],
+        [ sh:class alspacdcs:QCKeyValue ;
+            sh:description "A list of key value pairs for for information about quality control of this dataset. A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter' and the value might be '5e-07'." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path alspacdcs:qc_parts ],
+        [ sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path schema:name ],
+        [ sh:class dcat:Dataset ;
+            sh:description "List of NamedAlspacDatasets that were used at least in part to derive this Named or custom dataset." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 10 ;
+            sh:path alspacdcs:derived_from ],
+        [ sh:class dcat:Dataset ;
+            sh:description "The current version of this named alspac dataset" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path dcat:hasCurrentVersion ],
+        [ sh:class dcat:Dataset ;
+            sh:description "What was the previous freeze?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 7 ;
+            sh:path alspacdcs:previous_freeze ],
+        [ sh:description "The next version of this named alspac dataset" ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path alspacdcs:has_next_version ],
+        [ sh:description "The git tag of the repo that made this freeze." ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path alspacdcs:git_tag ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema:identifier ],
+        [ sh:description "The previous version of this named alspac dataset" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path alspacdcs:has_previous_version ],
+        [ sh:description "The md5sum of the woc file used to make this freeze" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path alspacdcs:woc_file_md5sum ],
+        [ sh:class alspacdcs:Paper ;
+            sh:description "A list of publications dois that use or refer to this data set" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path alspacdcs:publications_dois ],
+        [ sh:class dcat:Dataset ;
+            sh:description "A list of parts of a named alspac dataset version or freeze" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path alspacdcs:has_parts ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 14 ;
+            sh:path schema:description ],
+        [ sh:description "A list of keywords." ;
+            sh:order 2 ;
+            sh:path alspacdcs:keywords ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path schema:email ],
+        [ sh:class alspacdcs:UGKeyValue ;
+            sh:description "A list of key value pairs, where a key is something you might want to do and value is a description and/or link to how you might want to do it." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path alspacdcs:ug_parts ],
+        [ sh:class dcat:Dataset ;
+            sh:description "A list of freezes for this version of the data" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 11 ;
+            sh:path alspacdcs:has_freezes ],
+        [ sh:description "A list of orcids for the authors of the item" ;
+            sh:order 7 ;
+            sh:path alspacdcs:authors ],
+        [ sh:description "The approximate size of all the data in the freeze." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path alspacdcs:freeze_size ],
+        [ sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path schema:identifier ],
+        [ sh:description "Is this the current version of a named alspac dataset" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path alspacdcs:is_current_version ],
+        [ sh:class dcat:Distribution ;
+            sh:description "A list of data distributions for this abstract dataset" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path alspacdcs:data_distributions ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path schema:description ],
+        [ sh:description "Is this current freeze?" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path alspacdcs:is_current_freeze ],
+        [ sh:description "The main email address to contact" ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path schema:email ],
+        [ sh:class dcat:Dataset ;
+            sh:description "A list of versions of a named dataset" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path alspacdcs:versions ],
+        [ sh:class dcat:Dataset ;
+            sh:description "A list of parts of a named alspac dataset version or freeze" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 13 ;
+            sh:path alspacdcs:has_parts ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 16 ;
+            sh:path schema:description ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path schema:description ],
+        [ sh:class dcat:Dataset ;
+            sh:description "What is the next freeze ?" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 8 ;
+            sh:path alspacdcs:next_freeze ],
         [ sh:description "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information." ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path dcat:landingPage ],
-        [ sh:description "A list of publications dois that use or refer to this data set" ;
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 7 ;
-            sh:path alspac_data_catalogue_schema:publications ],
-        [ sh:description "a list of the orcid ids of the documentation authors" ;
-            sh:order 5 ;
-            sh:path ORCID:id ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 10 ;
-            sh:path schema:description ],
-        [ sh:description "A doi ref to the main publication describing this dataset." ;
-            sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path alspac_data_catalogue_schema:main_publication ],
-        [ sh:description "The orcid ids of the pis" ;
-            sh:order 1 ;
-            sh:path ORCID:id ],
-        [ sh:description "A list of keywords." ;
             sh:order 2 ;
-            sh:path alspac_data_catalogue_schema:keywords ] ;
+            sh:path schema:name ],
+        [ sh:class dcat:Dataset ;
+            sh:description "What named Alspac dataset is this a version of" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path alspacdcs:version_of ] ;
     sh:targetClass dcat:Dataset .
 

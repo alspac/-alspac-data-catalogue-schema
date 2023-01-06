@@ -3,30 +3,151 @@ type AlspacDataCatalogue
     id: Uriorcurie!
     name: String
     description: String
-    primaryInvestigatorOrcids: [Uriorcurie]
+    primaryInvestigatorOrcids: [Person]
     primaryEmail: String
-    namedAlspacDataSetCollection: [Uriorcurie]
+    namedAlspacDatasets: [NamedAlspacDataset]
+    seeAlso: [Uriorcurie]
   }
 
-type NamedAlspacDataSet
+type AlspacDataSetVersion
   {
     id: Uriorcurie!
     name: String
     description: String
-    landingPage: String
-    primaryInvestigatorOrcids: [Uriorcurie]
+    qcDescription: String
+    qcParts: [QCKeyValue]
+    ugParts: [UGKeyValue]
+    versionOf: NamedAlspacDataset
+    isCurrentVersion: String
+    hasPreviousVersion: Uriorcurie
+    hasNextVersion: Uriorcurie
+    authors: [String]
+    hasParts: [DatasetPart]
+    knownIssues: [KnownIssue]
+    hasScripts: [Script]
+    hasFreezes: [AlspacDataSetVersionFreeze]
+  }
+
+type AlspacDataSetVersionFreeze
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    linkerFileMd5sum: String
+    freezeSize: String
+    wocFileMd5sum: String
+    allIndividualsToExcludeMd5sum: String
+    isCurrentFreeze: Boolean
+    freezeNumber: String
+    freezeDate: Date
+    previousFreeze: AlspacDataSetVersionFreeze
+    nextFreeze: AlspacDataSetVersionFreeze
+    freezeOfAlspacDatasetVersion: AlspacDataSetVersion
+    freezeOfNamedAlspacDataset: NamedAlspacDataset
+    primaryEmail: String
+    gitTag: String
+    hasParts: [DatasetPart]
+  }
+
+type DataDistribution
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    md5sum: String
+    filesize: String
+    filetype: String
+    numberOfParticipants: Integer
+    numberOfGeneExpressionProbeValues: Integer
+    numberOfVariants: Integer
+    numberOfCpgs: Integer
+    requiredFiles: [DataDistribution]
+    belongsToContainer: String
+  }
+
+type DatasetPart
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    dataDistributions: [DataDistribution]
+  }
+
+type KnownIssue
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    issueDescription: String
+    loggedBy: String
+    loggedDate: String
+  }
+
+type NamedAlspacDataset
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    landingPageUrl: String
+    primaryInvestigatorOrcids: [Person]
     keywords: [String]
-    hasCurrentVersion: Uriorcurie
+    hasCurrentVersion: AlspacDataSetVersion
+    versions: [AlspacDataSetVersion]
     primaryEmail: String
-    documentationAuthorsOrcids: [Uriorcurie]
-    mainPublication: String
-    publications: String
+    documentationAuthorsOrcids: [Person]
+    mainPublicationDoi: Paper
+    publicationsDois: [Paper]
+    inCatalog: AlspacDataCatalogue
+    derivedFrom: [NamedAlspacDataset]
   }
 
-type NamedThing
+interface NamedThing
   {
     id: Uriorcurie!
     name: String
     description: String
+  }
+
+type Paper
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+  }
+
+type Person
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+  }
+
+type QCKeyValue
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    qcKey: String
+    qcValue: String
+  }
+
+type Script
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    authors: [String]
+    md5sum: String
+    filesize: String
+    filetype: String
+  }
+
+type UGKeyValue
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    ugKey: String
+    ugValue: String
   }
 
