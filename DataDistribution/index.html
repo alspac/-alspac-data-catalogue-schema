@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -211,14 +211,18 @@
     class DataDistribution
       NamedThing &lt;|-- DataDistribution
 
+      DataDistribution : belongsToContainer
       DataDistribution : description
       DataDistribution : filesize
       DataDistribution : filetype
       DataDistribution : id
       DataDistribution : md5sum
       DataDistribution : name
+      DataDistribution : number_of_cpgs
       DataDistribution : number_of_gene_expression_probe_values
       DataDistribution : number_of_participants
+      DataDistribution : number_of_variants
+      DataDistribution : required_files
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -270,6 +274,30 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../number_of_variants/">number_of_variants</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td>The number of genetic variants (i.e snps, indels etc)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../number_of_cpgs/">number_of_cpgs</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
+<td>The number of CPG sites.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../required_files/">required_files</a></td>
+<td>0..* <br/> <a href="./">DataDistribution</a></td>
+<td>If a file should be used with another file list them. For example the three plink files (bim, bed, fam) work together.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../belongsToContainer/">belongsToContainer</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>What containter does this belong to.</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
@@ -303,6 +331,12 @@
 <tr>
 <td><a href="../DatasetPart/">DatasetPart</a></td>
 <td><a href="../data_distributions/">data_distributions</a></td>
+<td>range</td>
+<td>DataDistribution</td>
+</tr>
+<tr>
+<td><a href="./">DataDistribution</a></td>
+<td><a href="../required_files/">required_files</a></td>
 <td>range</td>
 <td>DataDistribution</td>
 </tr>
@@ -347,6 +381,10 @@ slots:
 - filetype
 - number_of_participants
 - number_of_gene_expression_probe_values
+- number_of_variants
+- number_of_cpgs
+- required_files
+- belongsToContainer
 class_uri: dcat:Distribution
 
 </code></pre>
@@ -365,6 +403,7 @@ attributes:
     from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
     close_mappings:
     - spdx:checksum
+    - nfo:FileHash
     rank: 1000
     alias: md5sum
     owner: DataDistribution
@@ -416,6 +455,50 @@ attributes:
     domain_of:
     - DataDistribution
     range: integer
+  number_of_variants:
+    name: number_of_variants
+    description: The number of genetic variants (i.e snps, indels etc)
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: number_of_variants
+    owner: DataDistribution
+    domain_of:
+    - DataDistribution
+    range: integer
+  number_of_cpgs:
+    name: number_of_cpgs
+    description: The number of CPG sites.
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: number_of_cpgs
+    owner: DataDistribution
+    domain_of:
+    - DataDistribution
+    range: integer
+  required_files:
+    name: required_files
+    description: If a file should be used with another file list them. For example
+      the three plink files (bim, bed, fam) work together.
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    multivalued: true
+    alias: required_files
+    owner: DataDistribution
+    domain_of:
+    - DataDistribution
+    range: DataDistribution
+    inlined: true
+    inlined_as_list: true
+  belongsToContainer:
+    name: belongsToContainer
+    description: What containter does this belong to.
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: belongsToContainer
+    owner: DataDistribution
+    domain_of:
+    - DataDistribution
+    range: string
   id:
     name: id
     description: A unique identifier for a thing

@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about.md" class="md-nav__link">
+      <a href="about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -417,7 +417,7 @@ Name: alspac-data-catalogue-schema</p>
 <td>Known issues for a dataset should have a description, when they are logged an...</td>
 </tr>
 <tr>
-<td><a href="NamedAlspacDataset/">NamedAlspacDataset</a></td>
+<td><a href="NamedAlspacDataset.md">NamedAlspacDataset</a></td>
 <td>Represents a named_alspac_data_set</td>
 </tr>
 <tr>
@@ -462,6 +462,10 @@ Name: alspac-data-catalogue-schema</p>
 <tr>
 <td><a href="authors/">authors</a></td>
 <td>A list of orcids for the authors of the item</td>
+</tr>
+<tr>
+<td><a href="belongsToContainer/">belongsToContainer</a></td>
+<td>What containter does this belong to</td>
 </tr>
 <tr>
 <td><a href="data_distributions/">data_distributions</a></td>
@@ -600,12 +604,20 @@ Name: alspac-data-catalogue-schema</p>
 <td>What is the next freeze ?</td>
 </tr>
 <tr>
+<td><a href="number_of_cpgs/">number_of_cpgs</a></td>
+<td>The number of CPG sites</td>
+</tr>
+<tr>
 <td><a href="number_of_gene_expression_probe_values/">number_of_gene_expression_probe_values</a></td>
 <td>This slot is used for gene expression data distributions</td>
 </tr>
 <tr>
 <td><a href="number_of_participants/">number_of_participants</a></td>
 <td>The number of alspac participants in this dataset</td>
+</tr>
+<tr>
+<td><a href="number_of_variants/">number_of_variants</a></td>
+<td>The number of genetic variants (i</td>
 </tr>
 <tr>
 <td><a href="previous_freeze/">previous_freeze</a></td>
@@ -638,6 +650,14 @@ Name: alspac-data-catalogue-schema</p>
 <tr>
 <td><a href="qc_value/">qc_value</a></td>
 <td>A value for a key</td>
+</tr>
+<tr>
+<td><a href="required_files/">required_files</a></td>
+<td>If a file should be used with another file list them</td>
+</tr>
+<tr>
+<td><a href="see_also/">see_also</a></td>
+<td>Links to useful info</td>
 </tr>
 <tr>
 <td><a href="ug_key/">ug_key</a></td>
@@ -783,6 +803,27 @@ Name: alspac-data-catalogue-schema</p>
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
