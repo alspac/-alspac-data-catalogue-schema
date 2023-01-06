@@ -84,6 +84,19 @@ classes:
       - primary_email
       - named_alspac_datasets
       - see_also
+
+  BespokeAlspacDataset:
+    class_uri: dcat:Dataset
+    is_a: NamedThing
+    description: >-
+      This class is for describing and recording files that are
+      released as bespoke data release
+    slots:
+      - bnumber
+      - date_of_release
+      - keywords
+      - alspac_staff_responsible
+      - derived_from
       
 
   NamedAlspacDataset:
