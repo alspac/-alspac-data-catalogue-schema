@@ -335,6 +335,10 @@ slots:
     multivalued: true
     inlined_as_list: true
 
+  bnumber:
+    description: An ALSPAC project code
+    required: true
+
 #     inverse: part_of
   freeze_number:
     description: What number freeze is this?
