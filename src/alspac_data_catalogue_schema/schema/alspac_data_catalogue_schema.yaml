@@ -95,8 +95,10 @@ classes:
       - bnumber
       - date_of_release
       - keywords
-      - alspac_staff_responsible
+      - authors
       - derived_from
+      - has_scripts
+      - has_parts
       
 
   NamedAlspacDataset:
