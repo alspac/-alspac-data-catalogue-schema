@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/derived_from/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/date_of_release/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: derived_from - alspac-data-catalogue-schema</title>
+        <title>Slot: date_of_release - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-derived_from" class="md-skip">
+        <a href="#slot-date_of_release" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: derived_from
+              Slot: date_of_release
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/derived_from.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/date_of_release.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-derived_from">Slot: derived_from</h1>
-<p><em>List of NamedAlspacDatasets that were used at least in part to derive this Named or custom dataset.</em></p>
-<p>URI: <a href="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from">alspacdcs:derived_from</a></p>
+<h1 id="slot-date_of_release">Slot: date_of_release</h1>
+<p><em>The date this dataset was released to a colab.</em></p>
+<p>URI: <a href="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release">alspacdcs:date_of_release</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -334,16 +334,12 @@
 <td><a href="../BespokeAlspacDataset/">BespokeAlspacDataset</a></td>
 <td>This class is for describing and recording files that are released as bespoke data releases.</td>
 </tr>
-<tr>
-<td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
-<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
-</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../NamedAlspacDataset/">NamedAlspacDataset</a></li>
-<li>Multivalued: True</li>
+<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
+<li>Multivalued: None</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -353,19 +349,14 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: derived_from
-description: List of NamedAlspacDatasets that were used at least in part to derive
-  this Named or custom dataset.
+<pre><code class="language-yaml">name: date_of_release
+description: The date this dataset was released to a colab.
 from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
-multivalued: true
-alias: derived_from
+alias: date_of_release
 domain_of:
 - BespokeAlspacDataset
-- NamedAlspacDataset
-range: NamedAlspacDataset
-inlined: true
-inlined_as_list: true
+range: string
 
 </code></pre>
 
