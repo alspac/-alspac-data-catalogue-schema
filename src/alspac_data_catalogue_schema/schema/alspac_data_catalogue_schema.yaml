@@ -90,7 +90,7 @@ classes:
     is_a: NamedThing
     description: >-
       This class is for describing and recording files that are
-      released as bespoke data release
+      released as bespoke data releases.
     slots:
       - bnumber
       - date_of_release
@@ -338,6 +338,9 @@ slots:
   bnumber:
     description: An ALSPAC project code
     required: true
+
+  date_of_release:
+    description: The date this dataset was released to a colab.
 
 #     inverse: part_of
   freeze_number:
