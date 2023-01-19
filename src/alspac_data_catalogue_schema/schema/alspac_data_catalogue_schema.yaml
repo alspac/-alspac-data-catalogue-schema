@@ -99,6 +99,8 @@ classes:
       - derived_from
       - has_scripts
       - has_parts
+      - git_repo
+      - git_tag
       
 
   NamedAlspacDataset:
@@ -429,7 +431,8 @@ slots:
       this freeze
   git_tag:
     description: The git tag of the repo that made this freeze.
-
+  git_repo:
+    description: The git repo for this object
 
   qc_description:
     description: >-
