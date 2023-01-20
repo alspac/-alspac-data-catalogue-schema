@@ -101,6 +101,7 @@ classes:
       - has_parts
       - git_repo
       - git_tag
+      - dataset_size
       
 
   NamedAlspacDataset:
@@ -141,6 +142,7 @@ classes:
       - known_issues
       - has_scripts
       - has_freezes
+      - dataset_size
 
   Script:
     is_a: NamedThing
@@ -517,3 +519,7 @@ slots:
       What the issue is.
   freeze_size:
     description: The approximate size of all the data in the freeze.
+  dataset_size:
+    description: >-
+      The appoximate size in a version of a named
+      Alspacdata set of custom data release
