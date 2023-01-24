@@ -343,7 +343,7 @@ slots:
       A list of dirs in this  named alspac dataset version or
       freeze or custom dataset
     range: DataContainer
-    mulitvalued: true
+    multivalued: true
     inlined_as_list: true
   has_freezes:
     description: >-
