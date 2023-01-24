@@ -418,6 +418,10 @@ slots:
     description: >-
       The number of CPG sites.
     range: integer
+  number_of_cnv_variants:
+    description: >-
+      The number of cnv vaiants
+    range: integer
   belongsToContainer:
     description: >-
       What containter does this belong to.
