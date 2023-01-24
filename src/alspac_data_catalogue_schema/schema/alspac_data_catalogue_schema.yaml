@@ -211,8 +211,17 @@ classes:
      #- location_on_bp
      - number_of_variants # only for genetic data
      - number_of_cpgs # only for methylation data.
+     - number_of_cnv_variants
      - required_files #
      - belongsToContainer
+
+  DataContainer:
+    class_uri: nfo:Folder
+    is_a: NamedThing
+    description: >-
+      A dir/folder in a freeze, or version
+    slots:
+      - belongsToContainer
 
   KnownIssue:
     is_a: NamedThing
@@ -327,6 +336,12 @@ slots:
     freeze or custom dataset
     range: DatasetPart
     multivalued: true
+    inlined_as_list: true
+  has_containers:
+    description: A list of dirs in this  named alspac dataset version or
+    freeze or custom dataset
+    range: DataContainer
+    mulitvalued: true
     inlined_as_list: true
   has_freezes:
     description: >-
