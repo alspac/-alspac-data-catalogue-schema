@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/name/">
+        <link rel="canonical" href="https://alspac.github.io/alspac-data-catalogue-schema/has_containers/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Slot: name - alspac-data-catalogue-schema</title>
+        <title>Slot: has_containers - alspac-data-catalogue-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-name" class="md-skip">
+        <a href="#slot-has_containers" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: name
+              Slot: has_containers
             
           </span>
         </div>
@@ -256,13 +256,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
   </a>
@@ -310,92 +303,21 @@
                 
                   
 
-  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/name.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/alspac/alspac-data-catalogue-schema/edit/master/docs/has_containers.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-name">Slot: name</h1>
-<p><em>A human-readable name for a thing</em></p>
-<p>URI: <a href="http://schema.org/name">schema:name</a></p>
+<h1 id="slot-has_containers">Slot: has_containers</h1>
+<p><em>A list of dirs in this  named alspac dataset version or freeze or custom dataset</em></p>
+<p>URI: <a href="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers">alspacdcs:has_containers</a></p>
 <!-- no inheritance hierarchy -->
 
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
-</tr>
-<tr>
-<td><a href="../Person/">Person</a></td>
-<td>A person</td>
-</tr>
-<tr>
-<td><a href="../Paper/">Paper</a></td>
-<td>a scientific paper</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
-<td>Represents an alspac data catalogue. That is a set of named alspac data sets.</td>
-</tr>
-<tr>
-<td><a href="../BespokeAlspacDataset/">BespokeAlspacDataset</a></td>
-<td>This class is for describing and recording files that are released as bespoke data releases.</td>
-</tr>
-<tr>
-<td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
-<td>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
-<td>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</td>
-</tr>
-<tr>
-<td><a href="../Script/">Script</a></td>
-<td>A description and attributes of a script included in a version or freeze</td>
-</tr>
-<tr>
-<td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
-<td>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use by external colabs. It is normally a subset of files in a version of named alspac dataset, but sometimes file types will also change. For example .Rdata changed to .csv.</td>
-</tr>
-<tr>
-<td><a href="../DatasetPart/">DatasetPart</a></td>
-<td>Represents a  part of named alspac data set, in a version or freeze or custom dataset. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</td>
-</tr>
-<tr>
-<td><a href="../DataDistribution/">DataDistribution</a></td>
-<td>A dataset distribution has a location, file type and file size.</td>
-</tr>
-<tr>
-<td><a href="../DataContainer/">DataContainer</a></td>
-<td>A dir/folder in a freeze, or version</td>
-</tr>
-<tr>
-<td><a href="../KnownIssue/">KnownIssue</a></td>
-<td>Known issues for a dataset should have a description, when they are logged and by who</td>
-</tr>
-<tr>
-<td><a href="../QCKeyValue/">QCKeyValue</a></td>
-<td>A qc part with a key and a value.</td>
-</tr>
-<tr>
-<td><a href="../UGKeyValue/">UGKeyValue</a></td>
-<td>A user guide entry.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></li>
-<li>Multivalued: None</li>
+<li>Range: <a href="../DataContainer/">DataContainer</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -405,15 +327,15 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: name
-description: A human-readable name for a thing
+<pre><code class="language-yaml">name: has_containers
+description: A list of dirs in this  named alspac dataset version or freeze or custom
+  dataset
 from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
 rank: 1000
-slot_uri: schema:name
-alias: name
-domain_of:
-- NamedThing
-range: string
+multivalued: true
+alias: has_containers
+range: DataContainer
+inlined_as_list: true
 
 </code></pre>
 

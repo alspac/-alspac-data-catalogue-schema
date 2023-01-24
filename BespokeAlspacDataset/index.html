@@ -208,9 +208,12 @@
 
       BespokeAlspacDataset : authors
       BespokeAlspacDataset : bnumber
+      BespokeAlspacDataset : dataset_size
       BespokeAlspacDataset : date_of_release
       BespokeAlspacDataset : derived_from
       BespokeAlspacDataset : description
+      BespokeAlspacDataset : git_repo
+      BespokeAlspacDataset : git_tag
       BespokeAlspacDataset : has_parts
       BespokeAlspacDataset : has_scripts
       BespokeAlspacDataset : id
@@ -275,7 +278,25 @@
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
 <td>0..* <br/> <a href="../DatasetPart/">DatasetPart</a></td>
-<td>A list of parts of a named alspac dataset version or freeze</td>
+<td>A list of parts of a named alspac dataset version or freeze or custom dataset</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../git_repo/">git_repo</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The git repo for this object</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../git_tag/">git_tag</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The git tag of the repo that made this freeze.</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../dataset_size/">dataset_size</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The appoximate size in a version of a named Alspacdata set of custom data release</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -340,6 +361,9 @@ slots:
 - derived_from
 - has_scripts
 - has_parts
+- git_repo
+- git_tag
+- dataset_size
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -433,7 +457,8 @@ attributes:
     inlined_as_list: true
   has_parts:
     name: has_parts
-    description: A list of parts of a named alspac dataset version or freeze
+    description: A list of parts of a named alspac dataset version or freeze or custom
+      dataset
     from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
@@ -446,6 +471,39 @@ attributes:
     range: DatasetPart
     inlined: true
     inlined_as_list: true
+  git_repo:
+    name: git_repo
+    description: The git repo for this object
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: git_repo
+    owner: BespokeAlspacDataset
+    domain_of:
+    - BespokeAlspacDataset
+    range: string
+  git_tag:
+    name: git_tag
+    description: The git tag of the repo that made this freeze.
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: git_tag
+    owner: BespokeAlspacDataset
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersionFreeze
+    range: string
+  dataset_size:
+    name: dataset_size
+    description: The appoximate size in a version of a named Alspacdata set of custom
+      data release
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: dataset_size
+    owner: BespokeAlspacDataset
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersion
+    range: string
   id:
     name: id
     description: A unique identifier for a thing

@@ -329,7 +329,7 @@
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
 <td>0..* <br/> <a href="../DatasetPart/">DatasetPart</a></td>
-<td>A list of parts of a named alspac dataset version or freeze</td>
+<td>A list of parts of a named alspac dataset version or freeze or custom dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -585,11 +585,13 @@ attributes:
     alias: git_tag
     owner: AlspacDataSetVersionFreeze
     domain_of:
+    - BespokeAlspacDataset
     - AlspacDataSetVersionFreeze
     range: string
   has_parts:
     name: has_parts
-    description: A list of parts of a named alspac dataset version or freeze
+    description: A list of parts of a named alspac dataset version or freeze or custom
+      dataset
     from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true

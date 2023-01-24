@@ -409,12 +409,16 @@ Name: alspac-data-catalogue-schema</p>
 <td>This class is for describing and recording files that are released as bespoke...</td>
 </tr>
 <tr>
+<td><a href="DataContainer/">DataContainer</a></td>
+<td>A dir/folder in a freeze, or version</td>
+</tr>
+<tr>
 <td><a href="DataDistribution/">DataDistribution</a></td>
 <td>A dataset distribution has a location, file type and file size</td>
 </tr>
 <tr>
 <td><a href="DatasetPart/">DatasetPart</a></td>
-<td>Represents a  part of named alspac data set, in a version or freeze</td>
+<td>Represents a  part of named alspac data set, in a version or freeze or custom...</td>
 </tr>
 <tr>
 <td><a href="KnownIssue/">KnownIssue</a></td>
@@ -480,6 +484,10 @@ Name: alspac-data-catalogue-schema</p>
 <td>A list of data distributions for this abstract dataset</td>
 </tr>
 <tr>
+<td><a href="dataset_size/">dataset_size</a></td>
+<td>The appoximate size in a version of a named Alspacdata set of custom data rel...</td>
+</tr>
+<tr>
 <td><a href="date_of_release/">date_of_release</a></td>
 <td>The date this dataset was released to a colab</td>
 </tr>
@@ -524,8 +532,16 @@ Name: alspac-data-catalogue-schema</p>
 <td>The approximate size of all the data in the freeze</td>
 </tr>
 <tr>
+<td><a href="git_repo/">git_repo</a></td>
+<td>The git repo for this object</td>
+</tr>
+<tr>
 <td><a href="git_tag/">git_tag</a></td>
 <td>The git tag of the repo that made this freeze</td>
+</tr>
+<tr>
+<td><a href="has_containers/">has_containers</a></td>
+<td>A list of dirs in this  named alspac dataset version or freeze or custom data...</td>
 </tr>
 <tr>
 <td><a href="has_current_version/">has_current_version</a></td>
@@ -541,7 +557,7 @@ Name: alspac-data-catalogue-schema</p>
 </tr>
 <tr>
 <td><a href="has_parts/">has_parts</a></td>
-<td>A list of parts of a named alspac dataset version or freeze</td>
+<td>A list of parts of a named alspac dataset version or freeze or custom dataset</td>
 </tr>
 <tr>
 <td><a href="has_previous_version/">has_previous_version</a></td>
@@ -614,6 +630,10 @@ Name: alspac-data-catalogue-schema</p>
 <tr>
 <td><a href="next_freeze/">next_freeze</a></td>
 <td>What is the next freeze ?</td>
+</tr>
+<tr>
+<td><a href="number_of_cnv_variants/">number_of_cnv_variants</a></td>
+<td>The number of cnv vaiants</td>
 </tr>
 <tr>
 <td><a href="number_of_cpgs/">number_of_cpgs</a></td>

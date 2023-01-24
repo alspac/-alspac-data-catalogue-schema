@@ -212,6 +212,7 @@
       NamedThing &lt;|-- AlspacDataSetVersion
 
       AlspacDataSetVersion : authors
+      AlspacDataSetVersion : dataset_size
       AlspacDataSetVersion : description
       AlspacDataSetVersion : has_freezes
       AlspacDataSetVersion : has_next_version
@@ -297,7 +298,7 @@
 <tr>
 <td><a href="../has_parts/">has_parts</a></td>
 <td>0..* <br/> <a href="../DatasetPart/">DatasetPart</a></td>
-<td>A list of parts of a named alspac dataset version or freeze</td>
+<td>A list of parts of a named alspac dataset version or freeze or custom dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -316,6 +317,12 @@
 <td><a href="../has_freezes/">has_freezes</a></td>
 <td>0..* <br/> <a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
 <td>A list of freezes for this version of the data</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../dataset_size/">dataset_size</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The appoximate size in a version of a named Alspacdata set of custom data release</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -416,6 +423,7 @@ slots:
 - known_issues
 - has_scripts
 - has_freezes
+- dataset_size
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -525,7 +533,8 @@ attributes:
     inlined_as_list: true
   has_parts:
     name: has_parts
-    description: A list of parts of a named alspac dataset version or freeze
+    description: A list of parts of a named alspac dataset version or freeze or custom
+      dataset
     from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
     rank: 1000
     multivalued: true
@@ -578,6 +587,18 @@ attributes:
     range: AlspacDataSetVersionFreeze
     inlined: true
     inlined_as_list: true
+  dataset_size:
+    name: dataset_size
+    description: The appoximate size in a version of a named Alspacdata set of custom
+      data release
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: dataset_size
+    owner: AlspacDataSetVersion
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersion
+    range: string
   id:
     name: id
     description: A unique identifier for a thing
