@@ -1,0 +1,58 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:cnv_550_g1_2015-11-09_f2 a dcat:Dataset ;
+    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
+    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
+    alspacdcs:freeze_number "2" ;
+    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:cnv_550_g1_2015-11-09 ;
+    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:cnv_550_g1 ;
+    alspacdcs:freeze_size "27m" ;
+    alspacdcs:git_tag "https://github.com/alspac/dataset_cnv_550_g1/releases/tag/freeze2" ;
+    alspacdcs:has_containers alspacdcs:bd0fb41e-f720-46a7-9ed0-04dd3e0b22bd ;
+    alspacdcs:has_parts alspacdcs:cnv_550_g1_2015-11-09_cnvdata_f2,
+        alspacdcs:cnv_550_g1_2015-11-09_filtered_f2 ;
+    alspacdcs:is_current_freeze true ;
+    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
+    alspacdcs:previous_freeze alspacdcs:cnv_550_g1_2015-11-09_f1 ;
+    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
+    schema:description "This is the second freeze of the 2015-11-09 version of cnv_550_g1 dataset. It contains two csv versions of the cnv called data, the unfilterd and filtered versions." ;
+    schema:name "Genome-wide - CNV - G1 release version 2015-11-09 freeze 2" .
+
+alspacdcs:7d6c79f05965944ccbb0f69c4ef64825_new_cnvdata.csv a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:bd0fb41e-f720-46a7-9ed0-04dd3e0b22bd ;
+    alspacdcs:md5sum "7d6c79f05965944ccbb0f69c4ef64825" ;
+    alspacdcs:number_of_cnv_variants 70030 ;
+    alspacdcs:number_of_participants 7450 ;
+    schema:description "This is the csv file for the output of Penncnv before filtering." ;
+    schema:name "new_cnvdata.csv" ;
+    dcat:byteSize "21M" ;
+    dcat:mediaType ".csv" .
+
+alspacdcs:ac4cbb72380ae0bff2eab458625d7c8c_new_filtered.csv a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:bd0fb41e-f720-46a7-9ed0-04dd3e0b22bd ;
+    alspacdcs:md5sum "ac4cbb72380ae0bff2eab458625d7c8c" ;
+    alspacdcs:number_of_cnv_variants 14244 ;
+    alspacdcs:number_of_participants 6793 ;
+    schema:description "This is the csv file for the output of Penncnv after filtering." ;
+    schema:name "new_filtered.csv" ;
+    dcat:byteSize "5.9M" ;
+    dcat:mediaType ".csv" .
+
+alspacdcs:cnv_550_g1_2015-11-09_cnvdata_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:7d6c79f05965944ccbb0f69c4ef64825_new_cnvdata.csv ;
+    schema:description "This is the output of Penncnv before filtering." ;
+    schema:name "Unfiltered CNV data" .
+
+alspacdcs:cnv_550_g1_2015-11-09_filtered_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:ac4cbb72380ae0bff2eab458625d7c8c_new_filtered.csv ;
+    schema:description "CNV data that has been filtered." ;
+    schema:name "Filtered CNV data" .
+
+alspacdcs:bd0fb41e-f720-46a7-9ed0-04dd3e0b22bd a nfo:Folder ;
+    schema:description "A dir/folder containing the two freeze data files" ;
+    schema:name "data" .
+

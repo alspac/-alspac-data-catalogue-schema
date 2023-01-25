@@ -1,0 +1,257 @@
+# This yaml file is a description of a released version of a named alspac dataset
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema 
+
+id: alspacdcs:cnv_550_g1_2015-11-09
+name: Genome-wide - CNV - G1 release version 2015-11-09
+description: >-
+  This release contains predicted ALSPAC CNVs using PennCNV.
+  
+  LRR and BAF data was missing from the 23andMe raw genotype data,
+  so we had to generate this data ourselves using an in house
+  algorithm that Tom Gaunt  wrote (see make.sh in code release).
+
+  Once this data has been generated, we ran PennCNV using the hh550
+  libraries.
+  This was done using a script called PennCNV.sh (We do not have a
+  location for this script currently). 
+
+
+  
+qc_description: >-
+     Anna Guyatt generated filtered PennCNV calls. One sample with an ALN
+     ending in 'D' was removed (see known issues). Multiple calls were
+     merged using the 'clean_cnv.pl' (From PennCNV) script,
+     using a merge fraction of 0.5. Individuals with > 30 CNVs, a Log
+     R Ratio SD of >0.3, a BAF drift of > 0.002, and a waviness factor of > 0.05 were removed using the
+     'filter_cnv.pl' script. CNVs in which at least 50% of the length of the CNV call
+     overlapped with any of telomeric centromeric, immunoglobulin regions were removed using the 'scan_region.pl'
+     script in PennCNV. The files used to define these regions are
+     provided (SN not sure they are). In addition,
+     CNVs covering fewer than 5 probes, of a length < 5kb, and with a
+     confidence score of below 10 were removed, using the
+     'filter_cnv.pl' (From PennCNV) script.
+     Density was calculated as the number of probes in a CNV divided
+     by the length of the CNV,
+     and CNVs where the density of probes across the call was < 1
+     probe per 20kb was removed.
+
+     These QC parameters are suggestions only. Analysts can apply
+     their own filter parameters to the raw calls in data.cnv,
+     using the 'clean_cnv.pl', 'scan_region.pl' and 'filter_cnv.pl' programs in PennCNV.
+
+
+#qc_parts:
+#  - id: 
+#    qc_key: 
+#    qc_value: 
+#  
+
+##ug_parts:
+##  - ug_key: Differntial expression analysis
+##    ug_value: * a link to an example *
+  
+version_of: alspacdcs:cnv_550_g1
+is_current_version: true
+has_previous_version: NA
+has_next_version: NA
+has_freezes:
+  - alspacdcs:cnv_550_g1_2015-11-00_f2
+has_parts:
+  - id: alspacdcs:cnv_550_g1_2015-11-09_centroids
+    name: Alspac centroids
+    description: >-
+      The centroids for CNV calling.
+    data_distributions:
+    - id: alspacdcs:e8deed923257c9a8718e60e2699fbad2_ALSPAC.centroids
+      name: ALSPAC.centroids
+      description: >-
+        It is assumed this file is made from alspacdcs:c44380754dde66ed609f7b48e0445c3a_LRR.py
+      md5sum: e8deed923257c9a8718e60e2699fbad2
+      filesize: 46M
+      filetype: .txt
+      belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+  - id: alspacdcs:cnv_550_g1_2015-11-09_cnv_data
+    name: Alspac cnv data calls
+    description: >- 
+      This is the unfiltered version of the cnv data calls.
+    data_distributions:
+    - id: alspacdcs:2ad1a7fe16a754c0f41b8b1dd16e2e8a_data.cnv
+      name: data.cnv
+      description: >-
+        This file is a tabbed separated table. Fields:
+        Chr:Pos1-Pos2, numsnps,length, state, cn, Participant Id, Startsnp, endsnp, conf
+      md5sum: 2ad1a7fe16a754c0f41b8b1dd16e2e8a
+      filesize: 19M
+      filetype: .tsv
+      number_of_participants: 7590 # in r data <-read.table(), then length(unique(data$V5))
+      number_of_cnv_variants: 71882 # length(unique(data$V1))
+      belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+  - id: alspacdcs:cnv_550_g1_2015-11-09_data_log
+    name: data.log
+    description: >- 
+      Logs for the pipeline. Contains ALN and Qlet so not for general distribution.
+    data_distributions:
+    - id: alspacdcs:adaf8fd2cc44b051a00814ac1bb3d8b8_data.log
+      name: data.log
+      description: >-
+        Logs for the pipeline. Contains ALN and Qlet so not for general distribution.
+      md5sum: adaf8fd2cc44b051a00814ac1bb3d8b8
+      filesize: 735M
+      filetype: .tsv
+      belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+  - id: alspacdcs:cnv_550_g1_2015-11-09_filtered
+    name: Filtered CNV data
+    description: >- 
+      Data derivered from cnv_550_g1_2015-11-09_cnv_data.
+    data_distributions:
+    - id: alspacdcs:9ab741d0428db65168a25671f078a3c4_filtered.cnv
+      name: filtered.cnv
+      description: >-
+        Data derivered from alspacdcs:2ad1a7fe16a754c0f41b8b1dd16e2e8a_data.cnv
+      md5sum: 9ab741d0428db65168a25671f078a3c4
+      filesize: 5.3M
+      filetype: .tsv
+      number_of_participants: 6896 # in r data <-read.table(), then length(unique(data$V5))
+      number_of_cnv_variants: 14495 # length(unique(data$V1))
+      belongs_to_container: alspacdcs:042512b2-10a3-4e97-acc3-ca5e5f9aebce
+  - id: alspacdcs:cnv_550_g1_2015-11-09_raw
+    name: Raw CNV data
+    description: >- 
+      Raw CNV Data . Contains
+      approx 9382 ALSPACXXXXXX.tab files, and a children.penncnv.h5
+      file and a linker file.
+      .tab files have fields:
+        SNP Name
+        Sample ID
+        Allele1 - Top
+        Allele2 - Top
+        GC Score
+        X
+        Y
+        X
+        Raw
+        Y
+        Raw
+        Log R Ratio
+        B Allele Freq
+    data_distributions:
+    
+  - id: alspacdcs:cnv_550_g1_2015-11-09_timepoint
+    name: CNV time point data
+    description: >- 
+      CNV time point data. Contains info on origin of data including
+      if cell line,and clinic. 
+    data_distributions:
+    - id: alspacdcs:24ee24d3eb309355b63ced5ee3d44e01_childrensDNATimePointCollection.txt
+      name: childrensDNATimePointCollection.txt
+      description: >-
+        A tab deliminted file which has the timepoint when DNA was
+        collected of each person in this dataset.
+        Fields: aln, qlet, timepoint.
+        Note this file has the issue:  alspacdcs:cnv_550_g1_2015-11-09_issue_1
+      md5sum: 24ee24d3eb309355b63ced5ee3d44e01
+      filesize: 1977k
+      filetype: .txt
+      number_of_participants: 10504 #Data rows in file
+      belongs_to_container:  alspacdcs:06f7b361-fb90-49cb-8881-0683d421b902
+
+  
+
+known_issues:
+  - id: alspacdcs:cnv_550_g1_2015-11-09_issue_1
+    issue_description: >-
+       23andMe identifiers were in the form "ALSPAC<n>" where <n> is a
+       numeric identifier. I had to use the "23andMe.recode" file to convert these
+       identifiers back to ALN:QLET.  However, there are some "duplicate" ALNs in this
+       file, e.g.see ALSPAC09899933 (ALN 38877) and ALSPAC09900002 (ALN 38877D).
+       Therefore, I used ALSPAC_10K_UNRELATEDS_FINAL.fam (the magic
+       8365 dataset) to fetch a list of identifiers that I should be
+       using,i.e. should I use the 38877 or 38877D ALN.
+
+       For the final version of the dataset, I removed any remaining
+       "D" characters from the ALN:QLET (as per conversations with Chris Raistrick).
+
+       Also, there were some "missing" individuals from the 23andMe raw data, see run.out.   
+    logged_by: Hash Shihab
+    logged_date: 2016-11-06
+    
+  - id: alspacdcs:cnv_550_g1_2015-11-09_issue_2
+    issue_description: >-
+          AG found one individual with 'D' ALN in original dataset.
+          This has been removed during the QC process and this subject
+          is not present in the filtered.cnv file in the 'derived' folder.
+    logged_by: Anna Guyatt
+    logged_date: 2016-09-08
+
+has_scripts:
+  - id: alspacdcs:c44380754dde66ed609f7b48e0445c3a_LRR.py
+    name: LRR.py
+    md5sum: c44380754dde66ed609f7b48e0445c3a
+    description: >-
+      Python code used for calculating LRR/BAF. Some
+      sections written by Tom Gaunt.
+      Outputs centroids of BAF and LRR (in ALSPAC.centroids,
+      header is AA.R AA.Theta AB.R AB.Theta BB.R BB.Theta).
+      See also : https://github.com/MRCIEU/IlluminaFinalRep_LRRBAF 
+    filesize: 5.1K
+    filetype: .py
+    belongs_to_container: alspacdcs:4bc3b918-a571-412c-b188-b534ce6b47ea
+  - id: cd871545694821b7b7b2078a6c4cc82d_make.sh
+    name: make.sh
+    md5sum: cd871545694821b7b7b2078a6c4cc82d
+    description: >-
+      A shell script which works with the raw data from
+      23andme for ALSPAC children. Sorts the data for the LRR script.
+      Collects childrens raw data (into ALSPAC.raw with headers:
+        SNP Name Sample_ID Allele1_Top Allele2_Top GC_Score X Y X_Raw Y_Raw)
+    filesize: 1.0k
+    filetype: .sh
+    belongs_to_container: alspacdcs:4bc3b918-a571-412c-b188-b534ce6b47ea
+  - id: 8f8cb2376bbafba5afdac902679e9e6b_submission.sh
+    name: submission.sh
+    md5sum: 8f8cb2376bbafba5afdac902679e9e6b
+    description: >-
+      A submission script to run the
+      alspacdcs:c44380754dde66ed609f7b48e0445c3a_LRR.py on BC3 using pbs.
+    filesize: 225b
+    filetype: .sh
+    belongs_to_container: alspacdcs:4bc3b918-a571-412c-b188-b534ce6b47ea
+
+
+has_containers:
+  - id: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+    name: data
+    description: >-
+      This folder contains the main data for this data set
+  - id: alspacdcs:042512b2-10a3-4e97-acc3-ca5e5f9aebce
+    name: derived_data
+    description: >-
+      Contains a filterd version of the penncnv call data
+    belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+  - id: alspacdcs:74fcdd8a-fec5-4ef2-9dd1-3bc16b418640
+    name: raw
+    description: >-
+      Contains 9382 .tab files for the ALSPAC G1 raw, x,y LRR and BAF
+      data.
+      Also contains a linker.text file and and children.penncnv.h5 file
+    belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54
+  - id: alspacdcs:06f7b361-fb90-49cb-8881-0683d421b902
+    name: timepoint
+    description: >-
+      Contains a file that has the timepoint that the DNA was collected
+    belongs_to_container: alspacdcs:9d07d109-8cf4-443d-bd0c-577ca5684d54 
+  - id: alspacdcs:4bc3b918-a571-412c-b188-b534ce6b47ea
+    name: scripts
+    description: >-
+      This folder contains some scripts that were used in this data set
+  - id: alspacdcs:0234fabe-57fa-4a99-beb9-ea68356ce435
+    name: docs
+    description: >-
+      This folder contains the docs for the dataset
+  - id: alspacdcs:3281fb21-f841-4144-b08c-d1d65c0ed562
+    name: depreciated
+    description: >-
+      This folder contains the old documentation files which are now
+      depreciated but kept if anyone needs to refer to them
+    belongs_to_container:  alspacdcs:0234fabe-57fa-4a99-beb9-ea68356ce435
+  
