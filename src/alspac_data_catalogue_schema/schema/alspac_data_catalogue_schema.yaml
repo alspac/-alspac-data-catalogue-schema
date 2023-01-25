@@ -359,7 +359,7 @@ slots:
 
   bnumber:
     description: An ALSPAC project code
-    required: true
+#    required: true
 
   date_of_release:
     description: The date this dataset was released to a colab.
