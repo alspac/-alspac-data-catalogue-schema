@@ -180,6 +180,7 @@ classes:
       - primary_email
       - git_tag
       - has_parts
+      - has_containers
 
   DatasetPart:
     class_uri: dcat:Dataset
@@ -213,7 +214,7 @@ classes:
      - number_of_cpgs # only for methylation data.
      - number_of_cnv_variants
      - required_files #
-     - belongsToContainer
+     - belongs_to_container
 
   DataContainer:
     class_uri: nfo:Folder
@@ -221,7 +222,7 @@ classes:
     description: >-
       A dir/folder in a freeze, or version
     slots:
-      - belongsToContainer
+      - belongs_to_container
 
   KnownIssue:
     is_a: NamedThing
@@ -424,9 +425,10 @@ slots:
     description: >-
       The number of cnv vaiants
     range: integer
-  belongsToContainer:
+  belongs_to_container:
     description: >-
-      What containter does this belong to.
+      What container does this belong to.
+    range: DataContainer
     
       
   number_of_gene_expression_probe_values:
