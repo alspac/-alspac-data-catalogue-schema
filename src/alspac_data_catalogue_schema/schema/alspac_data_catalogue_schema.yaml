@@ -261,7 +261,7 @@ slots:
     range: uriorcurie
     description: Links to useful info
     multivalued: true
-    inlined_as_list: true
+    #inlined_as_list: true
   description:
     slot_uri: schema:description
     description: A human-readable description for a thing
