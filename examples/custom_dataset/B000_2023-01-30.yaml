@@ -1,0 +1,87 @@
+## This yaml file is a description of a test custom data set for test
+## bnumber b000
+## It should conform to the scehma
+## https://github.com/alspac/alspac-data-catalogue-schema
+## Class: BespokeAlspacDataset
+
+id: alspacdcs:B000_29390778-9f23-4aa8-8871-c6a77b8bf810 ### id format
+                              ### should be BXXX_UUID
+
+bnumber: alspacdcs:B000
+date_of_release: 2023-01-30
+keywords:
+  - genomic
+  - test
+git_repo: http://example.com/myrepo ## The repo used to develp the
+                              ## custom dataset
+git_tag: http://example.com/myrepo/v1 ## A tag of the repo at the time
+                              ## the dataset was built
+authors:
+  - ORCID:0000-0002-4064-3794  # Sam Neaves
+derived_from: alspacds:ge_ht12_g1 ## Here I am saying that this custom
+                              ## data was derived from the standard
+                              ## gene expression dataset (not actually
+                              ## true here)
+dataset_size: 20k
+
+has_containers:
+  - id: alspacdcs:e4b6b206-cb5b-403d-b3e4-1ab9b1d5f2aa ## uuid
+    name: pretend_data_B000
+    description: A top dir/folder containing the the custom data set
+  - id: alspacdcs:ad7381c2-4d3c-4fef-b759-c26a59fcbe90 ## uuid
+    name: subfolder
+    description: a dir with file2.txt data in it.
+    belongs_to_container:
+      alspacdcs:e4b6b206-cb5b-403d-b3e4-1ab9b1d5f2aa ## This folder is
+                              ## in another folder, the one with this ids.
+
+has_scripts:
+    - id: alspacdcs:86b695e88006d55d114e6f82c2ca9dfd_script.sh
+      ##format md5sum_filename
+      name: script.sh
+      md5sum: 86b695e88006d55d114e6f82c2ca9dfd
+      description: A placeholder test script
+      filesize: 859B
+      filetype: .sh
+all_individuals_to_exclude_md5sum: testtestestest
+
+has_parts:
+  ## In the test data file 1 and file 2 are meant to be the same data
+  ## in differnt formats
+  - id: alspacdcs:B0000_0b816f72-240a-4042-a904-88ea14fd5e30
+    ##Bnumber_uuid
+    name: part1 ## give a descriptive name to the data part
+    description: >-
+      This is a test description
+    data_distributions:
+      - id: alspacdcs:b2b363f716897d23b6f536ba104f1b58_file1.csv ## id
+                              ## format md5sum_filename
+        name: file1.csv
+        description: >-
+          This is the csv file format of part1 data blah blah
+        md5sum: b2b363f716897d23b6f536ba104f1b58
+        filesize: 18b
+        filetype: .csv
+        number_of_participants: 0
+        belongs_to_container: alspacdcs:e4b6b206-cb5b-403d-b3e4-1ab9b1d5f2aa
+      - id: alspacdcs:924a258504e85340c9497c9a60a81916_file1.txt ## id
+                              ## format md5sum_filename
+        name: file1.txt
+        description: >-
+          This is the csv file format of part1 data blah blah
+        md5sum: 924a258504e85340c9497c9a60a81916
+        filesize: 18b
+        filetype: .txt
+        number_of_participants: 0
+        belongs_to_container: alspacdcs:e4b6b206-cb5b-403d-b3e4-1ab9b1d5f2aa
+  - id: alspacdcs:B000_0b816f72-240a-4042-a904-88ea14fd5e30
+    ##Bnumber_uuid
+    name: part2
+    description: This is a test description
+    data_distributuions:
+      - id: alspacdcs:62a256001a246e77fd1941ca007b50e1_file2.txt
+        name: file2.txt
+        description: file2 is blah blah
+        md5sum:62a256001a246e77fd1941ca007b50e1
+        belongs_to_container: alspacdcs:ad7381c2-4d3c-4fef-b759-c26a59fcbe90
+                            
