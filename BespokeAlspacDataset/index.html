@@ -206,6 +206,7 @@
     class BespokeAlspacDataset
       NamedThing &lt;|-- BespokeAlspacDataset
 
+      BespokeAlspacDataset : all_individuals_to_exclude_md5sum
       BespokeAlspacDataset : authors
       BespokeAlspacDataset : bnumber
       BespokeAlspacDataset : dataset_size
@@ -214,6 +215,7 @@
       BespokeAlspacDataset : description
       BespokeAlspacDataset : git_repo
       BespokeAlspacDataset : git_tag
+      BespokeAlspacDataset : has_containers
       BespokeAlspacDataset : has_parts
       BespokeAlspacDataset : has_scripts
       BespokeAlspacDataset : id
@@ -300,6 +302,18 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../has_containers/">has_containers</a></td>
+<td>0..* <br/> <a href="../DataContainer/">DataContainer</a></td>
+<td>A list of dirs in this  named alspac dataset version or freeze or custom data...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../all_individuals_to_exclude_md5sum/">all_individuals_to_exclude_md5sum</a></td>
+<td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+<td>The md5sum of the all_individuals_to_exclude to make this freeze</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
@@ -364,6 +378,8 @@ slots:
 - git_repo
 - git_tag
 - dataset_size
+- has_containers
+- all_individuals_to_exclude_md5sum
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -502,6 +518,32 @@ attributes:
     domain_of:
     - BespokeAlspacDataset
     - AlspacDataSetVersion
+    range: string
+  has_containers:
+    name: has_containers
+    description: A list of dirs in this  named alspac dataset version or freeze or
+      custom dataset
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    multivalued: true
+    alias: has_containers
+    owner: BespokeAlspacDataset
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersionFreeze
+    range: DataContainer
+    inlined: true
+    inlined_as_list: true
+  all_individuals_to_exclude_md5sum:
+    name: all_individuals_to_exclude_md5sum
+    description: The md5sum of the all_individuals_to_exclude to make this freeze
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    alias: all_individuals_to_exclude_md5sum
+    owner: BespokeAlspacDataset
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersionFreeze
     range: string
   id:
     name: id
