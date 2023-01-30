@@ -28,3 +28,6 @@ convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/exam
 
 
 'yuml.txt' <-- [], 'gen-yuml -f yuml ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml > yuml.txt'.
+
+
+'custom_test' <-- [],'poetry run linkml-validate -s '.
