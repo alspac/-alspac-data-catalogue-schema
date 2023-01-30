@@ -102,6 +102,9 @@ classes:
       - git_repo
       - git_tag
       - dataset_size
+      - has_containers
+      - all_individuals_to_exclude_md5sum
+
       
 
   NamedAlspacDataset:
