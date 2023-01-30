@@ -250,19 +250,19 @@
 <tr>
 <td><a href="../qc_description/">qc_description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>Some free text to describe any quality control that has been performed.</td>
+<td>Some free text to describe any quality control that has been performed</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../qc_parts/">qc_parts</a></td>
 <td>0..* <br/> <a href="../QCKeyValue/">QCKeyValue</a></td>
-<td>A list of key value pairs for for information about quality control of this dataset. A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter' and the value might be '5e-07'.</td>
+<td>A list of key value pairs for for information about quality control of this d...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../ug_parts/">ug_parts</a></td>
 <td>0..* <br/> <a href="../UGKeyValue/">UGKeyValue</a></td>
-<td>A list of key value pairs, where a key is something you might want to do and value is a description and/or link to how you might want to do it.</td>
+<td>A list of key value pairs, where a key is something you might want to do and ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -322,26 +322,26 @@
 <tr>
 <td><a href="../dataset_size/">dataset_size</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The appoximate size in a version of a named Alspacdata set of custom data release</td>
+<td>The appoximate size in a version of a named Alspacdata set of custom data rel...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -360,19 +360,19 @@
 <td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
 <td><a href="../has_current_version/">has_current_version</a></td>
 <td>range</td>
-<td>AlspacDataSetVersion</td>
+<td><a href="./">AlspacDataSetVersion</a></td>
 </tr>
 <tr>
 <td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
 <td><a href="../versions/">versions</a></td>
 <td>range</td>
-<td>AlspacDataSetVersion</td>
+<td><a href="./">AlspacDataSetVersion</a></td>
 </tr>
 <tr>
 <td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
 <td><a href="../freeze_of_alspac_dataset_version/">freeze_of_alspac_dataset_version</a></td>
 <td>range</td>
-<td>AlspacDataSetVersion</td>
+<td><a href="./">AlspacDataSetVersion</a></td>
 </tr>
 </tbody>
 </table>
@@ -392,11 +392,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Dataset']</td>
+<td>dcat:Dataset</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:AlspacDataSetVersion']</td>
+<td>alspacdcs:AlspacDataSetVersion</td>
 </tr>
 </tbody>
 </table>

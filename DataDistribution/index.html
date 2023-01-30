@@ -253,7 +253,7 @@
 <tr>
 <td><a href="../filesize/">filesize</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The size of the file in k, m,g or t.</td>
+<td>The size of the file in k, m,g or t</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -277,13 +277,13 @@
 <tr>
 <td><a href="../number_of_variants/">number_of_variants</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
-<td>The number of genetic variants (i.e snps, indels etc)</td>
+<td>The number of genetic variants (i</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../number_of_cpgs/">number_of_cpgs</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a></td>
-<td>The number of CPG sites.</td>
+<td>The number of CPG sites</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -295,32 +295,32 @@
 <tr>
 <td><a href="../required_files/">required_files</a></td>
 <td>0..* <br/> <a href="./">DataDistribution</a></td>
-<td>If a file should be used with another file list them. For example the three plink files (bim, bed, fam) work together.</td>
+<td>If a file should be used with another file list them</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../belongs_to_container/">belongs_to_container</a></td>
 <td>0..1 <br/> <a href="../DataContainer/">DataContainer</a></td>
-<td>What container does this belong to.</td>
+<td>What container does this belong to</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -339,13 +339,13 @@
 <td><a href="../DatasetPart/">DatasetPart</a></td>
 <td><a href="../data_distributions/">data_distributions</a></td>
 <td>range</td>
-<td>DataDistribution</td>
+<td><a href="./">DataDistribution</a></td>
 </tr>
 <tr>
 <td><a href="./">DataDistribution</a></td>
 <td><a href="../required_files/">required_files</a></td>
 <td>range</td>
-<td>DataDistribution</td>
+<td><a href="./">DataDistribution</a></td>
 </tr>
 </tbody>
 </table>
@@ -365,11 +365,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Distribution']</td>
+<td>dcat:Distribution</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:DataDistribution']</td>
+<td>alspacdcs:DataDistribution</td>
 </tr>
 </tbody>
 </table>

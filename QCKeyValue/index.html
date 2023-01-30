@@ -239,7 +239,7 @@
 <tr>
 <td><a href="../qc_key/">qc_key</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter'</td>
+<td>A key might be something that has been done or a description of a paramater</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -252,19 +252,19 @@
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -283,7 +283,7 @@
 <td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
 <td><a href="../qc_parts/">qc_parts</a></td>
 <td>range</td>
-<td>QCKeyValue</td>
+<td><a href="./">QCKeyValue</a></td>
 </tr>
 </tbody>
 </table>
@@ -303,11 +303,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['alspacdcs:QCKeyValue']</td>
+<td>alspacdcs:QCKeyValue</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:QCKeyValue']</td>
+<td>alspacdcs:QCKeyValue</td>
 </tr>
 </tbody>
 </table>

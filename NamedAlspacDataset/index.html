@@ -248,7 +248,7 @@
 <tr>
 <td><a href="../landing_page_url/">landing_page_url</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
+<td>A Web page that can be navigated to in a Web browser to gain access to the ca...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -260,7 +260,7 @@
 <tr>
 <td><a href="../keywords/">keywords</a></td>
 <td>0..* <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>A list of keywords.</td>
+<td>A list of keywords</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -290,7 +290,7 @@
 <tr>
 <td><a href="../main_publication_doi/">main_publication_doi</a></td>
 <td>0..1 <br/> <a href="../Paper/">Paper</a></td>
-<td>A doi ref to the main publication describing this dataset.</td>
+<td>A doi ref to the main publication describing this dataset</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -308,26 +308,26 @@
 <tr>
 <td><a href="../derived_from/">derived_from</a></td>
 <td>0..* <br/> <a href="./">NamedAlspacDataset</a></td>
-<td>List of NamedAlspacDatasets that were used at least in part to derive this Named or custom dataset.</td>
+<td>List of NamedAlspacDatasets that were used at least in part to derive this Na...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -346,31 +346,31 @@
 <td><a href="../AlspacDataCatalogue/">AlspacDataCatalogue</a></td>
 <td><a href="../named_alspac_datasets/">named_alspac_datasets</a></td>
 <td>range</td>
-<td>NamedAlspacDataset</td>
+<td><a href="./">NamedAlspacDataset</a></td>
 </tr>
 <tr>
 <td><a href="../BespokeAlspacDataset/">BespokeAlspacDataset</a></td>
 <td><a href="../derived_from/">derived_from</a></td>
 <td>range</td>
-<td>NamedAlspacDataset</td>
+<td><a href="./">NamedAlspacDataset</a></td>
 </tr>
 <tr>
 <td><a href="./">NamedAlspacDataset</a></td>
 <td><a href="../derived_from/">derived_from</a></td>
 <td>range</td>
-<td>NamedAlspacDataset</td>
+<td><a href="./">NamedAlspacDataset</a></td>
 </tr>
 <tr>
 <td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
 <td><a href="../version_of/">version_of</a></td>
 <td>range</td>
-<td>NamedAlspacDataset</td>
+<td><a href="./">NamedAlspacDataset</a></td>
 </tr>
 <tr>
 <td><a href="../AlspacDataSetVersionFreeze/">AlspacDataSetVersionFreeze</a></td>
 <td><a href="../freeze_of_named_alspac_dataset/">freeze_of_named_alspac_dataset</a></td>
 <td>range</td>
-<td>NamedAlspacDataset</td>
+<td><a href="./">NamedAlspacDataset</a></td>
 </tr>
 </tbody>
 </table>
@@ -390,11 +390,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Dataset']</td>
+<td>dcat:Dataset</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:NamedAlspacDataset']</td>
+<td>alspacdcs:NamedAlspacDataset</td>
 </tr>
 </tbody>
 </table>

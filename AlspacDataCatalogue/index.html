@@ -266,19 +266,19 @@
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -297,7 +297,7 @@
 <td><a href="../NamedAlspacDataset/">NamedAlspacDataset</a></td>
 <td><a href="../in_catalog/">in_catalog</a></td>
 <td>range</td>
-<td>AlspacDataCatalogue</td>
+<td><a href="./">AlspacDataCatalogue</a></td>
 </tr>
 </tbody>
 </table>
@@ -317,11 +317,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Catalog']</td>
+<td>dcat:Catalog</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:AlspacDataCatalogue']</td>
+<td>alspacdcs:AlspacDataCatalogue</td>
 </tr>
 </tbody>
 </table>
@@ -406,8 +406,6 @@ attributes:
     domain_of:
     - AlspacDataCatalogue
     range: uriorcurie
-    inlined: true
-    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing

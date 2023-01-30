@@ -258,7 +258,7 @@
 <tr>
 <td><a href="../freeze_size/">freeze_size</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The approximate size of all the data in the freeze.</td>
+<td>The approximate size of all the data in the freeze</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -324,7 +324,7 @@
 <tr>
 <td><a href="../git_tag/">git_tag</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
-<td>The git tag of the repo that made this freeze.</td>
+<td>The git tag of the repo that made this freeze</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -336,26 +336,26 @@
 <tr>
 <td><a href="../has_containers/">has_containers</a></td>
 <td>0..* <br/> <a href="../DataContainer/">DataContainer</a></td>
-<td>A list of dirs in this  named alspac dataset version or freeze or custom dataset</td>
+<td>A list of dirs in this  named alspac dataset version or freeze or custom data...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable name for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
 <td>A human-readable description for a thing</td>
-<td>inherited</td>
+<td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
 </tbody>
 </table>
@@ -374,19 +374,19 @@
 <td><a href="../AlspacDataSetVersion/">AlspacDataSetVersion</a></td>
 <td><a href="../has_freezes/">has_freezes</a></td>
 <td>range</td>
-<td>AlspacDataSetVersionFreeze</td>
+<td><a href="./">AlspacDataSetVersionFreeze</a></td>
 </tr>
 <tr>
 <td><a href="./">AlspacDataSetVersionFreeze</a></td>
 <td><a href="../previous_freeze/">previous_freeze</a></td>
 <td>range</td>
-<td>AlspacDataSetVersionFreeze</td>
+<td><a href="./">AlspacDataSetVersionFreeze</a></td>
 </tr>
 <tr>
 <td><a href="./">AlspacDataSetVersionFreeze</a></td>
 <td><a href="../next_freeze/">next_freeze</a></td>
 <td>range</td>
-<td>AlspacDataSetVersionFreeze</td>
+<td><a href="./">AlspacDataSetVersionFreeze</a></td>
 </tr>
 </tbody>
 </table>
@@ -406,11 +406,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>['dcat:Dataset']</td>
+<td>dcat:Dataset</td>
 </tr>
 <tr>
 <td>native</td>
-<td>['alspacdcs:AlspacDataSetVersionFreeze']</td>
+<td>alspacdcs:AlspacDataSetVersionFreeze</td>
 </tr>
 </tbody>
 </table>
