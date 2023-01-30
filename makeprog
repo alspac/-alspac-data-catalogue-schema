@@ -30,4 +30,4 @@ convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/exam
 'yuml.txt' <-- [], 'gen-yuml -f yuml ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml > yuml.txt'.
 
 
-'custom_test' <-- [],'poetry run linkml-validate -s '.
+'custom_test' <-- [],'poetry run linkml-validate -s /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/examples/custom_dataset/B000_2023-01-30.yaml --target-class BespokeAlspacDataset'.

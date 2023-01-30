@@ -82,10 +82,10 @@ has_parts:
     ##Bnumber_uuid
     name: part2
     description: This is a test description
-    data_distributuions:
+    data_distributions:
       - id: alspacdcs:62a256001a246e77fd1941ca007b50e1_file2.txt
         name: file2.txt
         description: file2 is blah blah
-        md5sum:62a256001a246e77fd1941ca007b50e1
+        md5sum: 62a256001a246e77fd1941ca007b50e1
         belongs_to_container: alspacdcs:ad7381c2-4d3c-4fef-b759-c26a59fcbe90
                             
