@@ -1,0 +1,30 @@
+id: https://w3id.org/linkml/examples/thing_info
+name: thing_info
+prefixes:
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+default_range: string
+  
+
+
+classes:
+   Container:
+     attributes:
+       objects:
+         range: Object
+         multivalued: true
+   Object:
+     attributes:
+      type:
+         designates_type: true
+         range: uriorcurie
+   Person:
+     is_a: Object
+     attributes:
+       ssn:
+   Pizza:
+     is_a: Object
+     attributes:
+       topping:
+
