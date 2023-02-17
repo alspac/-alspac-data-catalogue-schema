@@ -43,7 +43,9 @@ def get_file_info(directory):
 
 def write_to_yaml(file_info, yaml_file):
     with open(yaml_file, 'w', encoding='utf-8') as f:
-        yaml.dump(file_info, f, default_flow_style=False, allow_unicode=True, sort_keys=True)
+        yaml.dump(file_info, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+#        yaml.dump(file_info, f, default_flow_style=False, allow_unicode=True, sort_keys=['id', 'filename', 'file_size', 'md5sum', 'belongs_to_container'])
 
 directory = '/mnt/storage/private/alspacdata/datasets/dataset_wgs_hiseq_g1/freeze/out/data'
 file_info = get_file_info(directory)
