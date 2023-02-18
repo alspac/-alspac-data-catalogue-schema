@@ -17,13 +17,20 @@ def process_file(root, file, progress_queue):
         file_md5 = file_md5.hexdigest()
     file_info = {
         'id': str(uuid.uuid4()),
-        'filename': file,
-        'file_size': file_size,
+        'name': file,
+        'filesize': human_readable_size(file_size),
         'md5sum': file_md5,
-        'belongs_to_container': "alspacdcs:74fcdd8a-fec5-4ef2-9dd1-3bc16b418640"
+        'belongs_to_container': "alspacdcs:1f00f76e-e198-4367-b87a-55ca74378246"
     }
     progress_queue.put(file_info)
     return file_info
+
+def human_readable_size(size, decimal_places=1):
+    for unit in ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB']:
+        if size < 1024.0:
+            break
+        size /= 1024.0
+    return f"{size:.{decimal_places}f}{unit}"
 
 def get_file_info(directory):
     file_info = []
@@ -47,6 +54,6 @@ def write_to_yaml(file_info, yaml_file):
 
 #        yaml.dump(file_info, f, default_flow_style=False, allow_unicode=True, sort_keys=['id', 'filename', 'file_size', 'md5sum', 'belongs_to_container'])
 
-directory = '/mnt/storage/private/alspacdata/datasets/dataset_wgs_hiseq_g1/freeze/out/data'
+directory = '/mnt/storage/private/alspacdata/datasets/dataset_cnv_550_g1/released/2015-11-09/data/raw/'
 file_info = get_file_info(directory)
-write_to_yaml(file_info, 'file_info_hiseq3.yaml')
+write_to_yaml(file_info, 'file_info_raw_cnv.yaml')
