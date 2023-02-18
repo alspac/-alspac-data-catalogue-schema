@@ -146,6 +146,7 @@ classes:
       - has_scripts
       - has_freezes
       - dataset_size
+      - has_containers
 
   Script:
     is_a: NamedThing
