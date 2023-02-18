@@ -134,7 +134,7 @@ has_parts:
         Raw
         Log R Ratio
         B Allele Freq
-    data_distributions:
+   
     
   - id: alspacdcs:cnv_550_g1_2015-11-09_timepoint
     name: CNV time point data
