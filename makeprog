@@ -2,6 +2,7 @@
 
 go <--[],'echo "hello world"'.
 
+ /*
 test_schema <--[],'gen-json-schema ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml'.
 
 test_cat <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml --target-class AlspacDataCatalogue'.
@@ -22,7 +23,16 @@ test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/sch
 './src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl --target-class AlspacDataSetVersionFreeze'.
 
 
+'./src/data/examples/$(FILE).ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(FILE).yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(FILE).yaml -o ./src/data/examples/$(FILE).ttl --target-class NamedAlspacDataset'.
 
+
+'./src/data/examples/$(Dataset_Version)_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(Dataset_Version)_f2.yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(Dataset_Version)_f2.yaml -o ./src/data/examples/$(Dataset_Version)_f2.ttl --target-class AlspacDataSetVersionFreeze'.
+ */
+
+'./src/data/examples/$(FILE).ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(FILE).yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(FILE).yaml -o ./src/data/examples/$(FILE).ttl --target-class AlspacDataSetVersion'.
+
+
+/*
 convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/examples/ge_ht12_g1.ttl','./src/data/examples/ge_ht12_g1_2015-11-02.ttl','./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl'],true.
 
 
@@ -33,3 +43,6 @@ convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/exam
 'custom_test' <-- [],'poetry run linkml-validate -s /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/examples/custom_dataset/B000_2023-01-30.yaml --target-class BespokeAlspacDataset'.
 
 file_info,{QsubArgs = '--time=48:00:00 --account=smed001801 --partition=mrcieu'} <--[],'python ./helper_file/doc_writer.py ./helper_file/file_info.yaml'.
+
+*/
+
