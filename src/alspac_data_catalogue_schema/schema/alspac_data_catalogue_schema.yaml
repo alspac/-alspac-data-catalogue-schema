@@ -37,7 +37,7 @@ prefixes:
   ORCID: http://identifiers.org/orcid/
   doi: https://doi.org/
   identifier: https://registry.identifiers.org/registry/
-  nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/
+  nfo: http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#
   
 default_prefix: alspacdcs 
 default_range: string
