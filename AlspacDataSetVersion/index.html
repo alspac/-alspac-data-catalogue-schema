@@ -214,6 +214,7 @@
       AlspacDataSetVersion : authors
       AlspacDataSetVersion : dataset_size
       AlspacDataSetVersion : description
+      AlspacDataSetVersion : has_containers
       AlspacDataSetVersion : has_freezes
       AlspacDataSetVersion : has_next_version
       AlspacDataSetVersion : has_parts
@@ -326,6 +327,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../has_containers/">has_containers</a></td>
+<td>0..* <br/> <a href="../DataContainer/">DataContainer</a></td>
+<td>A list of dirs in this  named alspac dataset version or freeze or custom data...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a thing</td>
@@ -424,6 +431,7 @@ slots:
 - has_scripts
 - has_freezes
 - dataset_size
+- has_containers
 class_uri: dcat:Dataset
 
 </code></pre>
@@ -599,6 +607,22 @@ attributes:
     - BespokeAlspacDataset
     - AlspacDataSetVersion
     range: string
+  has_containers:
+    name: has_containers
+    description: A list of dirs in this  named alspac dataset version or freeze or
+      custom dataset
+    from_schema: http://purl.org/alspac/alspac-data-catalogue-schema/
+    rank: 1000
+    multivalued: true
+    alias: has_containers
+    owner: AlspacDataSetVersion
+    domain_of:
+    - BespokeAlspacDataset
+    - AlspacDataSetVersion
+    - AlspacDataSetVersionFreeze
+    range: DataContainer
+    inlined: true
+    inlined_as_list: true
   id:
     name: id
     description: A unique identifier for a thing
