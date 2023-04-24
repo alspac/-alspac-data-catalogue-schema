@@ -1,0 +1,36 @@
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:gi_1000g_g0p
+name: Genome-wide - 1000G imputed - G0 partners
+description: >-
+  Genome-wide array data imputed to the 1000 genomes reference panel
+  for G0 partners, with some additional G0 mothers and G1 individuals.
+  From work package 2015.
+in_catalog: alspacdcs:alspac_data_catalogue_001
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+primary_investigator_orcids:
+  - ORCID:0000-0002-7141-9189 # Nic Timpson
+  - ORCID:0000-0003-0924-3247 # Tom Gaunt
+  - ORCID:0000-0003-3103-9330 # Sue Ring
+  - ORCID:0000-0002-0605-5403 # Wendy Mcardle
+keywords:
+  - genomic
+  - HumanCoreExome
+  - Imputed
+  - 1000G
+has_current_version: alspacdcs:gi_1000g_g0p_2016-11-22
+versions:
+  - alspacdcs:gi_1000g_g0p_2016-04-27
+  - alspacdcs:gi_1000g_g0p_2016-10-27
+  - alspacdcs:gi_1000g_g0p_2016-11-22
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+  - ORCID:0000-0002-4064-3794 # Sam Neaves
+  #- ORCID:
+#main_publication_doi: doi:
+#publications_dois:
+ # - doi:
+
+derived_from:
+  - alspacdcs:gwa_exome_g0p

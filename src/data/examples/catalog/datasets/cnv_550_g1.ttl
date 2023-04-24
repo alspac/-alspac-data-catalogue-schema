@@ -1,0 +1,40 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+alspacdcs:cnv_550_g1 a dcat:Dataset ;
+    alspacdcs:derived_from alspacdcs:gwa_550_g1 ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-0243-5150,
+        ORCID:0000-0002-4064-3794,
+        ORCID:0000-0003-0924-3247,
+        ORCID:0000-0003-1860-6337 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
+    alspacdcs:keywords "CNV",
+        "PennCNV",
+        "genomic" ;
+    alspacdcs:main_publication_doi <https://doi.org/10.1002/ajmg.b.32637> ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0003-0924-3247 ;
+    alspacdcs:publications_dois <https://doi.org/10.1002/ajmg.b.32637> ;
+    alspacdcs:versions alspacdcs:cnv_550_g1_2015-11-09 ;
+    schema:description "Copy number variation calls from genome-wide array data for G1 individuals" ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "Genome-wide - CNV - G1" ;
+    dcat:hasCurrentVersion alspacdcs:cnv_550_g1_2015-11-09 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" .
+
+ORCID:0000-0002-0243-5150 a foaf:Person .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+ORCID:0000-0003-1860-6337 a foaf:Person .
+
+alspacdcs:gwa_550_g1 a dcat:Dataset .
+
+ORCID:0000-0003-0924-3247 a foaf:Person .
+
+alspacdcs:cnv_550_g1_2015-11-09 a dcat:Dataset .
+
+<https://doi.org/10.1002/ajmg.b.32637> a alspacdcs:Paper .
+

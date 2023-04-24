@@ -1,0 +1,36 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ORCID="http://identifiers.org/orcid/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g1_2022-12-07">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-4064-3794">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-7141-9189">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <schema:name>Genome-wide - HapMap2 imputed - G1</schema:name>
+    <dcat:landingPage>http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/</dcat:landingPage>
+    <alspacdcs:keywords>genomic</alspacdcs:keywords>
+    <alspacdcs:keywords>snp</alspacdcs:keywords>
+    <dcat:hasCurrentVersion rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g1_2022-12-07"/>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <alspacdcs:in_catalog rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001"/>
+    <alspacdcs:keywords>genome-wide</alspacdcs:keywords>
+    <alspacdcs:keywords>illumina</alspacdcs:keywords>
+    <alspacdcs:keywords>imputation</alspacdcs:keywords>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-7141-9189"/>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-4064-3794"/>
+    <alspacdcs:keywords>hapmap</alspacdcs:keywords>
+    <schema:description>Genome-wide array data imputed to the HapMap2 reference panel for G1 individuals</schema:description>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g1_2022-12-07"/>
+    <alspacdcs:keywords>genotype</alspacdcs:keywords>
+  </rdf:Description>
+</rdf:RDF>

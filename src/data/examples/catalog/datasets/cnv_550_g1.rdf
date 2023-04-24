@@ -1,0 +1,50 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ORCID="http://identifiers.org/orcid/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0003-0924-3247">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-4064-3794">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_550_g1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-0243-5150">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cnv_550_g1">
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0924-3247"/>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cnv_550_g1_2015-11-09"/>
+    <dcat:landingPage>http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/</dcat:landingPage>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-4064-3794"/>
+    <alspacdcs:main_publication_doi rdf:resource="https://doi.org/10.1002/ajmg.b.32637"/>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-1860-6337"/>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <alspacdcs:in_catalog rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001"/>
+    <alspacdcs:derived_from rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_550_g1"/>
+    <schema:name>Genome-wide - CNV - G1</schema:name>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:keywords>PennCNV</alspacdcs:keywords>
+    <dcat:hasCurrentVersion rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cnv_550_g1_2015-11-09"/>
+    <schema:description>Copy number variation calls from genome-wide array data for G1 individuals</schema:description>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-0243-5150"/>
+    <alspacdcs:keywords>genomic</alspacdcs:keywords>
+    <alspacdcs:publications_dois rdf:resource="https://doi.org/10.1002/ajmg.b.32637"/>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0924-3247"/>
+    <alspacdcs:keywords>CNV</alspacdcs:keywords>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cnv_550_g1_2015-11-09">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.1002/ajmg.b.32637">
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0003-1860-6337">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+</rdf:RDF>

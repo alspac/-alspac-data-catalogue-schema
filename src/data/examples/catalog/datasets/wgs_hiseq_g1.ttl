@@ -1,0 +1,29 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+alspacdcs:wgs_hiseq_g1 a dcat:Dataset ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-4064-3794 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
+    alspacdcs:keywords "genomic",
+        "uk10k" ;
+    alspacdcs:main_publication_doi <https://doi.org/10.1038/nature14962.> ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-7141-9189 ;
+    alspacdcs:publications_dois <https://doi.org/10.1038/nature14962.> ;
+    alspacdcs:versions alspacdcs:wgs_hiseq_g1_2016-08-18 ;
+    schema:description "Whole genome sequencing for G1 individuals, part of the UK10K dataset. ALSPAC and TwinsUK cohorts were sequenced at an average read depth of 6.7x through the UK10K program (http://www.UK10K.org) using the Illumina HiSeq platform, and aligned to the GRCh37 human reference using BWA. SNV calls were completed using samtools/bcftools and VQSR and GATK were used to recall these calls." ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "Whole genome sequencing - G1" ;
+    dcat:hasCurrentVersion alspacdcs:wgs_hiseq_g1_2016-08-18 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+ORCID:0000-0002-7141-9189 a foaf:Person .
+
+alspacdcs:wgs_hiseq_g1_2016-08-18 a dcat:Dataset .
+
+<https://doi.org/10.1038/nature14962.> a alspacdcs:Paper .
+

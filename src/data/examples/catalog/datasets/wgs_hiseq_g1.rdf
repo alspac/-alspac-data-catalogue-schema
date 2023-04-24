@@ -1,0 +1,36 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ORCID="http://identifiers.org/orcid/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-4064-3794">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/wgs_hiseq_g1">
+    <alspacdcs:in_catalog rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001"/>
+    <schema:description>Whole genome sequencing for G1 individuals, part of the UK10K dataset. ALSPAC and TwinsUK cohorts were sequenced at an average read depth of 6.7x through the UK10K program (http://www.UK10K.org) using the Illumina HiSeq platform, and aligned to the GRCh37 human reference using BWA. SNV calls were completed using samtools/bcftools and VQSR and GATK were used to recall these calls.</schema:description>
+    <alspacdcs:keywords>uk10k</alspacdcs:keywords>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <schema:name>Whole genome sequencing - G1</schema:name>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/wgs_hiseq_g1_2016-08-18"/>
+    <dcat:landingPage>http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/</dcat:landingPage>
+    <dcat:hasCurrentVersion rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/wgs_hiseq_g1_2016-08-18"/>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-7141-9189"/>
+    <alspacdcs:main_publication_doi rdf:resource="https://doi.org/10.1038/nature14962."/>
+    <alspacdcs:publications_dois rdf:resource="https://doi.org/10.1038/nature14962."/>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-4064-3794"/>
+    <alspacdcs:keywords>genomic</alspacdcs:keywords>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-7141-9189">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.1038/nature14962.">
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/wgs_hiseq_g1_2016-08-18">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+</rdf:RDF>

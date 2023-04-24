@@ -1,0 +1,48 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ORCID="http://identifiers.org/orcid/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-4064-3794">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-7141-9189">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0003-0920-1055">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0003-0663-4621">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1">
+    <alspacdcs:keywords>genomic</alspacdcs:keywords>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0663-4621"/>
+    <dcat:landingPage>http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/</dcat:landingPage>
+    <schema:name>Gene expression - array - G1</schema:name>
+    <alspacdcs:publications_dois rdf:resource="https://doi.org/10.1371/journal.pgen.1004461"/>
+    <dcat:hasCurrentVersion rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02"/>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-7141-9189"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:keywords>genome-wide</alspacdcs:keywords>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <schema:description>Gene expression data from Illumina Human HT-12 v3 bead array for G1 individuals.</schema:description>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-4064-3794"/>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02"/>
+    <alspacdcs:main_publication_doi rdf:resource="https://doi.org/10.1371/journal.pgen.1004461"/>
+    <alspacdcs:keywords>expression</alspacdcs:keywords>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0920-1055"/>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0663-4621"/>
+    <alspacdcs:in_catalog rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001"/>
+    <alspacdcs:keywords>transcription</alspacdcs:keywords>
+    <alspacdcs:keywords>illumina</alspacdcs:keywords>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doi.org/10.1371/journal.pgen.1004461">
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+</rdf:RDF>

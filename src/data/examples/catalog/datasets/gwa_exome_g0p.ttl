@@ -1,0 +1,43 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+alspacdcs:gwa_exome_g0p a dcat:Dataset ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-4064-3794 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
+    alspacdcs:keywords "genome-wide",
+        "genomic",
+        "genotype",
+        "illumina",
+        "snp" ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-0605-5403,
+        ORCID:0000-0002-7141-9189,
+        ORCID:0000-0003-0924-3247,
+        ORCID:0000-0003-3103-9330 ;
+    alspacdcs:versions alspacdcs:gwa_exome_g0p_2016-04-27,
+        alspacdcs:gwa_exome_g0p_2016-10-27,
+        alspacdcs:gwa_exome_g0p_2016-11-22 ;
+    schema:description "Genome-wide array data including raw files and genotype calls for G2 individuals" ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "Genome-wide - Illumina exome core array - G2" ;
+    dcat:hasCurrentVersion alspacdcs:gwa_exome_g0p_2016-11-22 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" .
+
+ORCID:0000-0002-0605-5403 a foaf:Person .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+ORCID:0000-0002-7141-9189 a foaf:Person .
+
+ORCID:0000-0003-0924-3247 a foaf:Person .
+
+ORCID:0000-0003-3103-9330 a foaf:Person .
+
+alspacdcs:gwa_exome_g0p_2016-04-27 a dcat:Dataset .
+
+alspacdcs:gwa_exome_g0p_2016-10-27 a dcat:Dataset .
+
+alspacdcs:gwa_exome_g0p_2016-11-22 a dcat:Dataset .
+

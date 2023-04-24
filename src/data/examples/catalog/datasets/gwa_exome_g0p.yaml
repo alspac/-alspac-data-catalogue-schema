@@ -1,0 +1,31 @@
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:gwa_exome_g0p
+name: Genome-wide - Illumina exome core array - G2
+description: Genome-wide array data including raw files and genotype calls for G2 individuals
+in_catalog: alspacdcs:alspac_data_catalogue_001
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+primary_investigator_orcids:
+  - ORCID:0000-0002-7141-9189 # Nic Timpson
+  - ORCID:0000-0003-0924-3247 # Tom Gaunt
+  - ORCID:0000-0003-3103-9330 # Sue Ring
+  - ORCID:0000-0002-0605-5403 # Wendy Mcardle
+keywords:
+  - genomic
+  - genome-wide
+  - illumina
+  - snp
+  - genotype
+has_current_version: alspacdcs:gwa_exome_g0p_2016-11-22
+versions:
+  - alspacdcs:gwa_exome_g0p_2016-11-22
+  - alspacdcs:gwa_exome_g0p_2016-10-27
+  - alspacdcs:gwa_exome_g0p_2016-04-27
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+  - ORCID:0000-0002-4064-3794 # Sam Neaves
+#main_publication_doi: doi:
+#publications_dois:
+ # - doi:
+

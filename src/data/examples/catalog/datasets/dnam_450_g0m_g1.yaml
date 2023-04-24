@@ -1,0 +1,27 @@
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:dnam_450_g0m_g1
+name: DNA methylation - 450k - G0 mothers + G1
+description: >-
+  DNA methylation data from Illumina 450k arrays for G0 mothers at two time points and G1 individuals at three time points
+in_catalog: alspacdcs:alspac_data_catalogue_001
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+primary_investigator_orcids:
+  - ORCID:0000-0002-2715-9930 # Matthew Suderman
+keywords:
+  - methylation
+  - cpg
+  - epigenetic
+has_current_version: alspacdcs:dnam_450_g0m_g1_2016-05-03
+versions:
+  - alspacdcs:dnam_450_g0m_g1_2016-05-03
+  - alspacdcs:dnam_450_g0m_g1_2016-01-25
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+  - ORCID:0000-0002-2715-9930 # Matthew Suderman
+  - ORCID:0000-0002-4064-3794 # Sam Neaves
+main_publication_doi: doi:10.1093/ije/dyv072
+publications_dois:
+  - doi:10.1093/ije/dyv072
+

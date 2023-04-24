@@ -1,0 +1,61 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:ORCID="http://identifiers.org/orcid/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-06-25">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-4064-3794">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1">
+    <alspacdcs:derived_from rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_550_g1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-06-25"/>
+    <alspacdcs:keywords>genomic</alspacdcs:keywords>
+    <alspacdcs:keywords>genome-wide</alspacdcs:keywords>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0003-0920-1055"/>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-4064-3794"/>
+    <alspacdcs:keywords>genotype</alspacdcs:keywords>
+    <alspacdcs:keywords>snp</alspacdcs:keywords>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-10-30"/>
+    <alspacdcs:keywords>illumina</alspacdcs:keywords>
+    <dcat:hasCurrentVersion rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-10-30"/>
+    <alspacdcs:derived_from rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m"/>
+    <schema:name>Genome-wide - 1000G imputed - G0 mothers + G1</schema:name>
+    <alspacdcs:versions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-02-27"/>
+    <alspacdcs:documentation_authors_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-9321-028X"/>
+    <schema:email>alspac-omics@bristol.ac.uk</schema:email>
+    <alspacdcs:in_catalog rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001"/>
+    <schema:description>Genome-wide array data imputed to the 1000 genomes reference panel for G0 mothers and G1 individuals. SNP chips are useful for the generation of data on hundreds of thousands of SNPs, but there are millions more polymorphisms that remain untyped with this technology. If suitable numbers of whole genome sequences exist (e.g. 1000 genomes data) then millions of genotypes that are missing from a sample because they have not been typed by SNP chips can be imputed using probabilistic methods. Here the ALSPAC mother (G0) and children (G1) data were imputed to 1000 genomes using the best available phasing and imputation software and reference panels at the time.
+The ALSPAC genotype data generated using the Illumina HumanHap550 quad (children) and Illumina human660W quad (mothers) has been jointly imputed to the 1000 genomes reference panel (Version 1, Phase 3, Dec 2013 Release).</schema:description>
+    <dcat:landingPage>http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/</dcat:landingPage>
+    <alspacdcs:keywords>imputation</alspacdcs:keywords>
+    <alspacdcs:primary_investigator_orcids rdf:resource="http://identifiers.org/orcid/0000-0002-7141-9189"/>
+    <alspacdcs:keywords>1000 genomes</alspacdcs:keywords>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_550_g1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-7141-9189">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0003-0920-1055">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://identifiers.org/orcid/0000-0002-9321-028X">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-10-30">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_1000g_g0m_g1_2015-02-27">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+</rdf:RDF>

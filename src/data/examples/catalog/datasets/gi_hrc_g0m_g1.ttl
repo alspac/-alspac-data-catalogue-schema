@@ -1,0 +1,44 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+alspacdcs:gi_hrc_g0m_g1 a dcat:Dataset ;
+    alspacdcs:derived_from alspacdcs:gwa_550_g1,
+        alspacdcs:gwa_660_g0m ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-4064-3794,
+        ORCID:0000-0003-0920-1055 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
+    alspacdcs:keywords "genome-wide",
+        "genomic",
+        "genotype",
+        "haplotype reference consortium",
+        "illumina",
+        "imputation",
+        "snp" ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-7141-9189 ;
+    alspacdcs:versions alspacdcs:gi_hrc_g0m_g1_2015-10-30,
+        alspacdcs:gi_hrc_g0m_g1_2017-05-04 ;
+    schema:description """Genome-wide array data imputed to the HRC reference panel for G0 mothers and G1 individuals (HRC.r1.1, 2016).
+SNP chips are useful for the generation of data on hundreds of thousands of SNPs, but there are millions more polymorphisms that remain untyped with this technology. If suitable numbers of whole genome sequences exist (e.g. 1000 genomes data) then millions of genotypes that are missing from a sample because they have not been typed by SNP chips can be imputed using probabilistic methods. Here the ALSPAC mother and children data were imputed to a new reference panel known as the Haplotype Reference Consortium (HRC) panel. This comprises around 31000 sequenced individuals (mostly European), so the coverage of European haplotypes is much greater than in other panels. As a consequence imputation accuracy is expected to improve, particularly at lower frequencies.
+The ALSPAC genotype data generated using the Illumina HumanHap550 quad (children) and Illumina human660W quad (mothers) has been jointly phased using ShapeIt v2 (which uses relationship information to improve phasing accuracy) and imputed to the HRC panel (HRC.r1.1) using the Michigan imputation server.""" ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "Genome-wide - HRC imputed - G0 mothers + G1" ;
+    dcat:hasCurrentVersion alspacdcs:gi_hrc_g0m_g1_2017-05-04 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+ORCID:0000-0002-7141-9189 a foaf:Person .
+
+ORCID:0000-0003-0920-1055 a foaf:Person .
+
+alspacdcs:gi_hrc_g0m_g1_2015-10-30 a dcat:Dataset .
+
+alspacdcs:gwa_550_g1 a dcat:Dataset .
+
+alspacdcs:gwa_660_g0m a dcat:Dataset .
+
+alspacdcs:gi_hrc_g0m_g1_2017-05-04 a dcat:Dataset .
+

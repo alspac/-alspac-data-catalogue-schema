@@ -1,0 +1,58 @@
+
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:gi_hrc_g0m_g1
+name: Genome-wide - HRC imputed - G0 mothers + G1
+description: >-
+  Genome-wide array data imputed to the HRC reference panel for G0
+  mothers and G1 individuals (HRC.r1.1, 2016).
+
+  SNP chips are useful for the generation of data on hundreds of
+  thousands of SNPs, but there are millions more polymorphisms that
+  remain untyped with this technology. If suitable numbers of whole
+  genome sequences exist (e.g. 1000 genomes data) then millions of
+  genotypes that are missing from a sample because they have not been
+  typed by SNP chips can be imputed using probabilistic methods. Here
+  the ALSPAC mother and children data were imputed to a new reference
+  panel known as the Haplotype Reference Consortium (HRC) panel. This
+  comprises around 31000 sequenced individuals (mostly European), so
+  the coverage of European haplotypes is much greater than in other
+  panels.
+  As a consequence imputation accuracy is expected to improve,
+  particularly at lower frequencies.
+
+  The ALSPAC genotype data generated using the Illumina HumanHap550
+  quad (children) and Illumina human660W quad (mothers)
+  has been jointly phased using ShapeIt v2
+  (which uses relationship information to improve phasing accuracy)
+  and imputed to the HRC panel (HRC.r1.1) using the Michigan imputation server.
+
+  
+in_catalog: alspacdcs:alspac_data_catalogue_001
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+primary_investigator_orcids:
+  - ORCID:0000-0002-7141-9189 # Nic Timpson
+keywords:
+  - genomic
+  - genome-wide
+  - illumina
+  - imputation
+  - snp
+  - haplotype reference consortium
+  - genotype
+has_current_version: alspacdcs:gi_hrc_g0m_g1_2017-05-04
+versions:
+  - alspacdcs:gi_hrc_g0m_g1_2015-10-30
+  - alspacdcs:gi_hrc_g0m_g1_2017-05-04
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+  - ORCID:0000-0003-0920-1055 # Gibran Hemani
+  - ORCID:0000-0002-4064-3794 # Sam Neaves
+#main_publication_doi: doi:
+#publications_dois:
+#  - doi:
+
+derived_from:
+  - alspacdcs:gwa_550_g1
+  - alspacdcs:gwa_660_g0m

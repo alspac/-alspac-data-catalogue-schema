@@ -1,0 +1,29 @@
+
+# This yaml file is a decription of a named alspac data set.
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:gi_hapmap2_g0m
+name: Genome-wide - HapMap2 imputed - G0 mothers
+description: Genome-wide array data imputed to the HapMap2 reference panel for G0 mothers
+in_catalog: alspacdcs:alspac_data_catalogue_001
+landing_page_url: http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
+primary_investigator_orcids:
+  - ORCID:0000-0002-7141-9189 # Nic Timpson
+keywords:
+  - genomic
+  - genome-wide
+  - illumina
+  - imputation
+  - hapmap
+  - snp
+  - genotype
+has_current_version: alspacdcs:gi_hapmap2_g0m_2022-12-07
+versions:
+  - alspacdcs:gi_hapmap2_g0m_2022-12-07
+primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about this dataset.
+documentation_authors_orcids:
+  - ORCID:0000-0002-4064-3794 # Sam Neaves
+#main_publication_doi: doi:
+#publications_dois:
+#  - doi:
+
