@@ -1,0 +1,154 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/92d003a7-fad2-40ef-bd90-81a01243b42b">
+    <schema:name>Sample information</schema:name>
+    <schema:description>Information about the samples for the dataset</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/eba89feb-1ebd-4ff4-97de-e75282a9b62c"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b18c15ea-248b-4cf4-a0ad-e6bb8a6b8ab6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a5fdad2f-3037-4fe3-8a3e-7e00f762d320">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>1.1G</dcat:byteSize>
+    <schema:name>data.bed</schema:name>
+    <schema:description>Legacy 1 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy1 distribution of the plink bed file.</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">526688</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8340</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>7b4bc5c2cabf054d9177a792f1744693</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/70fb0f4d-55f5-4d07-b20e-a57ca477af78">
+    <schema:name>legacy1</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f029ce45-e298-4834-a9dd-4ae8e42fd3ee"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/28f2547a-6934-40d3-9d0b-240ba59f0350">
+    <schema:name>Variant Information</schema:name>
+    <schema:description>Information about genetic variants</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2dbfd304-8e4f-45ee-b5a2-79f6f7776de2"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/0c17376b-5e5f-49a6-9af6-3ae38294d747"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b18c15ea-248b-4cf4-a0ad-e6bb8a6b8ab6">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>139k</dcat:byteSize>
+    <schema:name>data.fam</schema:name>
+    <schema:description>leg1
+A text file with no header line, and one line per sample with the following six fields:
+1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8340</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>221c9d666316b329f773f987282cd88e</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2dbfd304-8e4f-45ee-b5a2-79f6f7776de2">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>13M</dcat:byteSize>
+    <schema:name>data.bim</schema:name>
+    <schema:description>Leg2  Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
+
+  1.Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
+  '0' indicates unknown)
+  or name
+  2. Variant identifier
+  3. Position in morgans or centimorgans (safe to use dummy value of '0')
+  4. Base-pair coordinate (1-based; limited to 231-2)
+  5. Allele 1 (corresponding to clear bits in .bed; usually minor)
+  6. Allele 2 (corresponding to set bits in .bed; usually major)</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465740</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>2dcd3e631bf21a8c0d9885a64081674f</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1c3915e8-0de3-4449-a757-3c04bc785560">
+    <schema:name>legacy2</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f029ce45-e298-4834-a9dd-4ae8e42fd3ee"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m_2022_12_05">
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/28f2547a-6934-40d3-9d0b-240ba59f0350"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:has_previous_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_previous_version>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f029ce45-e298-4834-a9dd-4ae8e42fd3ee"/>
+    <alspacdcs:known_issues rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cd9ae2f3-777e-40b4-812a-62f1a855cc84"/>
+    <alspacdcs:is_current_version>True</alspacdcs:is_current_version>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1c3915e8-0de3-4449-a757-3c04bc785560"/>
+    <alspacdcs:has_freezes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m_2022_12_05_f2"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/fb3805d7-5301-4792-86a2-7182a4c32f03"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/92d003a7-fad2-40ef-bd90-81a01243b42b"/>
+    <alspacdcs:qc_description>The following is the description we have of the QC procedure for either leg1 or leg2 files.
+
+ALSPAC mothers were genotyped using the Illumina human660W-quad array at Centre National de Génotypage (CNG) and genotypes were called with Illumina GenomeStudio. PLINK (v1.07) was used to carry out quality control measures on an initial set of 10,015 subjects and 557,124 directly genotyped SNPs. SNPs were removed if they displayed more than 5% missingness or a Hardy-Weinberg equilibrium P value of less than 1.0e-06. Additionally SNPs with a minor allele frequency of less than 1% were removed. Samples were excluded if they displayed more than 5% missingness, had indeterminate X chromosome heterozygosity or extreme autosomal heterozygosity. Samples showing evidence of population stratification were identified by multidimensional scaling of genome-wide identity by state pairwise distances using the four HapMap populations as a reference, and then excluded. Cryptic relatedness was assessed using a IBD estimate of more than 0.125 which is expected to correspond to roughly 12.5% alleles shared IBD or a relatedness at the first cousin level. Related subjects that passed all other quality control thresholds were retained during subsequent phasing and imputation. 9,048 subjects and 526,688 SNPs passed these quality control filters.</alspacdcs:qc_description>
+    <alspacdcs:has_next_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_next_version>
+    <schema:name>Version 2022-12-05 Genome-wide - Illumina 660 quad - G0 mothers</schema:name>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/70fb0f4d-55f5-4d07-b20e-a57ca477af78"/>
+    <alspacdcs:version_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m"/>
+    <schema:description>Version 2022-12-05 Genome-wide array data including raw files and genotype calls for G0 mothers This release version of the gwa_660_g0m data has two differnt QC'd set of files. 
+This version differs from the preivous relase version because we have changed the second column in the previous version in legacy 1 qc'd set of data, from all A to all M. To refelect that this data is a mothers dataset and this can now be used as a Qlet.</schema:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/fb3805d7-5301-4792-86a2-7182a4c32f03">
+    <schema:name>Biallelic genotype table</schema:name>
+    <schema:description>The genetic data</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a5fdad2f-3037-4fe3-8a3e-7e00f762d320"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/83f7a822-4ed5-4e9b-a051-e7ec9eb75009"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/0c17376b-5e5f-49a6-9af6-3ae38294d747">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>14M</dcat:byteSize>
+    <schema:name>data.bim</schema:name>
+    <schema:description>Leg 1 Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
+
+  1.Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
+  '0' indicates unknown)
+  or name
+  2. Variant identifier
+  3. Position in morgans or centimorgans (safe to use dummy value of '0')
+  4. Base-pair coordinate (1-based; limited to 231-2)
+  5. Allele 1 (corresponding to clear bits in .bed; usually minor)
+  6. Allele 2 (corresponding to set bits in .bed; usually major)</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">526688</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>c78dc88881086720b9f4055a4b5bcc0c</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m_2022_12_05_f2">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/83f7a822-4ed5-4e9b-a051-e7ec9eb75009">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>988M</dcat:byteSize>
+    <schema:name>data.bed</schema:name>
+    <schema:description>Legacy 2 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy2 distribution of the plink bed file.</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465740</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8890</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>39cffa853ba8497db4dde6bf26435560</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f029ce45-e298-4834-a9dd-4ae8e42fd3ee">
+    <schema:name>data</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cd9ae2f3-777e-40b4-812a-62f1a855cc84">
+    <alspacdcs:logged_date>2022-12-22</alspacdcs:logged_date>
+    <alspacdcs:logged_by>Sam Neaves</alspacdcs:logged_by>
+    <alspacdcs:issue_description>We do not know exactly how the legacy 1 and legacy 2 parts of the data were put together.</alspacdcs:issue_description>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/eba89feb-1ebd-4ff4-97de-e75282a9b62c">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>200k</dcat:byteSize>
+    <schema:name>data.fam</schema:name>
+    <schema:description>leg1
+A text file with no header line, and one line per sample with the following six fields:
+1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8890</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>488478427dcdbcbb9e0fec0a97d8eb7f</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+</rdf:RDF>

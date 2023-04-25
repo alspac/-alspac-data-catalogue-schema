@@ -1,0 +1,269 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_bryois">
+    <alspacdcs:qc_value>LCL's from unrelated individuals were grown under identical conditions and cells frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion). Expression profiling of the samples, each with two technical replicates, were performed using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where 200 ng of total RNA was processed according to the protocol supplied by Illumina. Raw data was imported to the Illumina Beadstudio software and probes with less than three beads present were excluded. Log2 - transformed expression signals were then normalized with quantile normalization of the replicates of each individual followed by quantile normalization across all individuals. We restricted our analysis to 23'935 probes tagging genes annotated in Ensembl. Principal component analysis was performed on 931 individuals. 62 individuals with principal component 1 or 2 greater than one standard deviation of the population were excluded from further analysis. See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461 for full details.</alspacdcs:qc_value>
+    <alspacdcs:qc_key>Bryois</alspacdcs:qc_key>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d171e08157db6b84a6a4939f5da2ba78_data.RData">
+    <dcat:mediaType>.RData</dcat:mediaType>
+    <dcat:byteSize>322M</dcat:byteSize>
+    <schema:name>data.RData</schema:name>
+    <schema:description>This is the .RData file that contain the dataset for the bryosis method for the 2015-11-02 release of ge_ht12_g1. RData file with IDs in columns and Illumina probe IDs in rows. This is the normalised data used in Bryois et al 2014. The object name in the RData file is `dat`. Probe IDs are mapped to Genes in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">949</alspacdcs:number_of_participants>
+    <alspacdcs:number_of_gene_expression_probe_values rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48630</alspacdcs:number_of_gene_expression_probe_values>
+    <alspacdcs:md5sum>d171e08157db6b84a6a4939f5da2ba78</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_number_of_individuals">
+    <alspacdcs:qc_value>931</alspacdcs:qc_value>
+    <alspacdcs:qc_key>Number of individuals</alspacdcs:qc_key>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.7K</dcat:byteSize>
+    <schema:name>mixupmapper.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>24e1fd034a96b37657743603d9cb0e6c</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_f2">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_bryosis">
+    <schema:name>Broyosis data</schema:name>
+    <schema:description>The set of data which was produced by the bryosis method for the 2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d171e08157db6b84a6a4939f5da2ba78_data.RData"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.2K</dcat:byteSize>
+    <schema:name>convert_genotypes.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>6a3b79a2d080d8e5f45a9dcde3c0405b</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.2K</dcat:byteSize>
+    <schema:name>remove_pcs.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>e3d6eafb8e8576ee28fff22109e851c1</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b515c9ed69ec01eed3a31e0d132c552c_data.RData">
+    <dcat:mediaType>.Rdata</dcat:mediaType>
+    <dcat:byteSize>314M</dcat:byteSize>
+    <schema:name>data.RData</schema:name>
+    <schema:description>RData file with IDs in columns and Illumina probe IDs in rows. Normalised data following the molgenis pipeline, found at https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook. The object name in the RData file is `dat`.</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">881</alspacdcs:number_of_participants>
+    <alspacdcs:number_of_gene_expression_probe_values rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48630</alspacdcs:number_of_gene_expression_probe_values>
+    <alspacdcs:md5sum>b515c9ed69ec01eed3a31e0d132c552c</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_molgenis">
+    <alspacdcs:qc_value>Genetic outliers were removed, any individuals that were clear outliers in the first 2 genetic principal components. Each probe was simply quantile normalised and then log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal components (excluding those that had genetic associations), and scaled to have mean 0 and variance 1. See https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full details.</alspacdcs:qc_value>
+    <alspacdcs:qc_key>Molgenis</alspacdcs:qc_key>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d9404781f96ff338c4755c4510f616c4_initial_setup.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>205B</dcat:byteSize>
+    <schema:name>initial_setup.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>d9404781f96ff338c4755c4510f616c4</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a7af80819b4dbd4a0dae795553a1de03_initial_setup.R">
+    <dcat:mediaType>.R</dcat:mediaType>
+    <dcat:byteSize>3.1K</dcat:byteSize>
+    <schema:name>initial_setup.R</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>a7af80819b4dbd4a0dae795553a1de03</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>739B</dcat:byteSize>
+    <schema:name>generate_pcs.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>8dd67b9513e18a3c0d8dcf12bfbd57cb</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_raw">
+    <schema:name>Raw Gene Expression data</schema:name>
+    <schema:description>Dataset part for the raw gene expression data</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/39af1c2d21276a0a3c10222a9828c6f1_data.txt"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bb449a9991739fdad51136df422e98e9_ids.R">
+    <dcat:mediaType>.R</dcat:mediaType>
+    <dcat:byteSize>214B</dcat:byteSize>
+    <schema:name>ids.R</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>bb449a9991739fdad51136df422e98e9</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_issue_1">
+    <alspacdcs:logged_date>unknown</alspacdcs:logged_date>
+    <alspacdcs:logged_by>Gibran Hermani</alspacdcs:logged_by>
+    <alspacdcs:issue_description>We do not have the original idat files that were used to call this data.</alspacdcs:issue_description>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.6K</dcat:byteSize>
+    <schema:name>gather_data.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>5dd7f9bd308c50f2ec401bb9ab4181d8</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>859B</dcat:byteSize>
+    <schema:name>checking_proxies.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>7ff9755c06115ec3d27d0a328a2a6895</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>31k</dcat:byteSize>
+    <schema:name>id_map.txt</schema:name>
+    <schema:description>A text file with two collums and no header mapping ids.</schema:description>
+    <alspacdcs:md5sum>2b91ff9a91f5bfe2b807ba638cc2916b</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.1K</dcat:byteSize>
+    <schema:name>cisQTL.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>2709e8d54e2687de65ecea73bcd63b1d</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_id_map">
+    <schema:name>Gene expression id mapping data</schema:name>
+    <schema:description>This data set has two distributions, one with a header and one without.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/889022ba439c1baef05b9dd83b8db497_id_map2.txt"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8013f1dce551d40ed2e0f56773cda52a_removemixups.R">
+    <dcat:mediaType>.R</dcat:mediaType>
+    <dcat:byteSize>586B</dcat:byteSize>
+    <schema:name>removemixups.R</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>8013f1dce551d40ed2e0f56773cda52a</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9792a553813502395cc791805db3fd5d_expression_normalisation.R">
+    <dcat:mediaType>.R</dcat:mediaType>
+    <dcat:byteSize>820B</dcat:byteSize>
+    <schema:name>expression_normalisation.R</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>9792a553813502395cc791805db3fd5d</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/39af1c2d21276a0a3c10222a9828c6f1_data.txt">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>1.1G</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>File with IDs in columns and probes in rows. Two columns per individual, with one column for average signal and one column for average number of beads. Presumably this is a file generated by the Illumina Genome Studio software. The IDs used in the files are mapped to ALNs in `alspacdcs:ge_ht12_g1_2015-11-02_id_map`.</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">997</alspacdcs:number_of_participants>
+    <alspacdcs:number_of_gene_expression_probe_values rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48630</alspacdcs:number_of_gene_expression_probe_values>
+    <alspacdcs:md5sum>39af1c2d21276a0a3c10222a9828c6f1</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/889022ba439c1baef05b9dd83b8db497_id_map2.txt">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>62k</dcat:byteSize>
+    <schema:name>id_map2.txt</schema:name>
+    <schema:description>A text file with two collumns and a header line mapping ids.</schema:description>
+    <alspacdcs:md5sum>889022ba439c1baef05b9dd83b8db497</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>1.6K</dcat:byteSize>
+    <schema:name>expression_normalisation.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>bd3cd8d3b95c5facb76fd1f80476fa8a</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh">
+    <dcat:mediaType>.sh</dcat:mediaType>
+    <dcat:byteSize>2.2K</dcat:byteSize>
+    <schema:name>combine_genotypes.sh</schema:name>
+    <schema:description>Part of the molgenis_eqtl_pipeline.</schema:description>
+    <alspacdcs:md5sum>572b73e8312f0691e4b95ad9e459f63b</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_molgenis">
+    <schema:name>Molgeis data</schema:name>
+    <schema:description>The set of data which was produced by the molgenis method for the 2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b515c9ed69ec01eed3a31e0d132c552c_data.RData"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz">
+    <dcat:mediaType>.txt.gz</dcat:mediaType>
+    <dcat:byteSize>450M</dcat:byteSize>
+    <schema:name>data.txt.gz</schema:name>
+    <schema:description>Zipped version of alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt</schema:description>
+    <alspacdcs:md5sum>9ef5acc742f7bece57e964bb341b5a9e</alspacdcs:md5sum>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_platform">
+    <alspacdcs:qc_value>Illumina Human HT-12 V3 BeadChips</alspacdcs:qc_value>
+    <alspacdcs:qc_key>Platform</alspacdcs:qc_key>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02">
+    <alspacdcs:qc_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_number_of_individuals"/>
+    <alspacdcs:qc_description>There are two different types of QC'd data available in this version, one performed by David Evans for the Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping meta analysis.</alspacdcs:qc_description>
+    <alspacdcs:is_current_version>True</alspacdcs:is_current_version>
+    <schema:description>This is the first version of the Gene expression - array - G1 dataset released by ALSPAC.
+</schema:description>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8013f1dce551d40ed2e0f56773cda52a_removemixups.R"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_bryosis"/>
+    <alspacdcs:has_freezes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_f2"/>
+    <alspacdcs:has_previous_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_previous_version>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a7af80819b4dbd4a0dae795553a1de03_initial_setup.R"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh"/>
+    <alspacdcs:qc_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_bryois"/>
+    <schema:name>Gene expression - array - G1 release version 2015-11-02</schema:name>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_molgenis"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9792a553813502395cc791805db3fd5d_expression_normalisation.R"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d9404781f96ff338c4755c4510f616c4_initial_setup.sh"/>
+    <alspacdcs:qc_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_number_of_probes"/>
+    <alspacdcs:has_next_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_next_version>
+    <alspacdcs:qc_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_molgenis"/>
+    <alspacdcs:known_issues rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_issue_1"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_raw"/>
+    <alspacdcs:qc_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_platform"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh"/>
+    <alspacdcs:version_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_id_map"/>
+    <alspacdcs:has_scripts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bb449a9991739fdad51136df422e98e9_ids.R"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ge_ht12_g1_2015-11-02_qc_number_of_probes">
+    <alspacdcs:qc_value>48804</alspacdcs:qc_value>
+    <alspacdcs:qc_key>Number of probes</alspacdcs:qc_key>
+    <rdf:type rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+  </rdf:Description>
+</rdf:RDF>

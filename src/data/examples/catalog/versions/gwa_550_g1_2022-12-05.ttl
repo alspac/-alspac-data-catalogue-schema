@@ -1,0 +1,76 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:gwa_550_g1_2022-12-05 a dcat:Dataset ;
+    alspacdcs:has_containers alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 ;
+    alspacdcs:has_freezes alspacdcs:gwa_550_g1_2022-12-05_f2 ;
+    alspacdcs:has_next_version "NA"^^xsd:anyURI ;
+    alspacdcs:has_parts alspacdcs:22528cfc-f8b0-477d-a016-3c3260c6ddd2,
+        alspacdcs:624c63f2-7750-46ba-837c-2629f2c80e2e,
+        alspacdcs:a511d25c-ae38-4ae5-ae6b-2e95cad4cc17 ;
+    alspacdcs:has_previous_version "NA"^^xsd:anyURI ;
+    alspacdcs:is_current_version "True" ;
+    alspacdcs:qc_description "" ;
+    alspacdcs:version_of alspacdcs:gwa_550_g1 ;
+    schema:description "Genome-wide array data genotype calls for G1 individuals 2022-12-05. " ;
+    schema:name "Genome-wide array data genotype calls for G1 individuals 2022-12-05." .
+
+alspacdcs:0f55fc05-69bf-46a2-82cc-d42335c362f8 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 ;
+    alspacdcs:md5sum "e78729d05d074db4508474379c7fbe8a" ;
+    schema:description """Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
+1. Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
+   '0' indicates unknown) or name
+2. Variant identifier 3. Position in morgans or centimorgans (safe to use dummy value of '0') 4. Base-pair coordinate (1-based; limited to 231-2) 5. Allele 1 (corresponding to clear bits in .bed; usually minor) 6. Allele 2 (corresponding to set bits in .bed; usually major)""" ;
+    schema:name "data.bim" ;
+    dcat:byteSize "14M" ;
+    dcat:mediaType ".bim" .
+
+alspacdcs:22528cfc-f8b0-477d-a016-3c3260c6ddd2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:a37b5aa2-a52c-4a9c-9d15-c1350ee2a286 ;
+    schema:description "Genotype data" ;
+    schema:name "Biallelic genotype table" .
+
+alspacdcs:624c63f2-7750-46ba-837c-2629f2c80e2e a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:fb0184f4-82b9-472f-86c4-fc3de9986b6c ;
+    schema:description "sample information" ;
+    schema:name "data sample information" .
+
+alspacdcs:a37b5aa2-a52c-4a9c-9d15-c1350ee2a286 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 ;
+    alspacdcs:md5sum "a483efdaf34696f4dfd768e9ba515634" ;
+    schema:description "Plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files." ;
+    schema:name "data.bed" ;
+    dcat:byteSize "999M" ;
+    dcat:mediaType ".bed" .
+
+alspacdcs:a511d25c-ae38-4ae5-ae6b-2e95cad4cc17 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:0f55fc05-69bf-46a2-82cc-d42335c362f8 ;
+    schema:description "Variant information" ;
+    schema:name "Variant Information" .
+
+alspacdcs:fb0184f4-82b9-472f-86c4-fc3de9986b6c a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 ;
+    alspacdcs:md5sum "171c7c4b5877b539a509328a03b8ce35" ;
+    schema:description """A text file with no header line, and one line per sample with the following six fields:
+  1. Family ID ('FID')
+  2. Within-family ID ('IID'; cannot be '0')
+  3. Within-family ID of father ('0' if father isn't in dataset)
+  4. Within-family ID of mother ('0' if mother isn't in dataset)
+  5. Sex code ('1' = male, '2' = female, '0' = unknown)
+  6. Phenotype value ('1' = control, '2' = case,
+  '-9'/'0'/non-numeric =
+  missing data if case/control)""" ;
+    schema:name "data.fam" ;
+    dcat:byteSize "139k" ;
+    dcat:mediaType ".fam" .
+
+alspacdcs:gwa_550_g1_2022-12-05_f2 a dcat:Dataset .
+
+alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 a nfo:Folder ;
+    schema:description "A dir/folder containing the plink data files" ;
+    schema:name "data" .
+

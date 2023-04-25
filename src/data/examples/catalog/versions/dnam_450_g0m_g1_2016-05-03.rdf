@@ -1,0 +1,316 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/01ae18d7-69b2-46c9-9fac-b517994f4545">
+    <schema:name>gse68456 cord cell counts</schema:name>
+    <schema:description>Cellcounts in cord predicted using cord reference published in de Goede et al (PMID: 26366232). This reference has been implemented in meffil. Samples are in rows and cell types in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/77d97ff8-5d79-4430-a387-bcbce6af81fc"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dnam_450_g0m_g1_2016-05-03_f2.yaml">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c0e014ab-76c2-49b2-b458-5e86b4936d5b">
+    <schema:name>houseman cell counts</schema:name>
+    <schema:description>Cell counts extracted using Houseman algorithm implemented in meffil (PMID: 22568884). Samples are in rows and cell types in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b656f997-7505-4dc7-822a-c0a99522403e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6bb1ab17-3599-4dbd-88dc-09277791d942">
+    <schema:name>samplesheet</schema:name>
+    <schema:description>A dir/folder containing the manifest file from Lims.</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b656f997-7505-4dc7-822a-c0a99522403e">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>571K</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>Text file of the cell counts calculated using Houseman algorithm.</schema:description>
+    <alspacdcs:md5sum>b8ff828b793a330a3638a883aec6ce13</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/40ce26ee-b571-4925-ae5f-ed574b7fc0c6">
+    <schema:name>control matrix</schema:name>
+    <schema:description>The 850 control probes are summarized in 42 control types. These probes can roughly be divided into negative control probes
+  (613), probes intended for between array normalization (186)
+  and the remainder (49), which are designed for quality
+  control, including assessing the
+  bisulfite conversion rate. None of these probes are designed
+  to measure a biological signal.
+  The summarized control probes can be used as surrogates for
+  unwanted variation and are used for the functional
+  normalization.
+  Samples are rows and 42 control types are in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/241b6448-1538-4dc5-ba8c-3df68e306887"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c11027d5-a263-4b11-a34f-73217df52fdd">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>118k</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>Plain text file of cellcounts in cord predicted using Bakulski.</schema:description>
+    <alspacdcs:md5sum>36cb564ccd08d1be6d24055dcadb99e9</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a91ba348-2796-4c4e-9cce-e3afe7ee984e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120">
+    <schema:name>cord</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions for cord.</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2fb3a96e-f00c-40bb-9e50-c468be650fbf"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/95cc8a1f-8087-4c5c-827c-e61c076282b5">
+    <dcat:mediaType>.Robj</dcat:mediaType>
+    <dcat:byteSize>418M</dcat:byteSize>
+    <schema:name>data.Robj</schema:name>
+    <schema:description>R object file for the detection p values matrix</schema:description>
+    <alspacdcs:md5sum>547217d77280df0633e9b4953d02f811</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/da06375d-fcab-4ec9-9951-1969051c9508"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/106bad45-3716-488f-bdd9-c334fa37a9bf">
+    <schema:name>samplesheet</schema:name>
+    <schema:description>Manifest file with columns extracted directly from LIMS and age, sex, aln, timepoint, timecode, sampletype, genotypeQC columns to remove population stratification samples, duplicate.rm column to remove duplicates. Samples in rows, variables in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5c5a3807-1e0e-4910-bc93-afc3436950ca"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dnam_450_g0m_g1_2016-05-03.yaml">
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f0bc6ebb-54c5-449b-b2e8-eb729a75f25f"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/20dcee3d-e45f-465a-9796-a1439187a774"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/fd56cb7c-582f-44e9-b2ec-4f1de23e07fd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/27cc2842-4ceb-45ff-abe1-af5106e102d2"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f5b24c65-266c-476c-a5df-f167bc3d65b8"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2fb3a96e-f00c-40bb-9e50-c468be650fbf"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/722a0c01-47cc-418b-8b16-1ca23e26fe79"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/97fb54a9-8f82-46fb-a7c6-6ed0669e5b81"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c0e014ab-76c2-49b2-b458-5e86b4936d5b"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c693a7e5-cf56-48c0-afca-84ba750fe507"/>
+    <alspacdcs:has_previous_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_previous_version>
+    <alspacdcs:has_freezes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dnam_450_g0m_g1_2016-05-03_f2.yaml"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/88060609-ce32-4986-b823-08d621d07474"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d8f43b22-b920-4b56-b45a-4030949b4905"/>
+    <alspacdcs:version_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dnam_450_g0m_g1"/>
+    <alspacdcs:has_next_version rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">NA</alspacdcs:has_next_version>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/da06375d-fcab-4ec9-9951-1969051c9508"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/01ae18d7-69b2-46c9-9fac-b517994f4545"/>
+    <schema:name>DNA methylation - 450k - G0 mothers + G1 release version 2016-05-03</schema:name>
+    <alspacdcs:is_current_version>True</alspacdcs:is_current_version>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/12fb358d-8656-498f-8c3f-c481e5ddbc09"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a91ba348-2796-4c4e-9cce-e3afe7ee984e"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d9670e1b-ee23-4d66-8d38-e6a8c4289163"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/657b5ede-5c02-4feb-9620-868961472e9b"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cb67161d-33fd-443c-8a8e-58e11a1bfdfc"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6bb1ab17-3599-4dbd-88dc-09277791d942"/>
+    <schema:description>This is a 2016 version of the DNA methylation data for G0M and G1 Alspac participants
+</schema:description>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/40ce26ee-b571-4925-ae5f-ed574b7fc0c6"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/106bad45-3716-488f-bdd9-c334fa37a9bf"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e711245f-bc6e-4ee4-9a36-8a064a723c9f"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f699b8a8-694c-44b5-962b-4108f59fb01f"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d59e5cbf-2009-4619-9e6b-4d1f6817b3ce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/77d97ff8-5d79-4430-a387-bcbce6af81fc">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>120k</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>Plain text file containinng cell counts predicted using cord reference.</schema:description>
+    <alspacdcs:md5sum>44c6e544116bc646dd7e939977798052</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/88060609-ce32-4986-b823-08d621d07474"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a91ba348-2796-4c4e-9cce-e3afe7ee984e">
+    <schema:name>andrews-and-bakulski</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions by andrews-and-bakulski algorithm</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/12fb358d-8656-498f-8c3f-c481e5ddbc09">
+    <schema:name>andrews and bakulksi cord cell counts</schema:name>
+    <schema:description>Cellcounts in cord predicted using cord reference published in Bakulski et al 2016 (PMID: 27019159). This reference has been implemented in meffil. In this text file, samples are in rows and cell types in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c11027d5-a263-4b11-a34f-73217df52fdd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d8f43b22-b920-4b56-b45a-4030949b4905">
+    <schema:name>reports</schema:name>
+    <schema:description>A dir/folder containing the reports</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e711245f-bc6e-4ee4-9a36-8a064a723c9f"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5c5a3807-1e0e-4910-bc93-afc3436950ca">
+    <dcat:mediaType>.Robj</dcat:mediaType>
+    <dcat:byteSize>127K</dcat:byteSize>
+    <schema:name>data.Robj</schema:name>
+    <schema:description>R data object manifest file.</schema:description>
+    <alspacdcs:md5sum>f64e33c08411256369886966182069a0</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6bb1ab17-3599-4dbd-88dc-09277791d942"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c693a7e5-cf56-48c0-afca-84ba750fe507">
+    <schema:name>qc.objects_clean</schema:name>
+    <schema:description>A dir/folder containing the cleaned samples from Lims</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d59e5cbf-2009-4619-9e6b-4d1f6817b3ce">
+    <schema:name>scripts</schema:name>
+    <schema:description>A dir/folder containing the script files</schema:description>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/657b5ede-5c02-4feb-9620-868961472e9b">
+    <schema:name>detection p values</schema:name>
+    <schema:description>This matrix shows the detection pvalues for each sample and each CpG and is extracted from the idat files using the "meffil.load.detection.pvalues" function in meffil. CpGs are in rows and samples in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/95cc8a1f-8087-4c5c-827c-e61c076282b5"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/27cc2842-4ceb-45ff-abe1-af5106e102d2">
+    <schema:name>qc objects all</schema:name>
+    <schema:description>This objects contain samples extracted from LIMS and is not cleaned up. This object has been used to do the data cleaning. All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called qc.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the qc or norm.objects. Specifically, the qc.objects contain raw control probe intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex,  predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c328b300-c945-4591-b280-6a68ebc51c0f"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f699b8a8-694c-44b5-962b-4108f59fb01f">
+    <schema:name>control_matrix</schema:name>
+    <schema:description>A dir/folder containing the control matrix files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/da06375d-fcab-4ec9-9951-1969051c9508">
+    <schema:name>detection_p_values</schema:name>
+    <schema:description>A dir/folder containing the matrix of detection values</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f5b24c65-266c-476c-a5df-f167bc3d65b8">
+    <schema:name>normalization</schema:name>
+    <schema:description>A dir/folder containing the normalization reports</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d8f43b22-b920-4b56-b45a-4030949b4905"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d9670e1b-ee23-4d66-8d38-e6a8c4289163">
+    <schema:name>qc objects clean</schema:name>
+    <schema:description>All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called norm.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the norm.objects. Specifically, the norm.objects contain raw control probe intensities, quantile distributions of the raw intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex, predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/24076ea9-591f-4769-8e5c-5851cb1ccbc6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf">
+    <schema:name>houseman</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions by houseman method. </schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2fb3a96e-f00c-40bb-9e50-c468be650fbf"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020">
+    <schema:name>data</schema:name>
+    <schema:description>A dir/folder containing the data files</schema:description>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/19f635a0-f0b0-45a0-bad3-4ea9ba72c83a">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>100k</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>Plain text file of cell counts predicted using GervinandLyle cord reference.</schema:description>
+    <alspacdcs:md5sum>d1ebacfab5d05d6e9fe78df5d812d8e6</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/20dcee3d-e45f-465a-9796-a1439187a774"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/deb00b0b-36e2-4eae-b10d-5ce1526a55ef">
+    <dcat:mediaType>.Robj</dcat:mediaType>
+    <dcat:byteSize>17G</dcat:byteSize>
+    <schema:name>data.Robj</schema:name>
+    <schema:description>R data object for the Normalized beta data.</schema:description>
+    <alspacdcs:md5sum>d1978f5ee0ca105cd178fb3129d402fa</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f0bc6ebb-54c5-449b-b2e8-eb729a75f25f"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/241b6448-1538-4dc5-ba8c-3df68e306887">
+    <dcat:mediaType>.txt</dcat:mediaType>
+    <dcat:byteSize>1.8M</dcat:byteSize>
+    <schema:name>data.txt</schema:name>
+    <schema:description>Plain text file of the control matrix.</schema:description>
+    <alspacdcs:md5sum>ef19a69f601173e78c581c04229478f8</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f699b8a8-694c-44b5-962b-4108f59fb01f"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/24076ea9-591f-4769-8e5c-5851cb1ccbc6">
+    <dcat:mediaType>.Robj</dcat:mediaType>
+    <dcat:byteSize>957M</dcat:byteSize>
+    <schema:name>data.Robj</schema:name>
+    <schema:description>R object file  of qc objects clean.</schema:description>
+    <alspacdcs:md5sum>f287be1fe41ae3654369dd04a90f8372</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c693a7e5-cf56-48c0-afca-84ba750fe507"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c328b300-c945-4591-b280-6a68ebc51c0f">
+    <dcat:mediaType>.Robj</dcat:mediaType>
+    <dcat:byteSize>1.2G</dcat:byteSize>
+    <schema:name>data.Robj</schema:name>
+    <schema:description>R data file of the qc objects.</schema:description>
+    <alspacdcs:md5sum>4227f425c5b6cd2599a365634eb98b33</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cb67161d-33fd-443c-8a8e-58e11a1bfdfc"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f0bc6ebb-54c5-449b-b2e8-eb729a75f25f">
+    <schema:name>betas</schema:name>
+    <schema:description>A dir/folder containing the beta files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cb67161d-33fd-443c-8a8e-58e11a1bfdfc">
+    <schema:name>qc.objects_all</schema:name>
+    <schema:description>A dir/folder containing the samples extracted from lims and not cleaned. </schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/97fb54a9-8f82-46fb-a7c6-6ed0669e5b81">
+    <schema:name>qc</schema:name>
+    <schema:description>A dir/folder containing the qc reports</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d8f43b22-b920-4b56-b45a-4030949b4905"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/fd56cb7c-582f-44e9-b2ec-4f1de23e07fd">
+    <schema:name>geervin and lyle cord cell counts</schema:name>
+    <schema:description>Cellcounts in cord predicted using GervinandLyle cord reference (unpublised). This reference has been implemented in meffil. Samples are in rows and cell types in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/19f635a0-f0b0-45a0-bad3-4ea9ba72c83a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/20dcee3d-e45f-465a-9796-a1439187a774">
+    <schema:name>gervinandlyle</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions by gervinandlyle algorithm/method.</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/722a0c01-47cc-418b-8b16-1ca23e26fe79">
+    <schema:name>betas</schema:name>
+    <schema:description>Normalized betas using functional normalization. We used 10 PCs on the controlmatrix to regress out technical variation. Slide was regressed out as random effect before normaliziation.
+ CpGs are in rows and samples in columns.</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/deb00b0b-36e2-4eae-b10d-5ce1526a55ef"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e711245f-bc6e-4ee4-9a36-8a064a723c9f">
+    <schema:name>derived</schema:name>
+    <schema:description>A dir/folder containing the derived data (e.g. Cell count predictions)</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6085157-e31d-412a-a36c-7126efb0d020"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/88060609-ce32-4986-b823-08d621d07474">
+    <schema:name>gse68456</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions by the gse68456 method.</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2fb3a96e-f00c-40bb-9e50-c468be650fbf">
+    <schema:name>cellcounts</schema:name>
+    <schema:description>A dir/folder containing the cell count predictions</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e711245f-bc6e-4ee4-9a36-8a064a723c9f"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+</rdf:RDF>

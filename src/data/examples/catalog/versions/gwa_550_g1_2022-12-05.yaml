@@ -1,0 +1,106 @@
+# This yaml file is a description of a released version of a named alspac dataset
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema 
+
+id: alspacdcs:gwa_550_g1_2022-12-05
+name: >-
+  Genome-wide array data genotype calls
+  for G1 individuals 2022-12-05.
+description: >-
+  Genome-wide array data genotype calls
+  for G1 individuals 2022-12-05. 
+
+  
+qc_description: >-
+  
+
+#qc_parts:
+#  - id: 
+#    qc_key: 
+#    qc_value: 
+#  
+
+##ug_parts:
+##  - ug_key: Gwas
+##    ug_value: * a link to an example *
+  
+version_of: alspacdcs:gwa_550_g1
+is_current_version: true
+has_previous_version: NA
+has_next_version: NA
+has_freezes:
+  - alspacdcs:gwa_550_g1_2022-12-05_f2
+
+
+has_containers:
+  - id: alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4 ## uuid
+    name: data
+    description: A dir/folder containing the plink data files
+    
+has_parts:
+  - id: alspacdcs:22528cfc-f8b0-477d-a016-3c3260c6ddd2
+    name: Biallelic genotype table
+    description: >-
+      Genotype data
+    data_distributions:
+    - id: alspacdcs:a37b5aa2-a52c-4a9c-9d15-c1350ee2a286
+      name: data.bed
+      description: >-
+        Plink bed file.
+        Primary representation of genotype calls at biallelic
+        variants. Must be accompanied by .bim and .fam files.
+      md5sum: a483efdaf34696f4dfd768e9ba515634
+      filesize: 999M
+      filetype: .bed
+      belongs_to_container: alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4
+  - id: alspacdcs:a511d25c-ae38-4ae5-ae6b-2e95cad4cc17
+    name:  Variant Information
+    description: >- 
+      Variant information
+    data_distributions:
+    - id: alspacdcs:0f55fc05-69bf-46a2-82cc-d42335c362f8
+      name: data.bim
+      description: >-
+           Extended variant information file accompanying a .bed binary
+           genotype table. (--make-just-bim can be used to update just
+           this file.) A text file with no header line, and one line per
+           variant with the following six fields:
+
+           1. Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
+              '0' indicates unknown) or name
+           2. Variant identifier
+           3. Position in morgans or centimorgans (safe to use dummy value of '0')
+           4. Base-pair coordinate (1-based; limited to 231-2)
+           5. Allele 1 (corresponding to clear bits in .bed; usually minor)
+           6. Allele 2 (corresponding to set bits in .bed; usually major)
+        
+      md5sum: e78729d05d074db4508474379c7fbe8a
+      filesize: 14M
+      filetype: .bim
+      number_of_participants:
+      #number_of_snvs:
+      belongs_to_container: alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4
+  - id: alspacdcs:624c63f2-7750-46ba-837c-2629f2c80e2e
+    name: data sample information
+    description: >-
+      sample information
+    data_distributions:
+      - id: alspacdcs:fb0184f4-82b9-472f-86c4-fc3de9986b6c
+        name: data.fam
+        description: >-
+          A text file with no header line, and one line per sample
+          with the following six fields:
+            1. Family ID ('FID')
+            2. Within-family ID ('IID'; cannot be '0')
+            3. Within-family ID of father ('0' if father isn't in dataset)
+            4. Within-family ID of mother ('0' if mother isn't in dataset)
+            5. Sex code ('1' = male, '2' = female, '0' = unknown)
+            6. Phenotype value ('1' = control, '2' = case,
+            '-9'/'0'/non-numeric =
+            missing data if case/control)
+        md5sum: 171c7c4b5877b539a509328a03b8ce35
+        filesize: 139k
+        filetype: .fam
+        number_of_participants:
+        belongs_to_container: alspacdcs:69b0b1a9-9af0-4b85-a9c9-2973fc1ab5c4
+ 
+  

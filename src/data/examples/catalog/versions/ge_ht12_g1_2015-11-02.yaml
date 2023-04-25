@@ -1,0 +1,251 @@
+# This yaml file is a description of a released version of a named alspac dataset
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema 
+
+id: alspacdcs:ge_ht12_g1_2015-11-02
+name: Gene expression - array - G1 release version 2015-11-02
+description: >
+  This is the first version of the Gene expression - array - G1 dataset released by ALSPAC.
+  
+qc_description: >-
+  There are two different types of QC'd data available in this version, one performed by David Evans for the
+  Bryois et al 2014 paper, and one performed by Gibran Hemani for the molgenis eQTL mapping
+  meta analysis.
+
+qc_parts:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_platform
+    qc_key: Platform
+    qc_value: Illumina Human HT-12 V3 BeadChips
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_number_of_individuals
+    qc_key: Number of individuals
+    qc_value: 931
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_number_of_probes
+    qc_key: Number of probes
+    qc_value: 48804
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_bryois
+    qc_key: Bryois
+    qc_value: >-
+      LCL's from unrelated individuals were grown under identical conditions and cells
+      frozen in RNAlater. RNA was extracted using an RNeasy extraction kit (Qiagen) and was
+      amplified using the Illumina TotalPrep-96 RNA Amplification kit (Ambion).
+      Expression profiling of the samples, each with two technical replicates, were performed
+      using the Illumina Human HT-12 V3 BeadChips (Illumina Inc) including 48,804 probes where
+      200 ng of total RNA was processed according to the protocol supplied by Illumina.
+      Raw data was imported to the Illumina Beadstudio software and probes with less than
+      three beads present were excluded. Log2 - transformed expression signals were then
+      normalized with quantile normalization of the replicates of each individual followed by
+      quantile normalization across all individuals. We restricted our analysis to 23'935 probes
+      tagging genes annotated in Ensembl. Principal component analysis was performed on 931
+      individuals. 62 individuals with principal component 1 or 2 greater than one standard
+      deviation of the population were excluded from further analysis.
+      See http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004461
+      for full details.
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_qc_molgenis
+    qc_key: Molgenis
+    qc_value: >-
+      Genetic outliers were removed, any individuals that were clear outliers in the
+      first 2 genetic principal components. Each probe was simply quantile normalised and then
+      log2 transformed. Then adjusted for the first 4 genetic MDS, expression principal
+      components (excluding those that had genetic associations), and scaled to have mean 0 and
+      variance 1. See
+      https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook for full
+      details.
+
+##ug_parts:
+##  - ug_key: Differntial expression analysis
+##    ug_value: * a link to an example *
+  
+version_of: alspacdcs:ge_ht12_g1
+is_current_version: true
+has_previous_version: NA
+has_next_version: NA
+has_freezes:
+  - alspacdcs:ge_ht12_g1_2015-11-02_f2
+has_parts:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_bryosis
+    name: Broyosis data
+    description: >-
+      The set of data which was produced by the bryosis method for the
+      2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes
+      in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
+    data_distributions:
+    - id: alspacdcs:d171e08157db6b84a6a4939f5da2ba78_data.RData
+      name: data.RData
+      description: >-
+        This is the .RData file that contain the dataset for the bryosis
+        method for the 2015-11-02 release of ge_ht12_g1.
+        RData file with IDs in columns and Illumina probe IDs in rows.
+        This is the normalised data used in Bryois et al 2014.
+        The object name in the RData file is `dat`.
+        Probe IDs are mapped to Genes in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
+
+      md5sum: d171e08157db6b84a6a4939f5da2ba78
+      filesize: 322M
+      filetype: .RData
+      number_of_participants: 949
+      number_of_gene_expression_probe_values: 48630
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_molgenis
+    name: Molgeis data
+    description: >-
+      The set of data which was produced by the molgenis method for
+      the 2015-11-02 release of ge_ht12_g1. Probe IDs are mapped to Genes
+      in alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
+    data_distributions:
+    - id: alspacdcs:b515c9ed69ec01eed3a31e0d132c552c_data.RData
+      name: data.RData
+      description: >-
+        RData file with IDs in columns and Illumina probe IDs in rows.
+        Normalised data following the molgenis pipeline,
+        found at
+        https://github.com/molgenis/systemsgenetics/wiki/eQTL-mapping-analysis-cookbook.
+        The object name in the RData file is `dat`.
+      md5sum: b515c9ed69ec01eed3a31e0d132c552c
+      filesize: 314M
+      filetype: .Rdata
+      number_of_participants: 881
+      number_of_gene_expression_probe_values: 48630
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_raw
+    name: Raw Gene Expression data
+    description: >-
+     Dataset part for the raw gene expression data
+    data_distributions:
+    - id: alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
+      name: data.txt
+      description:  >-
+        File with IDs in columns and probes in rows. Two columns per
+        individual, with one column for average signal and one column
+        for average number of beads.
+        Presumably this is a file generated by the Illumina Genome
+        Studio software.
+        The IDs used in the files are mapped to ALNs in `alspacdcs:ge_ht12_g1_2015-11-02_id_map`.
+      md5sum: 39af1c2d21276a0a3c10222a9828c6f1
+      filesize: 1.1G
+      filetype: .txt
+      number_of_participants: 997
+      number_of_gene_expression_probe_values: 48630
+
+    - id: alspacdcs:9ef5acc742f7bece57e964bb341b5a9e_data.txt.gz
+      name: data.txt.gz
+      description: Zipped version of alspacdcs:39af1c2d21276a0a3c10222a9828c6f1_data.txt
+      md5sum: 9ef5acc742f7bece57e964bb341b5a9e
+      filesize: 450M
+      filetype: .txt.gz
+      number_of_participants:
+      number_of_gene_expression_probe_values:
+    
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_id_map
+    name: Gene expression id mapping data
+    description: >-
+      This data set has two distributions, one with a
+      header and one without.
+    data_distributions:
+    - id: alspacdcs:2b91ff9a91f5bfe2b807ba638cc2916b_id_map.txt
+      name: id_map.txt
+      description: A text file with two collums and no header mapping ids.
+      md5sum: 2b91ff9a91f5bfe2b807ba638cc2916b
+      filesize: 31k
+      filetype: .txt
+      number_of_participants:
+
+    - id: alspacdcs:889022ba439c1baef05b9dd83b8db497_id_map2.txt
+      name: id_map2.txt
+      description: >-
+        A text file with two collumns and a header line
+        mapping ids.
+      md5sum: 889022ba439c1baef05b9dd83b8db497
+      filesize: 62k
+      filetype: .txt
+      number_of_participants:
+
+
+known_issues:
+  - id: alspacdcs:ge_ht12_g1_2015-11-02_issue_1
+    issue_description: >-
+      We do not have the original idat files that were used to call this data.
+    logged_by: Gibran Hermani
+    logged_date: unknown
+
+has_scripts:
+  - id: alspacdcs:7ff9755c06115ec3d27d0a328a2a6895_checking_proxies.sh
+    name: checking_proxies.sh
+    md5sum: 7ff9755c06115ec3d27d0a328a2a6895
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 859B
+    filetype: .sh
+  - id: alspacdcs:2709e8d54e2687de65ecea73bcd63b1d_cisQTL.sh
+    name: cisQTL.sh
+    md5sum: 2709e8d54e2687de65ecea73bcd63b1d
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.1K
+    filetype: .sh
+  - id: alspacdcs:572b73e8312f0691e4b95ad9e459f63b_combine_genotypes.sh
+    name: combine_genotypes.sh
+    md5sum: 572b73e8312f0691e4b95ad9e459f63b
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 2.2K
+    filetype: .sh
+  - id: alspacdcs:6a3b79a2d080d8e5f45a9dcde3c0405b_convert_genotypes.sh
+    name: convert_genotypes.sh
+    md5sum: 6a3b79a2d080d8e5f45a9dcde3c0405b
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.2K
+    filetype: .sh
+  - id: alspacdcs:9792a553813502395cc791805db3fd5d_expression_normalisation.R
+    name: expression_normalisation.R
+    md5sum: 9792a553813502395cc791805db3fd5d
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 820B
+    filetype: .R
+  - id: alspacdcs:bd3cd8d3b95c5facb76fd1f80476fa8a_expression_normalisation.sh
+    name: expression_normalisation.sh
+    md5sum: bd3cd8d3b95c5facb76fd1f80476fa8a
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.6K
+    filetype: .sh
+  - id: alspacdcs:5dd7f9bd308c50f2ec401bb9ab4181d8_gather_data.sh
+    name: gather_data.sh
+    md5sum: 5dd7f9bd308c50f2ec401bb9ab4181d8
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.6K
+    filetype: .sh
+  - id: alspacdcs:8dd67b9513e18a3c0d8dcf12bfbd57cb_generate_pcs.sh
+    name: generate_pcs.sh
+    md5sum: 8dd67b9513e18a3c0d8dcf12bfbd57cb
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 739B
+    filetype: .sh
+  - id: alspacdcs:bb449a9991739fdad51136df422e98e9_ids.R
+    name: ids.R
+    md5sum: bb449a9991739fdad51136df422e98e9
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 214B
+    filetype: .R
+  - id: alspacdcs:a7af80819b4dbd4a0dae795553a1de03_initial_setup.R
+    name: initial_setup.R
+    md5sum: a7af80819b4dbd4a0dae795553a1de03
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 3.1K
+    filetype: .R
+  - id: alspacdcs:d9404781f96ff338c4755c4510f616c4_initial_setup.sh
+    name: initial_setup.sh
+    md5sum: d9404781f96ff338c4755c4510f616c4
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 205B
+    filetype: .sh
+  - id: alspacdcs:24e1fd034a96b37657743603d9cb0e6c_mixupmapper.sh
+    name: mixupmapper.sh
+    md5sum: 24e1fd034a96b37657743603d9cb0e6c
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.7K
+    filetype: .sh
+  - id: alspacdcs:8013f1dce551d40ed2e0f56773cda52a_removemixups.R
+    name: removemixups.R
+    md5sum: 8013f1dce551d40ed2e0f56773cda52a
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 586B
+    filetype: .R
+  - id: alspacdcs:e3d6eafb8e8576ee28fff22109e851c1_remove_pcs.sh
+    name: remove_pcs.sh
+    md5sum: e3d6eafb8e8576ee28fff22109e851c1
+    description: Part of the molgenis_eqtl_pipeline.
+    filesize: 1.2K
+    filetype: .sh
