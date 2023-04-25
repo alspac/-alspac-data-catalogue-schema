@@ -1,0 +1,78 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:gi_hapmap2_g1_2022-12-07_f2 a dcat:Dataset ;
+    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
+    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
+    alspacdcs:freeze_number "2" ;
+    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:gi_hapmap2_g1_2022-12-07 ;
+    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:gi_hapmap2_g1 ;
+    alspacdcs:freeze_size "5G" ;
+    alspacdcs:git_tag "https://github.com/alspac/dataset_gi_hapmap2_g1/releases/tag/freeze2" ;
+    alspacdcs:has_containers alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 ;
+    alspacdcs:has_parts alspacdcs:1219c7c8-6a5b-482a-bdfc-2f26a4df5885,
+        alspacdcs:260ae08f-7077-4fa6-b59d-e1249afddbcf,
+        alspacdcs:8b10969b-0e48-4c27-8e9d-efc812042839,
+        alspacdcs:dd090263-6041-48f4-a28c-af81ff709614 ;
+    alspacdcs:is_current_freeze true ;
+    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
+    alspacdcs:previous_freeze alspacdcs:gi_hapmap2_g1_2022-12-07_f1 ;
+    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
+    schema:description "Freeze 2 of 2022-12-07 version of Genome-wide array data imputed to the HapMap2 reference panel for G1 individuals" ;
+    schema:name "Genome-wide - HapMap2 imputed - G1 version 2022-12-07 freeze 2" .
+
+alspacdcs:1219c7c8-6a5b-482a-bdfc-2f26a4df5885 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:60f60918-c307-4350-a88e-1138c360a72b ;
+    schema:name "freeze_id" .
+
+alspacdcs:25a9b8c3-0426-4cfb-b916-d6807c36fc50 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 ;
+    alspacdcs:md5sum "854d50582220c70ae5645b1a1c799af1" ;
+    alspacdcs:number_of_variants 2543887 ;
+    schema:name "freeze_id.bim" ;
+    dcat:byteSize "67.6MB" ;
+    dcat:mediaType ".bim" .
+
+alspacdcs:260ae08f-7077-4fa6-b59d-e1249afddbcf a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:3313fbd3-cd49-4c77-a1c6-5cc48d17fdbb ;
+    schema:name "freeze_id" .
+
+alspacdcs:3313fbd3-cd49-4c77-a1c6-5cc48d17fdbb a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 ;
+    alspacdcs:md5sum "05abaddce1dd588b65cc575b2d59061c" ;
+    schema:name "freeze_id.log" ;
+    dcat:byteSize "962.0B" ;
+    dcat:mediaType ".log" .
+
+alspacdcs:60f60918-c307-4350-a88e-1138c360a72b a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 ;
+    alspacdcs:md5sum "f8a30a2ec01e03cd4c975d5193c42951" ;
+    alspacdcs:number_of_participants 8224 ;
+    schema:name "freeze_id.fam" ;
+    dcat:byteSize "273.1KB" ;
+    dcat:mediaType ".fam" .
+
+alspacdcs:8b10969b-0e48-4c27-8e9d-efc812042839 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b2436f3c-fbd7-4470-ba44-dac809c767a3 ;
+    schema:name "freeze_id" .
+
+alspacdcs:b2436f3c-fbd7-4470-ba44-dac809c767a3 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 ;
+    alspacdcs:md5sum "90f19b52657a4fff8b301efbd87ea057" ;
+    alspacdcs:number_of_participants 8224 ;
+    alspacdcs:number_of_variants 2543887 ;
+    schema:name "freeze_id.bed" ;
+    dcat:byteSize "4.9GB" ;
+    dcat:mediaType ".bed" .
+
+alspacdcs:dd090263-6041-48f4-a28c-af81ff709614 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:25a9b8c3-0426-4cfb-b916-d6807c36fc50 ;
+    schema:name "freeze_id" .
+
+alspacdcs:63f74523-9ddd-4cc7-9037-d166bd1edba9 a nfo:Folder ;
+    schema:description "A dir/folder containing the plink freeze data files" ;
+    schema:name "data" .
+

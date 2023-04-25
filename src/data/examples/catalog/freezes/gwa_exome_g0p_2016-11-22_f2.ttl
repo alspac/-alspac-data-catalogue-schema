@@ -1,0 +1,109 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:gwa_exome_g0p_2016-11-22_f2 a dcat:Dataset ;
+    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
+    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
+    alspacdcs:freeze_number "2" ;
+    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:gwa_exome_g0p_2016-11-22 ;
+    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:gwa_exome_g0p ;
+    alspacdcs:freeze_size "281M" ;
+    alspacdcs:git_tag "https://github.com/alspac/dataset_gwa_exome_g0p/releases/tag/freeze2" ;
+    alspacdcs:has_containers alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:has_parts alspacdcs:19556134-925a-4753-8834-933c4c74e784,
+        alspacdcs:b0d09887-a085-4d7c-a0d2-c9986a72c3db,
+        alspacdcs:c5d1dff1-3f6d-4506-aebd-c56db36e8d85,
+        alspacdcs:c5f6f2d2-3f61-4bfa-a43c-c6e349a76607,
+        alspacdcs:cceed8c5-0276-4dbe-a617-7b585078caa0 ;
+    alspacdcs:is_current_freeze true ;
+    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
+    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
+    schema:description "Freeze 2 version 2016-11-22 Genome-wide array data including raw files and genotype calls for G0 partners, also including additional G0 mothers  who were absent from previous genotyping rounds" ;
+    schema:name "Freeze 2 version 2016-11-22 Genome-wide - Illumina exome core array - G0 partners" .
+
+alspacdcs:19556134-925a-4753-8834-933c4c74e784 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:2d9618aa-32bb-4b32-b62a-1b43f785584d ;
+    schema:name "freeze_id" .
+
+alspacdcs:1b737f6f-f7b5-425c-ae16-45ce9ae8796c a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:md5sum "0fe43f888776059fef0a76d3f08d00ad" ;
+    alspacdcs:number_of_variants 507586 ;
+    schema:description """Extended variant information file accompanying a .bed binary
+  genotype table. (in plink you can use --make-just-bim can be used to update just
+  this file.) A text file with no header line, and one line per
+  variant with the following six fields:
+
+    1.Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
+    '0' indicates unknown)
+    or name
+    2. Variant identifier
+    3. Position in morgans or centimorgans (safe to use dummy value of '0')
+    4. Base-pair coordinate (1-based; limited to 231-2)
+    5. Allele 1 (corresponding to clear bits in .bed; usually minor)
+    6. Allele 2 (corresponding to set bits in .bed; usually major)
+  """ ;
+    schema:name "freeze_id.bim" ;
+    dcat:byteSize "13.9MB" ;
+    dcat:mediaType ".bim" .
+
+alspacdcs:2d9618aa-32bb-4b32-b62a-1b43f785584d a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:md5sum "4be994a3152f66b5a2356a3fb9ef7109" ;
+    schema:name "freeze_id.log" ;
+    dcat:byteSize "1.1KB" ;
+    dcat:mediaType ".log" .
+
+alspacdcs:353f07d8-4345-4904-bca2-f6549612f38d a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:md5sum "7c64a240cf31539eadbebfc046e8f3dd" ;
+    alspacdcs:number_of_participants 2198 ;
+    schema:description """A text file with no header line, and one line per sample with the following six fields:
+1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)
+Here We use both the first two fields to have the full id of the partipant. i.e. not seprate family and within family ids.""" ;
+    schema:name "freeze_id.fam" ;
+    dcat:byteSize "122.3KB" ;
+    dcat:mediaType ".fam" .
+
+alspacdcs:40da3e0d-a450-46ee-954e-c1b70751f3d0 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:md5sum "304b0d356880c5174806ce08d7beffd3" ;
+    alspacdcs:number_of_participants 2198 ;
+    alspacdcs:number_of_variants 507586 ;
+    schema:description """Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files.
+  """ ;
+    schema:name "freeze_id.bed" ;
+    dcat:byteSize "266.2MB" ;
+    dcat:mediaType ".bed" .
+
+alspacdcs:b0d09887-a085-4d7c-a0d2-c9986a72c3db a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:e69564ad-9e75-4eea-8779-5ecaf04cff23 ;
+    schema:name "freeze_id" .
+
+alspacdcs:c5d1dff1-3f6d-4506-aebd-c56db36e8d85 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:353f07d8-4345-4904-bca2-f6549612f38d ;
+    schema:name "freeze_id" .
+
+alspacdcs:c5f6f2d2-3f61-4bfa-a43c-c6e349a76607 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:1b737f6f-f7b5-425c-ae16-45ce9ae8796c ;
+    schema:name "freeze_id" .
+
+alspacdcs:cceed8c5-0276-4dbe-a617-7b585078caa0 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:40da3e0d-a450-46ee-954e-c1b70751f3d0 ;
+    schema:name "freeze_id" .
+
+alspacdcs:e69564ad-9e75-4eea-8779-5ecaf04cff23 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe ;
+    alspacdcs:md5sum "7692c90adab2652f3d3ce9669af1f248" ;
+    schema:description "plink .hh file see https://www.cog-genomics.org/plink/1.9/formats#hh " ;
+    schema:name "freeze_id.hh" ;
+    dcat:byteSize "115.3KB" ;
+    dcat:mediaType ".hh" .
+
+alspacdcs:6c843f1c-5225-4780-8a93-58315f5e9dfe a nfo:Folder ;
+    schema:description "A dir/folder containing the plink data files" ;
+    schema:name "data" .
+

@@ -1,0 +1,387 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_f2 a dcat:Dataset ;
+    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
+    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
+    alspacdcs:freeze_number "2" ;
+    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:gi_1000g_g0m_g1_2015-10-30 ;
+    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:gi_1000g_g0m_g1 ;
+    alspacdcs:freeze_size "122G" ;
+    alspacdcs:git_tag "https://github.com/alspac/dataset_gi_1000g_g0m_g1/releases/tag/freeze2" ;
+    alspacdcs:has_parts alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr10_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr11_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr12_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr13_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr14_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr15_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr16_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr17_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr18_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr19_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr1_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr20_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr21_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr22_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr23_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr2_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr3_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr4_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr5_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr6_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr7_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr8_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr9_f2,
+        alspacdcs:gi_1000g_g0m_g1_2015-10-30_sample_f2 ;
+    alspacdcs:is_current_freeze true ;
+    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
+    alspacdcs:previous_freeze alspacdcs:gi_1000g_g0m_g1_2015-10-30_f1 ;
+    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
+    schema:description "This is the second freeze of the the 2015-10-30 version of gi_1000g_g0m_g1 datatset. It contains data in the oxford format which is a combination of bgen and sample files. It is a subset of the data in gi_1000g_g0m_g1_2015-10-30 limited to one format and with participants who have withdrawn their consent removed." ;
+    schema:name "Genome-wide - 1000G imputed - G0 mothers + G1 version 2015-10-30 freeze 2" .
+
+alspacdcs:05ff048fdb69e5230f6114b79fe15316_filtered_04.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "05ff048fdb69e5230f6114b79fe15316" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1968171 ;
+    schema:description "An Oxford Bgen file for Chr4. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_04.bgen" ;
+    dcat:byteSize "8.4G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample a dcat:Distribution ;
+    alspacdcs:md5sum "0a90132571090d09d48b243764efb4e8" ;
+    alspacdcs:number_of_participants 17451 ;
+    schema:description "A plain text .sample file. See https://doi.org/10.1101/308296 for file format details." ;
+    schema:name "swapped.sample" ;
+    dcat:byteSize "1.2M" ;
+    dcat:mediaType ".sample" .
+
+alspacdcs:0e3a68a7e1ec1f2cb0010a626ab9263a_filtered_09.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "0e3a68a7e1ec1f2cb0010a626ab9263a" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1187731 ;
+    schema:description """An Oxford Bgen file for Chr9. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+ (bgen v1.2)         """ ;
+    schema:name "filtered_09.bgen" ;
+    dcat:byteSize "5.1G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:1228bfe2240510d07d6dab6b9c7f2569_filtered_02.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "1228bfe2240510d07d6dab6b9c7f2569" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 2346862 ;
+    schema:description """An Oxford Bgen file for Chr2. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+ (bgen v1.2)         """ ;
+    schema:name "filtered_02.bgen" ;
+    dcat:byteSize "9.1G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:1c3519bc6b6d7690c08aafd4ebc8a257_filtered_16.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "1c3519bc6b6d7690c08aafd4ebc8a257" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 865998 ;
+    schema:description """An Oxford Bgen file for Chr16. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+ (bgen v1.2)         """ ;
+    schema:name "filtered_16.bgen" ;
+    dcat:byteSize "4.3G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:1d53bc005dd16fb158ad246341a53f90_filtered_01.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "1d53bc005dd16fb158ad246341a53f90" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 2155158 ;
+    schema:description """An Oxford Bgen file for Chr1. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+   (bgen v1.2)       """ ;
+    schema:name "filtered_01.bgen" ;
+    dcat:byteSize "9.1G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:3630b689b44e66f3d35b2bb9f68bf610_filtered_06.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "3630b689b44e66f3d35b2bb9f68bf610" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1755859 ;
+    schema:description """An Oxford Bgen file for Chr6. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+  (bgen v1.2)        """ ;
+    schema:name "filtered_06.bgen" ;
+    dcat:byteSize "6.8G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:5a203e624683e0a9bd7e6a044a55d23b_filtered_08.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "5a203e624683e0a9bd7e6a044a55d23b" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1557429 ;
+    schema:description "An Oxford Bgen file for Chr8. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_08.bgen" ;
+    dcat:byteSize "5.9G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:626f2b3c896fb964e11a9813eb58950d_filtered_10.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "626f2b3c896fb964e11a9813eb58950d" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1361506 ;
+    schema:description "An Oxford Bgen file for Chr10. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_10.bgen" ;
+    dcat:byteSize "5.4G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:627d479b1c560563f5683b758ec5fe83_filtered_08.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "627d479b1c560563f5683b758ec5fe83" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1599387 ;
+    schema:description """An Oxford Bgen file for Chr7. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+  (bgen v1.2)        """ ;
+    schema:name "filtered_07.bgen" ;
+    dcat:byteSize "7.1G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:67e580b2a695e7d21c48e21ad257f480_filtered_05.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "67e580b2a695e7d21c48e21ad257f480" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1808090 ;
+    schema:description "An Oxford Bgen file for Chr5. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_05.bgen" ;
+    dcat:byteSize "6.9G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:747157de02c44b5608723f104068eb7a_filtered_11.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "747157de02c44b5608723f104068eb7a" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1356882 ;
+    schema:description "An Oxford Bgen file for Chr11. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_11.bgen" ;
+    dcat:byteSize "5.4G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:996703072516e362395c75525a11dac5_filtered_17.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "996703072516e362395c75525a11dac5" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 753174 ;
+    schema:description "An Oxford Bgen file for Chr17. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_17.bgen" ;
+    dcat:byteSize "3.8G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:996703072516e362395c75525a11dac5_filtered_18.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "996703072516e362395c75525a11dac5" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 783010 ;
+    schema:description "An Oxford Bgen file for Chr18. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_18.bgen" ;
+    dcat:byteSize "3.5G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:a12e4ace173e21e20269c7043fba2c1b a dcat:Distribution ;
+    alspacdcs:md5sum "a12e4ace173e21e20269c7043fba2c1b" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1966662 ;
+    schema:description """An Oxford Bgen file for Chr1. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+ (bgen v1.2)         """ ;
+    schema:name "filtered_03.bgen" ;
+    dcat:byteSize "7.7G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:af7ed74c619827ce5fcd71dd4de5051e_filtered_14.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "af7ed74c619827ce5fcd71dd4de5051e" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 904351 ;
+    schema:description """An Oxford Bgen file for Chr14. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details.
+ (bgen v1.2)         """ ;
+    schema:name "filtered_14.bgen" ;
+    dcat:byteSize "3.9G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:b471936f24534263f52227ebd574ba8c_filtered_21.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "b471936f24534263f52227ebd574ba8c" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 377554 ;
+    schema:description "An Oxford Bgen file for Chr21. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_21.bgen" ;
+    dcat:byteSize "1.9G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:b53e28e084c2143be5042fe21c42499b_filtered_19.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "b53e28e084c2143be5042fe21c42499b" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 603516 ;
+    schema:description "An Oxford Bgen file for Chr19. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_19.bgen" ;
+    dcat:byteSize "4.0G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:b6cccb84156f0cc6cd3ce63c65735097_filtered_12.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "b6cccb84156f0cc6cd3ce63c65735097" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1314328 ;
+    schema:description "An Oxford Bgen file for Chr12. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_12.bgen" ;
+    dcat:byteSize "5.4G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:b7ad79bed88c1b82f6dc33284ad910c7_filtered_20.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "b7ad79bed88c1b82f6dc33284ad910c7" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 617694 ;
+    schema:description "An Oxford Bgen file for Chr20. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_20.bgen" ;
+    dcat:byteSize "2.8G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:c000c85566cf8b557d68ea8bc1c81e9e_filtered_15.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "c000c85566cf8b557d68ea8bc1c81e9e" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 812545 ;
+    schema:description "An Oxford Bgen file for Chr15. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_15.bgen" ;
+    dcat:byteSize "3.7G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:c20c544fda38696b1bedc1225b8a33c1_filtered_13.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "c20c544fda38696b1bedc1225b8a33c1" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 987740 ;
+    schema:description "An Oxford Bgen file for Chr13. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)          " ;
+    schema:name "filtered_13.bgen" ;
+    dcat:byteSize "4.0G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:dcb10907c9d725d0eb5b97bb08ef41a8_filtered_23.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "dcb10907c9d725d0eb5b97bb08ef41a8" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 1250218 ;
+    schema:description "An Oxford Bgen file for Chr23. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)" ;
+    schema:name "filtered_23.bgen" ;
+    dcat:byteSize "5.9G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:f4294a748324f48c6412f622987ce3f9_filtered_22.bgen a dcat:Distribution ;
+    alspacdcs:md5sum "f4294a748324f48c6412f622987ce3f9" ;
+    alspacdcs:number_of_participants 17451 ;
+    alspacdcs:number_of_variants 365644 ;
+    schema:description "An Oxford Bgen file for Chr22. To be used with alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample file. See https://doi.org/10.1101/308296 for file format details. (bgen v1.2)" ;
+    schema:name "filtered_22.bgen" ;
+    dcat:byteSize "2.1G" ;
+    dcat:mediaType ".bgen" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr10_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:626f2b3c896fb964e11a9813eb58950d_filtered_10.bgen ;
+    schema:description "Data for Chr10" ;
+    schema:name "Chr10" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr11_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:747157de02c44b5608723f104068eb7a_filtered_11.bgen ;
+    schema:description "Data for Chr11" ;
+    schema:name "Chr11" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr12_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b6cccb84156f0cc6cd3ce63c65735097_filtered_12.bgen ;
+    schema:description "Data for Chr12" ;
+    schema:name "Chr12" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr13_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:c20c544fda38696b1bedc1225b8a33c1_filtered_13.bgen ;
+    schema:description "Data for Chr13" ;
+    schema:name "Chr13" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr14_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:af7ed74c619827ce5fcd71dd4de5051e_filtered_14.bgen ;
+    schema:description "Data for Chr14" ;
+    schema:name "Chr14" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr15_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:c000c85566cf8b557d68ea8bc1c81e9e_filtered_15.bgen ;
+    schema:description "Data for Chr15" ;
+    schema:name "Chr15" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr16_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:1c3519bc6b6d7690c08aafd4ebc8a257_filtered_16.bgen ;
+    schema:description "Data for Chr16" ;
+    schema:name "Chr16" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr17_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:996703072516e362395c75525a11dac5_filtered_17.bgen ;
+    schema:description "Data for Chr17" ;
+    schema:name "Chr17" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr18_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:996703072516e362395c75525a11dac5_filtered_18.bgen ;
+    schema:description "Data for Chr18" ;
+    schema:name "Chr18" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr19_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b53e28e084c2143be5042fe21c42499b_filtered_19.bgen ;
+    schema:description "Data for Chr19" ;
+    schema:name "Chr19" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr1_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:1d53bc005dd16fb158ad246341a53f90_filtered_01.bgen ;
+    schema:description "Data for Chr1" ;
+    schema:name "Chr1" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr20_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b7ad79bed88c1b82f6dc33284ad910c7_filtered_20.bgen ;
+    schema:description "Data for Chr20" ;
+    schema:name "Chr20" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr21_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b471936f24534263f52227ebd574ba8c_filtered_21.bgen ;
+    schema:description "Data for Chr21" ;
+    schema:name "Chr21" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr22_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:f4294a748324f48c6412f622987ce3f9_filtered_22.bgen ;
+    schema:description "Data for Chr22" ;
+    schema:name "Chr22" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr23_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:dcb10907c9d725d0eb5b97bb08ef41a8_filtered_23.bgen ;
+    schema:description "Data for Chr23" ;
+    schema:name "Chr23" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr2_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:1228bfe2240510d07d6dab6b9c7f2569_filtered_02.bgen ;
+    schema:description "Data for Chr2" ;
+    schema:name "Chr2" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr3_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:a12e4ace173e21e20269c7043fba2c1b ;
+    schema:description "Data for Chr3" ;
+    schema:name "Chr3" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr4_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:05ff048fdb69e5230f6114b79fe15316_filtered_04.bgen ;
+    schema:description "Data for Chr4" ;
+    schema:name "Chr4" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr5_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:67e580b2a695e7d21c48e21ad257f480_filtered_05.bgen ;
+    schema:description "Data for Chr5" ;
+    schema:name "Chr5" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr6_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:3630b689b44e66f3d35b2bb9f68bf610_filtered_06.bgen ;
+    schema:description "Data for Chr6" ;
+    schema:name "Chr6" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr7_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:627d479b1c560563f5683b758ec5fe83_filtered_08.bgen ;
+    schema:description "Data for Chr7" ;
+    schema:name "Chr7" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr8_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:5a203e624683e0a9bd7e6a044a55d23b_filtered_08.bgen ;
+    schema:description "Data for Chr8" ;
+    schema:name "Chr8" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_chr9_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:0e3a68a7e1ec1f2cb0010a626ab9263a_filtered_09.bgen ;
+    schema:description "Data for Chr9" ;
+    schema:name "Chr9" .
+
+alspacdcs:gi_1000g_g0m_g1_2015-10-30_sample_f2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:0a90132571090d09d48b243764efb4e8_swapped.sample ;
+    schema:description "The samples in the data. To be used with the genetic data." ;
+    schema:name "Samples" .
+
