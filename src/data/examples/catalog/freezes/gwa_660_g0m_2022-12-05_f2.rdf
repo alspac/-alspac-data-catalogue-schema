@@ -1,53 +1,84 @@
-@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#> .
-@prefix schema: <http://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-alspacdcs:gwa_660_g0m_2022-12-05_f2 a dcat:Dataset ;
-    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
-    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
-    alspacdcs:freeze_number "2" ;
-    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:gwa_660_g0m_2022-12-05 ;
-    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:gwa_660_g0m ;
-    alspacdcs:freeze_size "2G" ;
-    alspacdcs:git_tag "https://github.com/alspac/dataset_gwa_660_g0m/releases/tag/freeze2" ;
-    alspacdcs:has_containers alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1,
-        alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012,
-        alspacdcs:b610f7ab-8af9-4bd4-8edc-4d90cd0d2763 ;
-    alspacdcs:has_parts alspacdcs:2e99b905-8f7a-4679-91af-19eaa043b345,
-        alspacdcs:39b88df9-de1c-4abd-abd2-68751b6a8e26,
-        alspacdcs:58b8c0ca-ae2c-4cf6-b4f7-7cbf17a3b10f,
-        alspacdcs:971d0382-a395-465c-ba91-e73d5957c768,
-        alspacdcs:f456e79f-2255-42d8-a121-82d80293a034 ;
-    alspacdcs:is_current_freeze true ;
-    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
-    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
-    schema:description "Genome-wide array data including raw files and genotype calls for G0 mothers" ;
-    schema:name "Freeze 2 version 2022-12-05 Genome-wide - Illumina 660 quad - G0 mothers" .
-
-alspacdcs:2e99b905-8f7a-4679-91af-19eaa043b345 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:fe7667c9-50ce-4385-a3f4-62a740a65336 ;
-    schema:description "Information about the plink run for making the dataset" ;
-    schema:name "Log information" .
-
-alspacdcs:39b88df9-de1c-4abd-abd2-68751b6a8e26 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:822e8560-f2f1-49fa-8b03-af745fe130ba,
-        alspacdcs:e0cfc624-5e48-43d0-b31a-160ed23e9768 ;
-    schema:description "The genetic data" ;
-    schema:name "Biallelic genotype table" .
-
-alspacdcs:58b8c0ca-ae2c-4cf6-b4f7-7cbf17a3b10f a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:60b656f8-fb99-4ccd-9701-d7d896b4658d,
-        alspacdcs:de57fccd-d6a5-4355-8522-c283f9ca589c ;
-    schema:description "Information about genetic variants" ;
-    schema:name "Variant Information" .
-
-alspacdcs:60b656f8-fb99-4ccd-9701-d7d896b4658d a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012 ;
-    alspacdcs:md5sum "9cc913bd598cd4b088ba96599d6eb197" ;
-    alspacdcs:number_of_variants 465740 ;
-    schema:description """Legacy 1 Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1">
+    <schema:name>legacy2</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b610f7ab-8af9-4bd4-8edc-4d90cd0d2763"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b454c198-d15b-4420-ab75-270c0377c6eb">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>448k</dcat:byteSize>
+    <schema:name>freeze_id.fam</schema:name>
+    <schema:description>legacy2
+A text file with no header line, and one line per sample with the following six fields:
+1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8654</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>6b50057427ff4a9e1ed6bbbc49f28f14</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2e99b905-8f7a-4679-91af-19eaa043b345">
+    <schema:name>Log information</schema:name>
+    <schema:description>Information about the plink run for making the dataset</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/fe7667c9-50ce-4385-a3f4-62a740a65336"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d6df50aa-c36f-4af9-8224-40f0cbd44e21">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>1k</dcat:byteSize>
+    <schema:name>freeze_id.fam</schema:name>
+    <schema:description>legacy 1 plink log file</schema:description>
+    <alspacdcs:md5sum>d99b968f44a8adc68098b2afdfbbe220</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012">
+    <schema:name>legacy1</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b610f7ab-8af9-4bd4-8edc-4d90cd0d2763"/>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f456e79f-2255-42d8-a121-82d80293a034">
+    <schema:name>Sample information</schema:name>
+    <schema:description>Information about the samples for the dataset</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c59e34c3-62e6-4750-8beb-665876b255ff"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b454c198-d15b-4420-ab75-270c0377c6eb"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m_2022-12-05_f2">
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f456e79f-2255-42d8-a121-82d80293a034"/>
+    <alspacdcs:linker_file_md5sum>33b08d90fa3e43504308f20283088a6b</alspacdcs:linker_file_md5sum>
+    <alspacdcs:is_current_freeze rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alspacdcs:is_current_freeze>
+    <alspacdcs:git_tag>https://github.com/alspac/dataset_gwa_660_g0m/releases/tag/freeze2</alspacdcs:git_tag>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/39b88df9-de1c-4abd-abd2-68751b6a8e26"/>
+    <alspacdcs:freeze_number>2</alspacdcs:freeze_number>
+    <alspacdcs:freeze_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-12-19</alspacdcs:freeze_date>
+    <schema:name>Freeze 2 version 2022-12-05 Genome-wide - Illumina 660 quad - G0 mothers</schema:name>
+    <schema:description>Genome-wide array data including raw files and genotype calls for G0 mothers</schema:description>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/971d0382-a395-465c-ba91-e73d5957c768"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:all_individuals_to_exclude_md5sum>da4785a577a4d837883710f7ab45af51</alspacdcs:all_individuals_to_exclude_md5sum>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/58b8c0ca-ae2c-4cf6-b4f7-7cbf17a3b10f"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2e99b905-8f7a-4679-91af-19eaa043b345"/>
+    <alspacdcs:freeze_of_named_alspac_dataset rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m"/>
+    <alspacdcs:woc_file_md5sum>2feb3852dfd14c2868072624fd7fa1ea</alspacdcs:woc_file_md5sum>
+    <alspacdcs:freeze_of_alspac_dataset_version rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gwa_660_g0m_2022-12-05"/>
+    <alspacdcs:freeze_size>2G</alspacdcs:freeze_size>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b610f7ab-8af9-4bd4-8edc-4d90cd0d2763"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/60b656f8-fb99-4ccd-9701-d7d896b4658d">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>13M</dcat:byteSize>
+    <schema:name>freeze_id.bim</schema:name>
+    <schema:description>Legacy 1 Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
 
   1.Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
   '0' indicates unknown)
@@ -56,61 +87,35 @@ alspacdcs:60b656f8-fb99-4ccd-9701-d7d896b4658d a dcat:Distribution ;
   3. Position in morgans or centimorgans (safe to use dummy value of '0')
   4. Base-pair coordinate (1-based; limited to 231-2)
   5. Allele 1 (corresponding to clear bits in .bed; usually minor)
-  6. Allele 2 (corresponding to set bits in .bed; usually major)""" ;
-    schema:name "freeze_id.bim" ;
-    dcat:byteSize "13M" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:822e8560-f2f1-49fa-8b03-af745fe130ba a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1 ;
-    alspacdcs:md5sum "8e0233613d6847420aa0c44e5d314c7a" ;
-    alspacdcs:number_of_participants 8654 ;
-    alspacdcs:number_of_variants 465740 ;
-    schema:description "Legacy 2 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy2 distribution of the plink bed file." ;
-    schema:name "freeze_id.bed" ;
-    dcat:byteSize "962M" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:971d0382-a395-465c-ba91-e73d5957c768 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:d6df50aa-c36f-4af9-8224-40f0cbd44e21 ;
-    schema:description "Information about the plink run for making the dataset" ;
-    schema:name "Log information" .
-
-alspacdcs:b454c198-d15b-4420-ab75-270c0377c6eb a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1 ;
-    alspacdcs:md5sum "6b50057427ff4a9e1ed6bbbc49f28f14" ;
-    alspacdcs:number_of_participants 8654 ;
-    schema:description """legacy2
+  6. Allele 2 (corresponding to set bits in .bed; usually major)</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465740</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>9cc913bd598cd4b088ba96599d6eb197</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c59e34c3-62e6-4750-8beb-665876b255ff">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>448k</dcat:byteSize>
+    <schema:name>freeze_id.fam</schema:name>
+    <schema:description>legacy 1
 A text file with no header line, and one line per sample with the following six fields:
-1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)""" ;
-    schema:name "freeze_id.fam" ;
-    dcat:byteSize "448k" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:c59e34c3-62e6-4750-8beb-665876b255ff a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012 ;
-    alspacdcs:md5sum "6b50057427ff4a9e1ed6bbbc49f28f14" ;
-    alspacdcs:number_of_participants 8654 ;
-    schema:description """legacy 1
-A text file with no header line, and one line per sample with the following six fields:
-1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)""" ;
-    schema:name "freeze_id.fam" ;
-    dcat:byteSize "448k" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:d6df50aa-c36f-4af9-8224-40f0cbd44e21 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012 ;
-    alspacdcs:md5sum "d99b968f44a8adc68098b2afdfbbe220" ;
-    schema:description "legacy 1 plink log file" ;
-    schema:name "freeze_id.fam" ;
-    dcat:byteSize "1k" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:de57fccd-d6a5-4355-8522-c283f9ca589c a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1 ;
-    alspacdcs:md5sum "9cc913bd598cd4b088ba96599d6eb197" ;
-    alspacdcs:number_of_variants 465740 ;
-    schema:description """Legacy 2  Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
+1. Family ID ('FID') 2. Within-family ID ('IID'; cannot be '0') 3. Within-family ID of father ('0' if father isn't in dataset) 4. Within-family ID of mother ('0' if mother isn't in dataset) 5. Sex code ('1' = male, '2' = female, '0' = unknown) 6. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)</schema:description>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8654</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>6b50057427ff4a9e1ed6bbbc49f28f14</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/971d0382-a395-465c-ba91-e73d5957c768">
+    <schema:name>Log information</schema:name>
+    <schema:description>Information about the plink run for making the dataset</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d6df50aa-c36f-4af9-8224-40f0cbd44e21"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/de57fccd-d6a5-4355-8522-c283f9ca589c">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>13M</dcat:byteSize>
+    <schema:name>freeze_id.bim</schema:name>
+    <schema:description>Legacy 2  Extended variant information file accompanying a .bed binary genotype table. (--make-just-bim can be used to update just this file.) A text file with no header line, and one line per variant with the following six fields:
 
   1.Chromosome code (either an integer, or 'X'/'Y'/'XY'/'MT';
   '0' indicates unknown)
@@ -119,47 +124,61 @@ alspacdcs:de57fccd-d6a5-4355-8522-c283f9ca589c a dcat:Distribution ;
   3. Position in morgans or centimorgans (safe to use dummy value of '0')
   4. Base-pair coordinate (1-based; limited to 231-2)
   5. Allele 1 (corresponding to clear bits in .bed; usually minor)
-  6. Allele 2 (corresponding to set bits in .bed; usually major)""" ;
-    schema:name "freeze_id.bim" ;
-    dcat:byteSize "13M" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:e0cfc624-5e48-43d0-b31a-160ed23e9768 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012 ;
-    alspacdcs:md5sum "8e0233613d6847420aa0c44e5d314c7a" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 526688 ;
-    schema:description "Legacy 1 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy1 distribution of the plink bed file." ;
-    schema:name "freeze_id.bed" ;
-    dcat:byteSize "962M" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:f456e79f-2255-42d8-a121-82d80293a034 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:b454c198-d15b-4420-ab75-270c0377c6eb,
-        alspacdcs:c59e34c3-62e6-4750-8beb-665876b255ff ;
-    schema:description "Information about the samples for the dataset" ;
-    schema:name "Sample information" .
-
-alspacdcs:fe7667c9-50ce-4385-a3f4-62a740a65336 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1 ;
-    alspacdcs:md5sum "6b50057427ff4a9e1ed6bbbc49f28f14" ;
-    schema:description """legacy2 plink log file
-        """ ;
-    schema:name "freeze_id.log" ;
-    dcat:byteSize "1.1k" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:b610f7ab-8af9-4bd4-8edc-4d90cd0d2763 a nfo:Folder ;
-    schema:description "A dir/folder containing the plink data files" ;
-    schema:name "data" .
-
-alspacdcs:9f6244b7-b1c6-4164-9180-c996255d8de1 a nfo:Folder ;
-    alspacdcs:belongs_to_container alspacdcs:b610f7ab-8af9-4bd4-8edc-4d90cd0d2763 ;
-    schema:description "A dir/folder containing the plink data files" ;
-    schema:name "legacy2" .
-
-alspacdcs:ab3e1d38-8d4f-46c9-b860-cbccddecd012 a nfo:Folder ;
-    alspacdcs:belongs_to_container alspacdcs:b610f7ab-8af9-4bd4-8edc-4d90cd0d2763 ;
-    schema:description "A dir/folder containing the plink data files" ;
-    schema:name "legacy1" .
-
+  6. Allele 2 (corresponding to set bits in .bed; usually major)</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465740</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>9cc913bd598cd4b088ba96599d6eb197</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b610f7ab-8af9-4bd4-8edc-4d90cd0d2763">
+    <schema:name>data</schema:name>
+    <schema:description>A dir/folder containing the plink data files</schema:description>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/822e8560-f2f1-49fa-8b03-af745fe130ba">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>962M</dcat:byteSize>
+    <schema:name>freeze_id.bed</schema:name>
+    <schema:description>Legacy 2 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy2 distribution of the plink bed file.</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465740</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8654</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>8e0233613d6847420aa0c44e5d314c7a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e0cfc624-5e48-43d0-b31a-160ed23e9768">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>962M</dcat:byteSize>
+    <schema:name>freeze_id.bed</schema:name>
+    <schema:description>Legacy 1 plink bed file. Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files. The legacy1 distribution of the plink bed file.</schema:description>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">526688</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>8e0233613d6847420aa0c44e5d314c7a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ab3e1d38-8d4f-46c9-b860-cbccddecd012"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/fe7667c9-50ce-4385-a3f4-62a740a65336">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>1.1k</dcat:byteSize>
+    <schema:name>freeze_id.log</schema:name>
+    <schema:description>legacy2 plink log file
+        </schema:description>
+    <alspacdcs:md5sum>6b50057427ff4a9e1ed6bbbc49f28f14</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9f6244b7-b1c6-4164-9180-c996255d8de1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/39b88df9-de1c-4abd-abd2-68751b6a8e26">
+    <schema:name>Biallelic genotype table</schema:name>
+    <schema:description>The genetic data</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e0cfc624-5e48-43d0-b31a-160ed23e9768"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/822e8560-f2f1-49fa-8b03-af745fe130ba"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/58b8c0ca-ae2c-4cf6-b4f7-7cbf17a3b10f">
+    <schema:name>Variant Information</schema:name>
+    <schema:description>Information about genetic variants</schema:description>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/de57fccd-d6a5-4355-8522-c283f9ca589c"/>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/60b656f8-fb99-4ccd-9701-d7d896b4658d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+</rdf:RDF>

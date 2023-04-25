@@ -1,1170 +1,1350 @@
-@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#> .
-@prefix schema: <http://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-alspacdcs:gi_hapmap2_g0m_2022-12-07_f2 a dcat:Dataset ;
-    alspacdcs:all_individuals_to_exclude_md5sum "da4785a577a4d837883710f7ab45af51" ;
-    alspacdcs:freeze_date "2022-12-19"^^xsd:date ;
-    alspacdcs:freeze_number "2" ;
-    alspacdcs:freeze_of_alspac_dataset_version alspacdcs:gi_hapmap2_g0m_2022-12-07 ;
-    alspacdcs:freeze_of_named_alspac_dataset alspacdcs:gi_hapmap2_g0m ;
-    alspacdcs:freeze_size "4.9G" ;
-    alspacdcs:git_tag "https://github.com/alspac/dataset_gi_hapmap2_g0m/releases/tag/freeze2" ;
-    alspacdcs:has_containers alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:has_parts alspacdcs:02526725-2b5c-47b7-80da-1871d7116701,
-        alspacdcs:02fe6c53-2451-456c-89d7-940ff2931ce5,
-        alspacdcs:048b5054-96f4-4bdb-be49-80871a143638,
-        alspacdcs:05e64663-3254-4936-9d94-8ec1d2fe6f54,
-        alspacdcs:0a832be6-00cf-4e45-80a1-f1cd5fc1a77c,
-        alspacdcs:1032066b-bb6b-402d-9d21-10728d344352,
-        alspacdcs:10ca2381-2e29-4596-953c-c0a9eb598e0a,
-        alspacdcs:1405f6e5-e2b6-4b33-9966-218903dca75b,
-        alspacdcs:18b148e1-fb8b-42ba-ad0a-e6541b3e51fa,
-        alspacdcs:24b2cdf5-de78-49eb-89f4-654701aa69c8,
-        alspacdcs:26c16bd2-6fe9-45da-9fa6-64da34877711,
-        alspacdcs:2853c528-9e92-409f-9617-5d47c80f69c6,
-        alspacdcs:2a60adf0-81c6-4e02-b0f4-9f7dcc722094,
-        alspacdcs:2f717b0d-89a0-4697-931c-477269e5405c,
-        alspacdcs:2ffa871a-2482-4682-acc9-1aba3cc338db,
-        alspacdcs:316f8a2a-9e44-437a-bb92-2de42c79dcf7,
-        alspacdcs:340779dd-9a08-4d61-97a3-f9d2454a8697,
-        alspacdcs:34cd7eb5-3c5a-48c5-a3cb-058593705e43,
-        alspacdcs:34f2f166-dfca-47b1-aba7-3c97c009c0dc,
-        alspacdcs:381d3715-b436-4780-9ede-c288504700f4,
-        alspacdcs:3a4d950e-abf6-43ef-8850-45abad00dd7c,
-        alspacdcs:3ee40f25-2d9a-471e-b97d-9c0501707e38,
-        alspacdcs:418912be-8357-493c-baa6-f6830a37feae,
-        alspacdcs:463d1f32-2048-4ab7-a856-86f85ad5ac45,
-        alspacdcs:465bb628-2422-471b-bdbc-44fce53711dd,
-        alspacdcs:472a41d3-23b5-481e-b8fa-c99a03ced9c1,
-        alspacdcs:4c3f0cd8-77eb-436e-9aeb-fb2728925213,
-        alspacdcs:4dcd9379-7b60-4f55-8056-60834950ea27,
-        alspacdcs:5ad54753-f82e-4a1c-9ca3-e15cc6609bc8,
-        alspacdcs:5b0aebae-ab41-4f85-bc32-1a17db8561cb,
-        alspacdcs:5df062a6-f42c-434e-b391-2efebe06cc5b,
-        alspacdcs:5fa16fd8-d259-4e6b-9493-421777c1c84f,
-        alspacdcs:608e24ca-625c-4e0d-8869-2a7f4646b9d1,
-        alspacdcs:629598d2-af99-4fc3-8df1-926e0b4055ef,
-        alspacdcs:64e09193-67ae-4edf-ab58-2b4e463f1728,
-        alspacdcs:65f873bd-9a86-41c5-89c1-f37a000d9c96,
-        alspacdcs:6a03837e-e8ab-41f4-ae91-56c5c9c2239f,
-        alspacdcs:6a830c5f-7397-4e9c-a444-9f62c86547bf,
-        alspacdcs:6d61adba-89cb-47de-b952-a0b9cad24e96,
-        alspacdcs:72d64db9-2e2f-4a82-9fa5-6722bd2cc9e4,
-        alspacdcs:7989ec08-73b5-496f-ad38-0741d6893d96,
-        alspacdcs:7ecca087-d444-4a4d-be73-53a7e22f2236,
-        alspacdcs:846bb3b7-c40c-41c5-9c87-9f360b7e035e,
-        alspacdcs:85ba529e-5d6e-4530-921e-2071c5f80ec2,
-        alspacdcs:8b7f0aad-c1d0-4175-b65c-0ce6392b2fed,
-        alspacdcs:8d16df55-6adc-4cba-9999-b1e325ca6945,
-        alspacdcs:8fdbdcd9-7c30-49bf-ab80-7c330d0a0ea4,
-        alspacdcs:981d5443-66ab-4ed7-a15a-faebf893cde1,
-        alspacdcs:989ed402-a9f3-4b1e-93a3-b2d2016c8410,
-        alspacdcs:9ccbf5c6-772a-4244-9545-c468ec990443,
-        alspacdcs:a650eecc-5a67-4ef4-a058-ed6a7ce24f73,
-        alspacdcs:a6ef0f28-7dbe-4810-8f71-94384d81fe5a,
-        alspacdcs:a82e3486-742c-4c9a-8178-23efeee5fea3,
-        alspacdcs:a9d9d58a-aef1-4718-97c5-11ae2090ee16,
-        alspacdcs:aa4339c4-0a36-424a-adb8-e0fafc1101ab,
-        alspacdcs:adb656b4-2822-40d6-8838-c18e3e3f8ebf,
-        alspacdcs:aeb1d70c-bc8a-4e2b-a20c-7384336b199e,
-        alspacdcs:aef1006c-d75c-4f3f-b625-64e89737b456,
-        alspacdcs:af6f016b-a1c9-4433-8782-c91e376f0324,
-        alspacdcs:b0964999-77e4-4140-974d-e999df473438,
-        alspacdcs:b1a3ade7-9927-4022-b51d-4625a22369e8,
-        alspacdcs:b55979e2-3e0e-4073-b430-bc1d02fe9407,
-        alspacdcs:b6a4d58d-591a-4898-bb6e-bdde7b4198e0,
-        alspacdcs:b70b48f6-9c61-480c-8774-9efb22e65536,
-        alspacdcs:b82587ef-9908-429e-9213-46ee81825a54,
-        alspacdcs:b9b97f2b-b0f6-4246-87e9-bf8c3c4c32fb,
-        alspacdcs:bc090ee7-8ed4-4680-a1da-6c31b04ee5f6,
-        alspacdcs:c04e7148-b963-41fd-af51-62801893836c,
-        alspacdcs:c78b777e-00e9-42b2-93ba-a33ab809fba2,
-        alspacdcs:c7979cfb-552b-4335-a272-69ed873a8611,
-        alspacdcs:c7fbf1df-07cc-4c80-b759-07cbedf0e91b,
-        alspacdcs:d1da4947-c33c-4a3a-8a04-d416ec7e1c5f,
-        alspacdcs:d234cd8e-8241-4d8a-b062-7ecb584349be,
-        alspacdcs:d2da8b11-a918-4162-8bde-ad4f1fee8498,
-        alspacdcs:d2e165c4-c48f-400d-b8d2-6395123ac76a,
-        alspacdcs:d5bbf7ff-f2f1-4494-aad1-601262e8fe8c,
-        alspacdcs:d84c1bcf-3c27-4b66-a375-7fa56e5e556d,
-        alspacdcs:dab3263d-94a9-4f44-813e-433f87428b3a,
-        alspacdcs:dd7cee6d-26a4-4831-adb7-17a7a1faa680,
-        alspacdcs:e417de2b-465b-45ed-837a-34aeaefc6b48,
-        alspacdcs:e6f230a4-bfb0-4808-a9d6-a740b2d14aa7,
-        alspacdcs:eadca60d-5dd9-44ce-8ae9-0ad748d65e37,
-        alspacdcs:ec359f65-9310-44ad-852f-749402165764,
-        alspacdcs:ed9a395f-ce22-40e7-b9a3-309a53e1222f,
-        alspacdcs:eec90bbd-3b5b-438d-a80f-fbcb760ae7ba,
-        alspacdcs:f02b09a6-44f6-4d1c-a73c-02d6b3cca994,
-        alspacdcs:f52d36aa-ec51-4f2a-8e59-0ae28ad7b2ba,
-        alspacdcs:fd96801b-0748-4d45-8ad8-7be84100f4fc ;
-    alspacdcs:is_current_freeze true ;
-    alspacdcs:linker_file_md5sum "33b08d90fa3e43504308f20283088a6b" ;
-    alspacdcs:previous_freeze alspacdcs:gi_hapmap2_g0m_2022-12-07_f1 ;
-    alspacdcs:woc_file_md5sum "2feb3852dfd14c2868072624fd7fa1ea" ;
-    schema:description "Version 2022-12-07 freeze 2 of Genome-wide array data imputed to the HapMap2 reference panel for G0 mothers" ;
-    schema:name "Genome-wide - HapMap2 imputed - G0 mothers version 2022-12-07 freeze 2" .
-
-alspacdcs:02526725-2b5c-47b7-80da-1871d7116701 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:088b72bf-84a7-470d-aa03-068a5f5d1779 ;
-    schema:name "freeze_id_chr9" .
-
-alspacdcs:02fe6c53-2451-456c-89d7-940ff2931ce5 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:75624335-c6b0-4473-b505-731a6a068289 ;
-    schema:name "freeze_id_chr15" .
-
-alspacdcs:030be247-22fa-4efc-aa77-a2a1594569e8 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "a7341c7cc87876298c4223bf8f2532b7" ;
-    schema:name "freeze_id_chr2.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:048b5054-96f4-4bdb-be49-80871a143638 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:8b8c3755-0a0b-4182-afc2-1af0bffc0c06 ;
-    schema:name "freeze_id_chr12" .
-
-alspacdcs:05e64663-3254-4936-9d94-8ec1d2fe6f54 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:8921be0d-e030-4e5c-b856-4fed0ba20b96 ;
-    schema:name "freeze_id_chr20" .
-
-alspacdcs:072393ab-7abc-48a7-81a3-ffc27db80662 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr14.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:088b72bf-84a7-470d-aa03-068a5f5d1779 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr9.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:09521625-b72a-4164-8817-848cb6cba4be a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "b9b6bcad51c47f94a6b42c9b564c48b3" ;
-    alspacdcs:number_of_variants 33863 ;
-    schema:name "freeze_id_chr21.bim" ;
-    dcat:byteSize "924.7KB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:0a832be6-00cf-4e45-80a1-f1cd5fc1a77c a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:e3651275-353a-4fa9-81f2-12987d0fa627 ;
-    schema:name "freeze_id_chr11" .
-
-alspacdcs:0b8ea64e-a336-4e39-a6e8-e2b2d3959f2e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "6065cc7f5feb3d61dba0af30cb339e0f" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 71550 ;
-    schema:name "freeze_id_chr16.bed" ;
-    dcat:byteSize "138.6MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:1032066b-bb6b-402d-9d21-10728d344352 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:d6b53dc8-3d27-413f-9227-e59a4df2c81a ;
-    schema:name "freeze_id_chr17" .
-
-alspacdcs:10ca2381-2e29-4596-953c-c0a9eb598e0a a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:f7386c43-d1c9-4e1f-aa0c-3a72e97757dc ;
-    schema:name "freeze_id_chr19" .
-
-alspacdcs:11083cc8-a1be-4466-98b5-c1b2e1b5a4e1 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "3b3671f1daaa9264fbfb455dfc6d4dcf" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 33815 ;
-    schema:name "freeze_id_chr22.bed" ;
-    dcat:byteSize "65.5MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:11b81410-2193-4a32-8ac4-8f021141243d a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr15.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:1302eb29-2946-4811-81cc-d5676ca58f85 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr12.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:1405f6e5-e2b6-4b33-9966-218903dca75b a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:6a00f4ee-57bc-447b-8399-2b3dec9c8e60 ;
-    schema:name "freeze_id_chr11" .
-
-alspacdcs:177d4638-0d17-4c88-b800-69c147e0ba8e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "078d57d6732cf190ce12d041a70e9ea2" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 72300 ;
-    schema:name "freeze_id_chr15.bed" ;
-    dcat:byteSize "140.0MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:18b148e1-fb8b-42ba-ad0a-e6541b3e51fa a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:30a02280-214c-4e60-b572-943955783af8 ;
-    schema:name "freeze_id_chr7" .
-
-alspacdcs:1a22f317-71e7-41bb-9af0-ad6104aa29b6 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "02d89651808eabe235b6c35e06a2a121" ;
-    alspacdcs:number_of_variants 143232 ;
-    schema:name "freeze_id_chr7.bim" ;
-    dcat:byteSize "3.8MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:1ae14b83-bdd0-4e66-9068-4a296e064f84 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr22.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:1bc8b4fb-123b-4506-a87f-600cb9633dde a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "df9073ce37d5833c17a6dd7bb3ba689a" ;
-    alspacdcs:number_of_variants 138402 ;
-    schema:name "freeze_id_chr10.bim" ;
-    dcat:byteSize "3.8MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:1e3ebe8f-8798-4625-b7b8-314f11114c0d a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "a2604d5a956bd4cbbdab49202aa69eea" ;
-    alspacdcs:number_of_variants 163157 ;
-    schema:name "freeze_id_chr4.bim" ;
-    dcat:byteSize "4.3MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:1fb0d26a-f00a-4e33-8792-1b0aa65b8187 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "6fa5cc113c749e592d91583d5f257d14" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 193554 ;
-    schema:name "freeze_id_chr1.bed" ;
-    dcat:byteSize "374.9MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:2451e033-59cf-4b2a-b686-3776162dff67 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "0339a72e8118ef67f600f2cc1392c136" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 182381 ;
-    schema:name "freeze_id_chr6.bed" ;
-    dcat:byteSize "353.3MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:24b2cdf5-de78-49eb-89f4-654701aa69c8 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:9ade1881-5fce-4c8e-9f89-99c0140c2f97 ;
-    schema:name "freeze_id_chr4" .
-
-alspacdcs:26c16bd2-6fe9-45da-9fa6-64da34877711 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:76b9f534-850d-478b-ac7b-7bd163beb9cd ;
-    schema:name "freeze_id_chr8" .
-
-alspacdcs:2853c528-9e92-409f-9617-5d47c80f69c6 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:c87b7fa0-896f-4eda-b5d2-428716967242 ;
-    schema:name "freeze_id_chr10" .
-
-alspacdcs:2a60adf0-81c6-4e02-b0f4-9f7dcc722094 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:11b81410-2193-4a32-8ac4-8f021141243d ;
-    schema:name "freeze_id_chr15" .
-
-alspacdcs:2c3ddef2-b43b-4f02-a49d-bd0afc5e1097 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "14ab59ba4ea1f4fbd4c7a423c123cba9" ;
-    schema:name "freeze_id_chr22.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:2f717b0d-89a0-4697-931c-477269e5405c a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:7aba68da-ec89-409f-af21-c261a98dea20 ;
-    schema:name "freeze_id_chr5" .
-
-alspacdcs:2ffa871a-2482-4682-acc9-1aba3cc338db a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:46c108df-3198-4c55-be22-02cf0a3685e6 ;
-    schema:name "freeze_id_chr18" .
-
-alspacdcs:30a02280-214c-4e60-b572-943955783af8 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "3f740bebb144f9f00494831f081c6ac6" ;
-    schema:name "freeze_id_chr7.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:316f8a2a-9e44-437a-bb92-2de42c79dcf7 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:ff468429-c179-4063-b8bc-4380b6f5bcbd ;
-    schema:name "freeze_id_chr13" .
-
-alspacdcs:340779dd-9a08-4d61-97a3-f9d2454a8697 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:67a76158-5855-4e2d-9878-c2eb30400e02 ;
-    schema:name "freeze_id_chr4" .
-
-alspacdcs:34cd7eb5-3c5a-48c5-a3cb-058593705e43 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:c5d5969b-af9d-4c8d-8266-e94f7c678071 ;
-    schema:name "freeze_id_chr3" .
-
-alspacdcs:34f2f166-dfca-47b1-aba7-3c97c009c0dc a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:369dcf88-503d-4a98-aa30-ce3cc7c1333a ;
-    schema:name "freeze_id_chr2" .
-
-alspacdcs:35df00bc-5c43-46c3-a5a2-982de2a90be4 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "2dbbbbf0790f71af86fc8ecd8b655d30" ;
-    alspacdcs:number_of_variants 71550 ;
-    schema:name "freeze_id_chr16.bim" ;
-    dcat:byteSize "1.9MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:369dcf88-503d-4a98-aa30-ce3cc7c1333a a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "679c79dca22a15518494fbb2fdfb7a73" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 220833 ;
-    schema:name "freeze_id_chr2.bed" ;
-    dcat:byteSize "427.7MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:381d3715-b436-4780-9ede-c288504700f4 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:e16425b1-c5ba-4820-a50f-10d3a95a59b6 ;
-    schema:name "freeze_id_chr6" .
-
-alspacdcs:3a4d950e-abf6-43ef-8850-45abad00dd7c a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:4172ee29-d042-4940-994d-3265bb2787ec ;
-    schema:name "freeze_id_chr17" .
-
-alspacdcs:3debb92d-a3bc-45b4-a5fd-447912f4b7d6 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "12816586007445d7d63de68264e68035" ;
-    schema:name "freeze_id_chr21.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:3ee40f25-2d9a-471e-b97d-9c0501707e38 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:e73114aa-2a66-4316-943a-a3d38838e110 ;
-    schema:name "freeze_id_chr11" .
-
-alspacdcs:4172ee29-d042-4940-994d-3265bb2787ec a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "9b2548fde72d0bb67fb185d45a6fb175" ;
-    alspacdcs:number_of_variants 58455 ;
-    schema:name "freeze_id_chr17.bim" ;
-    dcat:byteSize "1.6MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:418912be-8357-493c-baa6-f6830a37feae a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:bc8dc2d5-1a55-4547-b282-a8b0a7900098 ;
-    schema:name "freeze_id_chr1" .
-
-alspacdcs:42a6b622-2c1b-471d-a255-a20fcd9cd6f3 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "53993ff4c0346a90928ea6f57c316ae0" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 174356 ;
-    schema:name "freeze_id_chr3.bed" ;
-    dcat:byteSize "337.7MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:4556b82b-fd79-4425-88b7-82f566134173 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr16.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:463d1f32-2048-4ab7-a856-86f85ad5ac45 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:da76a088-3b7c-4423-a63e-c0ac64161350 ;
-    schema:name "freeze_id_chr13" .
-
-alspacdcs:465bb628-2422-471b-bdbc-44fce53711dd a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1302eb29-2946-4811-81cc-d5676ca58f85 ;
-    schema:name "freeze_id_chr12" .
-
-alspacdcs:46c108df-3198-4c55-be22-02cf0a3685e6 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "ec2dbf93e2522026a259ef92eaa68f3a" ;
-    schema:name "freeze_id_chr18.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:472a41d3-23b5-481e-b8fa-c99a03ced9c1 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:3debb92d-a3bc-45b4-a5fd-447912f4b7d6 ;
-    schema:name "freeze_id_chr21" .
-
-alspacdcs:4a5ed486-81ed-44d4-abac-87b743d14bfa a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "ceb02f423137bc0db69eaded93098b7d" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 104120 ;
-    schema:name "freeze_id_chr13.bed" ;
-    dcat:byteSize "201.7MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:4af28bc0-bfd3-4761-a51f-27edb490bc2d a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr6.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:4b4e0d6f-aa6b-44c3-8f73-dfc5e6425833 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "1d411d61a8eee5e9e0bf6804d1ba460e" ;
-    schema:name "freeze_id_chr12.log" ;
-    dcat:byteSize "994.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:4c3f0cd8-77eb-436e-9aeb-fb2728925213 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:aaa37490-b953-4925-b9be-830a3ceb8a9e ;
-    schema:name "freeze_id_chr14" .
-
-alspacdcs:4dcd9379-7b60-4f55-8056-60834950ea27 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:73e393f1-614c-4e41-ab76-e7509b5eb672 ;
-    schema:name "freeze_id_chr2" .
-
-alspacdcs:5ad54753-f82e-4a1c-9ca3-e15cc6609bc8 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:975e345d-deb5-4e15-89ec-ad342b18c2ba ;
-    schema:name "freeze_id_chr21" .
-
-alspacdcs:5b0aebae-ab41-4f85-bc32-1a17db8561cb a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:7169f332-5f15-4448-8488-88ad077ef750 ;
-    schema:name "freeze_id_chr10" .
-
-alspacdcs:5bf8f5ab-0115-44f4-803d-edefaf5000e7 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "b2c3323ec24277ecff0b221f6d2795e3" ;
-    alspacdcs:number_of_variants 76812 ;
-    schema:name "freeze_id_chr18.bim" ;
-    dcat:byteSize "2.1MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:5dd27720-3e0c-4aff-9e6d-27865afd26a8 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "4ada017794ed183673789bebf273da9c" ;
-    schema:name "freeze_id_chr6.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:5df062a6-f42c-434e-b391-2efebe06cc5b a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:61d395a7-72e0-45bb-bfec-01bc49b916ad ;
-    schema:name "freeze_id_chr22" .
-
-alspacdcs:5fa16fd8-d259-4e6b-9493-421777c1c84f a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:4a5ed486-81ed-44d4-abac-87b743d14bfa ;
-    schema:name "freeze_id_chr13" .
-
-alspacdcs:60756365-1b25-4843-8312-96a5f9d0a1ba a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr3.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:608e24ca-625c-4e0d-8869-2a7f4646b9d1 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:b48e11aa-6b2e-4340-9c62-ac1bccab7e8a ;
-    schema:name "freeze_id_chr8" .
-
-alspacdcs:61d395a7-72e0-45bb-bfec-01bc49b916ad a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "4850f4458270a4f8f30a682821b2b6f2" ;
-    alspacdcs:number_of_variants 33815 ;
-    schema:name "freeze_id_chr22.bim" ;
-    dcat:byteSize "920.9KB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:629598d2-af99-4fc3-8df1-926e0b4055ef a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:072393ab-7abc-48a7-81a3-ffc27db80662 ;
-    schema:name "freeze_id_chr14" .
-
-alspacdcs:64e09193-67ae-4edf-ab58-2b4e463f1728 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:7bee6dbf-34cf-4116-ab3d-63cc07a94bb5 ;
-    schema:name "freeze_id_chr1" .
-
-alspacdcs:656a5f6e-eae5-4f55-8b55-80e8c349274c a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr18.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:65f873bd-9a86-41c5-89c1-f37a000d9c96 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:91173d72-76d4-4ab2-b125-2e11f9170e94 ;
-    schema:name "freeze_id_chr5" .
-
-alspacdcs:664eb2ff-6eb9-44f4-b39b-a0f9d309aefe a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "22c4c68aeedaeb7ca38e8c71340c5c42" ;
-    schema:name "freeze_id_chr9.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:67a76158-5855-4e2d-9878-c2eb30400e02 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "6893eb373427e28bcbe582dee47c99bb" ;
-    schema:name "freeze_id_chr4.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:698cc6cd-12f5-4efb-a8d0-f6867283ad0e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "656b255438b8175b1739abf77e171526" ;
-    alspacdcs:number_of_variants 124860 ;
-    schema:name "freeze_id_chr12.bim" ;
-    dcat:byteSize "3.4MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:6a00f4ee-57bc-447b-8399-2b3dec9c8e60 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "313af6755f961e49ae6de817c365d509" ;
-    alspacdcs:number_of_variants 130069 ;
-    schema:name "freeze_id_chr11.bim" ;
-    dcat:byteSize "3.5MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:6a03837e-e8ab-41f4-ae91-56c5c9c2239f a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:ee197d4a-1e33-468e-bac3-6dd0e662fb26 ;
-    schema:name "freeze_id_chr15" .
-
-alspacdcs:6a830c5f-7397-4e9c-a444-9f62c86547bf a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:8801f40e-bce4-45dd-8a33-1f042497a694 ;
-    schema:name "freeze_id_chr14" .
-
-alspacdcs:6d61adba-89cb-47de-b952-a0b9cad24e96 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:2c3ddef2-b43b-4f02-a49d-bd0afc5e1097 ;
-    schema:name "freeze_id_chr22" .
-
-alspacdcs:7169f332-5f15-4448-8488-88ad077ef750 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "069699ecfb02e6500637899361604f24" ;
-    schema:name "freeze_id_chr10.log" ;
-    dcat:byteSize "994.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:7288969b-99b9-439a-b88d-dec0186953dd a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "187f34560b9d2bd4dab39498dc139b21" ;
-    schema:name "freeze_id_chr5.bim" ;
-    dcat:byteSize "4.4MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:72d64db9-2e2f-4a82-9fa5-6722bd2cc9e4 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:984ce9b9-9d6e-4ecc-bd1c-8d0902fee87e ;
-    schema:name "freeze_id_chr18" .
-
-alspacdcs:73e393f1-614c-4e41-ab76-e7509b5eb672 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr2.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:75624335-c6b0-4473-b505-731a6a068289 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "7f9249a8777387658b9e880ccf6283cc" ;
-    alspacdcs:number_of_variants 168144 ;
-    schema:name "freeze_id_chr15.bim" ;
-    dcat:byteSize "1.9MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:76b9f534-850d-478b-ac7b-7bd163beb9cd a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "6bd8f2157f87167c7c96ebf1d63d2b3c" ;
-    alspacdcs:number_of_variants 147483 ;
-    schema:name "freeze_id_chr8.bim" ;
-    dcat:byteSize "3.9MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:7989ec08-73b5-496f-ad38-0741d6893d96 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:948e762b-6ef3-4841-8f4f-27eb0d8df8db ;
-    schema:name "freeze_id_chr17" .
-
-alspacdcs:7aba68da-ec89-409f-af21-c261a98dea20 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr5.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:7bee6dbf-34cf-4116-ab3d-63cc07a94bb5 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "7dfd825a254bb8f26d725c0d44b820bf" ;
-    schema:name "freeze_id_chr1.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:7e1b774d-2aa3-43e9-8603-bcce9aa9b525 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "b374362f0e810a9004fca6718462c2fc" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 138402 ;
-    schema:name "freeze_id_chr10.bed" ;
-    dcat:byteSize "268.1MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:7ecca087-d444-4a4d-be73-53a7e22f2236 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:bcadaf0a-ef43-4c76-aff1-e3777d2930ab ;
-    schema:name "freeze_id_chr5" .
-
-alspacdcs:846bb3b7-c40c-41c5-9c87-9f360b7e035e a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:953a7afa-016b-48ef-be0a-cf9062d0278e ;
-    schema:name "freeze_id_chr7" .
-
-alspacdcs:85ba529e-5d6e-4530-921e-2071c5f80ec2 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1fb0d26a-f00a-4e33-8792-1b0aa65b8187 ;
-    schema:name "freeze_id_chr1" .
-
-alspacdcs:8801f40e-bce4-45dd-8a33-1f042497a694 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "3c2e76766e229b0a2c80dc2e2cc0e3e2" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 83936 ;
-    schema:name "freeze_id_chr14.bed" ;
-    dcat:byteSize "162.6MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:8921be0d-e030-4e5c-b856-4fed0ba20b96 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "f825b426e7e551392dc8ff71a5463330" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 63408 ;
-    schema:name "freeze_id_chr20.bed" ;
-    dcat:byteSize "122.8MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:8a3b4ea0-8535-4c4c-8f51-2f7f617eb93f a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "35c6120b777725e7b480469d2e2a9686" ;
-    alspacdcs:number_of_variants 104120 ;
-    schema:name "freeze_id_chr13.bim" ;
-    dcat:byteSize "2.8MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:8b7f0aad-c1d0-4175-b65c-0ce6392b2fed a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:a35c7fc3-d3b0-4b66-9f89-bd8c99d563a1 ;
-    schema:name "freeze_id_chr21" .
-
-alspacdcs:8b8c3755-0a0b-4182-afc2-1af0bffc0c06 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "f8a4dcf29da25f900cfa689970d720ef" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 124860 ;
-    schema:name "freeze_id_chr12.bed" ;
-    dcat:byteSize "241.8MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:8ce7255a-3401-4195-a7bf-d69803699478 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "76a70ff4f7add78b2f89637e3021f304" ;
-    schema:name "freeze_id_chr8.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:8d16df55-6adc-4cba-9999-b1e325ca6945 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:8ce7255a-3401-4195-a7bf-d69803699478 ;
-    schema:name "freeze_id_chr8" .
-
-alspacdcs:8fdbdcd9-7c30-49bf-ab80-7c330d0a0ea4 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:bb843328-cdf7-4efd-8429-9d93639a4307 ;
-    schema:name "freeze_id_chr8" .
-
-alspacdcs:91173d72-76d4-4ab2-b125-2e11f9170e94 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "cac146a314fb6850f5a083ac83e83544" ;
-    schema:name "freeze_id_chr5.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:948e762b-6ef3-4841-8f4f-27eb0d8df8db a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr17.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:94f6f643-d29f-4c32-b31e-fe5558b78c9a a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "69778e46742dd7508d07e18b1581e94f" ;
-    schema:name "freeze_id_chr14.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:953a7afa-016b-48ef-be0a-cf9062d0278e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "7c85c68841737d5f37816e75dae2e3a1" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 143232 ;
-    schema:name "freeze_id_chr7.bed" ;
-    dcat:byteSize "277.4MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:975e345d-deb5-4e15-89ec-ad342b18c2ba a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "23b1e2c4f7ee74f8815d5ec296f6e43a" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 33863 ;
-    schema:name "freeze_id_chr21.bed" ;
-    dcat:byteSize "65.6MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:97e35561-f3de-4d04-bdae-2c97208d020b a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "a7767f2a1bb755c3ebb0a1163961c2ed" ;
-    alspacdcs:number_of_variants 122112 ;
-    schema:name "freeze_id_chr9.bim" ;
-    dcat:byteSize "3.2MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:981d5443-66ab-4ed7-a15a-faebf893cde1 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:e5f0d521-d89d-4dcd-999b-f8486778f38c ;
-    schema:name "freeze_id_chr20" .
-
-alspacdcs:984ce9b9-9d6e-4ecc-bd1c-8d0902fee87e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "bece589f78a088301a5a156239a6908b" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 76812 ;
-    schema:name "freeze_id_chr18.bed" ;
-    dcat:byteSize "148.8MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:989ed402-a9f3-4b1e-93a3-b2d2016c8410 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:4b4e0d6f-aa6b-44c3-8f73-dfc5e6425833 ;
-    schema:name "freeze_id_chr12" .
-
-alspacdcs:9ade1881-5fce-4c8e-9f89-99c0140c2f97 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr4.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:9c10f3e2-4ca3-452d-b709-fc8e57fe66bd a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr20.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:9ccbf5c6-772a-4244-9545-c468ec990443 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:a2380e43-63c7-4564-8703-09103b1565d7 ;
-    schema:name "freeze_id_chr19" .
-
-alspacdcs:a2380e43-63c7-4564-8703-09103b1565d7 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "8918fede8f9b88416505c8724c522f5d" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr19.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:a35c7fc3-d3b0-4b66-9f89-bd8c99d563a1 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr21.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:a4e2e16c-15ff-4f67-876b-3932b373c9c6 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr19.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:a650eecc-5a67-4ef4-a058-ed6a7ce24f73 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:7e1b774d-2aa3-43e9-8603-bcce9aa9b525 ;
-    schema:name "freeze_id_chr10" .
-
-alspacdcs:a6ef0f28-7dbe-4810-8f71-94384d81fe5a a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:4556b82b-fd79-4425-88b7-82f566134173 ;
-    schema:name "freeze_id_chr16" .
-
-alspacdcs:a82e3486-742c-4c9a-8178-23efeee5fea3 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:030be247-22fa-4efc-aa77-a2a1594569e8 ;
-    schema:name "freeze_id_chr2" .
-
-alspacdcs:a9d9d58a-aef1-4718-97c5-11ae2090ee16 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:bfb1e0c8-f021-491b-ac96-f1a2d8b20334 ;
-    schema:name "freeze_id_chr19" .
-
-alspacdcs:aa4339c4-0a36-424a-adb8-e0fafc1101ab a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:d175700e-a482-4c65-8211-e9fc86a9e832 ;
-    schema:name "freeze_id_chr20" .
-
-alspacdcs:aaa37490-b953-4925-b9be-830a3ceb8a9e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "e6098ee196c0fb7b5db26cbd31bcb096" ;
-    alspacdcs:number_of_variants 83936 ;
-    schema:name "freeze_id_chr14.bim" ;
-    dcat:byteSize "2.3MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:adb656b4-2822-40d6-8838-c18e3e3f8ebf a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:656a5f6e-eae5-4f55-8b55-80e8c349274c ;
-    schema:name "freeze_id_chr18" .
-
-alspacdcs:ae1a6d71-f043-4617-87fd-9a58e5349851 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "c238bbb7d95f29fbba3c93e15b30bd23" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 163157 ;
-    schema:name "freeze_id_chr4.bed" ;
-    dcat:byteSize "316.0MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:aeb1d70c-bc8a-4e2b-a20c-7384336b199e a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:0b8ea64e-a336-4e39-a6e8-e2b2d3959f2e ;
-    schema:name "freeze_id_chr16" .
-
-alspacdcs:aef1006c-d75c-4f3f-b625-64e89737b456 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:8a3b4ea0-8535-4c4c-8f51-2f7f617eb93f ;
-    schema:name "freeze_id_chr13" .
-
-alspacdcs:af6f016b-a1c9-4433-8782-c91e376f0324 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:5bf8f5ab-0115-44f4-803d-edefaf5000e7 ;
-    schema:name "freeze_id_chr18" .
-
-alspacdcs:b0964999-77e4-4140-974d-e999df473438 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:4af28bc0-bfd3-4761-a51f-27edb490bc2d ;
-    schema:name "freeze_id_chr6" .
-
-alspacdcs:b1a3ade7-9927-4022-b51d-4625a22369e8 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:97e35561-f3de-4d04-bdae-2c97208d020b ;
-    schema:name "freeze_id_chr9" .
-
-alspacdcs:b48e11aa-6b2e-4340-9c62-ac1bccab7e8a a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "d3b9d2ee04e7420a000d727681fd64b1" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 147483 ;
-    schema:name "freeze_id_chr8.bed" ;
-    dcat:byteSize "285.7MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:b55979e2-3e0e-4073-b430-bc1d02fe9407 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:a4e2e16c-15ff-4f67-876b-3932b373c9c6 ;
-    schema:name "freeze_id_chr19" .
-
-alspacdcs:b6a4d58d-591a-4898-bb6e-bdde7b4198e0 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:177d4638-0d17-4c88-b800-69c147e0ba8e ;
-    schema:name "freeze_id_chr15" .
-
-alspacdcs:b70b48f6-9c61-480c-8774-9efb22e65536 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:e06abac9-3fed-47da-ad4f-b862d73abf0e ;
-    schema:name "freeze_id_chr3" .
-
-alspacdcs:b82587ef-9908-429e-9213-46ee81825a54 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:eb7fae6a-30bb-4114-b173-88279df0d549 ;
-    schema:name "freeze_id_chr16" .
-
-alspacdcs:b9b97f2b-b0f6-4246-87e9-bf8c3c4c32fb a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:11083cc8-a1be-4466-98b5-c1b2e1b5a4e1 ;
-    schema:name "freeze_id_chr22" .
-
-alspacdcs:bb1e5cd5-d421-4542-b0e8-c25473747924 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "962617b049a9ab0100affffdab207c04" ;
-    alspacdcs:number_of_variants 193554 ;
-    schema:name "freeze_id_chr1.bim" ;
-    dcat:byteSize "5.1MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:bb843328-cdf7-4efd-8429-9d93639a4307 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr8.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:bc090ee7-8ed4-4680-a1da-6c31b04ee5f6 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:664eb2ff-6eb9-44f4-b39b-a0f9d309aefe ;
-    schema:name "freeze_id_chr9" .
-
-alspacdcs:bc8dc2d5-1a55-4547-b282-a8b0a7900098 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr1.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:bcadaf0a-ef43-4c76-aff1-e3777d2930ab a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "0a3d2ac67f9b14195900c9af64a9bb59" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 168144 ;
-    schema:name "freeze_id_chr5.bed" ;
-    dcat:byteSize "325.7MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:bfb1e0c8-f021-491b-ac96-f1a2d8b20334 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "843659fc778e2a82e3f46ea31991769a" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 37045 ;
-    schema:name "freeze_id_chr19.bed" ;
-    dcat:byteSize "71.8MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:c04e7148-b963-41fd-af51-62801893836c a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:42a6b622-2c1b-471d-a255-a20fcd9cd6f3 ;
-    schema:name "freeze_id_chr3" .
-
-alspacdcs:c480b6e2-7110-4b65-a5e6-da1cf4ee4d4f a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "18f30f3422904cf8c63a57c1417db323" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 58455 ;
-    schema:name "freeze_id_chr17.bed" ;
-    dcat:byteSize "113.2MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:c5d5969b-af9d-4c8d-8266-e94f7c678071 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "a65f7659065cfe53fff87169c1d9c4ab" ;
-    schema:name "freeze_id_chr3.log" ;
-    dcat:byteSize "988.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:c78b777e-00e9-42b2-93ba-a33ab809fba2 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1a22f317-71e7-41bb-9af0-ad6104aa29b6 ;
-    schema:name "freeze_id_chr7" .
-
-alspacdcs:c7979cfb-552b-4335-a272-69ed873a8611 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:5dd27720-3e0c-4aff-9e6d-27865afd26a8 ;
-    schema:name "freeze_id_chr6" .
-
-alspacdcs:c7fbf1df-07cc-4c80-b759-07cbedf0e91b a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:ae1a6d71-f043-4617-87fd-9a58e5349851 ;
-    schema:name "freeze_id_chr4" .
-
-alspacdcs:c87b7fa0-896f-4eda-b5d2-428716967242 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr10.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:cab80313-6d01-4104-992b-938a420762cd a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr7.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:cc46d45e-b146-4134-957b-09eb643f03d7 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "0153a626149a8a47c72f182c1ec77467" ;
-    alspacdcs:number_of_variants 220833 ;
-    schema:name "freeze_id_chr2.bim" ;
-    dcat:byteSize "5.9MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:d175700e-a482-4c65-8211-e9fc86a9e832 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "ebad5115bb5c0f68ed080c896452bfdd" ;
-    alspacdcs:number_of_variants 63408 ;
-    schema:name "freeze_id_chr20.bim" ;
-    dcat:byteSize "1.7MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:d1da4947-c33c-4a3a-8a04-d416ec7e1c5f a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:2451e033-59cf-4b2a-b686-3776162dff67 ;
-    schema:name "freeze_id_chr6" .
-
-alspacdcs:d234cd8e-8241-4d8a-b062-7ecb584349be a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:9c10f3e2-4ca3-452d-b709-fc8e57fe66bd ;
-    schema:name "freeze_id_chr20" .
-
-alspacdcs:d2da8b11-a918-4162-8bde-ad4f1fee8498 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1bc8b4fb-123b-4506-a87f-600cb9633dde ;
-    schema:name "freeze_id_chr10" .
-
-alspacdcs:d2e165c4-c48f-400d-b8d2-6395123ac76a a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:bb1e5cd5-d421-4542-b0e8-c25473747924 ;
-    schema:name "freeze_id_chr1" .
-
-alspacdcs:d380082d-2870-42b6-9cca-c5a3fa444442 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "5116ab4bcc98b90a546b5c4d2d801ec1" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 122112 ;
-    schema:name "freeze_id_chr9.bed" ;
-    dcat:byteSize "236.5MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:d5bbf7ff-f2f1-4494-aad1-601262e8fe8c a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:09521625-b72a-4164-8817-848cb6cba4be ;
-    schema:name "freeze_id_chr21" .
-
-alspacdcs:d6b53dc8-3d27-413f-9227-e59a4df2c81a a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "9a23812f79c545fdf58fb33b64b506b3" ;
-    schema:name "freeze_id_chr17.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:d84c1bcf-3c27-4b66-a375-7fa56e5e556d a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:fec393d9-dfa8-40bd-8536-f5a91604949e ;
-    schema:name "freeze_id_chr11" .
-
-alspacdcs:da76a088-3b7c-4423-a63e-c0ac64161350 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "6d3aa262c8f23ae7f35fac5b1e1dc07b" ;
-    schema:name "freeze_id_chr13.log" ;
-    dcat:byteSize "994.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:dab3263d-94a9-4f44-813e-433f87428b3a a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:c480b6e2-7110-4b65-a5e6-da1cf4ee4d4f ;
-    schema:name "freeze_id_chr17" .
-
-alspacdcs:dd7cee6d-26a4-4831-adb7-17a7a1faa680 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:698cc6cd-12f5-4efb-a8d0-f6867283ad0e ;
-    schema:name "freeze_id_chr12" .
-
-alspacdcs:e06abac9-3fed-47da-ad4f-b862d73abf0e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "7167d91e59ceee29494f6983809d7f1f" ;
-    alspacdcs:number_of_variants 174356 ;
-    schema:name "freeze_id_chr3.bim" ;
-    dcat:byteSize "4.6MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:e16425b1-c5ba-4820-a50f-10d3a95a59b6 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "7b13b6830fe94fb988a2fcb77df59cc5" ;
-    alspacdcs:number_of_variants 182381 ;
-    schema:name "freeze_id_chr6.bim" ;
-    dcat:byteSize "4.8MB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:e3651275-353a-4fa9-81f2-12987d0fa627 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "690bd8a865945e28a8a3b89fd7fd17c3" ;
-    schema:name "freeze_id_chr11.log" ;
-    dcat:byteSize "994.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:e417de2b-465b-45ed-837a-34aeaefc6b48 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:94f6f643-d29f-4c32-b31e-fe5558b78c9a ;
-    schema:name "freeze_id_chr14" .
-
-alspacdcs:e5f0d521-d89d-4dcd-999b-f8486778f38c a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "01b5a0b1d68a90cd63964ad52c1250ba" ;
-    schema:name "freeze_id_chr20.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:e6f230a4-bfb0-4808-a9d6-a740b2d14aa7 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:60756365-1b25-4843-8312-96a5f9d0a1ba ;
-    schema:name "freeze_id_chr3" .
-
-alspacdcs:e73114aa-2a66-4316-943a-a3d38838e110 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "87629dc6736fd5d72e6655769af1195c" ;
-    alspacdcs:number_of_participants 8124 ;
-    alspacdcs:number_of_variants 130069 ;
-    schema:name "freeze_id_chr11.bed" ;
-    dcat:byteSize "251.9MB" ;
-    dcat:mediaType ".bed" .
-
-alspacdcs:eadca60d-5dd9-44ce-8ae9-0ad748d65e37 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:d380082d-2870-42b6-9cca-c5a3fa444442 ;
-    schema:name "freeze_id_chr9" .
-
-alspacdcs:eb7fae6a-30bb-4114-b173-88279df0d549 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "85416c5fa6142f0439ae70b37a5808b8" ;
-    schema:name "freeze_id_chr16.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:ec359f65-9310-44ad-852f-749402165764 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1e3ebe8f-8798-4625-b7b8-314f11114c0d ;
-    schema:name "freeze_id_chr4" .
-
-alspacdcs:ed9a395f-ce22-40e7-b9a3-309a53e1222f a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:1ae14b83-bdd0-4e66-9068-4a296e064f84 ;
-    schema:name "freeze_id_chr22" .
-
-alspacdcs:ee197d4a-1e33-468e-bac3-6dd0e662fb26 a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "c9f21ddf346a1b45de27a41176d06672" ;
-    schema:name "freeze_id_chr15.log" ;
-    dcat:byteSize "992.0B" ;
-    dcat:mediaType ".log" .
-
-alspacdcs:eec90bbd-3b5b-438d-a80f-fbcb760ae7ba a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:7288969b-99b9-439a-b88d-dec0186953dd ;
-    schema:name "freeze_id_chr5" .
-
-alspacdcs:f02b09a6-44f6-4d1c-a73c-02d6b3cca994 a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:cc46d45e-b146-4134-957b-09eb643f03d7 ;
-    schema:name "freeze_id_chr2" .
-
-alspacdcs:f52d36aa-ec51-4f2a-8e59-0ae28ad7b2ba a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:cab80313-6d01-4104-992b-938a420762cd ;
-    schema:name "freeze_id_chr7" .
-
-alspacdcs:f7386c43-d1c9-4e1f-aa0c-3a72e97757dc a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "eb33f90e6c4f631aa9683c2fff5e75f7" ;
-    alspacdcs:number_of_variants 37045 ;
-    schema:name "freeze_id_chr19.bim" ;
-    dcat:byteSize "1012.3KB" ;
-    dcat:mediaType ".bim" .
-
-alspacdcs:fd96801b-0748-4d45-8ad8-7be84100f4fc a dcat:Dataset ;
-    alspacdcs:data_distributions alspacdcs:35df00bc-5c43-46c3-a5a2-982de2a90be4 ;
-    schema:name "freeze_id_chr16" .
-
-alspacdcs:fec393d9-dfa8-40bd-8536-f5a91604949e a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr11.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:ff468429-c179-4063-b8bc-4380b6f5bcbd a dcat:Distribution ;
-    alspacdcs:belongs_to_container alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 ;
-    alspacdcs:md5sum "20323cdc203fcadf4b2c208f7e15bd59" ;
-    alspacdcs:number_of_participants 8124 ;
-    schema:name "freeze_id_chr13.fam" ;
-    dcat:byteSize "277.7KB" ;
-    dcat:mediaType ".fam" .
-
-alspacdcs:dabc73ca-1d45-40bb-b0ed-11fab248ddf6 a nfo:Folder ;
-    schema:description "A dir/folder containing the plink freeze data files" ;
-    schema:name "plink" .
-
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#"
+    xmlns:alspacdcs="http://purl.org/alspac/alspac-data-catalogue-schema/"
+    xmlns:schema="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e417de2b-465b-45ed-837a-34aeaefc6b48">
+    <schema:name>freeze_id_chr14</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/94f6f643-d29f-4c32-b31e-fe5558b78c9a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5fa16fd8-d259-4e6b-9493-421777c1c84f">
+    <schema:name>freeze_id_chr13</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4a5ed486-81ed-44d4-abac-87b743d14bfa"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a6ef0f28-7dbe-4810-8f71-94384d81fe5a">
+    <schema:name>freeze_id_chr16</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4556b82b-fd79-4425-88b7-82f566134173"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/24b2cdf5-de78-49eb-89f4-654701aa69c8">
+    <schema:name>freeze_id_chr4</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9ade1881-5fce-4c8e-9f89-99c0140c2f97"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5bf8f5ab-0115-44f4-803d-edefaf5000e7">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>2.1MB</dcat:byteSize>
+    <schema:name>freeze_id_chr18.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76812</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>b2c3323ec24277ecff0b221f6d2795e3</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7288969b-99b9-439a-b88d-dec0186953dd">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>4.4MB</dcat:byteSize>
+    <schema:name>freeze_id_chr5.bim</schema:name>
+    <alspacdcs:md5sum>187f34560b9d2bd4dab39498dc139b21</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1405f6e5-e2b6-4b33-9966-218903dca75b">
+    <schema:name>freeze_id_chr11</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6a00f4ee-57bc-447b-8399-2b3dec9c8e60"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c7979cfb-552b-4335-a272-69ed873a8611">
+    <schema:name>freeze_id_chr6</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5dd27720-3e0c-4aff-9e6d-27865afd26a8"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/3a4d950e-abf6-43ef-8850-45abad00dd7c">
+    <schema:name>freeze_id_chr17</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4172ee29-d042-4940-994d-3265bb2787ec"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/0a832be6-00cf-4e45-80a1-f1cd5fc1a77c">
+    <schema:name>freeze_id_chr11</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e3651275-353a-4fa9-81f2-12987d0fa627"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bfb1e0c8-f021-491b-ac96-f1a2d8b20334">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>71.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr19.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37045</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>843659fc778e2a82e3f46ea31991769a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/418912be-8357-493c-baa6-f6830a37feae">
+    <schema:name>freeze_id_chr1</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bc8dc2d5-1a55-4547-b282-a8b0a7900098"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/0b8ea64e-a336-4e39-a6e8-e2b2d3959f2e">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>138.6MB</dcat:byteSize>
+    <schema:name>freeze_id_chr16.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71550</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>6065cc7f5feb3d61dba0af30cb339e0f</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a9d9d58a-aef1-4718-97c5-11ae2090ee16">
+    <schema:name>freeze_id_chr19</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bfb1e0c8-f021-491b-ac96-f1a2d8b20334"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/65f873bd-9a86-41c5-89c1-f37a000d9c96">
+    <schema:name>freeze_id_chr5</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/91173d72-76d4-4ab2-b125-2e11f9170e94"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1bc8b4fb-123b-4506-a87f-600cb9633dde">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr10.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">138402</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>df9073ce37d5833c17a6dd7bb3ba689a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2ffa871a-2482-4682-acc9-1aba3cc338db">
+    <schema:name>freeze_id_chr18</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/46c108df-3198-4c55-be22-02cf0a3685e6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8d16df55-6adc-4cba-9999-b1e325ca6945">
+    <schema:name>freeze_id_chr8</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8ce7255a-3401-4195-a7bf-d69803699478"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ec359f65-9310-44ad-852f-749402165764">
+    <schema:name>freeze_id_chr4</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1e3ebe8f-8798-4625-b7b8-314f11114c0d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4c3f0cd8-77eb-436e-9aeb-fb2728925213">
+    <schema:name>freeze_id_chr14</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/aaa37490-b953-4925-b9be-830a3ceb8a9e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/34cd7eb5-3c5a-48c5-a3cb-058593705e43">
+    <schema:name>freeze_id_chr3</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c5d5969b-af9d-4c8d-8266-e94f7c678071"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a650eecc-5a67-4ef4-a058-ed6a7ce24f73">
+    <schema:name>freeze_id_chr10</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7e1b774d-2aa3-43e9-8603-bcce9aa9b525"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5b0aebae-ab41-4f85-bc32-1a17db8561cb">
+    <schema:name>freeze_id_chr10</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7169f332-5f15-4448-8488-88ad077ef750"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d6b53dc8-3d27-413f-9227-e59a4df2c81a">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr17.log</schema:name>
+    <alspacdcs:md5sum>9a23812f79c545fdf58fb33b64b506b3</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4a5ed486-81ed-44d4-abac-87b743d14bfa">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>201.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr13.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104120</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>ceb02f423137bc0db69eaded93098b7d</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/629598d2-af99-4fc3-8df1-926e0b4055ef">
+    <schema:name>freeze_id_chr14</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/072393ab-7abc-48a7-81a3-ffc27db80662"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7169f332-5f15-4448-8488-88ad077ef750">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>994.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr10.log</schema:name>
+    <alspacdcs:md5sum>069699ecfb02e6500637899361604f24</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cab80313-6d01-4104-992b-938a420762cd">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr7.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b48e11aa-6b2e-4340-9c62-ac1bccab7e8a">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>285.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr8.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">147483</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>d3b9d2ee04e7420a000d727681fd64b1</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/94f6f643-d29f-4c32-b31e-fe5558b78c9a">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr14.log</schema:name>
+    <alspacdcs:md5sum>69778e46742dd7508d07e18b1581e94f</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/072393ab-7abc-48a7-81a3-ffc27db80662">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr14.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ee197d4a-1e33-468e-bac3-6dd0e662fb26">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr15.log</schema:name>
+    <alspacdcs:md5sum>c9f21ddf346a1b45de27a41176d06672</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/381d3715-b436-4780-9ede-c288504700f4">
+    <schema:name>freeze_id_chr6</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e16425b1-c5ba-4820-a50f-10d3a95a59b6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a35c7fc3-d3b0-4b66-9f89-bd8c99d563a1">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr21.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6a00f4ee-57bc-447b-8399-2b3dec9c8e60">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.5MB</dcat:byteSize>
+    <schema:name>freeze_id_chr11.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130069</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>313af6755f961e49ae6de817c365d509</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7ecca087-d444-4a4d-be73-53a7e22f2236">
+    <schema:name>freeze_id_chr5</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bcadaf0a-ef43-4c76-aff1-e3777d2930ab"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/eb7fae6a-30bb-4114-b173-88279df0d549">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr16.log</schema:name>
+    <alspacdcs:md5sum>85416c5fa6142f0439ae70b37a5808b8</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7989ec08-73b5-496f-ad38-0741d6893d96">
+    <schema:name>freeze_id_chr17</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/948e762b-6ef3-4841-8f4f-27eb0d8df8db"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2c3ddef2-b43b-4f02-a49d-bd0afc5e1097">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr22.log</schema:name>
+    <alspacdcs:md5sum>14ab59ba4ea1f4fbd4c7a423c123cba9</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/af6f016b-a1c9-4433-8782-c91e376f0324">
+    <schema:name>freeze_id_chr18</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5bf8f5ab-0115-44f4-803d-edefaf5000e7"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4af28bc0-bfd3-4761-a51f-27edb490bc2d">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr6.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/465bb628-2422-471b-bdbc-44fce53711dd">
+    <schema:name>freeze_id_chr12</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1302eb29-2946-4811-81cc-d5676ca58f85"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e6f230a4-bfb0-4808-a9d6-a740b2d14aa7">
+    <schema:name>freeze_id_chr3</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/60756365-1b25-4843-8312-96a5f9d0a1ba"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/02fe6c53-2451-456c-89d7-940ff2931ce5">
+    <schema:name>freeze_id_chr15</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/75624335-c6b0-4473-b505-731a6a068289"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1032066b-bb6b-402d-9d21-10728d344352">
+    <schema:name>freeze_id_chr17</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d6b53dc8-3d27-413f-9227-e59a4df2c81a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/72d64db9-2e2f-4a82-9fa5-6722bd2cc9e4">
+    <schema:name>freeze_id_chr18</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/984ce9b9-9d6e-4ecc-bd1c-8d0902fee87e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f02b09a6-44f6-4d1c-a73c-02d6b3cca994">
+    <schema:name>freeze_id_chr2</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cc46d45e-b146-4134-957b-09eb643f03d7"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c7fbf1df-07cc-4c80-b759-07cbedf0e91b">
+    <schema:name>freeze_id_chr4</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ae1a6d71-f043-4617-87fd-9a58e5349851"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/aeb1d70c-bc8a-4e2b-a20c-7384336b199e">
+    <schema:name>freeze_id_chr16</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/0b8ea64e-a336-4e39-a6e8-e2b2d3959f2e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/67a76158-5855-4e2d-9878-c2eb30400e02">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr4.log</schema:name>
+    <alspacdcs:md5sum>6893eb373427e28bcbe582dee47c99bb</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/fec393d9-dfa8-40bd-8536-f5a91604949e">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr11.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ae1a6d71-f043-4617-87fd-9a58e5349851">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>316.0MB</dcat:byteSize>
+    <schema:name>freeze_id_chr4.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163157</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>c238bbb7d95f29fbba3c93e15b30bd23</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/73e393f1-614c-4e41-ab76-e7509b5eb672">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr2.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e3651275-353a-4fa9-81f2-12987d0fa627">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>994.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr11.log</schema:name>
+    <alspacdcs:md5sum>690bd8a865945e28a8a3b89fd7fd17c3</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/30a02280-214c-4e60-b572-943955783af8">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr7.log</schema:name>
+    <alspacdcs:md5sum>3f740bebb144f9f00494831f081c6ac6</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/948e762b-6ef3-4841-8f4f-27eb0d8df8db">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr17.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f52d36aa-ec51-4f2a-8e59-0ae28ad7b2ba">
+    <schema:name>freeze_id_chr7</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/cab80313-6d01-4104-992b-938a420762cd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/3debb92d-a3bc-45b4-a5fd-447912f4b7d6">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr21.log</schema:name>
+    <alspacdcs:md5sum>12816586007445d7d63de68264e68035</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8a3b4ea0-8535-4c4c-8f51-2f7f617eb93f">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>2.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr13.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104120</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>35c6120b777725e7b480469d2e2a9686</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/11083cc8-a1be-4466-98b5-c1b2e1b5a4e1">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>65.5MB</dcat:byteSize>
+    <schema:name>freeze_id_chr22.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33815</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>3b3671f1daaa9264fbfb455dfc6d4dcf</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d234cd8e-8241-4d8a-b062-7ecb584349be">
+    <schema:name>freeze_id_chr20</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9c10f3e2-4ca3-452d-b709-fc8e57fe66bd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/02526725-2b5c-47b7-80da-1871d7116701">
+    <schema:name>freeze_id_chr9</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/088b72bf-84a7-470d-aa03-068a5f5d1779"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a4e2e16c-15ff-4f67-876b-3932b373c9c6">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr19.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/75624335-c6b0-4473-b505-731a6a068289">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>1.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr15.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168144</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>7f9249a8777387658b9e880ccf6283cc</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8921be0d-e030-4e5c-b856-4fed0ba20b96">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>122.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr20.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63408</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>f825b426e7e551392dc8ff71a5463330</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5dd27720-3e0c-4aff-9e6d-27865afd26a8">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr6.log</schema:name>
+    <alspacdcs:md5sum>4ada017794ed183673789bebf273da9c</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/656a5f6e-eae5-4f55-8b55-80e8c349274c">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr18.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b0964999-77e4-4140-974d-e999df473438">
+    <schema:name>freeze_id_chr6</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4af28bc0-bfd3-4761-a51f-27edb490bc2d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/91173d72-76d4-4ab2-b125-2e11f9170e94">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr5.log</schema:name>
+    <alspacdcs:md5sum>cac146a314fb6850f5a083ac83e83544</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/97e35561-f3de-4d04-bdae-2c97208d020b">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.2MB</dcat:byteSize>
+    <schema:name>freeze_id_chr9.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122112</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>a7767f2a1bb755c3ebb0a1163961c2ed</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1fb0d26a-f00a-4e33-8792-1b0aa65b8187">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>374.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr1.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193554</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>6fa5cc113c749e592d91583d5f257d14</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/316f8a2a-9e44-437a-bb92-2de42c79dcf7">
+    <schema:name>freeze_id_chr13</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ff468429-c179-4063-b8bc-4380b6f5bcbd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/aef1006c-d75c-4f3f-b625-64e89737b456">
+    <schema:name>freeze_id_chr13</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8a3b4ea0-8535-4c4c-8f51-2f7f617eb93f"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bc090ee7-8ed4-4680-a1da-6c31b04ee5f6">
+    <schema:name>freeze_id_chr9</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/664eb2ff-6eb9-44f4-b39b-a0f9d309aefe"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d380082d-2870-42b6-9cca-c5a3fa444442">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>236.5MB</dcat:byteSize>
+    <schema:name>freeze_id_chr9.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122112</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>5116ab4bcc98b90a546b5c4d2d801ec1</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/09521625-b72a-4164-8817-848cb6cba4be">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>924.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr21.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33863</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>b9b6bcad51c47f94a6b42c9b564c48b3</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/adb656b4-2822-40d6-8838-c18e3e3f8ebf">
+    <schema:name>freeze_id_chr18</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/656a5f6e-eae5-4f55-8b55-80e8c349274c"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/35df00bc-5c43-46c3-a5a2-982de2a90be4">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>1.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr16.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71550</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>2dbbbbf0790f71af86fc8ecd8b655d30</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7aba68da-ec89-409f-af21-c261a98dea20">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr5.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9ccbf5c6-772a-4244-9545-c468ec990443">
+    <schema:name>freeze_id_chr19</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a2380e43-63c7-4564-8703-09103b1565d7"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bc8dc2d5-1a55-4547-b282-a8b0a7900098">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr1.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5df062a6-f42c-434e-b391-2efebe06cc5b">
+    <schema:name>freeze_id_chr22</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/61d395a7-72e0-45bb-bfec-01bc49b916ad"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e16425b1-c5ba-4820-a50f-10d3a95a59b6">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>4.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr6.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182381</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>7b13b6830fe94fb988a2fcb77df59cc5</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/984ce9b9-9d6e-4ecc-bd1c-8d0902fee87e">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>148.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr18.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76812</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>bece589f78a088301a5a156239a6908b</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e5f0d521-d89d-4dcd-999b-f8486778f38c">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr20.log</schema:name>
+    <alspacdcs:md5sum>01b5a0b1d68a90cd63964ad52c1250ba</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2a60adf0-81c6-4e02-b0f4-9f7dcc722094">
+    <schema:name>freeze_id_chr15</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/11b81410-2193-4a32-8ac4-8f021141243d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/11b81410-2193-4a32-8ac4-8f021141243d">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr15.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/030be247-22fa-4efc-aa77-a2a1594569e8">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr2.log</schema:name>
+    <alspacdcs:md5sum>a7341c7cc87876298c4223bf8f2532b7</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6">
+    <schema:name>plink</schema:name>
+    <schema:description>A dir/folder containing the plink freeze data files</schema:description>
+    <rdf:type rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ed9a395f-ce22-40e7-b9a3-309a53e1222f">
+    <schema:name>freeze_id_chr22</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1ae14b83-bdd0-4e66-9068-4a296e064f84"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/369dcf88-503d-4a98-aa30-ce3cc7c1333a">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>427.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr2.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220833</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>679c79dca22a15518494fbb2fdfb7a73</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/975e345d-deb5-4e15-89ec-ad342b18c2ba">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>65.6MB</dcat:byteSize>
+    <schema:name>freeze_id_chr21.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33863</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>23b1e2c4f7ee74f8815d5ec296f6e43a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4b4e0d6f-aa6b-44c3-8f73-dfc5e6425833">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>994.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr12.log</schema:name>
+    <alspacdcs:md5sum>1d411d61a8eee5e9e0bf6804d1ba460e</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c78b777e-00e9-42b2-93ba-a33ab809fba2">
+    <schema:name>freeze_id_chr7</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1a22f317-71e7-41bb-9af0-ad6104aa29b6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/088b72bf-84a7-470d-aa03-068a5f5d1779">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr9.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dd7cee6d-26a4-4831-adb7-17a7a1faa680">
+    <schema:name>freeze_id_chr12</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/698cc6cd-12f5-4efb-a8d0-f6867283ad0e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/34f2f166-dfca-47b1-aba7-3c97c009c0dc">
+    <schema:name>freeze_id_chr2</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/369dcf88-503d-4a98-aa30-ce3cc7c1333a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/64e09193-67ae-4edf-ab58-2b4e463f1728">
+    <schema:name>freeze_id_chr1</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7bee6dbf-34cf-4116-ab3d-63cc07a94bb5"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/26c16bd2-6fe9-45da-9fa6-64da34877711">
+    <schema:name>freeze_id_chr8</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/76b9f534-850d-478b-ac7b-7bd163beb9cd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1302eb29-2946-4811-81cc-d5676ca58f85">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr12.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/3ee40f25-2d9a-471e-b97d-9c0501707e38">
+    <schema:name>freeze_id_chr11</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e73114aa-2a66-4316-943a-a3d38838e110"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d2e165c4-c48f-400d-b8d2-6395123ac76a">
+    <schema:name>freeze_id_chr1</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bb1e5cd5-d421-4542-b0e8-c25473747924"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/981d5443-66ab-4ed7-a15a-faebf893cde1">
+    <schema:name>freeze_id_chr20</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e5f0d521-d89d-4dcd-999b-f8486778f38c"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9ade1881-5fce-4c8e-9f89-99c0140c2f97">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr4.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/5ad54753-f82e-4a1c-9ca3-e15cc6609bc8">
+    <schema:name>freeze_id_chr21</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/975e345d-deb5-4e15-89ec-ad342b18c2ba"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1e3ebe8f-8798-4625-b7b8-314f11114c0d">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>4.3MB</dcat:byteSize>
+    <schema:name>freeze_id_chr4.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">163157</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>a2604d5a956bd4cbbdab49202aa69eea</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/698cc6cd-12f5-4efb-a8d0-f6867283ad0e">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.4MB</dcat:byteSize>
+    <schema:name>freeze_id_chr12.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">124860</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>656b255438b8175b1739abf77e171526</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/472a41d3-23b5-481e-b8fa-c99a03ced9c1">
+    <schema:name>freeze_id_chr21</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/3debb92d-a3bc-45b4-a5fd-447912f4b7d6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bcadaf0a-ef43-4c76-aff1-e3777d2930ab">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>325.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr5.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168144</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>0a3d2ac67f9b14195900c9af64a9bb59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6a03837e-e8ab-41f4-ae91-56c5c9c2239f">
+    <schema:name>freeze_id_chr15</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ee197d4a-1e33-468e-bac3-6dd0e662fb26"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/da76a088-3b7c-4423-a63e-c0ac64161350">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>994.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr13.log</schema:name>
+    <alspacdcs:md5sum>6d3aa262c8f23ae7f35fac5b1e1dc07b</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g0m_2022-12-07_f2">
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d2e165c4-c48f-400d-b8d2-6395123ac76a"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4c3f0cd8-77eb-436e-9aeb-fb2728925213"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/02fe6c53-2451-456c-89d7-940ff2931ce5"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e417de2b-465b-45ed-837a-34aeaefc6b48"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/608e24ca-625c-4e0d-8869-2a7f4646b9d1"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a82e3486-742c-4c9a-8178-23efeee5fea3"/>
+    <alspacdcs:has_containers rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/0a832be6-00cf-4e45-80a1-f1cd5fc1a77c"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/472a41d3-23b5-481e-b8fa-c99a03ced9c1"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/aef1006c-d75c-4f3f-b625-64e89737b456"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a650eecc-5a67-4ef4-a058-ed6a7ce24f73"/>
+    <alspacdcs:is_current_freeze rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alspacdcs:is_current_freeze>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dab3263d-94a9-4f44-813e-433f87428b3a"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/340779dd-9a08-4d61-97a3-f9d2454a8697"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/381d3715-b436-4780-9ede-c288504700f4"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5fa16fd8-d259-4e6b-9493-421777c1c84f"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/64e09193-67ae-4edf-ab58-2b4e463f1728"/>
+    <alspacdcs:freeze_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-12-19</alspacdcs:freeze_date>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a6ef0f28-7dbe-4810-8f71-94384d81fe5a"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f52d36aa-ec51-4f2a-8e59-0ae28ad7b2ba"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d5bbf7ff-f2f1-4494-aad1-601262e8fe8c"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d1da4947-c33c-4a3a-8a04-d416ec7e1c5f"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/316f8a2a-9e44-437a-bb92-2de42c79dcf7"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8fdbdcd9-7c30-49bf-ab80-7c330d0a0ea4"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5ad54753-f82e-4a1c-9ca3-e15cc6609bc8"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/af6f016b-a1c9-4433-8782-c91e376f0324"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ed9a395f-ce22-40e7-b9a3-309a53e1222f"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/629598d2-af99-4fc3-8df1-926e0b4055ef"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/eadca60d-5dd9-44ce-8ae9-0ad748d65e37"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/9ccbf5c6-772a-4244-9545-c468ec990443"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/463d1f32-2048-4ab7-a856-86f85ad5ac45"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d84c1bcf-3c27-4b66-a375-7fa56e5e556d"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b1a3ade7-9927-4022-b51d-4625a22369e8"/>
+    <alspacdcs:freeze_of_alspac_dataset_version rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g0m_2022-12-07"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1405f6e5-e2b6-4b33-9966-218903dca75b"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2ffa871a-2482-4682-acc9-1aba3cc338db"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c04e7148-b963-41fd-af51-62801893836c"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/72d64db9-2e2f-4a82-9fa5-6722bd2cc9e4"/>
+    <alspacdcs:freeze_of_named_alspac_dataset rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g0m"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/85ba529e-5d6e-4530-921e-2071c5f80ec2"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ec359f65-9310-44ad-852f-749402165764"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/18b148e1-fb8b-42ba-ad0a-e6541b3e51fa"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4dcd9379-7b60-4f55-8056-60834950ea27"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c78b777e-00e9-42b2-93ba-a33ab809fba2"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8b7f0aad-c1d0-4175-b65c-0ce6392b2fed"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2f717b0d-89a0-4697-931c-477269e5405c"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/048b5054-96f4-4bdb-be49-80871a143638"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/981d5443-66ab-4ed7-a15a-faebf893cde1"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/aa4339c4-0a36-424a-adb8-e0fafc1101ab"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a9d9d58a-aef1-4718-97c5-11ae2090ee16"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/26c16bd2-6fe9-45da-9fa6-64da34877711"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2853c528-9e92-409f-9617-5d47c80f69c6"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/05e64663-3254-4936-9d94-8ec1d2fe6f54"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/aeb1d70c-bc8a-4e2b-a20c-7384336b199e"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/65f873bd-9a86-41c5-89c1-f37a000d9c96"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/846bb3b7-c40c-41c5-9c87-9f360b7e035e"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b70b48f6-9c61-480c-8774-9efb22e65536"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/eec90bbd-3b5b-438d-a80f-fbcb760ae7ba"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5b0aebae-ab41-4f85-bc32-1a17db8561cb"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b82587ef-9908-429e-9213-46ee81825a54"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d2da8b11-a918-4162-8bde-ad4f1fee8498"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7ecca087-d444-4a4d-be73-53a7e22f2236"/>
+    <alspacdcs:woc_file_md5sum>2feb3852dfd14c2868072624fd7fa1ea</alspacdcs:woc_file_md5sum>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6a03837e-e8ab-41f4-ae91-56c5c9c2239f"/>
+    <alspacdcs:freeze_size>4.9G</alspacdcs:freeze_size>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/02526725-2b5c-47b7-80da-1871d7116701"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/fd96801b-0748-4d45-8ad8-7be84100f4fc"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b55979e2-3e0e-4073-b430-bc1d02fe9407"/>
+    <schema:description>Version 2022-12-07 freeze 2 of Genome-wide array data imputed to the HapMap2 reference panel for G0 mothers</schema:description>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c7fbf1df-07cc-4c80-b759-07cbedf0e91b"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6d61adba-89cb-47de-b952-a0b9cad24e96"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dd7cee6d-26a4-4831-adb7-17a7a1faa680"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8d16df55-6adc-4cba-9999-b1e325ca6945"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e6f230a4-bfb0-4808-a9d6-a740b2d14aa7"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7989ec08-73b5-496f-ad38-0741d6893d96"/>
+    <alspacdcs:git_tag>https://github.com/alspac/dataset_gi_hapmap2_g0m/releases/tag/freeze2</alspacdcs:git_tag>
+    <alspacdcs:previous_freeze rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/gi_hapmap2_g0m_2022-12-07_f1"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/adb656b4-2822-40d6-8838-c18e3e3f8ebf"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/34cd7eb5-3c5a-48c5-a3cb-058593705e43"/>
+    <alspacdcs:linker_file_md5sum>33b08d90fa3e43504308f20283088a6b</alspacdcs:linker_file_md5sum>
+    <schema:name>Genome-wide - HapMap2 imputed - G0 mothers version 2022-12-07 freeze 2</schema:name>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b0964999-77e4-4140-974d-e999df473438"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bc090ee7-8ed4-4680-a1da-6c31b04ee5f6"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b6a4d58d-591a-4898-bb6e-bdde7b4198e0"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/6a830c5f-7397-4e9c-a444-9f62c86547bf"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/3ee40f25-2d9a-471e-b97d-9c0501707e38"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f02b09a6-44f6-4d1c-a73c-02d6b3cca994"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/24b2cdf5-de78-49eb-89f4-654701aa69c8"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/465bb628-2422-471b-bdbc-44fce53711dd"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c7979cfb-552b-4335-a272-69ed873a8611"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/989ed402-a9f3-4b1e-93a3-b2d2016c8410"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/5df062a6-f42c-434e-b391-2efebe06cc5b"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d234cd8e-8241-4d8a-b062-7ecb584349be"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/10ca2381-2e29-4596-953c-c0a9eb598e0a"/>
+    <alspacdcs:freeze_number>2</alspacdcs:freeze_number>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/3a4d950e-abf6-43ef-8850-45abad00dd7c"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2a60adf0-81c6-4e02-b0f4-9f7dcc722094"/>
+    <alspacdcs:all_individuals_to_exclude_md5sum>da4785a577a4d837883710f7ab45af51</alspacdcs:all_individuals_to_exclude_md5sum>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/418912be-8357-493c-baa6-f6830a37feae"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b9b97f2b-b0f6-4246-87e9-bf8c3c4c32fb"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1032066b-bb6b-402d-9d21-10728d344352"/>
+    <alspacdcs:has_parts rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/34f2f166-dfca-47b1-aba7-3c97c009c0dc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/eec90bbd-3b5b-438d-a80f-fbcb760ae7ba">
+    <schema:name>freeze_id_chr5</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7288969b-99b9-439a-b88d-dec0186953dd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/61d395a7-72e0-45bb-bfec-01bc49b916ad">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>920.9KB</dcat:byteSize>
+    <schema:name>freeze_id_chr22.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33815</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>4850f4458270a4f8f30a682821b2b6f2</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4556b82b-fd79-4425-88b7-82f566134173">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr16.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d2da8b11-a918-4162-8bde-ad4f1fee8498">
+    <schema:name>freeze_id_chr10</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1bc8b4fb-123b-4506-a87f-600cb9633dde"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/fd96801b-0748-4d45-8ad8-7be84100f4fc">
+    <schema:name>freeze_id_chr16</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/35df00bc-5c43-46c3-a5a2-982de2a90be4"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1ae14b83-bdd0-4e66-9068-4a296e064f84">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr22.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/60756365-1b25-4843-8312-96a5f9d0a1ba">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr3.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2853c528-9e92-409f-9617-5d47c80f69c6">
+    <schema:name>freeze_id_chr10</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c87b7fa0-896f-4eda-b5d2-428716967242"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/cc46d45e-b146-4134-957b-09eb643f03d7">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>5.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr2.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220833</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>0153a626149a8a47c72f182c1ec77467</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b70b48f6-9c61-480c-8774-9efb22e65536">
+    <schema:name>freeze_id_chr3</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/e06abac9-3fed-47da-ad4f-b862d73abf0e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d1da4947-c33c-4a3a-8a04-d416ec7e1c5f">
+    <schema:name>freeze_id_chr6</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2451e033-59cf-4b2a-b686-3776162dff67"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7e1b774d-2aa3-43e9-8603-bcce9aa9b525">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>268.1MB</dcat:byteSize>
+    <schema:name>freeze_id_chr10.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">138402</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>b374362f0e810a9004fca6718462c2fc</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b9b97f2b-b0f6-4246-87e9-bf8c3c4c32fb">
+    <schema:name>freeze_id_chr22</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/11083cc8-a1be-4466-98b5-c1b2e1b5a4e1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d5bbf7ff-f2f1-4494-aad1-601262e8fe8c">
+    <schema:name>freeze_id_chr21</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/09521625-b72a-4164-8817-848cb6cba4be"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8b7f0aad-c1d0-4175-b65c-0ce6392b2fed">
+    <schema:name>freeze_id_chr21</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a35c7fc3-d3b0-4b66-9f89-bd8c99d563a1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ff468429-c179-4063-b8bc-4380b6f5bcbd">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr13.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4172ee29-d042-4940-994d-3265bb2787ec">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>1.6MB</dcat:byteSize>
+    <schema:name>freeze_id_chr17.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58455</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>9b2548fde72d0bb67fb185d45a6fb175</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bb1e5cd5-d421-4542-b0e8-c25473747924">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>5.1MB</dcat:byteSize>
+    <schema:name>freeze_id_chr1.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193554</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>962617b049a9ab0100affffdab207c04</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c87b7fa0-896f-4eda-b5d2-428716967242">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr10.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2f717b0d-89a0-4697-931c-477269e5405c">
+    <schema:name>freeze_id_chr5</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/7aba68da-ec89-409f-af21-c261a98dea20"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/eadca60d-5dd9-44ce-8ae9-0ad748d65e37">
+    <schema:name>freeze_id_chr9</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d380082d-2870-42b6-9cca-c5a3fa444442"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/7bee6dbf-34cf-4116-ab3d-63cc07a94bb5">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr1.log</schema:name>
+    <alspacdcs:md5sum>7dfd825a254bb8f26d725c0d44b820bf</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8801f40e-bce4-45dd-8a33-1f042497a694">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>162.6MB</dcat:byteSize>
+    <schema:name>freeze_id_chr14.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83936</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>3c2e76766e229b0a2c80dc2e2cc0e3e2</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/aaa37490-b953-4925-b9be-830a3ceb8a9e">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>2.3MB</dcat:byteSize>
+    <schema:name>freeze_id_chr14.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83936</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>e6098ee196c0fb7b5db26cbd31bcb096</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d84c1bcf-3c27-4b66-a375-7fa56e5e556d">
+    <schema:name>freeze_id_chr11</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/fec393d9-dfa8-40bd-8536-f5a91604949e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/048b5054-96f4-4bdb-be49-80871a143638">
+    <schema:name>freeze_id_chr12</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8b8c3755-0a0b-4182-afc2-1af0bffc0c06"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/463d1f32-2048-4ab7-a856-86f85ad5ac45">
+    <schema:name>freeze_id_chr13</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/da76a088-3b7c-4423-a63e-c0ac64161350"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c04e7148-b963-41fd-af51-62801893836c">
+    <schema:name>freeze_id_chr3</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/42a6b622-2c1b-471d-a255-a20fcd9cd6f3"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dab3263d-94a9-4f44-813e-433f87428b3a">
+    <schema:name>freeze_id_chr17</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/c480b6e2-7110-4b65-a5e6-da1cf4ee4d4f"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a2380e43-63c7-4564-8703-09103b1565d7">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr19.log</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>8918fede8f9b88416505c8724c522f5d</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bb843328-cdf7-4efd-8429-9d93639a4307">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr8.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/aa4339c4-0a36-424a-adb8-e0fafc1101ab">
+    <schema:name>freeze_id_chr20</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/d175700e-a482-4c65-8211-e9fc86a9e832"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6a830c5f-7397-4e9c-a444-9f62c86547bf">
+    <schema:name>freeze_id_chr14</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8801f40e-bce4-45dd-8a33-1f042497a694"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/9c10f3e2-4ca3-452d-b709-fc8e57fe66bd">
+    <dcat:mediaType>.fam</dcat:mediaType>
+    <dcat:byteSize>277.7KB</dcat:byteSize>
+    <schema:name>freeze_id_chr20.fam</schema:name>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>20323cdc203fcadf4b2c208f7e15bd59</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/76b9f534-850d-478b-ac7b-7bd163beb9cd">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr8.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">147483</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>6bd8f2157f87167c7c96ebf1d63d2b3c</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/989ed402-a9f3-4b1e-93a3-b2d2016c8410">
+    <schema:name>freeze_id_chr12</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/4b4e0d6f-aa6b-44c3-8f73-dfc5e6425833"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/953a7afa-016b-48ef-be0a-cf9062d0278e">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>277.4MB</dcat:byteSize>
+    <schema:name>freeze_id_chr7.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143232</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>7c85c68841737d5f37816e75dae2e3a1</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/664eb2ff-6eb9-44f4-b39b-a0f9d309aefe">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr9.log</schema:name>
+    <alspacdcs:md5sum>22c4c68aeedaeb7ca38e8c71340c5c42</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b82587ef-9908-429e-9213-46ee81825a54">
+    <schema:name>freeze_id_chr16</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/eb7fae6a-30bb-4114-b173-88279df0d549"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8ce7255a-3401-4195-a7bf-d69803699478">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr8.log</schema:name>
+    <alspacdcs:md5sum>76a70ff4f7add78b2f89637e3021f304</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/a82e3486-742c-4c9a-8178-23efeee5fea3">
+    <schema:name>freeze_id_chr2</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/030be247-22fa-4efc-aa77-a2a1594569e8"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c480b6e2-7110-4b65-a5e6-da1cf4ee4d4f">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>113.2MB</dcat:byteSize>
+    <schema:name>freeze_id_chr17.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58455</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>18f30f3422904cf8c63a57c1417db323</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b55979e2-3e0e-4073-b430-bc1d02fe9407">
+    <schema:name>freeze_id_chr19</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/a4e2e16c-15ff-4f67-876b-3932b373c9c6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e06abac9-3fed-47da-ad4f-b862d73abf0e">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>4.6MB</dcat:byteSize>
+    <schema:name>freeze_id_chr3.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">174356</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>7167d91e59ceee29494f6983809d7f1f</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b1a3ade7-9927-4022-b51d-4625a22369e8">
+    <schema:name>freeze_id_chr9</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/97e35561-f3de-4d04-bdae-2c97208d020b"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/846bb3b7-c40c-41c5-9c87-9f360b7e035e">
+    <schema:name>freeze_id_chr7</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/953a7afa-016b-48ef-be0a-cf9062d0278e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/05e64663-3254-4936-9d94-8ec1d2fe6f54">
+    <schema:name>freeze_id_chr20</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/8921be0d-e030-4e5c-b856-4fed0ba20b96"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/10ca2381-2e29-4596-953c-c0a9eb598e0a">
+    <schema:name>freeze_id_chr19</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/f7386c43-d1c9-4e1f-aa0c-3a72e97757dc"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/4dcd9379-7b60-4f55-8056-60834950ea27">
+    <schema:name>freeze_id_chr2</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/73e393f1-614c-4e41-ab76-e7509b5eb672"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/e73114aa-2a66-4316-943a-a3d38838e110">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>251.9MB</dcat:byteSize>
+    <schema:name>freeze_id_chr11.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130069</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>87629dc6736fd5d72e6655769af1195c</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/42a6b622-2c1b-471d-a255-a20fcd9cd6f3">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>337.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr3.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">174356</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>53993ff4c0346a90928ea6f57c316ae0</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/1a22f317-71e7-41bb-9af0-ad6104aa29b6">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>3.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr7.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143232</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>02d89651808eabe235b6c35e06a2a121</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/6d61adba-89cb-47de-b952-a0b9cad24e96">
+    <schema:name>freeze_id_chr22</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/2c3ddef2-b43b-4f02-a49d-bd0afc5e1097"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/c5d5969b-af9d-4c8d-8266-e94f7c678071">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>988.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr3.log</schema:name>
+    <alspacdcs:md5sum>a65f7659065cfe53fff87169c1d9c4ab</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/b6a4d58d-591a-4898-bb6e-bdde7b4198e0">
+    <schema:name>freeze_id_chr15</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/177d4638-0d17-4c88-b800-69c147e0ba8e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/177d4638-0d17-4c88-b800-69c147e0ba8e">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>140.0MB</dcat:byteSize>
+    <schema:name>freeze_id_chr15.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72300</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>078d57d6732cf190ce12d041a70e9ea2</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/2451e033-59cf-4b2a-b686-3776162dff67">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>353.3MB</dcat:byteSize>
+    <schema:name>freeze_id_chr6.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">182381</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>0339a72e8118ef67f600f2cc1392c136</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/608e24ca-625c-4e0d-8869-2a7f4646b9d1">
+    <schema:name>freeze_id_chr8</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/b48e11aa-6b2e-4340-9c62-ac1bccab7e8a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/18b148e1-fb8b-42ba-ad0a-e6541b3e51fa">
+    <schema:name>freeze_id_chr7</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/30a02280-214c-4e60-b572-943955783af8"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/340779dd-9a08-4d61-97a3-f9d2454a8697">
+    <schema:name>freeze_id_chr4</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/67a76158-5855-4e2d-9878-c2eb30400e02"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/46c108df-3198-4c55-be22-02cf0a3685e6">
+    <dcat:mediaType>.log</dcat:mediaType>
+    <dcat:byteSize>992.0B</dcat:byteSize>
+    <schema:name>freeze_id_chr18.log</schema:name>
+    <alspacdcs:md5sum>ec2dbf93e2522026a259ef92eaa68f3a</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/85ba529e-5d6e-4530-921e-2071c5f80ec2">
+    <schema:name>freeze_id_chr1</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/1fb0d26a-f00a-4e33-8792-1b0aa65b8187"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/d175700e-a482-4c65-8211-e9fc86a9e832">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>1.7MB</dcat:byteSize>
+    <schema:name>freeze_id_chr20.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63408</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>ebad5115bb5c0f68ed080c896452bfdd</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8b8c3755-0a0b-4182-afc2-1af0bffc0c06">
+    <dcat:mediaType>.bed</dcat:mediaType>
+    <dcat:byteSize>241.8MB</dcat:byteSize>
+    <schema:name>freeze_id_chr12.bed</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">124860</alspacdcs:number_of_variants>
+    <alspacdcs:number_of_participants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8124</alspacdcs:number_of_participants>
+    <alspacdcs:md5sum>f8a4dcf29da25f900cfa689970d720ef</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/8fdbdcd9-7c30-49bf-ab80-7c330d0a0ea4">
+    <schema:name>freeze_id_chr8</schema:name>
+    <alspacdcs:data_distributions rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bb843328-cdf7-4efd-8429-9d93639a4307"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/f7386c43-d1c9-4e1f-aa0c-3a72e97757dc">
+    <dcat:mediaType>.bim</dcat:mediaType>
+    <dcat:byteSize>1012.3KB</dcat:byteSize>
+    <schema:name>freeze_id_chr19.bim</schema:name>
+    <alspacdcs:number_of_variants rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37045</alspacdcs:number_of_variants>
+    <alspacdcs:md5sum>eb33f90e6c4f631aa9683c2fff5e75f7</alspacdcs:md5sum>
+    <alspacdcs:belongs_to_container rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dabc73ca-1d45-40bb-b0ed-11fab248ddf6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </rdf:Description>
+</rdf:RDF>
