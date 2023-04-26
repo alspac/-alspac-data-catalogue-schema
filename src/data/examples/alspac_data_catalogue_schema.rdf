@@ -1,0 +1,1412 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:shex="http://www.w3.org/ns/shex#"
+    xmlns:linkml="https://w3id.org/linkml/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:schema="http://schema.org/"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/time">
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <skos:definition>A time object represents a (local) time of day, independent of any particular day</skos:definition>
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:base>XSDTime</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Time"/>
+    <skos:editorialNote>URI is dateTime because OWL reasoners do not work with straight date or time</skos:editorialNote>
+    <skos:exactMatch rdf:resource="http://schema.org/Time"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <sh:prefix>IAO</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.obolibrary.org/obo/IAO_"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart">
+    <skos:definition>Represents a  part of named alspac data set, in a version or freeze or custom dataset. For example in an omics context the data collected for a single chr which would be made availble as a dcat distribution of this type of dataset which would be of a specific file.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <skos:mappingRelation rdf:resource="dcat:Dataset"/>
+    <linkml:slot_usage rdf:nodeID="A1"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/data_distributions"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <sh:prefix>vcard</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset">
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:slot_usage rdf:nodeID="A3"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_current_version"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/main_publication_doi"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids"/>
+    <skos:definition>Represents a named_alspac_data_set. That is a set of data that has been collected or produced to be named, reused and distributed.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/in_catalog"/>
+    <skos:mappingRelation rdf:resource="dcat:Dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/keywords"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/versions"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/landing_page_url"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/publications_dois"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <sh:prefix>odrl</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum">
+    <skos:closeMatch rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#FileHash"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <skos:definition>What is the md5sum of the file in this distribution?</skos:definition>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <skos:closeMatch rdf:resource="http://spdx.org/rdf/terms#checksum"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Uriorcurie"/>
+    <linkml:base>URIorCURIE</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>a URI or a CURIE</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ug_value">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_value"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_value"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A description or link to how to do something</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/next_freeze">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/next_freeze"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/next_freeze"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What is the next freeze ?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_value"/>
+    <linkml:slot_usage rdf:nodeID="A5"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <skos:definition>A user guide entry.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_key"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:class_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/id">
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie"/>
+    <skos:definition>A unique identifier for a thing</skos:definition>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:identifier>
+    <linkml:required rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:required>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slot_uri rdf:resource="http://schema.org/identifier"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <skos:mappingRelation rdf:resource="http://schema.org/identifier"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/known_issues">
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/known_issues"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/known_issues"/>
+    <skos:definition>A list of known issues inline</skos:definition>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/main_publication_doi">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/main_publication_doi"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/main_publication_doi"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A doi ref to the main publication describing this dataset.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/nodeidentifier">
+    <linkml:uri rdf:resource="http://www.w3.org/ns/shex#nonLiteral"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Nodeidentifier"/>
+    <linkml:base>NodeIdentifier</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>A URI, CURIE or BNODE that represents a node in a model.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cpgs">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cpgs"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cpgs"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The number of CPG sites.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The md5sum of the all_individuals_to_exclude to make this freeze</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/logged_date">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_date"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_date"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The date that this issue was logged.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <sh:prefix>biolink</sh:prefix>
+    <sh:namespace rdf:resource="https://w3id.org/biolink/vocab/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>This slot is used for gene expression data distributions</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <sh:prefix>time</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/2006/time#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <sh:prefix>foaf</sh:prefix>
+    <sh:namespace rdf:resource="http://xmlns.com/foaf/0.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ug_key">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_key"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_key"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A key is something you might want to do for example run a gwas</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <sh:prefix>rdfs</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The git tag of the repo that made this freeze.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/date">
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+    <skos:exactMatch rdf:resource="http://schema.org/Date"/>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>a date (year, month and day) in an idealized calendar</skos:definition>
+    <linkml:repr>str</linkml:repr>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Date"/>
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:base>XSDDate</linkml:base>
+    <skos:editorialNote>URI is dateTime because OWL reasoners don't work with straight date or time</skos:editorialNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <sh:prefix>rdf</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <sh:prefix>dce</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/versions">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/versions"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/versions"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:definition>A list of versions of a named dataset</skos:definition>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/in_catalog">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/in_catalog"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/in_catalog"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What catalog is this dataset a part of</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/qc_parts">
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <skos:definition>A list of key value pairs for for information about quality control of this dataset. A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter' and the value might be '5e-07'.</skos:definition>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_parts"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_parts"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <sh:prefix>locn</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/ns/locn#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_participants">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_participants"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_participants"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The number of alspac participants in this dataset</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/integer">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Integer"/>
+    <linkml:base>int</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:exactMatch rdf:resource="http://schema.org/Integer"/>
+    <skos:definition>An integer</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <sh:prefix>identifier</sh:prefix>
+    <sh:namespace rdf:resource="https://registry.identifiers.org/registry/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <sh:prefix>owl</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/2002/07/owl#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <sh:prefix>prov</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/ns/prov#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/publications_dois">
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/publications_dois"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/publications_dois"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <skos:definition>A list of publications dois that use or refer to this data set</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What container does this belong to.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email">
+    <skos:definition>The main email address to contact</skos:definition>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <skos:exactMatch rdf:resource="http://xmlns.com/foaf/0.1/email"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:mappingRelation rdf:resource="http://schema.org/email"/>
+    <linkml:slot_uri rdf:resource="http://schema.org/email"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <sh:prefix>dcterms</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.org/dc/terms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/uri">
+    <linkml:repr>str</linkml:repr>
+    <skos:closeMatch rdf:resource="http://schema.org/URL"/>
+    <skos:definition>a complete URI</skos:definition>
+    <dcterms:conformsTo>https://www.ietf.org/rfc/rfc3987.txt</dcterms:conformsTo>
+    <linkml:base>URI</linkml:base>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Uri"/>
+    <skos:note>in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node</skos:note>
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The appoximate size in a version of a named Alspacdata set of custom data release</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_freezes">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_freezes"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A list of freezes for this version of the data</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_freezes"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/issue_description">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/issue_description"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/issue_description"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What the issue is.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_freeze">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_freeze"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/boolean"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_freeze"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>Is this current freeze?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/logged_by">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_by"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_by"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The person who logged this issue.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/required_files">
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <skos:definition>If a file should be used with another file list them. For example the three plink files (bim, bed, fam) work together.</skos:definition>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/required_files"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/required_files"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/keywords">
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A list of keywords.</skos:definition>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/keywords"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/keywords"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/authors">
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <skos:definition>A list of orcids for the authors of the item</skos:definition>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/datetime">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Datetime"/>
+    <linkml:base>XSDDateTime</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:exactMatch rdf:resource="http://schema.org/DateTime"/>
+    <skos:definition>The combination of a date and time</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <sh:prefix>example</sh:prefix>
+    <sh:namespace rdf:resource="http://example.org/rdf#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/linker_file_md5sum">
+    <skos:closeMatch rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#FileHash"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/linker_file_md5sum"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/linker_file_md5sum"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <skos:closeMatch rdf:resource="http://spdx.org/rdf/terms#checksum"/>
+    <skos:definition>What is the md5sum of the dataset linker file used to make this freeze</skos:definition>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slot_usage rdf:nodeID="A18"/>
+    <skos:definition>A dir/folder in a freeze, or version</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:mappingRelation rdf:resource="nfo:Folder"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:class_uri rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#Folder"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/qc_description">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_description"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_description"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>Some free text to describe any quality control that has been performed.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/named_alspac_datasets">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/named_alspac_datasets"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/named_alspac_datasets"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A list of named alspac data sets curies ids</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/Script">
+    <skos:definition>A description and attributes of a script included in a version or freeze</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filetype"/>
+    <linkml:slot_usage rdf:nodeID="A19"/>
+    <linkml:class_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filesize"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/bnumber">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bnumber"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bnumber"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>An ALSPAC project code</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids">
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Person"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids"/>
+    <skos:definition>The orcid ids of the pis</skos:definition>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <skos:definition>A list of parts of a named alspac dataset version or freeze or custom dataset</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/curie">
+    <linkml:base>Curie</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Curie"/>
+    <skos:definition>a compact URI</skos:definition>
+    <skos:note>in RDF serializations this MUST be expanded to a URI</skos:note>
+    <dcterms:conformsTo>https://www.w3.org/TR/curie/</dcterms:conformsTo>
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <skos:note>in non-RDF serializations MAY be serialized as the compact representation</skos:note>
+    <linkml:repr>str</linkml:repr>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/objectidentifier">
+    <linkml:uri rdf:resource="http://www.w3.org/ns/shex#iri"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Objectidentifier"/>
+    <linkml:base>ElementIdentifier</linkml:base>
+    <skos:note>Used for inheritence and type checking</skos:note>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>A URI or CURIE that represents an object in the model.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/qc_key">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_key"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_key"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A key might be something that has been done or a description of a paramater. i.e 'snp_hwe_filter'</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:definition>A list of dirs in this  named alspac dataset version or freeze or custom dataset</skos:definition>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset">
+    <linkml:slot_usage rdf:nodeID="A20"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_repo"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bnumber"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/keywords"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>This class is for describing and recording files that are released as bespoke data releases.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <skos:mappingRelation rdf:resource="dcat:Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/version_of">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/version_of"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/version_of"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What named Alspac dataset is this a version of</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:class_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:slot_usage rdf:nodeID="A21"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_date"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:definition>Known issues for a dataset should have a description, when they are logged and by who </skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/issue_description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids">
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Person"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids"/>
+    <skos:definition>a list of the orcid ids of the documentation authors</skos:definition>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <sh:prefix>alspacdcs</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_named_alspac_dataset">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_named_alspac_dataset"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_named_alspac_dataset"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What named alspac dataset is this freeze built from?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cnv_variants">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cnv_variants"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cnv_variants"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The number of cnv vaiants</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/qc_value">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_value"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_value"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A value for a key</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/date_or_datetime">
+    <linkml:uri rdf:resource="https://w3id.org/linkml/DateOrDatetime"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/DateOrDatetime"/>
+    <linkml:base>str</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>Either a date or a datetime</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <sh:prefix>schema</sh:prefix>
+    <sh:namespace rdf:resource="http://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_variants">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_variants"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_variants"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The number of genetic variants (i.e snps, indels etc)</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:slot_usage rdf:nodeID="A24"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/see_also"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <skos:mappingRelation rdf:resource="dcat:Catalog"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/named_alspac_datasets"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:definition>Represents an alspac data catalogue. That is a set of named alspac data sets.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion">
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_next_version"/>
+    <linkml:slot_usage rdf:nodeID="A25"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/known_issues"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_freezes"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_version"/>
+    <skos:definition>Represents a version of a named_alspac_data_set. That is a specific set of data which internal people to alspac can use.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_previous_version"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_parts"/>
+    <skos:mappingRelation rdf:resource="dcat:Dataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/version_of"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/string">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/String"/>
+    <linkml:base>str</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:exactMatch rdf:resource="http://schema.org/Text"/>
+    <skos:definition>A character string</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_date">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_date"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_date"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>When was this freeze made?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_number">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_number"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_number"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What number freeze is this?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/woc_file_md5sum">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/woc_file_md5sum"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/woc_file_md5sum"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The md5sum of the woc file used to make this freeze</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/filetype">
+    <skos:definition>what is the file type?</skos:definition>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:slot_uri rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <skos:mappingRelation rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filetype"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/previous_freeze">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/previous_freeze"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/previous_freeze"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What was the previous freeze?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/Person">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Person"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <skos:mappingRelation rdf:resource="foaf:Person"/>
+    <linkml:id_prefixes>ORCID</linkml:id_prefixes>
+    <linkml:class_uri rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slot_usage rdf:nodeID="A26"/>
+    <skos:definition>A person</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/see_also">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/see_also"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/see_also"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>Links to useful info</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <sh:prefix>ORCID</sh:prefix>
+    <sh:namespace rdf:resource="http://identifiers.org/orcid/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_next_version">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_next_version"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_next_version"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The next version of this named alspac dataset</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <sh:prefix>dctypes</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.org/dc/dcmitype/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/double">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Double"/>
+    <linkml:base>float</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>A real number that conforms to the xsd:double specification</skos:definition>
+    <skos:closeMatch rdf:resource="http://schema.org/Float"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/git_repo">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_repo"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_repo"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The git repo for this object</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <sh:prefix>doi</sh:prefix>
+    <sh:namespace rdf:resource="https://doi.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/boolean">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <linkml:repr>bool</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Boolean"/>
+    <linkml:base>Bool</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:exactMatch rdf:resource="http://schema.org/Boolean"/>
+    <skos:definition>A binary (true or false) value</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_version">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_version"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_version"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>Is this the current version of a named alspac dataset</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/decimal">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Decimal"/>
+    <linkml:base>Decimal</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>A real number with arbitrary precision that conforms to the xsd:decimal specification</skos:definition>
+    <skos:broadMatch rdf:resource="http://schema.org/Number"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_current_version">
+    <linkml:slot_uri rdf:resource="http://www.w3.org/ns/dcat#hasCurrentVersion"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_current_version"/>
+    <skos:mappingRelation rdf:resource="http://www.w3.org/ns/dcat#hasCurrentVersion"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The current version of this named alspac dataset</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <sh:prefix>spdx</sh:prefix>
+    <sh:namespace rdf:resource="http://spdx.org/rdf/terms#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <sh:prefix>PATO</sh:prefix>
+    <sh:namespace rdf:resource="http://purl.obolibrary.org/obo/PATO_"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing">
+    <linkml:slot_usage rdf:nodeID="A32"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:abstract>
+    <skos:definition>A generic grouping for any identifiable entity</skos:definition>
+    <linkml:class_uri rdf:resource="http://schema.org/Thing"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:mappingRelation rdf:resource="http://schema.org/Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ncname">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <linkml:repr>str</linkml:repr>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Ncname"/>
+    <linkml:base>NCName</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:definition>Prefix part of CURIE</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_named_alspac_dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/previous_freeze"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_number"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_size"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:mappingRelation rdf:resource="dcat:Dataset"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <linkml:slot_usage rdf:nodeID="A33"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_date"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/next_freeze"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_freeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <skos:definition>Represents a freeze of a version of named_alspac_data_set. That is a specific set of data which can be applied to use by external colabs. It is normally a subset of files in a version of named alspac dataset, but sometimes file types will also change. For example .Rdata changed to .csv.</skos:definition>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/woc_file_md5sum"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_alspac_dataset_version"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/linker_file_md5sum"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <sh:prefix>skos</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slot_usage rdf:nodeID="A35"/>
+    <skos:definition>A qc part with a key and a value.</skos:definition>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_key"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:class_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_value"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/data_distributions">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/data_distributions"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/data_distributions"/>
+    <skos:definition>A list of data distributions for this abstract dataset</skos:definition>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/filesize">
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filesize"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <skos:definition>The size of the file in k, m,g or t.</skos:definition>
+    <skos:mappingRelation rdf:resource="http://www.w3.org/ns/dcat#byteSize"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:slot_uri rdf:resource="http://www.w3.org/ns/dcat#byteSize"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution">
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filesize"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cpgs"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cnv_variants"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/required_files"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_participants"/>
+    <skos:mappingRelation rdf:resource="dcat:Distribution"/>
+    <linkml:class_uri rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <skos:definition>A dataset distribution has a location, file type and file size.</skos:definition>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_variants"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filetype"/>
+    <linkml:slot_usage rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_size">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_size"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_size"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The approximate size of all the data in the freeze.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/ug_parts">
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_parts"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_parts"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A list of key value pairs, where a key is something you might want to do and value is a description and/or link to how you might want to do it.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/float">
+    <linkml:uri rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <linkml:imported_from>linkml:types</linkml:imported_from>
+    <linkml:definition_uri rdf:resource="https://w3id.org/linkml/Float"/>
+    <linkml:base>float</linkml:base>
+    <skos:inScheme rdf:resource="https://w3id.org/linkml/types"/>
+    <skos:exactMatch rdf:resource="http://schema.org/Float"/>
+    <skos:definition>A real number that conforms to the xsd:float specification</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/TypeDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The date this dataset was released to a colab.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <sh:prefix>dcat</sh:prefix>
+    <sh:namespace rdf:resource="http://www.w3.org/ns/dcat#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts">
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <skos:definition>A list of scripts that are included in a dataset version or freeze</skos:definition>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/alspac-data-catalogue-schema">
+    <sh:declare rdf:nodeID="A14"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_previous_version"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/in_catalog"/>
+    <sh:declare rdf:nodeID="A15"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/version_of"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_parts"/>
+    <linkml:imports rdf:resource="https://w3id.org/linkml/types"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_email"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_repo"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/float"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_parts"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <sh:declare rdf:nodeID="A31"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_participants"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/known_issues"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date_or_datetime"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <sh:declare rdf:nodeID="A12"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie"/>
+    <sh:declare rdf:nodeID="A6"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/curie"/>
+    <linkml:source_file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15655</linkml:source_file_size>
+    <linkml:generation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-26T15:55:33</linkml:generation_date>
+    <sh:declare rdf:nodeID="A38"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/boolean"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/authors"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/publications_dois"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_key"/>
+    <linkml:source_file>alspac_data_catalogue_schema.yaml</linkml:source_file>
+    <sh:declare rdf:nodeID="A23"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_current_version"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_freezes"/>
+    <sh:declare rdf:nodeID="A37"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/required_files"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/data_distributions"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_key"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/datetime"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_value"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DatasetPart"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/decimal"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_date"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/issue_description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_containers"/>
+    <sh:declare rdf:nodeID="A28"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_named_alspac_dataset"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/all_individuals_to_exclude_md5sum"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <sh:declare rdf:nodeID="A17"/>
+    <sh:declare rdf:nodeID="A9"/>
+    <sh:declare rdf:nodeID="A27"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_alspac_dataset_version"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date"/>
+    <dcterms:title>alspac-data-catalogue-schema</dcterms:title>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/bnumber"/>
+    <sh:declare rdf:nodeID="A39"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/QCKeyValue"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataContainer"/>
+    <linkml:default_range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <sh:declare rdf:nodeID="A10"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cpgs"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/DataDistribution"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/see_also"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_gene_expression_probe_values"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <sh:declare rdf:nodeID="A7"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/date_of_release"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_size"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_next_version"/>
+    <sh:declare rdf:nodeID="A0"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ncname"/>
+    <sh:declare rdf:nodeID="A11"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filesize"/>
+    <sh:declare rdf:nodeID="A34"/>
+    <sh:declare rdf:nodeID="A13"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/versions"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/dataset_size"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_cnv_variants"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/objectidentifier"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/belongs_to_container"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/UGKeyValue"/>
+    <sh:declare rdf:nodeID="A4"/>
+    <linkml:metamodel_version>1.7.0</linkml:metamodel_version>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/git_tag"/>
+    <sh:declare rdf:nodeID="A16"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/documentation_authors_orcids"/>
+    <skos:definition>This project is for the schema of alspac data catalogues and meta data on data sets</skos:definition>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/nodeidentifier"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/number_of_variants"/>
+    <linkml:id rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:source_file_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-08T13:43:58</linkml:source_file_date>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Script"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_scripts"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/integer"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/primary_investigator_orcids"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/qc_description"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/md5sum"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/main_publication_doi"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_freeze"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_date"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/woc_file_md5sum"/>
+    <sh:declare rdf:nodeID="A30"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/time"/>
+    <sh:declare rdf:nodeID="A8"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/next_freeze"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/named_alspac_datasets"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/filetype"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/KnownIssue"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/logged_by"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/previous_freeze"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/linker_file_md5sum"/>
+    <sh:declare rdf:nodeID="A22"/>
+    <linkml:default_prefix>alspacdcs</linkml:default_prefix>
+    <dcterms:license>MIT</dcterms:license>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataCatalogue"/>
+    <rdfs:seeAlso rdf:resource="https://alspac.github.io/alspac-data-catalogue-schema"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_number"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SchemaDefinition"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uri"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/landing_page_url"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/ug_value"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/is_current_version"/>
+    <linkml:default_curi_maps>semweb_context</linkml:default_curi_maps>
+    <sh:declare rdf:nodeID="A29"/>
+    <sh:declare rdf:nodeID="A2"/>
+    <linkml:types rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/double"/>
+    <linkml:classes rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Person"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/keywords"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/landing_page_url">
+    <linkml:slot_uri rdf:resource="http://www.w3.org/ns/dcat#landingPage"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/landing_page_url"/>
+    <skos:mappingRelation rdf:resource="http://www.w3.org/ns/dcat#landingPage"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_alspac_dataset_version">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_alspac_dataset_version"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersionFreeze"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/freeze_of_alspac_dataset_version"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>What version was this freeze built from?</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/name">
+    <linkml:slot_uri rdf:resource="http://schema.org/name"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <skos:mappingRelation rdf:resource="http://schema.org/name"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A human-readable name for a thing</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <sh:prefix>nfo</sh:prefix>
+    <sh:namespace rdf:resource="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <sh:prefix>linkml</sh:prefix>
+    <sh:namespace rdf:resource="https://w3id.org/linkml/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/has_previous_version">
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_previous_version"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/uriorcurie"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/AlspacDataSetVersion"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/has_previous_version"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>The previous version of this named alspac dataset</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/Paper">
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+    <rdf:type rdf:resource="https://w3id.org/linkml/ClassDefinition"/>
+    <linkml:is_a rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:slot_usage rdf:nodeID="A40"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/id"/>
+    <skos:closeMatch rdf:resource="iao:0000013"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/name"/>
+    <linkml:slots rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <linkml:class_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/Paper"/>
+    <skos:definition>a scientific paper</skos:definition>
+    <linkml:id_prefixes>doi</linkml:id_prefixes>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/description">
+    <linkml:slot_uri rdf:resource="http://schema.org/description"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/string"/>
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedThing"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/description"/>
+    <skos:mappingRelation rdf:resource="http://schema.org/description"/>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <skos:definition>A human-readable description for a thing</skos:definition>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from">
+    <linkml:owner rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:slot_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from"/>
+    <linkml:inlined rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined>
+    <rdf:type rdf:resource="https://w3id.org/linkml/SlotDefinition"/>
+    <linkml:definition_uri rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/derived_from"/>
+    <skos:definition>List of NamedAlspacDatasets that were used at least in part to derive this Named or custom dataset.</skos:definition>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:multivalued rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:multivalued>
+    <skos:inScheme rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/"/>
+    <linkml:range rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/NamedAlspacDataset"/>
+    <linkml:domain_of rdf:resource="http://purl.org/alspac/alspac-data-catalogue-schema/BespokeAlspacDataset"/>
+    <linkml:inlined_as_list rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</linkml:inlined_as_list>
+  </rdf:Description>
+</rdf:RDF>
