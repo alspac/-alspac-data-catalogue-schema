@@ -1,48 +1,208 @@
-% poetry shell ? Do I need to add poetry to rules?
-
-go <--[],'echo "hello world"'.
-
- /*
-test_schema <--[],'gen-json-schema ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml'.
-
-test_cat <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml --target-class AlspacDataCatalogue'.
-
-test_ge_ht12_g1 <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1.yaml --target-class NamedAlspacDataset'.
-
-'test_ge_ht12_g1_2015-11-02' <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02.yaml --target-class AlspacDataSetVersion'.
-
-'test_ge_ht12_g1_2015-11-02_f2' <--[],'linkml-validate -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml --target-class AlspacDataSetVersionFreeze'.
-
-
-'./src/data/examples/alspac_data_catalogue-001.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/alspac_data_catalogue-001.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/alspac_data_catalogue-001.yaml -o ./src/data/examples/alspac_data_catalogue-001.ttl --target-class AlspacDataCatalogue'.
-
-'./src/data/examples/ge_ht12_g1.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1.yaml -o ./src/data/examples/ge_ht12_g1.ttl --target-class NamedAlspacDataset'.
-
-'./src/data/examples/ge_ht12_g1_2015-11-02.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02.ttl --target-class AlspacDataSetVersion'.
-
-'./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml'],'linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/ge_ht12_g1_2015-11-02_f2.yaml -o ./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl --target-class AlspacDataSetVersionFreeze'.
-
-
-'./src/data/examples/$(FILE).ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(FILE).yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(FILE).yaml -o ./src/data/examples/$(FILE).ttl --target-class NamedAlspacDataset'.
-
-
-'./src/data/examples/$(Dataset_Version)_f2.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(Dataset_Version)_f2.yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(Dataset_Version)_f2.yaml -o ./src/data/examples/$(Dataset_Version)_f2.ttl --target-class AlspacDataSetVersionFreeze'.
- */
-
-'./src/data/examples/$(FILE).ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml','./src/data/examples/$(FILE).yaml'],'poetry run linkml-convert -s ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml ./src/data/examples/$(FILE).yaml -o ./src/data/examples/$(FILE).ttl --target-class AlspacDataSetVersion'.
-
-
 /*
-convert <--['./src/data/examples/alspac_data_catalogue-001.ttl','./src/data/examples/ge_ht12_g1.ttl','./src/data/examples/ge_ht12_g1_2015-11-02.ttl','./src/data/examples/ge_ht12_g1_2015-11-02_f2.ttl'],true.
+  This make file is for making the html static site for the catalog
+  Sam Neaves April 2022
+  If you are adding a freeze and you have new freeze yaml files then they needed to be added to the lists.
+  Similarly if you are adding a dataset.
+*/
+
+%This is where the schema file is located.
+sf('./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml').
+
+
+% This rule is for making the freeze ttl files
+'./src/data/examples/catalog/freezes/$(FreezeFile).ttl',{sf(SF)} <--[SF,'$(@D)/$(FreezeFile).yaml'],'poetry run linkml-convert -s $(^) -o $(@) --target-class AlspacDataSetVersionFreeze'.
+
+
+% This makes all the freeze ttl freeze files.
+go <--['./src/data/examples/catalog/freezes/cnv_550_g1_2015-11-09_f2.ttl',
+'./src/data/examples/catalog/freezes/dnam_450_g0m_g1_2016-05-03_f2.ttl',
+'./src/data/examples/catalog/freezes/ge_ht12_g1_2015-11-02_f2.ttl',
+'./src/data/examples/catalog/freezes/gi_1000g_g0m_g1_2015-10-30_f2.ttl',
+'./src/data/examples/catalog/freezes/gi_1000g_g0p_2016-11-22_f2.ttl',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g0m_2022-12-07_f2.ttl',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g1_2022-12-07_f2.ttl',
+'./src/data/examples/catalog/freezes/gi_hrc_g0m_g1_2017-05-04_f2.ttl',
+'./src/data/examples/catalog/freezes/gwa_550_g1_2022-12-05_f2.ttl',
+'./src/data/examples/catalog/freezes/gwa_660_g0m_2022-12-05_f2.ttl',
+'./src/data/examples/catalog/freezes/gwa_exome_g0p_2016-11-22_f2.ttl',
+'./src/data/examples/catalog/freezes/wgs_hiseq_g1_2016-08-18_f2.ttl'], true.
+
+
+% This rule makes the freeze rdf files
+'./src/data/examples/catalog/freezes/$(DatasetFile).rdf'<--['$(@D)/$(DatasetFile).ttl'],
+'/Users/sn0550/Documents/apache-jena-4.8.0/bin/riot --syntax=turtle --output=rdfxml $(^) > $(@)'.
+
+% This rule makes all the freeze rdf files
+gordf <--['./src/data/examples/catalog/freezes/cnv_550_g1_2015-11-09_f2.rdf',
+'./src/data/examples/catalog/freezes/dnam_450_g0m_g1_2016-05-03_f2.rdf',
+'./src/data/examples/catalog/freezes/ge_ht12_g1_2015-11-02_f2.rdf',
+'./src/data/examples/catalog/freezes/gi_1000g_g0m_g1_2015-10-30_f2.rdf',
+'./src/data/examples/catalog/freezes/gi_1000g_g0p_2016-11-22_f2.rdf',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g0m_2022-12-07_f2.rdf',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g1_2022-12-07_f2.rdf',
+'./src/data/examples/catalog/freezes/gi_hrc_g0m_g1_2017-05-04_f2.rdf',
+'./src/data/examples/catalog/freezes/gwa_550_g1_2022-12-05_f2.rdf',
+'./src/data/examples/catalog/freezes/gwa_660_g0m_2022-12-05_f2.rdf',
+'./src/data/examples/catalog/freezes/gwa_exome_g0p_2016-11-22_f2.rdf',
+'./src/data/examples/catalog/freezes/wgs_hiseq_g1_2016-08-18_f2.rdf'], true.
+
+% This rule makes all the html files for the freezes
+gohtml <--['./src/data/examples/catalog/freezes/cnv_550_g1_2015-11-09_f2.html',
+'./src/data/examples/catalog/freezes/dnam_450_g0m_g1_2016-05-03_f2.html',
+'./src/data/examples/catalog/freezes/ge_ht12_g1_2015-11-02_f2.html',
+'./src/data/examples/catalog/freezes/gi_1000g_g0m_g1_2015-10-30_f2.html',
+'./src/data/examples/catalog/freezes/gi_1000g_g0p_2016-11-22_f2.html',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g0m_2022-12-07_f2.html',
+'./src/data/examples/catalog/freezes/gi_hapmap2_g1_2022-12-07_f2.html',
+'./src/data/examples/catalog/freezes/gi_hrc_g0m_g1_2017-05-04_f2.html',
+'./src/data/examples/catalog/freezes/gwa_550_g1_2022-12-05_f2.html',
+'./src/data/examples/catalog/freezes/gwa_660_g0m_2022-12-05_f2.html',
+'./src/data/examples/catalog/freezes/gwa_exome_g0p_2016-11-22_f2.html',
+'./src/data/examples/catalog/freezes/wgs_hiseq_g1_2016-08-18_f2.html'], true.
+
+% This rule make the html from the rdf files
+'./src/data/examples/catalog/freezes/$(DatasetFile).html' <--['$(@D)/$(DatasetFile).rdf'],
+'curl -o $(@) "https://redefer.rhizomik.net/rdf2html?rdf=https://raw.githubusercontent.com/alspac/alspac-data-catalogue-schema/main/src/data/examples/catalog/freezes/$(DatasetFile).rdf&mode=snippet&namespaces=true&language=en"'.
+
+
+% This rule makes the version ttl files
+'./src/data/examples/catalog/versions/$(VersionFile).ttl',{sf(SF)} <--[SF,'$(@D)/$(VersionFile).yaml'],'poetry run linkml-convert -s $(^) -o $(@) --target-class AlspacDataSetVersion'.
+
+% This rule makes all the version ttl files
+go2 <--['./src/data/examples/catalog/versions/cnv_550_g1_2015-11-09.ttl',
+'./src/data/examples/catalog/versions/dnam_450_g0m_g1_2016-05-03.ttl',
+'./src/data/examples/catalog/versions/ge_ht12_g1_2015-11-02.ttl',
+'./src/data/examples/catalog/versions/gi_1000g_g0p_2016-11-22.ttl',
+'./src/data/examples/catalog/versions/gi_hapmap2_g0m_2022-12-07.ttl',
+'./src/data/examples/catalog/versions/gi_hapmap2_g1_2022-12-07.ttl',
+'./src/data/examples/catalog/versions/gi_hrc_g0m_g1_2017-05-04.ttl',
+'./src/data/examples/catalog/versions/gwa_550_g1_2022-12-05.ttl',
+'./src/data/examples/catalog/versions/gwa_660_g0m_2022-12-05.ttl',
+'./src/data/examples/catalog/versions/gwa_exome_g0p_2016-11-22.ttl',
+'./src/data/examples/catalog/versions/wgs_hiseq_g1_2016-08-18.ttl'], true.
+
+
+% This rule makes the version rdf 
+'./src/data/examples/catalog/versions/$(VersionFile).rdf' <--['$(@D)/$(VersionFile).ttl'],
+'/Users/sn0550/Documents/apache-jena-4.8.0/bin/riot --syntax=turtle --output=rdfxml $(^) > $(@)'.
+
+% This rule makes all the version rdfs
+go2rdf <--['./src/data/examples/catalog/versions/cnv_550_g1_2015-11-09.rdf',
+'./src/data/examples/catalog/versions/dnam_450_g0m_g1_2016-05-03.rdf',
+'./src/data/examples/catalog/versions/ge_ht12_g1_2015-11-02.rdf',
+'./src/data/examples/catalog/versions/gi_1000g_g0p_2016-11-22.rdf',
+'./src/data/examples/catalog/versions/gi_hapmap2_g0m_2022-12-07.rdf',
+'./src/data/examples/catalog/versions/gi_hapmap2_g1_2022-12-07.rdf',
+'./src/data/examples/catalog/versions/gi_hrc_g0m_g1_2017-05-04.rdf',
+'./src/data/examples/catalog/versions/gwa_550_g1_2022-12-05.rdf',
+'./src/data/examples/catalog/versions/gwa_660_g0m_2022-12-05.rdf',
+'./src/data/examples/catalog/versions/gwa_exome_g0p_2016-11-22.rdf',
+'./src/data/examples/catalog/versions/wgs_hiseq_g1_2016-08-18.rdf'], true.
 
 
 
-'yuml.txt' <-- [], 'gen-yuml -f yuml ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml > yuml.txt'.
 
 
-'custom_test' <-- [],'poetry run linkml-validate -s /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml /Users/sn0550/Documents/linkml-tests/alspac-data-catalogue-schema/examples/custom_dataset/B000_2023-01-30.yaml --target-class BespokeAlspacDataset'.
+
+% This rule makes the html of versions.
+go2html <--['./src/data/examples/catalog/versions/cnv_550_g1_2015-11-09.html',
+'./src/data/examples/catalog/versions/dnam_450_g0m_g1_2016-05-03.html',
+'./src/data/examples/catalog/versions/ge_ht12_g1_2015-11-02.html',
+'./src/data/examples/catalog/versions/gi_1000g_g0p_2016-11-22.html',
+'./src/data/examples/catalog/versions/gi_hapmap2_g0m_2022-12-07.html',
+'./src/data/examples/catalog/versions/gi_hapmap2_g1_2022-12-07.html',
+'./src/data/examples/catalog/versions/gi_hrc_g0m_g1_2017-05-04.html',
+'./src/data/examples/catalog/versions/gwa_550_g1_2022-12-05.html',
+'./src/data/examples/catalog/versions/gwa_660_g0m_2022-12-05.html',
+'./src/data/examples/catalog/versions/gwa_exome_g0p_2016-11-22.html',
+'./src/data/examples/catalog/versions/wgs_hiseq_g1_2016-08-18.html'], true.
+
+/* This rule makes the html of the versions. This is calling a local server that needs to be setup to work
+See the notes document in this repo for details
+*/
+   
+'./src/data/examples/catalog/versions/$(DatasetFile).html' <--['$(@D)/$(DatasetFile).rdf'],
+'curl -o $(@) "http://localhost:8080/redefer-rdf2html-0.1/rdf2html?rdf=https://raw.githubusercontent.com/alspac/alspac-data-catalogue-schema/main/src/data/examples/catalog/versions/$(DatasetFile).rdf&mode=snippet&namespaces=true&language=en"'.
+
+
+% This rule makes the ttl of the datasets
+'./src/data/examples/catalog/datasets/$(DatasetFile).ttl',{sf(SF)} <--[SF,'$(@D)/$(DatasetFile).yaml'],'poetry run linkml-convert -s $(^) -o $(@) --target-class NamedAlspacDataset'.
+
+%For dataset ttls
+go3 <--['./src/data/examples/catalog/datasets/cnv_550_g1.ttl',
+'./src/data/examples/catalog/datasets/dnam_450_g0m_g1.ttl',
+'./src/data/examples/catalog/datasets/ge_ht12_g1.ttl',
+'./src/data/examples/catalog/datasets/gi_1000g_g0m_g1.ttl',
+'./src/data/examples/catalog/datasets/gi_1000g_g0p.ttl',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g0m.ttl',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g1.ttl',
+'./src/data/examples/catalog/datasets/gi_hrc_g0m_g1.ttl',
+'./src/data/examples/catalog/datasets/gwa_550_g1.ttl',
+'./src/data/examples/catalog/datasets/gwa_660_g0m.ttl',
+'./src/data/examples/catalog/datasets/gwa_exome_g0p.ttl',
+'./src/data/examples/catalog/datasets/wgs_hiseq_g1.ttl'], true.
+
+%%Dataset rdf
+'./src/data/examples/catalog/datasets/$(DatasetFile).rdf'<--['$(@D)/$(DatasetFile).ttl'],
+'/Users/sn0550/Documents/apache-jena-4.8.0/bin/riot --syntax=turtle --output=rdfxml $(^) > $(@)'.
+
+go3rdf <--['./src/data/examples/catalog/datasets/cnv_550_g1.rdf',
+'./src/data/examples/catalog/datasets/dnam_450_g0m_g1.rdf',
+'./src/data/examples/catalog/datasets/ge_ht12_g1.rdf',
+'./src/data/examples/catalog/datasets/gi_1000g_g0m_g1.rdf',
+'./src/data/examples/catalog/datasets/gi_1000g_g0p.rdf',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g0m.rdf',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g1.rdf',
+'./src/data/examples/catalog/datasets/gi_hrc_g0m_g1.rdf',
+'./src/data/examples/catalog/datasets/gwa_550_g1.rdf',
+'./src/data/examples/catalog/datasets/gwa_660_g0m.rdf',
+'./src/data/examples/catalog/datasets/gwa_exome_g0p.rdf',
+'./src/data/examples/catalog/datasets/wgs_hiseq_g1.rdf'], true.
+
+
+
+% Dataset html
+go3html <--['./src/data/examples/catalog/datasets/cnv_550_g1.html',
+'./src/data/examples/catalog/datasets/dnam_450_g0m_g1.html',
+'./src/data/examples/catalog/datasets/ge_ht12_g1.html',
+'./src/data/examples/catalog/datasets/gi_1000g_g0m_g1.html',
+'./src/data/examples/catalog/datasets/gi_1000g_g0p.html',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g0m.html',
+'./src/data/examples/catalog/datasets/gi_hapmap2_g1.html',
+'./src/data/examples/catalog/datasets/gi_hrc_g0m_g1.html',
+'./src/data/examples/catalog/datasets/gwa_550_g1.html',
+'./src/data/examples/catalog/datasets/gwa_660_g0m.html',
+'./src/data/examples/catalog/datasets/gwa_exome_g0p.html',
+'./src/data/examples/catalog/datasets/wgs_hiseq_g1.html'], true.
+
+%Dataset html
+'./src/data/examples/catalog/datasets/$(DatasetFile).html' <--['$(@D)/$(DatasetFile).rdf'],
+'curl -o $(@) "https://redefer.rhizomik.net/rdf2html?rdf=https://raw.githubusercontent.com/alspac/alspac-data-catalogue-schema/main/src/data/examples/catalog/datasets/$(DatasetFile).rdf&mode=snippet&namespaces=true&language=en"'.
+
+
+
 
 file_info,{QsubArgs = '--time=48:00:00 --account=smed001801 --partition=mrcieu'} <--[],'python ./helper_file/doc_writer.py ./helper_file/file_info.yaml'.
 
-*/
 
+%% These rules are for converting the catalog yaml file  to rdf and html
+%'./src/data/examples/alspac_data_catalogue-001.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue-001.yaml'],'poetry run gen-rdf --stacktrace ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue-001.yaml > ./src/data/examples/alspac_data_catalogue-001.ttl'.
+'./src/data/examples/alspac_data_catalogue-001.ttl',{sf(SF)} <--[SF,'$(@D)/alspac_data_catalogue-001.yaml'],'poetry run linkml-convert -s $(^) -o $(@) --target-class AlspacDataCatalogue'.
+
+
+'./src/data/examples/alspac_data_catalogue-001.rdf'<--['$(@D)/alspac_data_catalogue-001.ttl'],
+'/Users/sn0550/Documents/apache-jena-4.8.0/bin/riot --syntax=turtle --output=rdfxml $(^) > $(@)'.
+
+'./src/data/examples/alspac_data_catalogue-001.html' <--['./src/data/examples/alspac_data_catalogue-001.rdf'],
+'curl -o ./src/data/examples/alspac_data_catalogue-001.html  "https://redefer.rhizomik.net/rdf2html?rdf=https://raw.githubusercontent.com/alspac/alspac-data-catalogue-schema/main/src/data/examples/alspac_data_catalogue-001.rdf&mode=snippet&namespaces=true&language=en"'.
+
+
+
+%% These rules are for converting the schmema itself to rdf and html
+'./src/data/examples/alspac_data_catalogue_schema.ttl' <--['./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml'],'poetry run gen-rdf --stacktrace ./src/alspac_data_catalogue_schema/schema/alspac_data_catalogue_schema.yaml > ./src/data/examples/alspac_data_catalogue_schema.ttl'.
+
+'./src/data/examples/alspac_data_catalogue_schema.rdf'<--['$(@D)/alspac_data_catalogue_schema.ttl'],
+'/Users/sn0550/Documents/apache-jena-4.8.0/bin/riot --syntax=turtle --output=rdfxml $(^) > $(@)'.
+
+'./src/data/examples/alspac_data_catalogue_schema.html' <--['./src/data/examples/alspac_data_catalogue_schema.rdf'],
+'curl -o ./src/data/examples/alspac_data_catalogue_schema.html  "https://redefer.rhizomik.net/rdf2html?rdf=https://raw.githubusercontent.com/alspac/alspac-data-catalogue-schema/main/src/data/examples/alspac_data_catalogue_schema.rdf&mode=snippet&namespaces=true&language=en"'.
