@@ -1,5 +1,5 @@
 objects:
-  - ssn: 123
-    type: Person
-  - topping: mushroom
-    type: Pizza
+  - type: Person
+    ssn: 123
+  - type: Pizza
+    topping: mushroom

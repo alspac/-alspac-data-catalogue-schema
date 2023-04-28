@@ -17,9 +17,9 @@ named_alspac_datasets:
   - alspacdcs:gi_hapmap2_g1
   - alspacdcs:cnv_550_g1
   - alspacdcs:wgs_hiseq_g1
-  - alspacdcs:wes_novaseq_g1
+#  - alspacdcs:wes_novaseq_g1
   - alspacdcs:dnam_450_g0m_g1
-  - alspacdcs:dnam_bs_g0m
+#  - alspacdcs:dnam_bs_g0m
 see_also:
   - https://dbpedia.org/page/Avon_Longitudinal_Study_of_Parents_and_Children
 
