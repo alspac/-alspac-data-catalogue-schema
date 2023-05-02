@@ -766,9 +766,9 @@ the omics data catalog as a RDF triple store more efficient and reliable.
 
 * Availability
 
-- The catalog is availble here: http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001
-- SPARQL end point here: http://samneaves.ddns.net/yasgui/index.html
-- SWISH Pengine here: http://samneaves.ddns.net/swish/
+- The catalog is availble here (as HTML with rdfa): http://purl.org/alspac/alspac-data-catalogue-schema/alspac_data_catalogue_001
+- SPARQL end point here: Not currently available 
+- SWISH Pengine here: Not currently available
 - Github repoistory here: https://github.com/alspac/alspac-data-catalogue-schema
 - Data schema documentation here: https://alspac.github.io/alspac-data-catalogue-schema/
 
